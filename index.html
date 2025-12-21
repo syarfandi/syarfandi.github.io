@@ -3,98 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akan Segera Hadir</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <title>Segera Hadir... Bersiaplah.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --color-bg: #0a0a0a;
+            --color-text-primary: #ffffff;
+            --color-accent-1: #FF3366; /* Neon Pink */
+            --color-accent-2: #00EAFF; /* Neon Cyan */
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body, html {
             height: 100%;
-        }
-        body {
-            /* Ganti URL di bawah ini dengan gambar pilihan Anda */
-            background: url('https://images.unsplash.com/photo-1497294815431-9365093b7331?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
-            background-size: cover;
+            background-color: var(--color-bg);
+            font-family: 'Montserrat', sans-serif;
+            overflow: hidden; /* Mencegah scrollbar */
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: 'Source Sans Pro', sans-serif;
         }
 
-        /* Efek Kaca (Glassmorphism) */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.25); /* Putih transparan */
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-            backdrop-filter: blur(10px); /* Kunci efek buram */
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            padding: 4rem 3rem;
+        /* --- AREA ANIMASI LATAR BELAKANG --- */
+        .ambient-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        /* Orb cahaya yang bergerak */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px); /* Efek glow yang sangat kuat */
+            opacity: 0.6;
+            mix-blend-mode: screen; /* Agar warna bercampur dengan indah */
+            animation: moveOrb 20s infinite alternate ease-in-out;
+        }
+
+        .orb-1 {
+            width: 60vw;
+            height: 60vw;
+            background: var(--color-accent-1);
+            top: -20%;
+            left: -20%;
+            animation-duration: 25s;
+        }
+
+        .orb-2 {
+            width: 50vw;
+            height: 50vw;
+            background: var(--color-accent-2);
+            bottom: -10%;
+            right: -10%;
+            animation-duration: 18s;
+            animation-delay: -5s;
+        }
+
+        @keyframes moveOrb {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(20%, 30%) scale(1.2); }
+            100% { transform: translate(-10%, -20%) scale(0.9); }
+        }
+
+
+        /* --- AREA KONTEN UTAMA --- */
+        .content-container {
             text-align: center;
-            max-width: 600px;
-            width: 90%;
-            color: #333;
+            z-index: 10;
+            padding: 2rem;
+            /* Efek kaca halus di belakang teks agar lebih terbaca */
+            backdrop-filter: blur(5px);
+            border-radius: 30px;
+            border: 1px solid rgba(255,255,255,0.05);
         }
 
-        h1 {
-            font-family: 'Playfair Display', serif; /* Font Serif untuk kesan elegan */
-            font-size: 4rem;
-            color: #222;
-            margin-bottom: 1rem;
-            line-height: 1.1;
+        /* Tipografi Kinetik */
+        h1.kinetic-title {
+            font-size: clamp(3rem, 10vw, 8rem); /* Responsif yang ekstrem */
+            text-transform: uppercase;
+            line-height: 0.9;
+            color: transparent;
+            /* Membuat teks bolong (outline) */
+            -webkit-text-stroke: 2px rgba(255,255,255,0.6);
+            position: relative;
         }
 
+        /* Lapisan duplikat untuk efek 'glitch' dan isian warna */
+        h1.kinetic-title::before,
+        h1.kinetic-title::after {
+            content: attr(data-text); /* Mengambil teks dari atribut HTML */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+        }
+
+        /* Lapisan Warna Biru */
+        h1.kinetic-title::before {
+            color: var(--color-accent-2);
+            z-index: -1;
+            animation: glitchShiftBlue 4s infinite linear alternate-reverse;
+            /* Clip path membuat irisan pada teks */
+            clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+        }
+
+        /* Lapisan Warna Pink */
+        h1.kinetic-title::after {
+            color: var(--color-accent-1);
+            z-index: -2;
+            animation: glitchShiftPink 5s infinite linear alternate;
+            clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+        }
+
+
+        /* Animasi pergeseran teks (Glitch Effect) */
+        @keyframes glitchShiftBlue {
+            0% { transform: translate(-5px, 2px) skew(2deg); }
+            20% { transform: translate(5px, -2px) skew(-2deg); }
+            40% { transform: translate(-2px, 5px) skew(1deg); }
+            60% { transform: translate(2px, -5px) skew(-1deg); }
+            80% { transform: translate(3px, 2px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        @keyframes glitchShiftPink {
+            0% { transform: translate(5px, -2px) skew(-2deg); }
+            20% { transform: translate(-5px, 2px) skew(2deg); }
+            40% { transform: translate(2px, -5px) skew(-1deg); }
+            60% { transform: translate(-2px, 5px) skew(1deg); }
+            80% { transform: translate(-3px, -2px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        /* Subtitle yang berdenyut */
         p.subtitle {
-            font-size: 1.3rem;
-            color: #444;
-            margin-bottom: 3rem;
-            font-weight: 300;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
             margin-top: 2rem;
-        }
-        
-        .social-links a {
-            text-decoration: none;
-            color: #555;
-            font-weight: bold;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            transition: color 0.3s;
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.7);
+            animation: textPulse 3s ease-in-out infinite alternate;
         }
 
-        .social-links a:hover {
-            color: #000;
+        @keyframes textPulse {
+            0% { opacity: 0.5; letter-spacing: 4px; }
+            100% { opacity: 1; letter-spacing: 8px; text-shadow: 0 0 20px rgba(255,255,255,0.5); }
         }
 
-        @media (max-width: 600px) {
-            h1 { font-size: 2.8rem; }
-            .glass-card { padding: 3rem 2rem; }
-        }
     </style>
 </head>
 <body>
-    <div class="glass-card">
-        <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; margin-bottom: 10px;">Project Baru</p>
-        <h1>Coming Soon.</h1>
-        <p class="subtitle">Kami sedang menyeduh sesuatu yang spesial untuk Anda. Tunggu tanggal mainnya.</p>
-        
-        <!-- <div class="social-links">
-            <a href="#">INSTAGRAM</a>
-            <a href="#">TWITTER</a>
-            <a href="#">EMAIL</a>
-        </div> -->
+    <div class="ambient-background">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
     </div>
+
+    <div class="content-container">
+        <h1 class="kinetic-title" data-text="COMING SOON">
+            Coming Soon
+        </h1>
+        <p class="subtitle">Realitas Baru Sedang Dibentuk</p>
+    </div>
+
 </body>
 </html>
-
 
 <!--
 <!DOCTYPE html>
