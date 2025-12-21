@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Segera Hadir... Bersiaplah.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <title>Coming Soon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --color-bg: #0a0a0a;
-            --color-text-primary: #ffffff;
-            --color-accent-1: #FF3366; /* Neon Pink */
-            --color-accent-2: #00EAFF; /* Neon Cyan */
+            --bg-color: #0a0a0a;
+            --text-color: #f0f0f0;
+            --accent-1: #4f46e5; /* Indigo */
+            --accent-2: #ec4899; /* Pink */
+            --accent-3: #06b6d4; /* Cyan */
         }
 
         * {
@@ -19,162 +20,194 @@
             box-sizing: border-box;
         }
 
-        body, html {
-            height: 100%;
-            background-color: var(--color-bg);
-            font-family: 'Montserrat', sans-serif;
-            overflow: hidden; /* Mencegah scrollbar */
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Space Grotesk', sans-serif;
+            height: 100vh;
+            overflow: hidden; /* Mencegah scroll */
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
 
-        /* --- AREA ANIMASI LATAR BELAKANG --- */
-        .ambient-background {
+        /* --- BACKGROUND ANIMATION (AMBIENT ORBS) --- */
+        .ambient-light {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1;
+            z-index: 0;
             overflow: hidden;
+            filter: blur(80px); /* Efek blur ekstrem untuk nuansa halus */
+            opacity: 0.6;
         }
 
-        /* Orb cahaya yang bergerak */
         .orb {
             position: absolute;
             border-radius: 50%;
-            filter: blur(120px); /* Efek glow yang sangat kuat */
-            opacity: 0.6;
-            mix-blend-mode: screen; /* Agar warna bercampur dengan indah */
-            animation: moveOrb 20s infinite alternate ease-in-out;
+            animation: moveOrb 20s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .orb-1 {
-            width: 60vw;
-            height: 60vw;
-            background: var(--color-accent-1);
-            top: -20%;
-            left: -20%;
+            width: 400px;
+            height: 400px;
+            background: var(--accent-1);
+            top: -10%;
+            left: -10%;
             animation-duration: 25s;
         }
 
         .orb-2 {
-            width: 50vw;
-            height: 50vw;
-            background: var(--color-accent-2);
+            width: 300px;
+            height: 300px;
+            background: var(--accent-2);
             bottom: -10%;
-            right: -10%;
+            right: -5%;
             animation-duration: 18s;
             animation-delay: -5s;
         }
 
+        .orb-3 {
+            width: 200px;
+            height: 200px;
+            background: var(--accent-3);
+            top: 40%;
+            left: 40%;
+            animation-duration: 22s;
+            animation-delay: -10s;
+        }
+
         @keyframes moveOrb {
             0% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(20%, 30%) scale(1.2); }
-            100% { transform: translate(-10%, -20%) scale(0.9); }
+            33% { transform: translate(30px, 50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(10px, -30px) scale(1); }
         }
 
-
-        /* --- AREA KONTEN UTAMA --- */
-        .content-container {
-            text-align: center;
+        /* --- MAIN CONTENT & TYPOGRAPHY --- */
+        .container {
             z-index: 10;
-            padding: 2rem;
-            /* Efek kaca halus di belakang teks agar lebih terbaca */
-            backdrop-filter: blur(5px);
-            border-radius: 30px;
-            border: 1px solid rgba(255,255,255,0.05);
+            text-align: center;
+            mix-blend-mode: overlay; /* Membuat teks menyatu indah dengan background */
         }
 
-        /* Tipografi Kinetik */
-        h1.kinetic-title {
-            font-size: clamp(3rem, 10vw, 8rem); /* Responsif yang ekstrem */
+        /* Animasi Garis Loading */
+        .loader-line {
+            width: 0%;
+            height: 2px;
+            background: white;
+            margin: 0 auto 30px auto;
+            animation: loadLine 2.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        /* Teks Utama */
+        h1 {
+            font-size: 8vw; /* Responsif mengikuti lebar layar */
+            font-weight: 700;
+            line-height: 1;
             text-transform: uppercase;
-            line-height: 0.9;
-            color: transparent;
-            /* Membuat teks bolong (outline) */
-            -webkit-text-stroke: 2px rgba(255,255,255,0.6);
-            position: relative;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+            
+            /* Masking Effect untuk Reveal */
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+            transform: translateY(100px);
+            opacity: 0;
+            
+            animation: textReveal 1.5s cubic-bezier(0.19, 1, 0.22, 1) 0.5s forwards,
+                       breathe 8s ease-in-out infinite 2s; /* Animasi berulang setelah muncul */
         }
 
-        /* Lapisan duplikat untuk efek 'glitch' dan isian warna */
-        h1.kinetic-title::before,
-        h1.kinetic-title::after {
-            content: attr(data-text); /* Mengambil teks dari atribut HTML */
+        /* Teks Sub-judul */
+        p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: subReveal 1.5s ease-out 1.2s forwards;
+        }
+
+        /* Elemen Dekorasi Berputar */
+        .spinner-wrapper {
             position: absolute;
-            top: 0;
-            left: 0;
+            bottom: 50px;
+            right: 50px;
+            width: 60px;
+            height: 60px;
+            z-index: 20;
+        }
+
+        .spinner {
             width: 100%;
             height: 100%;
-            opacity: 0.8;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 2s linear infinite;
         }
 
-        /* Lapisan Warna Biru */
-        h1.kinetic-title::before {
-            color: var(--color-accent-2);
-            z-index: -1;
-            animation: glitchShiftBlue 4s infinite linear alternate-reverse;
-            /* Clip path membuat irisan pada teks */
-            clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+        /* --- KEYFRAMES --- */
+        
+        @keyframes loadLine {
+            0% { width: 0%; opacity: 0; }
+            50% { opacity: 1; }
+            100% { width: 100px; opacity: 0.5; }
         }
 
-        /* Lapisan Warna Pink */
-        h1.kinetic-title::after {
-            color: var(--color-accent-1);
-            z-index: -2;
-            animation: glitchShiftPink 5s infinite linear alternate;
-            clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+        @keyframes textReveal {
+            to {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
 
-
-        /* Animasi pergeseran teks (Glitch Effect) */
-        @keyframes glitchShiftBlue {
-            0% { transform: translate(-5px, 2px) skew(2deg); }
-            20% { transform: translate(5px, -2px) skew(-2deg); }
-            40% { transform: translate(-2px, 5px) skew(1deg); }
-            60% { transform: translate(2px, -5px) skew(-1deg); }
-            80% { transform: translate(3px, 2px); }
-            100% { transform: translate(0, 0); }
+        @keyframes subReveal {
+            to {
+                transform: translateY(0);
+                opacity: 0.7;
+            }
         }
 
-        @keyframes glitchShiftPink {
-            0% { transform: translate(5px, -2px) skew(-2deg); }
-            20% { transform: translate(-5px, 2px) skew(2deg); }
-            40% { transform: translate(2px, -5px) skew(-1deg); }
-            60% { transform: translate(-2px, 5px) skew(1deg); }
-            80% { transform: translate(-3px, -2px); }
-            100% { transform: translate(0, 0); }
+        @keyframes breathe {
+            0%, 100% { letter-spacing: -2px; }
+            50% { letter-spacing: 0px; } /* Teks merenggang pelan */
         }
 
-        /* Subtitle yang berdenyut */
-        p.subtitle {
-            margin-top: 2rem;
-            font-size: 1.2rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.7);
-            animation: textPulse 3s ease-in-out infinite alternate;
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
 
-        @keyframes textPulse {
-            0% { opacity: 0.5; letter-spacing: 4px; }
-            100% { opacity: 1; letter-spacing: 8px; text-shadow: 0 0 20px rgba(255,255,255,0.5); }
+        /* --- MOBILE ADJUSTMENT --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 15vw; letter-spacing: -1px; }
+            p { font-size: 0.9rem; letter-spacing: 3px; }
+            .spinner-wrapper { bottom: 30px; right: 50%; transform: translateX(50%); } /* Spinner pindah ke tengah bawah */
         }
-
     </style>
 </head>
 <body>
-    <div class="ambient-background">
+
+    <div class="ambient-light">
         <div class="orb orb-1"></div>
         <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
     </div>
 
-    <div class="content-container">
-        <h1 class="kinetic-title" data-text="COMING SOON">
-            Coming Soon
-        </h1>
-        <p class="subtitle">Realitas Baru Sedang Dibentuk</p>
+    <div class="container">
+        <div class="loader-line"></div>
+        <h1>Coming Soon</h1>
+        <p>Experience The Future</p>
+    </div>
+
+    <div class="spinner-wrapper">
+        <div class="spinner"></div>
     </div>
 
 </body>
