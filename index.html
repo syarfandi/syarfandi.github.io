@@ -23,3 +23,133 @@
 </body>
 </html>
 -->
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segera Hadir</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+        }
+
+        /* Animasi Background Gradient */
+        .bg-animate {
+            background: var(--bg-gradient);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Kontainer Utama dengan Efek Melayang */
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 3rem;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            animation: float 6s ease-in-out infinite;
+            max-width: 90%;
+            width: 500px;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        /* Form Newsletter */
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+        }
+
+        input[type="email"] {
+            flex-grow: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 50px;
+            outline: none;
+            background: rgba(255,255,255,0.9);
+            font-family: inherit;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 50px;
+            background: #23d5ab;
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+            font-family: inherit;
+        }
+
+        button:hover {
+            background: #1b9e80;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .newsletter-form { flex-direction: column; }
+            button { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animate">
+        <div class="container">
+            <h1>COMING SOON</h1>
+            <p>Kami sedang menyiapkan sesuatu yang luar biasa. Jadilah yang pertama tahu saat kami meluncur!</p>
+            
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Terima kasih! Email Anda telah tersimpan.');">
+                <input type="email" placeholder="Masukkan email Anda..." required>
+                <button type="submit">Beri Tahu Saya</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
