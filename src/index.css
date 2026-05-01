@@ -42,7 +42,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Outfit', sans-serif;
 }
 
@@ -60,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding-inline: 2rem;
 }
 
 .text-gradient {
@@ -75,13 +80,16 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg-color);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--surface-color);
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-color);
 }
@@ -101,14 +109,15 @@ a {
 
 /* Base layouts */
 section {
-  padding: 6rem 0;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
   position: relative;
 }
 
 .heading-secondary {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 800;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   text-align: center;
 }
 
@@ -151,18 +160,25 @@ section {
     transform: translateX(50%);
     width: max-content;
   }
-  
+
   .container {
-    padding: 0 1.5rem;
+    padding-inline: 1.5rem;
   }
-  
+
   section {
-    padding: 4rem 0;
+    padding: 10rem 0 6rem;
   }
 }
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
