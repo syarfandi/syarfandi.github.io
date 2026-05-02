@@ -523,38 +523,78 @@ const ExperienceSection = () => {
 };
 
 const PortfolioSection = () => {
-  const { t } = useTheme();
-  const projects = [
-    { title: "Makaverse (Makassar Metaverse)", link: "makaverse.makassarkota.go.id", type: t('typeVR'), icon: <Layout size={20} /> },
-    { title: "Malmora (Reseller & Dropship)", link: "malmora.com", type: t('typeWeb'), icon: <Layout size={20} /> },
-    { title: "Virtual Museum Makassar", link: "dikemas.makassarkota.go.id/virtualtour", type: t('typeVR'), icon: <Monitor size={20} /> },
-    { title: "Al-Haram VR", link: null, type: t('typeVR'), icon: <Layout size={20} /> },
-    { title: "Email Server Makassar Gov", link: "surat.makassarkota.go.id", type: t('typeInfra'), icon: <Cpu size={20} /> },
-    { title: "Helpdesk Kota Makassar", link: "helpdesk.makassarkota.go.id", type: t('typeWeb'), icon: <Code size={20} /> },
-    { title: "Paralluta (Lalu Lintas)", link: null, type: t('typeWeb'), icon: <Code size={20} /> },
-    { title: "SOP Pelaporan Insiden Siber", link: null, type: t('typeSecurity'), icon: <Shield size={20} /> },
+  const { t, lang } = useTheme();
+  const [publicRepos, setPublicRepos] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // All projects unified — sorted by complexity, mixed between featured & repo
+  const allProjects = [
+    { id: 'getkasir', title: 'GetKasir Enterprise POS', desc: lang === 'id' ? 'Ekosistem retail raksasa kelas Enterprise yang menggabungkan kecanggihan AI, keamanan biometrik, dan skalabilitas cloud (100+ Modul).' : 'Enterprise-class giant retail ecosystem combining AI sophistication, biometric security, and cloud scalability (100+ Modules).', badge: 'JavaScript', url: 'https://getkasir.com' },
+    { id: 'makaverse', title: 'Makaverse (Makassar Metaverse)', desc: lang === 'id' ? 'Platform metaverse skala kota pertama di Sulawesi — menggabungkan 3D WebGL, real-time multiplayer, dan data geospasial Kota Makassar dalam satu pengalaman imersif berbasis browser.' : "Makassar's first city-scale metaverse platform — combining 3D WebGL, real-time multiplayer, and geospatial city data into a single browser-based immersive experience.", badge: t('typeVR'), url: 'https://makaverse.makassarkota.go.id' },
+    { id: 'asistenvirtual', title: 'Lipsync Realtime Avatar AI', desc: lang === 'id' ? 'Aplikasi Conversational AI canggih berbasis web yang menggabungkan kecerdasan buatan mutakhir (Lipsync Realtime, Voice AI, LLM) dengan antarmuka visual yang memukau.' : 'Advanced web-based Conversational AI app combining cutting-edge AI (Lipsync Realtime, Voice AI, LLM) with stunning visual interfaces.', badge: 'TypeScript', url: 'https://asistenvirtual.ai' },
+    { id: 'malmora', title: 'Malmora (Reseller & Dropship)', desc: lang === 'id' ? 'Platform aplikasi reseller & dropship yang berfokus pada produk kebutuhan muslim-muslimah, memudahkan pengguna berjualan online tanpa memikirkan pengemasan dan pengiriman di wilayah Sulawesi & Indonesia Timur.' : 'Reseller & dropship app platform focused on Muslim lifestyle products, enabling users to sell online without handling packaging or shipping across Sulawesi and Eastern Indonesia.', badge: t('typeWeb'), url: 'https://malmora.com' },
+    { id: 'datasulsel', title: 'Portal Data Sulsel', desc: lang === 'id' ? 'Portal data terpadu untuk pengelolaan, monitoring, dan analisis statistik data keagamaan di seluruh wilayah Sulawesi Selatan secara real-time.' : 'Integrated data portal for real-time management, monitoring, and analysis of religious statistical data across South Sulawesi.', badge: 'PLpgSQL', url: 'https://datasulsel.com' },
+    { id: 'emailserver', title: 'Email Server Makassar Gov', desc: lang === 'id' ? 'Infrastruktur email cluster berbasis Mailcow yang mendukung lebih dari 200 domain pemerintah Kota Makassar dengan keamanan SPF/DKIM/DMARC dan high-availability setup.' : 'Mailcow-based email cluster infrastructure supporting 200+ Makassar government domains with SPF/DKIM/DMARC security hardening and high-availability configuration.', badge: t('typeInfra'), url: 'https://surat.makassarkota.go.id' },
+    { id: 'ppidparepare', title: 'PPID Kemenag Kota Parepare', desc: lang === 'id' ? 'Portal Resmi PPID Kemenag Kota Parepare untuk transparansi informasi publik, laporan kinerja, dan integrasi Google Gemini AI.' : 'Official PPID Kemenag Kota Parepare Portal for public information transparency, performance reports, and Google Gemini AI integration.', badge: 'TypeScript', url: 'https://ppid.kemenag.go.id/parepare' },
+    { id: 'helpdesk', title: 'Helpdesk Kota Makassar', desc: lang === 'id' ? 'Portal layanan warga Kota Makassar berbasis web untuk manajemen pengaduan publik, tracking tiket real-time, dan integrasi dengan unit kerja Pemkot Makassar.' : 'Citizen service portal for Makassar City enabling public complaint management, real-time ticket tracking, and integration across municipal work units.', badge: t('typeWeb'), url: 'https://helpdesk.makassarkota.go.id' },
+    { id: 'kegiatansulsel', title: 'Manajemen Kegiatan Sulsel', desc: lang === 'id' ? 'Sistem Manajemen Kehadiran dan Pendaftaran Peserta Kegiatan Sulawesi Selatan berbasis Next.js, Supabase, dan QR Code.' : 'South Sulawesi Activity Participant Registration and Attendance Management System based on Next.js, Supabase, and QR Code.', badge: 'TypeScript', url: 'https://kegiatansulsel.com' },
+    { id: 'virtualmuseum', title: 'Virtual Museum Makassar', desc: lang === 'id' ? 'Museum digital interaktif Kota Makassar dengan navigasi panorama 360°, galeri artefak 3D, dan tur audio-visual untuk pelestarian warisan budaya Sulawesi Selatan.' : 'Interactive digital museum of Makassar City featuring 360° panoramic navigation, 3D artifact galleries, and audio-visual tours for South Sulawesi cultural heritage preservation.', badge: t('typeVR'), url: 'https://dikemas.makassarkota.go.id/virtualtour' },
+    { id: 'kawansedarah', title: 'Kawan Sedarah (Blood Stock)', desc: lang === 'id' ? 'Command center platform monitoring stok darah real-time yang terintegrasi dengan Supabase.' : 'Command center platform for real-time blood stock monitoring integrated with Supabase.', badge: 'TypeScript', url: 'https://kawansedarah.com' },
+    { id: 'alharamvr', title: 'Al-Haram VR', desc: lang === 'id' ? 'Rekonstruksi virtual reality presisi tinggi dari Masjidil Haram dan Masjid Nabawi menggunakan Unity, dioptimalkan untuk headset VR dan mobile sebagai alat edukasi ibadah haji & umrah.' : 'High-fidelity virtual reality reconstruction of Al-Masjid Al-Haram and Al-Masjid An-Nabawi in Unity, optimized for VR headsets and mobile as a Hajj & Umrah educational tool.', badge: t('typeVR'), url: null },
+    { id: 'paralluta', title: 'Paralluta (Lalu Lintas)', desc: lang === 'id' ? 'Sistem informasi manajemen lalu lintas berbasis web untuk monitoring kondisi jalan, pencatatan pelanggaran, dan koordinasi petugas lapangan Kota Makassar.' : 'Web-based traffic management information system for road condition monitoring, violation recording, and field officer coordination across Makassar City.', badge: t('typeWeb'), url: null },
+    { id: 'sopsiber', title: 'SOP Pelaporan Insiden Siber', desc: lang === 'id' ? 'Dokumen SOP komprehensif dan protokol respons insiden siber yang diformulasikan untuk jaringan IT Pemerintah Kota Makassar, sesuai standar BSSN dan NIST Cybersecurity Framework.' : 'Comprehensive SOP documentation and cyber incident response protocols formulated for Makassar City Government IT networks, aligned with BSSN and NIST Cybersecurity Framework standards.', badge: t('typeSecurity'), url: null },
   ];
+
+  const formatName = (name) => {
+    return name.split(/[-._]/).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  };
+
+  const knownRepoNames = allProjects.map(p => p.id);
+
+  useEffect(() => {
+    const excludedRepos = ['syarfandi.github.io', 'MagiskOnWSA'];
+    fetch('https://api.github.com/users/syarfandi/repos?sort=updated&per_page=15')
+      .then(res => res.json())
+      .then(data => {
+        const filtered = data
+          .filter(repo => !knownRepoNames.includes(repo.name) && !excludedRepos.includes(repo.name))
+          .slice(0, 6)
+          .map(repo => ({ id: repo.name, title: formatName(repo.name), desc: repo.description || 'No description available.', badge: repo.language || 'Mixed', url: repo.html_url, isPublicRepo: true }));
+        setPublicRepos(filtered);
+        setLoading(false);
+      })
+      .catch(() => { setPublicRepos([]); setLoading(false); });
+  }, [lang]);
+
+  const combined = [...allProjects, ...publicRepos];
+
   return (
     <section id="portfolio" className="container">
       <h2 className="heading-secondary">{t('featured')} <span className="text-gradient">{t('projects')}</span></h2>
+
       <div className="portfolio-grid">
-        {projects.map((project, idx) => (
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: idx * 0.05 }} key={idx} className="portfolio-card glass">
-            <div className="card-header" style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <span className="badge">{project.type}</span>
-              <div style={{ color: 'var(--primary-color)' }}>{project.icon}</div>
+        {combined.map((item, idx) => (
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: idx * 0.03 }} key={item.id} className="portfolio-card glass">
+            <div className="card-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <span className="badge">{item.badge}</span>
             </div>
-            <h3 style={{ color: 'var(--text-primary)' }}>{project.title}</h3>
-            {project.link && (
-              <a href={"https://" + project.link} target="_blank" rel="noreferrer" className="project-link">{project.link} <ExternalLink size={16} /></a>
+            <h3 style={{ color: 'var(--text-primary)' }}>{item.title}</h3>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '1.5rem', flexGrow: 1, lineHeight: 1.7 }}>{item.desc}</p>
+            {item.url && (
+              <a href={item.url} target="_blank" rel="noreferrer" className="project-link">
+                {item.isPublicRepo ? t('viewRepo') : 'Lihat Aplikasi'} <ExternalLink size={16} />
+              </a>
             )}
           </motion.div>
         ))}
       </div>
+
+      {loading && <div style={{ textAlign: 'center', color: 'var(--text-secondary)', padding: '2rem' }}>{t('loadingRepos')}</div>}
+
       <style>{`
-        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
         @media (max-width: 1024px) {
-          .portfolio-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+          .portfolio-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
         }
         @media (max-width: 768px) {
           .portfolio-grid { grid-template-columns: 1fr; }
@@ -565,7 +605,7 @@ const PortfolioSection = () => {
         .portfolio-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); border-color: var(--primary-color); }
         .card-header { margin-bottom: 2rem; }
         .badge { background: rgba(30, 58, 138, 0.1); color: var(--primary-color); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
-        .portfolio-card h3 { font-size: 1.3rem; margin-bottom: 1.5rem; flex-grow: 1; font-weight: 700; }
+        .portfolio-card h3 { font-size: 1.3rem; margin-bottom: 1.5rem; font-weight: 700; }
         .project-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color); font-size: 0.95rem; font-weight: 700; transition: all 0.3s ease; }
         .project-link:hover { color: var(--accent-color); transform: translateX(5px); }
       `}</style>
@@ -573,79 +613,9 @@ const PortfolioSection = () => {
   );
 };
 
-const GithubSection = () => {
-  const { t, lang } = useTheme();
-  const [repos, setRepos] = useState([]);
-  const [loading, setLoading] = useState(true);
+const GithubSection = () => null;
 
-  const formatName = (name) => {
-    const mapping = {
-      'asistenvirtual': 'Lipsync Realtime Avatar AI',
-      'datasulsel': 'Portal Data Sulsel',
-      'kawansedarah': 'Kawan Sedarah (Blood Stock)',
-      'getkasir': 'GetKasir Enterprise POS',
-      'kegiatansulsel': 'Manajemen Kegiatan Sulsel',
-      'ppidparepare': 'PPID Kemenag Kota Parepare',
-      'syarfandi.github.io': 'Professional Portfolio'
-    };
-    if (mapping[name]) return mapping[name];
-    return name.split(/[-._]/).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-  };
 
-  const privateRepos = [
-    { id: 'private-asistenvirtual', name: 'asistenvirtual', url: 'https://asistenvirtual.ai', description: lang === 'id' ? 'Aplikasi Conversational AI canggih berbasis web yang menggabungkan kecerdasan buatan mutakhir (Lipsync Realtime, Voice AI, LLM) dengan antarmuka visual yang memukau.' : 'Advanced web-based Conversational AI app combining cutting-edge AI (Lipsync Realtime, Voice AI, LLM) with stunning visual interfaces.', language: 'TypeScript', stargazers_count: 0, forks_count: 0, isPrivate: true },
-    { id: 'private-datasulsel', name: 'datasulsel', url: 'https://datasulsel.com', description: lang === 'id' ? 'Portal data terpadu untuk pengelolaan, monitoring, dan analisis statistik data keagamaan di seluruh wilayah Sulawesi Selatan secara real-time.' : 'Integrated data portal for real-time management, monitoring, and analysis of religious statistical data across South Sulawesi.', language: 'PLpgSQL', stargazers_count: 0, forks_count: 0, isPrivate: true },
-    { id: 'private-kawansedarah', name: 'kawansedarah', url: 'https://kawansedarah.com', description: lang === 'id' ? 'Command center platform monitoring stok darah real-time yang terintegrasi dengan Supabase.' : 'Command center platform for real-time blood stock monitoring integrated with Supabase.', language: 'TypeScript', stargazers_count: 0, forks_count: 0, isPrivate: true },
-    { id: 'private-getkasir', name: 'getkasir', url: 'https://getkasir.com', description: lang === 'id' ? 'Ekosistem retail raksasa kelas Enterprise yang menggabungkan kecanggihan AI, keamanan biometrik, dan skalabilitas cloud (100+ Modul).' : 'Enterprise-class giant retail ecosystem combining AI sophistication, biometric security, and cloud scalability (100+ Modules).', language: 'JavaScript', stargazers_count: 0, forks_count: 0, isPrivate: true },
-    { id: 'private-kegiatansulsel', name: 'kegiatansulsel', url: 'https://kegiatansulsel.com', description: lang === 'id' ? 'Sistem Manajemen Kehadiran dan Pendaftaran Peserta Kegiatan Sulawesi Selatan berbasis Next.js, Supabase, dan QR Code.' : 'South Sulawesi Activity Participant Registration and Attendance Management System based on Next.js, Supabase, and QR Code.', language: 'TypeScript', stargazers_count: 0, forks_count: 0, isPrivate: true },
-    { id: 'private-ppidparepare', name: 'ppidparepare', url: 'https://ppid.kemenag.go.id/parepare', description: lang === 'id' ? 'Portal Resmi PPID Kemenag Kota Parepare untuk transparansi informasi publik, laporan kinerja, dan integrasi Google Gemini AI.' : 'Official PPID Kemenag Kota Parepare Portal for public information transparency, performance reports, and Google Gemini AI integration.', language: 'TypeScript', stargazers_count: 0, forks_count: 0, isPrivate: true }
-  ];
-
-  useEffect(() => {
-    const excludedRepos = ['syarfandi.github.io', 'MagiskOnWSA'];
-    fetch('https://api.github.com/users/syarfandi/repos?sort=updated&per_page=15')
-      .then(res => res.json())
-      .then(data => {
-        const publicRepos = data
-          .filter(repo =>
-            !privateRepos.some(p => p.name === repo.name) &&
-            !excludedRepos.includes(repo.name)
-          )
-          .slice(0, 6)
-          .map(repo => ({ ...repo, isPrivate: false }));
-        setRepos([...privateRepos, ...publicRepos]);
-        setLoading(false);
-      })
-      .catch(() => { setRepos(privateRepos); setLoading(false); });
-  }, [lang]);
-
-  return (
-    <section id="github" className="container">
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', marginBottom: '3rem' }}>
-        <Github size={40} color="var(--primary-color)" /><h2 className="heading-secondary" style={{ marginBottom: 0 }}>{t('openSource')} <span className="text-gradient">{t('contributions')}</span></h2>
-      </div>
-      {loading ? (<div style={{ textAlign: 'center', color: 'var(--text-secondary)' }}>{t('loadingRepos')}</div>) : (
-        <div className="portfolio-grid">
-          {repos.map((repo, idx) => (
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: idx * 0.1 }} key={repo.id} className="portfolio-card glass">
-              <div className="card-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span className="badge" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}><Code size={14} /> {repo.language || 'Mixed'}</span>
-                <div style={{ display: 'flex', gap: '1rem', color: 'var(--text-secondary)', fontSize: '0.9rem' }}><span style={{ display: 'flex', alignItems: 'center', gap: '0.2rem' }}><Star size={14} /> {repo.stargazers_count}</span><span style={{ display: 'flex', alignItems: 'center', gap: '0.2rem' }}><GitFork size={14} /> {repo.forks_count}</span></div>
-              </div>
-              <h3 style={{ wordBreak: 'break-word', fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--text-primary)' }}>{formatName(repo.name)}</h3>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '1.5rem', flexGrow: 1 }}>{repo.description || 'No description available.'}</p>
-              {repo.isPrivate ? (
-                <a href={repo.url} target="_blank" rel="noreferrer" className="project-link">Lihat Aplikasi <ExternalLink size={16} /></a>
-              ) : (
-                <a href={repo.html_url} target="_blank" rel="noreferrer" className="project-link">{t('viewRepo')} <ExternalLink size={16} /></a>
-              )}
-            </motion.div>
-          ))}
-        </div>
-      )}
-    </section>
-  );
-};
 
 const SkillsSection = () => {
   const { t } = useTheme();
