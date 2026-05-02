@@ -18,8 +18,10 @@ const translations = {
     education: "Pendidikan",
     yearsExp: "Tahun Pengalaman",
     projectsDelivered: "Proyek Selesai",
-    publicSector: "Pakar Sektor Publik",
     commitment: "Komitmen",
+    publicSector: "Pakar Sektor Publik",
+    retailIndustry: "Pakar Industri Retail",
+    bizSector: "Biz",
     professional: "Perjalanan",
     journey: "Profesional",
     present: "Sekarang",
@@ -108,8 +110,10 @@ const translations = {
     education: "Education",
     yearsExp: "Years Experience",
     projectsDelivered: "Projects Delivered",
-    publicSector: "Public Sector Expert",
     commitment: "Commitment",
+    publicSector: "Public Sector Expert",
+    retailIndustry: "Retail Industry Expert",
+    bizSector: "Biz",
     professional: "Professional",
     journey: "Journey",
     present: "Present",
@@ -403,8 +407,9 @@ const AboutSection = () => {
           <div className="stats-grid">
             <div className="stat-card glass"><h3 className="text-gradient">8+</h3><p>{t('yearsExp')}</p></div>
             <div className="stat-card glass"><h3 className="text-gradient">20+</h3><p>{t('projectsDelivered')}</p></div>
-            <div className="stat-card glass"><h3 className="text-gradient">Gov</h3><p>{t('publicSector')}</p></div>
             <div className="stat-card glass"><h3 className="text-gradient">100%</h3><p>{t('commitment')}</p></div>
+            <div className="stat-card glass"><h3 className="text-gradient">Gov</h3><p>{t('publicSector')}</p></div>
+            <div className="stat-card glass"><h3 className="text-gradient">{t('bizSector')}</h3><p>{t('retailIndustry')}</p></div>
           </div>
         </div>
         <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid var(--glass-border)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
@@ -426,7 +431,7 @@ const AboutSection = () => {
         .about-card { padding: 4rem; }
         .about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center; }
         .info-item { display: flex; align-items: flex-start; gap: 1rem; }
-        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; }
         .stat-card { padding: 2rem; text-align: center; transition: transform 0.3s ease; }
         .stat-card:hover { transform: translateY(-5px); }
         .stat-card h3 { font-size: 2.5rem; margin-bottom: 0.5rem; }
@@ -496,7 +501,7 @@ const PortfolioSection = () => {
   const { t } = useTheme();
   const projects = [
     { title: "Makaverse (Makassar Metaverse)", link: "makaverse.makassarkota.go.id", type: t('typeVR'), icon: <Layout size={20}/> },
-    { title: "Virtual Tour Lorong Wisata", link: "malmora.com", type: t('typeVR'), icon: <Monitor size={20}/> },
+    { title: "Malmora (Reseller & Dropship)", link: "malmora.com", type: t('typeWeb'), icon: <Layout size={20}/> },
     { title: "Virtual Museum Makassar", link: "dikemas.makassarkota.go.id/virtualtour", type: t('typeVR'), icon: <Monitor size={20}/> },
     { title: "Al-Haram VR", link: null, type: t('typeVR'), icon: <Layout size={20}/> },
     { title: "Email Server Makassar Gov", link: "surat.makassarkota.go.id", type: t('typeInfra'), icon: <Cpu size={20}/> },
