@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, ExternalLink, Download, ChevronDown, Award, Briefc
 
 const translations = {
   id: {
-    heroRole: "IT Professional & Developer",
+    heroRole: "IT Professional, DevSecOps & Developer",
     heroGreeting: "Hai, Saya",
     heroDesc: "Bersemangat dalam membangun solusi digital yang berdampak, membina kerja sama tim yang solid, dan menghadirkan inovasi layanan publik yang prima.",
     hireMe: "Rekrut Saya",
@@ -44,7 +44,7 @@ const translations = {
     openSource: "Karya Kode",
     contributions: "& Inovasi Digital",
     loadingRepos: "Memuat repositori...",
-    
+
     // Experiences
     exp9Title: "Pranata Komputer (ASN)",
     exp9Company: "Kanwil Kementerian Agama Prov. Sulawesi Selatan",
@@ -53,7 +53,7 @@ const translations = {
     exp1Title: "Tenaga Ahli DevSecOps & Infrastruktur",
     exp1Company: "Dinas Kominfo & Disbud Kota Makassar",
     exp1Desc: "Mengelola infrastruktur Makassar Metaverse (Makaverse), Virtual Tour Lorong Wisata, Virtual Museum Makassar, dan server email pemerintah.",
-    
+
     exp7Title: "SQA & DevSecOps Engineer",
     exp7Company: "Malmora (Startup)",
     exp7Desc: "Platform reseller & dropship produk muslim yang berfokus di Sulawesi dan Indonesia Timur, memudahkan pengguna berjualan online tanpa ribet logistik.",
@@ -61,11 +61,11 @@ const translations = {
     exp8Title: "Co-Founder",
     exp8Company: "GetKasir (Startup)",
     exp8Desc: "Memimpin visi strategis, pengembangan bisnis, dan arsitektur teknologi untuk ekosistem retail enterprise dengan 100+ modul.",
-    
+
     exp2Title: "Staff Admin",
     exp2Company: "PT. Hammer Konstruksi Indonesia",
     exp2Desc: "Manajemen data operasional perusahaan, dokumentasi mitra strategis, dan koordinasi teknis lapangan untuk proyek konstruksi.",
-    
+
     exp3Title: "Staff Admin HD/ODC",
     exp3Company: "PT. Mutiara Jaya Perkasa",
     exp3Desc: "Pemeliharaan infrastruktur jaringan, troubleshooting sistem komputer, dan perancangan denah fiber optik menggunakan AutoCAD.",
@@ -87,7 +87,7 @@ const translations = {
     typeWeb: "Web & Enterprise",
     typeInfra: "Infrastruktur IT",
     typeSecurity: "Keamanan Siber",
-    
+
     // Certificates details
     certBSSN: "National Cyber Exercise #10 - BSSN",
     certSamsung: "Winner Top 10 - Samsung Indonesia Next Apps 4.0 Gear VR Challenge",
@@ -96,7 +96,7 @@ const translations = {
     certCityApp: "Microsoft CityApp Appathon Participant"
   },
   en: {
-    heroRole: "IT Professional & Developer",
+    heroRole: "IT Professional, DevSecOps & Developer",
     heroGreeting: "Hi, I'm",
     heroDesc: "Passionate about building impactful digital solutions, fostering solid teamwork, and delivering excellent public service innovations.",
     hireMe: "Hire Me",
@@ -145,7 +145,7 @@ const translations = {
     exp1Title: "DevSecOps & Infrastructure Expert",
     exp1Company: "Dinas Kominfo & Disbud Makassar",
     exp1Desc: "Managing infrastructure for Makassar Metaverse (Makaverse), Virtual Tour Lorong Wisata, Virtual Museum Makassar, and gov email servers.",
-    
+
     exp7Title: "SQA & DevSecOps Engineer",
     exp7Company: "Malmora (Startup)",
     exp7Desc: "Reseller & dropship platform for Muslim products in Sulawesi and Eastern Indonesia, simplifying online selling by handling logistics.",
@@ -153,11 +153,11 @@ const translations = {
     exp8Title: "Co-Founder",
     exp8Company: "GetKasir (Startup)",
     exp8Desc: "Leading strategic vision, business development, and technology architecture for an enterprise retail ecosystem with 100+ modules.",
-    
+
     exp2Title: "Admin Staff",
     exp2Company: "PT. Hammer Konstruksi Indonesia",
     exp2Desc: "Management of company operational data, strategic partner documentation, and field technical coordination for construction projects.",
-    
+
     exp3Title: "Admin Staff HD/ODC",
     exp3Company: "PT. Mutiara Jaya Perkasa",
     exp3Desc: "Maintenance of network infrastructure, computer system troubleshooting, and fiber optic plan design using AutoCAD.",
@@ -277,7 +277,7 @@ const HeroSection = () => {
       <div className="bg-orb orb-2"></div>
       <motion.div style={{ y, opacity }} className="container hero-content">
         <div className="hero-grid">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -286,7 +286,7 @@ const HeroSection = () => {
             <div className="image-stack">
               <div className="image-bg-blob"></div>
               <img src="/Andi.png" alt='Syarfandi "Andi" Achmad' className="hero-img-main" />
-              <motion.div 
+              <motion.div
                 animate={{ y: [0, -15, 0] }}
                 transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
                 className="floating-card glass"
@@ -297,15 +297,15 @@ const HeroSection = () => {
             </div>
           </motion.div>
 
-          <motion.div 
-            initial={{ opacity: 0, x: 30 }} 
-            animate={{ opacity: 1, x: 0 }} 
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="hero-text-container"
           >
             <h2 className="hero-subheading">{t('heroRole')}</h2>
             <h1 className="hero-title">
-              {t('heroGreeting')} <br/>
+              {t('heroGreeting')} <br />
               <span className="text-gradient">Syarfandi "Andi" Achmad</span>
             </h1>
             <p className="hero-description">{t('heroDesc')}</p>
@@ -316,10 +316,10 @@ const HeroSection = () => {
               </button>
             </div>
 
-            <motion.div 
-              initial={false} 
-              animate={{ height: showResumeModal ? 'auto' : 0, opacity: showResumeModal ? 1 : 0 }} 
-              transition={{ duration: 0.4, ease: "easeInOut" }} 
+            <motion.div
+              initial={false}
+              animate={{ height: showResumeModal ? 'auto' : 0, opacity: showResumeModal ? 1 : 0 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
               className="resume-modal-inline"
             >
               <div className="glass resume-options-grid">
@@ -500,14 +500,14 @@ const ExperienceSection = () => {
 const PortfolioSection = () => {
   const { t } = useTheme();
   const projects = [
-    { title: "Makaverse (Makassar Metaverse)", link: "makaverse.makassarkota.go.id", type: t('typeVR'), icon: <Layout size={20}/> },
-    { title: "Malmora (Reseller & Dropship)", link: "malmora.com", type: t('typeWeb'), icon: <Layout size={20}/> },
-    { title: "Virtual Museum Makassar", link: "dikemas.makassarkota.go.id/virtualtour", type: t('typeVR'), icon: <Monitor size={20}/> },
-    { title: "Al-Haram VR", link: null, type: t('typeVR'), icon: <Layout size={20}/> },
-    { title: "Email Server Makassar Gov", link: "surat.makassarkota.go.id", type: t('typeInfra'), icon: <Cpu size={20}/> },
-    { title: "Helpdesk Kota Makassar", link: "helpdesk.makassarkota.go.id", type: t('typeWeb'), icon: <Code size={20}/> },
-    { title: "Paralluta (Lalu Lintas)", link: null, type: t('typeWeb'), icon: <Code size={20}/> },
-    { title: "SOP Pelaporan Insiden Siber", link: null, type: t('typeSecurity'), icon: <Shield size={20}/> },
+    { title: "Makaverse (Makassar Metaverse)", link: "makaverse.makassarkota.go.id", type: t('typeVR'), icon: <Layout size={20} /> },
+    { title: "Malmora (Reseller & Dropship)", link: "malmora.com", type: t('typeWeb'), icon: <Layout size={20} /> },
+    { title: "Virtual Museum Makassar", link: "dikemas.makassarkota.go.id/virtualtour", type: t('typeVR'), icon: <Monitor size={20} /> },
+    { title: "Al-Haram VR", link: null, type: t('typeVR'), icon: <Layout size={20} /> },
+    { title: "Email Server Makassar Gov", link: "surat.makassarkota.go.id", type: t('typeInfra'), icon: <Cpu size={20} /> },
+    { title: "Helpdesk Kota Makassar", link: "helpdesk.makassarkota.go.id", type: t('typeWeb'), icon: <Code size={20} /> },
+    { title: "Paralluta (Lalu Lintas)", link: null, type: t('typeWeb'), icon: <Code size={20} /> },
+    { title: "SOP Pelaporan Insiden Siber", link: null, type: t('typeSecurity'), icon: <Shield size={20} /> },
   ];
   return (
     <section id="portfolio" className="container">
@@ -577,16 +577,16 @@ const GithubSection = () => {
     const excludedRepos = ['syarfandi.github.io', 'MagiskOnWSA'];
     fetch('https://api.github.com/users/syarfandi/repos?sort=updated&per_page=15')
       .then(res => res.json())
-      .then(data => { 
+      .then(data => {
         const publicRepos = data
-          .filter(repo => 
-            !privateRepos.some(p => p.name === repo.name) && 
+          .filter(repo =>
+            !privateRepos.some(p => p.name === repo.name) &&
             !excludedRepos.includes(repo.name)
           )
           .slice(0, 6)
           .map(repo => ({ ...repo, isPrivate: false }));
-        setRepos([...privateRepos, ...publicRepos]); 
-        setLoading(false); 
+        setRepos([...privateRepos, ...publicRepos]);
+        setLoading(false);
       })
       .catch(() => { setRepos(privateRepos); setLoading(false); });
   }, [lang]);
@@ -664,10 +664,10 @@ const SkillsSection = () => {
 const CertificatesSection = () => {
   const { t } = useTheme();
   const certs = [
-    { title: t('certBSSN'), issuer: "BSSN", date: "2024", icon: <Shield size={32}/> },
-    { title: t('certSamsung'), issuer: "Samsung Indonesia & Dicoding", date: "2017", icon: <Award size={32}/> },
-    { title: t('certEnglish'), issuer: "Access English School", date: "2018", icon: <Languages size={32}/> },
-    { title: t('certBlender'), issuer: "Blender Army Makassar", date: "2014", icon: <Cpu size={32}/> },
+    { title: t('certBSSN'), issuer: "BSSN", date: "2024", icon: <Shield size={32} /> },
+    { title: t('certSamsung'), issuer: "Samsung Indonesia & Dicoding", date: "2017", icon: <Award size={32} /> },
+    { title: t('certEnglish'), issuer: "Access English School", date: "2018", icon: <Languages size={32} /> },
+    { title: t('certBlender'), issuer: "Blender Army Makassar", date: "2014", icon: <Cpu size={32} /> },
   ];
   return (
     <section id="certificates" className="container">
