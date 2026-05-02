@@ -8,7 +8,9 @@ const translations = {
     heroGreeting: "Hai, Saya",
     heroDesc: "Bersemangat dalam membangun solusi digital yang berdampak, membina kerja sama tim yang solid, dan menghadirkan inovasi layanan publik yang prima.",
     hireMe: "Rekrut Saya",
-    resume: "Resume DevOps (ID)",
+    resume: "Pilih Resume",
+    selectResume: "Pilih Versi Resume",
+    close: "Tutup",
     aboutMe: "Tentang",
     me: "Saya",
     aboutDesc: "Saya memiliki semangat alami untuk bekerja dalam tim untuk mencapai tim yang solid dan berkarakter. Memiliki kemampuan komunikasi yang baik, dapat bekerja dengan cepat dan efisien, serta selalu berkomitmen untuk memberikan pelayanan terbaik.",
@@ -96,7 +98,9 @@ const translations = {
     heroGreeting: "Hi, I'm",
     heroDesc: "Passionate about building impactful digital solutions, fostering solid teamwork, and delivering excellent public service innovations.",
     hireMe: "Hire Me",
-    resume: "Resume DevOps",
+    resume: "Select Resume",
+    selectResume: "Select Resume Version",
+    close: "Close",
     aboutMe: "About",
     me: "Me",
     aboutDesc: "I have a natural passion for working in a team to achieve a solid and character-driven dynamic. I possess good communication skills, can work quickly and efficiently, and am always committed to providing the best service.",
@@ -247,6 +251,22 @@ const HeroSection = () => {
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  const [showResumeModal, setShowResumeModal] = useState(false);
+
+  const resumeOptions = [
+    { title: "DevSecOps Engineer", path: "/devops/" },
+    { title: "Cloud Engineer", path: "/cloud/" },
+    { title: "Frontend Developer", path: "/frontend/" },
+    { title: "Backend Developer", path: "/backend/" },
+    { title: "Fullstack Developer", path: "/fullstack/" },
+    { title: "Mobile Developer", path: "/mobile/" },
+    { title: "Data Scientist", path: "/data-scientist/" },
+    { title: "Data Analyst", path: "/data-analyst/" },
+    { title: "System Administrator", path: "/sysadmin/" },
+    { title: "Data Engineer", path: "/data-engineer/" },
+    { title: "Product Manager", path: "/product-manager/" }
+  ];
+
   return (
     <section ref={ref} className="hero-section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
       <div className="bg-orb orb-1"></div>
@@ -258,12 +278,25 @@ const HeroSection = () => {
           <p style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto 2.5rem' }}>{t('heroDesc')}</p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="#contact" className="btn btn-primary glass">{t('hireMe')}</a>
-            <a href="/devops/" target="_blank" className="btn btn-outline glass" rel="noreferrer">
-              <FileText size={20} style={{ marginRight: '0.5rem', color: 'var(--text-primary)' }} /> <span style={{ color: 'var(--text-primary)' }}>{t('resume')}</span>
-            </a>
+            <button onClick={() => setShowResumeModal(!showResumeModal)} className="btn btn-outline glass">
+              <span style={{ color: 'var(--text-primary)' }}>{t('resume')}</span>
+            </button>
           </div>
+
+          <motion.div initial={false} animate={{ height: showResumeModal ? 'auto' : 0, opacity: showResumeModal ? 1 : 0 }} transition={{ duration: 0.4, ease: "easeInOut" }} style={{ overflow: 'hidden', marginTop: '1.5rem' }}>
+            <div className="glass" style={{ maxWidth: '800px', margin: '0 auto', padding: '1.5rem', borderRadius: '24px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '0.5rem' }}>
+                {resumeOptions.map((opt, i) => (
+                  <a key={i} href={opt.path} target="_blank" rel="noreferrer" className="glass resume-opt-btn" style={{ textDecoration: 'none', padding: '1rem', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.2s ease', textAlign: 'center' }}>
+                    <span style={{ color: 'var(--text-primary)', fontSize: '0.85rem', fontWeight: 600 }}>{opt.title}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
       </motion.div>
+
       <motion.div animate={{ y: [0, 10, 0] }} transition={{ repeat: Infinity, duration: 2 }} style={{ position: 'absolute', bottom: '2rem', left: '50%', transform: 'translateX(-50%)', opacity: 0.5, color: 'var(--text-primary)' }}>
         <ChevronDown size={32} />
       </motion.div>
@@ -276,6 +309,9 @@ const HeroSection = () => {
         .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4); }
         .btn-outline { border: 1px solid var(--glass-border); }
         .btn-outline:hover { background: var(--surface-color); }
+        .resume-opt-btn:hover { background: var(--primary-color) !important; transform: scale(1.02); }
+        .resume-opt-btn:hover span { color: white !important; }
+        .resume-opt-btn:hover svg { color: white !important; }
       `}</style>
     </section>
   );
