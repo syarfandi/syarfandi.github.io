@@ -302,6 +302,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="hero-text-container"
+            style={{ marginTop: '-13rem' }}
           >
             <h2 className="hero-subheading">{t('heroRole')}</h2>
             <h1 className="hero-title">
