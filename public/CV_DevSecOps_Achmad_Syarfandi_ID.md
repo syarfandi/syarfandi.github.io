@@ -33,8 +33,8 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Mengelola** lingkungan server on-prem yang kompleks dan infrastruktur untuk lebih dari **200+ domain satuan kerja** di seluruh lingkungan pemerintah kota.
 - **Mengamankan** aset digital pemerintah dengan memimpin tim respon teknis selama **BSSN National Cyber Exercise**, mempertahankan uptime 100% selama simulasi serangan.
 
-### Lead DevSecOps Engineer | GetKasir (Startup Enterprise POS)
-*2019 – Sekarang | Remote/Berbasis Proyek*
+### Co-Founder | GetKasir (Startup Enterprise POS)
+*2019 – Sekarang| Remote/Berbasis Proyek*
 - **Menskalakan** infrastruktur cloud untuk **ekosistem retail enterprise dengan 100+ modul**, mendukung ribuan merchant di seluruh Indonesia.
 - **Mengintegrasikan** protokol keamanan biometrik dan sistem verifikasi identitas otomatis ke dalam lingkungan produksi.
 - **Mengoptimalkan** klaster database PostgreSQL dan instance Supabase untuk menangani transaksi retail konkurensi tinggi selama periode puncak.
@@ -46,10 +46,16 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Merampingkan** siklus rilis aplikasi mobile, memastikan pengiriman fitur yang cepat sambil tetap mempertahankan standar kualitas yang ketat.
 - **Mengorkestrasi** lingkungan staging dan produksi cloud, mengurangi biaya infrastruktur sebesar 25% melalui optimasi sumber daya dan pemanfaatan serverless.
 
+### Sekretaris | Masjid Nurul Huda
+*2021 – 2026 | Makassar, Indonesia*
+- **Mengelola** administrasi organisasi dan mengoordinasikan pengurus periode 2021-2026.
+- **Mengoptimalkan** manajemen aset komunitas dan dokumentasi digital untuk operasional masjid.
+
+
 ---
 
 ## Proyek Teknis
-- **Asisten Virtual AI**: Mengembangkan aplikasi Conversational AI yang mengintegrasikan LLM, Voice AI, dan Simli untuk interaksi pengguna yang mendalam.
+- **Lipsync Realtime Avatar AI**: Mengembangkan aplikasi Conversational AI yang mengintegrasikan LLM, Voice AI, dan Simli untuk interaksi pengguna yang mendalam.
 - **Makaverse (Makassar Metaverse)**: Merancang infrastruktur cloud high-availability untuk platform metaverse unggulan pemerintah kota.
 - **Gov Email Cluster**: Membangun dan mengamankan infrastruktur email berbasis Mailcow yang mendukung lebih dari 200 domain satuan kerja.
 - **Portal Transparansi PPID Parepare**: Membangun portal transparansi resmi dengan integrasi Google Gemini AI untuk keterbukaan informasi publik.

@@ -1,16 +1,16 @@
 # Syarfandi "Andi" Achmad
-**DevSecOps Engineer | Cloud Infrastructure & Security Specialist**
+**Cloud Engineer | Cloud Architecture & Infrastructure Specialist**
 Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 [Portfolio: syarfandi.github.io](https://syarfandi.github.io) | [LinkedIn](https://linkedin.com/in/syarfandi)
 
 ---
 
 ## Professional Summary
-Dynamic **DevSecOps Engineer** with 5+ years of experience in architecting high-performance **cloud server and on-premise server** ecosystems and self-healing infrastructure. Expert at bridging development and security through **Kubernetes** orchestration and **Terraform** automation. With a strong commitment to **Zero Trust** principles and security-as-code, I help global organizations scale rapidly without compromising system integrity. A proactive leader in **asynchronous remote teams**, dedicated to delivering operational excellence and hardening digital assets against modern threats.
+Dynamic **Cloud Engineer** with 8+ years of experience in architecting high-performance **cloud and on-premise server** ecosystems and scalable infrastructure. Expert at designing and implementing robust cloud solutions using **AWS, GCP**, and **Kubernetes**. Dedicated to delivering operational excellence through automated **Terraform** workflows and cloud-native optimizations. A proactive leader in **asynchronous remote teams**, focused on driving digital transformation and maximizing cloud ROI for global organizations.
 
 ## Core Technical Competencies
-- **Infrastructure & Orchestration**: Kubernetes (K8s), Terraform (IaC), Docker, Helm, AWS/GCP, Vercel/Netlify, Linux System Administration.
-- **Security & Compliance**: DevSecOps (SAST/DAST), Zero Trust Architecture principles, BSSN Incident Response, Serverless Security.
+- **Infrastructure & Orchestration**: Kubernetes (K8s), Terraform (IaC), Docker, Helm, AWS/GCP, Vercel/Netlify/Firebase, Linux System Administration.
+- **Cloud Strategy & FinOps**: Cloud Migration, Multi-cloud Architecture, Cost Optimization (FinOps), Cloud Governance, PaaS/SaaS Integration.
 - **CI/CD & Automation**: GitHub Actions, GitLab CI, Jenkins, PM2, Python/Bash Scripting.
 - **Data & Middleware**: Supabase, PostgreSQL (Optimization & Scaling), RESTful API Architecture, Redis.
 - **Soft Skills**: Asynchronous Collaboration, Technical Writing, Remote Team Leadership, Strategic Planning.
@@ -19,14 +19,14 @@ Dynamic **DevSecOps Engineer** with 5+ years of experience in architecting high-
 
 ## Professional Experience
 
-### Computer Specialist (Civil Servant) | Ministry of Religious Affairs (Regional Office)
+### Cloud Infrastructure Lead (Civil Servant) | Ministry of Religious Affairs (Regional Office)
 *2025 – Present | Makassar, Indonesia*
 - **Spearheaded** the digital transformation of regional religious services, migrating legacy systems to modern cloud architectures.
 - **Orchestrated** the regional data infrastructure (**Data Sulsel**), enabling real-time statistical analysis for over 9 million residents.
 - **Strengthened** organizational security posture by implementing automated compliance checks and standardized incident response protocols.
 - **Automated** internal reporting workflows, reducing manual data processing time by 60% through custom integration scripts.
 
-### DevSecOps & Infrastructure Expert | Department of Communication & Informatics (Diskominfo)
+### Cloud Solution Architect | Department of Communication & Informatics (Diskominfo)
 *2023 – 2025 | Makassar, Indonesia*
 - **Architected** the high-availability infrastructure for **Makassar Metaverse (Makaverse)** and **Virtual Museum Makassar**, handling peak traffic of thousands of concurrent users.
 - **Engineered** a secure and resilient government email cluster using **Mailcow**, ensuring 99.99% availability and robust anti-spam/security filtering.
@@ -36,11 +36,11 @@ Dynamic **DevSecOps Engineer** with 5+ years of experience in architecting high-
 ### Co-Founder | GetKasir (Enterprise POS Startup)
 *2019 – Present| Remote/Project-based*
 - **Scaled** the cloud infrastructure for a massive **100+ module enterprise retail ecosystem**, supporting thousands of merchants nationwide.
-- **Integrated** biometric security protocols and automated identity verification systems into the production environment.
+- **Implemented** automated cloud backup and recovery strategies, ensuring 99.9% data durability.
 - **Optimized** PostgreSQL database clusters and Supabase instances to handle high-concurrency retail transactions during peak periods.
 - **Standardized** technical documentation for infrastructure scaling and disaster recovery, enabling seamless asynchronous collaboration.
 
-### SQA & DevSecOps Engineer | Malmora (Startup)
+### SQA & Cloud Infrastructure Engineer | Malmora (Startup)
 *2020 – 2023 | Remote*
 - **Automated** full-stack testing frameworks and CI/CD pipelines for a high-scale **Mobile Marketplace Reseller** platform.
 - **Streamlined** mobile app release cycles, ensuring rapid delivery of features while maintaining rigorous quality standards.
@@ -73,8 +73,8 @@ Dynamic **DevSecOps Engineer** with 5+ years of experience in architecting high-
 ---
 
 ## Global Market Competitiveness (Keywords for 2026+)
-To stay competitive in the global DevSecOps market, I am actively implementing and refining:
-- **Zero Trust Architecture**: Identity-aware proxies, micro-segmentation, and "Never Trust, Always Verify" principles.
-- **Serverless Security**: Securing AWS Lambda/Cloud Functions, API Gateway throttling, and automated IAM least-privilege auditing.
-- **GitOps**: Using ArgoCD/Flux for automated infrastructure synchronization.
-- **eBPF Security**: Deep kernel-level observability and security monitoring.
+To stay competitive in the global Cloud Engineering market, I am actively implementing and refining:
+- **Cloud FinOps**: Implementing real-time cost monitoring, budget alerts, and automated resource right-sizing to maximize ROI.
+- **Multi-Cloud Strategy**: Architecting portable solutions across AWS, GCP, and Azure to avoid vendor lock-in and enhance resilience.
+- **Serverless Evolution**: Leveraging AWS Lambda, GCP Cloud Run, and Event-driven architectures for high-scale, low-maintenance systems.
+- **Cloud Governance**: Enforcing compliance-as-code and automated IAM auditing to maintain security at scale.

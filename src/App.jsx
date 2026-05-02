@@ -54,17 +54,17 @@ const translations = {
     
     exp7Title: "SQA & DevSecOps Engineer",
     exp7Company: "Malmora (Startup)",
-    exp7Desc: "Mengelola DevSecOps dan Software Quality Assurance (SQA) untuk aplikasi mobile marketplace reseller dan toko online.",
+    exp7Desc: "Platform reseller & dropship produk muslim yang berfokus di Sulawesi dan Indonesia Timur, memudahkan pengguna berjualan online tanpa ribet logistik.",
 
-    exp8Title: "Lead DevSecOps Engineer",
+    exp8Title: "Co-Founder",
     exp8Company: "GetKasir (Startup)",
-    exp8Desc: "Merancang infrastruktur cloud untuk ekosistem retail enterprise dengan 100+ modul.",
+    exp8Desc: "Memimpin visi strategis, pengembangan bisnis, dan arsitektur teknologi untuk ekosistem retail enterprise dengan 100+ modul.",
     
-    exp2Title: "Senior Staff Admin",
+    exp2Title: "Staff Admin",
     exp2Company: "PT. Hammer Konstruksi Indonesia",
     exp2Desc: "Manajemen data operasional perusahaan, dokumentasi mitra strategis, dan koordinasi teknis lapangan untuk proyek konstruksi.",
     
-    exp3Title: "Senior Staff Admin HD/ODC",
+    exp3Title: "Staff Admin HD/ODC",
     exp3Company: "PT. Mutiara Jaya Perkasa",
     exp3Desc: "Pemeliharaan infrastruktur jaringan, troubleshooting sistem komputer, dan perancangan denah fiber optik menggunakan AutoCAD.",
 
@@ -72,9 +72,9 @@ const translations = {
     exp4Company: "Self-Employed",
     exp4Desc: "Mengembangkan berbagai aplikasi interaktif 3D (Al-Haram VR, BSD City VR, Zoo VR) dan memenangkan Samsung Indonesia Next Apps 4.0 Challenge.",
 
-    exp5Title: "Sekretaris Umum",
-    exp5Company: "Masjid Nurul Huda Makassar",
-    exp5Desc: "Mengelola administrasi organisasi, koordinasi pengurus periode 2021-2024, dan optimalisasi manajemen aset komunitas.",
+    exp5Title: "Sekretaris",
+    exp5Company: "Masjid Nurul Huda",
+    exp5Desc: "Mengelola administrasi organisasi, koordinasi pengurus periode 2021-2026, dan optimalisasi manajemen aset komunitas.",
 
     exp6Title: "Badan Pengurus Organisasi",
     exp6Company: "EXOMATIK Study Club",
@@ -144,17 +144,17 @@ const translations = {
     
     exp7Title: "SQA & DevSecOps Engineer",
     exp7Company: "Malmora (Startup)",
-    exp7Desc: "Managing DevSecOps and SQA for mobile marketplace reseller and online shop applications.",
+    exp7Desc: "Reseller & dropship platform for Muslim products in Sulawesi and Eastern Indonesia, simplifying online selling by handling logistics.",
 
-    exp8Title: "Lead DevSecOps Engineer",
+    exp8Title: "Co-Founder",
     exp8Company: "GetKasir (Startup)",
-    exp8Desc: "Designing cloud infrastructure for enterprise retail ecosystems with 100+ modules.",
+    exp8Desc: "Leading strategic vision, business development, and technology architecture for an enterprise retail ecosystem with 100+ modules.",
     
-    exp2Title: "Senior Admin Staff",
+    exp2Title: "Admin Staff",
     exp2Company: "PT. Hammer Konstruksi Indonesia",
     exp2Desc: "Management of company operational data, strategic partner documentation, and field technical coordination for construction projects.",
     
-    exp3Title: "Senior Admin Staff HD/ODC",
+    exp3Title: "Admin Staff HD/ODC",
     exp3Company: "PT. Mutiara Jaya Perkasa",
     exp3Desc: "Maintenance of network infrastructure, computer system troubleshooting, and fiber optic plan design using AutoCAD.",
 
@@ -162,9 +162,9 @@ const translations = {
     exp4Company: "Self-Employed",
     exp4Desc: "Developed various interactive 3D applications (Al-Haram VR, BSD City VR, Zoo VR) and won Samsung Indonesia Next Apps 4.0 Challenge.",
 
-    exp5Title: "General Secretary",
-    exp5Company: "Nurul Huda Mosque Makassar",
-    exp5Desc: "Managed organizational administration, coordinated the 2021-2024 board, and optimized community asset management.",
+    exp5Title: "Secretary",
+    exp5Company: "Nurul Huda Mosque",
+    exp5Desc: "Managed organizational administration, coordinated the 2021-2026 board, and optimized community asset management.",
 
     exp6Title: "Organization Board",
     exp6Company: "EXOMATIK Study Club",
@@ -271,47 +271,110 @@ const HeroSection = () => {
     <section ref={ref} className="hero-section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
       <div className="bg-orb orb-1"></div>
       <div className="bg-orb orb-2"></div>
-      <motion.div style={{ y, opacity }} className="container hero-content text-center">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <h2 style={{ fontSize: '1.5rem', color: 'var(--accent-color)', marginBottom: '1rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>{t('heroRole')}</h2>
-          <h1 style={{ fontSize: 'clamp(3rem, 8vw, 6rem)', lineHeight: 1.1, marginBottom: '1.5rem', fontWeight: 800 }}>{t('heroGreeting')} <br/><span className="text-gradient">Achmad Syarfandi</span></h1>
-          <p style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto 2.5rem' }}>{t('heroDesc')}</p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="#contact" className="btn btn-primary glass">{t('hireMe')}</a>
-            <button onClick={() => setShowResumeModal(!showResumeModal)} className="btn btn-outline glass">
-              <span style={{ color: 'var(--text-primary)' }}>{t('resume')}</span>
-            </button>
-          </div>
+      <motion.div style={{ y, opacity }} className="container hero-content">
+        <div className="hero-grid">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="hero-image-container"
+          >
+            <div className="image-stack">
+              <div className="image-bg-blob"></div>
+              <img src="/Andi.png" alt='Syarfandi "Andi" Achmad' className="hero-img-main" />
+              <motion.div 
+                animate={{ y: [0, -15, 0] }}
+                transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+                className="floating-card glass"
+              >
+                <Shield size={20} color="var(--primary-color)" />
+                <span>Expert Infrastructure</span>
+              </motion.div>
+            </div>
+          </motion.div>
 
-          <motion.div initial={false} animate={{ height: showResumeModal ? 'auto' : 0, opacity: showResumeModal ? 1 : 0 }} transition={{ duration: 0.4, ease: "easeInOut" }} style={{ overflow: 'hidden', marginTop: '1.5rem' }}>
-            <div className="glass" style={{ maxWidth: '800px', margin: '0 auto', padding: '1.5rem', borderRadius: '24px' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '0.5rem' }}>
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }} 
+            animate={{ opacity: 1, x: 0 }} 
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="hero-text-container"
+          >
+            <h2 className="hero-subheading">{t('heroRole')}</h2>
+            <h1 className="hero-title">
+              {t('heroGreeting')} <br/>
+              <span className="text-gradient">Syarfandi "Andi" Achmad</span>
+            </h1>
+            <p className="hero-description">{t('heroDesc')}</p>
+            <div className="hero-buttons">
+              <a href="#contact" className="btn btn-primary glass">{t('hireMe')}</a>
+              <button onClick={() => setShowResumeModal(!showResumeModal)} className="btn btn-outline glass">
+                <span style={{ color: 'var(--text-primary)' }}>{t('resume')}</span>
+              </button>
+            </div>
+
+            <motion.div 
+              initial={false} 
+              animate={{ height: showResumeModal ? 'auto' : 0, opacity: showResumeModal ? 1 : 0 }} 
+              transition={{ duration: 0.4, ease: "easeInOut" }} 
+              className="resume-modal-inline"
+            >
+              <div className="glass resume-options-grid">
                 {resumeOptions.map((opt, i) => (
-                  <a key={i} href={opt.path} target="_blank" rel="noreferrer" className="glass resume-opt-btn" style={{ textDecoration: 'none', padding: '1rem', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.2s ease', textAlign: 'center' }}>
-                    <span style={{ color: 'var(--text-primary)', fontSize: '0.85rem', fontWeight: 600 }}>{opt.title}</span>
+                  <a key={i} href={opt.path} target="_blank" rel="noreferrer" className="glass resume-opt-btn">
+                    <span>{opt.title}</span>
                   </a>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
       </motion.div>
 
       <motion.div animate={{ y: [0, 10, 0] }} transition={{ repeat: Infinity, duration: 2 }} style={{ position: 'absolute', bottom: '2rem', left: '50%', transform: 'translateX(-50%)', opacity: 0.5, color: 'var(--text-primary)' }}>
         <ChevronDown size={32} />
       </motion.div>
       <style>{`
-        .bg-orb { position: absolute; border-radius: 50%; filter: blur(100px); z-index: -1; opacity: 0.3; }
-        .orb-1 { background: var(--primary-color); width: 400px; height: 400px; top: -100px; left: -100px; }
-        .orb-2 { background: var(--secondary-color); width: 500px; height: 500px; bottom: -200px; right: -100px; }
-        .btn { display: inline-flex; align-items: center; padding: 1rem 2rem; font-weight: 600; font-size: 1rem; border-radius: 50px; transition: all 0.3s ease; }
+        .bg-orb { position: absolute; border-radius: 50%; filter: blur(120px); z-index: -1; opacity: 0.2; }
+        .orb-1 { background: var(--primary-color); width: 600px; height: 600px; top: -200px; left: -200px; }
+        .orb-2 { background: var(--secondary-color); width: 700px; height: 700px; bottom: -300px; right: -200px; }
+        .hero-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 4rem; align-items: center; }
+        .hero-title { fontSize: clamp(3rem, 8vw, 6rem); lineHeight: 1.2; marginBottom: 3.5rem; fontWeight: 800; }
+        .hero-subheading { fontSize: 1.5rem; color: var(--primary-color); marginBottom: 2.5rem; letterSpacing: 0.2em; textTransform: uppercase; fontWeight: 700; }
+        .hero-description { fontSize: 1.25rem; color: var(--text-secondary); maxWidth: 750px; marginBottom: 6rem; line-height: 1.8; }
+        .hero-buttons { display: flex; gap: 2.5rem; flex-wrap: wrap; margin-top: 2rem; }
+        .resume-modal-inline { overflow: hidden; margin-top: 2rem; }
+        .resume-options-grid { padding: 1.5rem; border-radius: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.75rem; }
+        .resume-opt-btn { text-decoration: none; padding: 0.85rem; border-radius: 12px; display: flex; alignItems: center; justifyContent: center; transition: all 0.2s ease; text-align: center; }
+        .resume-opt-btn span { color: var(--text-primary); fontSize: 0.95rem; fontWeight: 600; }
+        
+        .hero-image-container { position: relative; }
+        .image-stack { position: relative; width: 100%; max-width: 450px; margin: 0 auto; }
+        .image-bg-blob { position: absolute; top: 10%; left: 10%; width: 80%; height: 80%; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; filter: blur(40px); opacity: 0.4; animation: morph 6s ease-in-out infinite; z-index: 0; }
+        .hero-img-main { position: relative; width: 100%; height: auto; border-radius: 30px; z-index: 1; filter: drop-shadow(0 20px 50px rgba(0,0,0,0.1)); }
+        .floating-card { position: absolute; bottom: 20px; left: -30px; padding: 1rem 1.5rem; border-radius: 20px; display: flex; align-items: center; gap: 0.75rem; z-index: 2; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .floating-card span { font-weight: 700; font-size: 0.9rem; color: var(--text-primary); }
+
+        @keyframes morph {
+          0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+          50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+          100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+        }
+
+        @media (max-width: 1024px) {
+          .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 3rem; }
+          .hero-buttons { justify-content: center; }
+          .hero-description { margin-inline: auto; }
+          .hero-image-container { order: -1; }
+          .image-stack { max-width: 350px; }
+        }
+
+        .btn { display: inline-flex; align-items: center; padding: 1.2rem 2.5rem; font-weight: 700; font-size: 1.1rem; border-radius: 50px; transition: all 0.3s ease; cursor: pointer; }
         .btn-primary { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white !important; border: none; }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(30, 58, 138, 0.4); }
         .btn-outline { border: 1px solid var(--glass-border); }
         .btn-outline:hover { background: var(--surface-color); }
-        .resume-opt-btn:hover { background: var(--primary-color) !important; transform: scale(1.02); }
+        .resume-opt-btn:hover { background: var(--primary-color) !important; transform: translateY(-3px); }
         .resume-opt-btn:hover span { color: white !important; }
-        .resume-opt-btn:hover svg { color: white !important; }
       `}</style>
     </section>
   );
@@ -321,7 +384,7 @@ const AboutSection = () => {
   const { t } = useTheme();
   return (
     <section id="about" className="container">
-      <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="glass about-card">
+      <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4 }} className="glass about-card">
         <div className="about-grid">
           <div>
             <h2 className="heading-secondary" style={{ textAlign: 'left', marginBottom: '1.5rem' }}>{t('aboutMe')} <span className="text-gradient">{t('me')}</span></h2>
@@ -390,10 +453,10 @@ const ExperienceSection = () => {
   const experiences = [
     { title: t('exp9Title'), company: t('exp9Company'), period: `2025 - ${t('present')}`, desc: t('exp9Desc') },
     { title: t('exp1Title'), company: t('exp1Company'), period: "2023 - 2025", desc: t('exp1Desc') },
-    { title: t('exp8Title'), company: t('exp8Company'), period: "2019 - Present", desc: t('exp8Desc') },
+    { title: t('exp8Title'), company: t('exp8Company'), period: `2019 - ${t('present')}`, desc: t('exp8Desc') },
     { title: t('exp7Title'), company: t('exp7Company'), period: "2020 - 2023", desc: t('exp7Desc') },
     { title: t('exp2Title'), company: t('exp2Company'), period: "2020 - 2023", desc: t('exp2Desc') },
-    { title: t('exp5Title'), company: t('exp5Company'), period: "2021 - 2024", desc: t('exp5Desc') },
+    { title: t('exp5Title'), company: t('exp5Company'), period: "2021 - 2026", desc: t('exp5Desc') },
     { title: t('exp3Title'), company: t('exp3Company'), period: "2018 - 2019", desc: t('exp3Desc') },
     { title: t('exp6Title'), company: t('exp6Company'), period: "2014 - 2017", desc: t('exp6Desc') },
     { title: t('exp4Title'), company: t('exp4Company'), period: "2016 - 2019", desc: t('exp4Desc') },
@@ -403,7 +466,7 @@ const ExperienceSection = () => {
       <h2 className="heading-secondary">{t('professional')} <span className="text-gradient">{t('journey')}</span></h2>
       <div className="timeline">
         {experiences.map((exp, index) => (
-          <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.2 }} key={index} className="timeline-item glass">
+          <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: index * 0.1 }} key={index} className="timeline-item glass">
             <div className="timeline-icon"><Briefcase size={20} /></div>
             <div className="timeline-content">
               <span className="period">{exp.period}</span>
@@ -446,7 +509,7 @@ const PortfolioSection = () => {
       <h2 className="heading-secondary">{t('featured')} <span className="text-gradient">{t('projects')}</span></h2>
       <div className="portfolio-grid">
         {projects.map((project, idx) => (
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: idx * 0.1 }} key={idx} className="portfolio-card glass">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: idx * 0.05 }} key={idx} className="portfolio-card glass">
             <div className="card-header" style={{ display: 'flex', justifyContent: 'space-between' }}>
               <span className="badge">{project.type}</span>
               <div style={{ color: 'var(--primary-color)' }}>{project.icon}</div>
@@ -484,7 +547,7 @@ const GithubSection = () => {
 
   const formatName = (name) => {
     const mapping = {
-      'asistenvirtual': 'Asisten Virtual AI (Simli)',
+      'asistenvirtual': 'Lipsync Realtime Avatar AI',
       'datasulsel': 'Portal Data Sulsel',
       'kawansedarah': 'Kawan Sedarah (Blood Stock)',
       'getkasir': 'GetKasir Enterprise POS',
@@ -497,7 +560,7 @@ const GithubSection = () => {
   };
 
   const privateRepos = [
-    { id: 'private-asistenvirtual', name: 'asistenvirtual', url: 'https://asistenvirtual.ai', description: lang === 'id' ? 'Aplikasi Conversational AI canggih berbasis web yang menggabungkan kecerdasan buatan mutakhir (Simli, Voice AI, LLM) dengan antarmuka visual yang memukau.' : 'Advanced web-based Conversational AI app combining cutting-edge AI (Simli, Voice AI, LLM) with stunning visual interfaces.', language: 'TypeScript', stargazers_count: 0, forks_count: 0, isPrivate: true },
+    { id: 'private-asistenvirtual', name: 'asistenvirtual', url: 'https://asistenvirtual.ai', description: lang === 'id' ? 'Aplikasi Conversational AI canggih berbasis web yang menggabungkan kecerdasan buatan mutakhir (Lipsync Realtime, Voice AI, LLM) dengan antarmuka visual yang memukau.' : 'Advanced web-based Conversational AI app combining cutting-edge AI (Lipsync Realtime, Voice AI, LLM) with stunning visual interfaces.', language: 'TypeScript', stargazers_count: 0, forks_count: 0, isPrivate: true },
     { id: 'private-datasulsel', name: 'datasulsel', url: 'https://datasulsel.com', description: lang === 'id' ? 'Portal data terpadu untuk pengelolaan, monitoring, dan analisis statistik data keagamaan di seluruh wilayah Sulawesi Selatan secara real-time.' : 'Integrated data portal for real-time management, monitoring, and analysis of religious statistical data across South Sulawesi.', language: 'PLpgSQL', stargazers_count: 0, forks_count: 0, isPrivate: true },
     { id: 'private-kawansedarah', name: 'kawansedarah', url: 'https://kawansedarah.com', description: lang === 'id' ? 'Command center platform monitoring stok darah real-time yang terintegrasi dengan Supabase.' : 'Command center platform for real-time blood stock monitoring integrated with Supabase.', language: 'TypeScript', stargazers_count: 0, forks_count: 0, isPrivate: true },
     { id: 'private-getkasir', name: 'getkasir', url: 'https://getkasir.com', description: lang === 'id' ? 'Ekosistem retail raksasa kelas Enterprise yang menggabungkan kecanggihan AI, keamanan biometrik, dan skalabilitas cloud (100+ Modul).' : 'Enterprise-class giant retail ecosystem combining AI sophistication, biometric security, and cloud scalability (100+ Modules).', language: 'JavaScript', stargazers_count: 0, forks_count: 0, isPrivate: true },
@@ -570,7 +633,7 @@ const SkillsSection = () => {
           {skills.map((skill, idx) => (
             <div key={idx} className="skill-item">
               <div className="skill-info"><span style={{ fontWeight: 600, color: 'var(--text-primary)' }}>{skill.name}</span><span className="text-gradient">{skill.level}%</span></div>
-              <div className="skill-bar-bg"><motion.div className="skill-bar-fill" initial={{ width: 0 }} whileInView={{ width: `${skill.level}%` }} viewport={{ once: true }} transition={{ duration: 1, delay: 0.2 }} /></div>
+              <div className="skill-bar-bg"><motion.div className="skill-bar-fill" initial={{ width: 0 }} whileInView={{ width: `${skill.level}%` }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }} /></div>
             </div>
           ))}
         </div>
@@ -653,7 +716,7 @@ const Footer = () => {
   const { t } = useTheme();
   return (
     <footer style={{ padding: '2rem 0', textAlign: 'center', borderTop: '1px solid var(--glass-border)', color: 'var(--text-secondary)' }}>
-      <p>&copy; {new Date().getFullYear()} Achmad Syarfandi. {t('allRightsReserved')}</p>
+      <p>&copy; {new Date().getFullYear()} Syarfandi "Andi" Achmad. {t('allRightsReserved')}</p>
     </footer>
   );
 };

@@ -36,14 +36,14 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
-        :root {
-            --primary: #4f46e5;
-            --secondary: #0f172a;
-            --accent: #10b981;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
+                :root {
+            --primary: #1e3a8a; /* Navy */
+            --secondary: #0f172a; /* Dark Navy */
+            --accent: #3b82f6; /* Modern Blue */
+            --text-main: #0f172a;
+            --text-muted: #475569;
             --bg: #ffffff;
-            --border: #e2e8f0;
+            --border: rgba(30, 58, 138, 0.1);
         }
 
         * {
@@ -156,8 +156,8 @@
             display: grid;
         }
 
-        .sidebar {
-            background-color: var(--secondary);
+                .sidebar {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             padding: 40px;
         }
@@ -359,9 +359,11 @@
                 border: none;
             }
 
-            .sidebar {
-                -webkit-print-color-adjust: exact;
-            }
+                    .sidebar {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 40px;
+        }
         }
     </style>
 </head>
@@ -398,7 +400,7 @@
             <div class="profile-section">
                 <img src="/profile.png" alt="Syarfandi 'Andi' Achmad" class="profile-img">
                 <h1>SYARFANDI "ANDI" ACHMAD</h1>
-                <p class="role" id="p-role">Senior DevSecOps Engineer</p>
+                <p class="role" id="p-role">DevSecOps Engineer</p>
             </div>
             <div class="contact-info">
                 <div class="contact-item"><i data-lucide="mail" size="14"></i><a
@@ -461,7 +463,7 @@
                 eduTitle: "Education",
                 projectsTitle: "Featured Projects",
                 present: "Present",
-                summary: "Dynamic <strong>DevSecOps Engineer</strong> with 5+ years of experience in architecting high-performance <strong>cloud server and on-premise server</strong> ecosystems and self-healing infrastructure. Expert at bridging development and security through <strong>Kubernetes</strong> orchestration and <strong>Terraform</strong> automation. With a strong commitment to <strong>Zero Trust</strong> principles and security-as-code, I help global organizations scale rapidly without compromising system integrity. A proactive leader in <strong>asynchronous remote teams</strong>, dedicated to delivering operational excellence and hardening digital assets against modern threats.",
+                summary: "Strategic <strong>DevSecOps Engineer</strong> with 8+ years of experience in architecting high-security <strong>cloud and on-premise</strong> ecosystems. Expert in <strong>Kubernetes, Terraform</strong>, and automated security pipelines. Proven track record of securing government digital assets and scaling enterprise infrastructures for global retail platforms. Dedicated to bridging the gap between development and security through automated compliance and robust CI/CD workflows.",
                 skills: [
                     { name: "Infrastructure as Code (Terraform)", level: 90 },
                     { name: "Kubernetes (K8s) & Docker", level: 85 },
@@ -499,7 +501,7 @@
                         ]
                     },
                     {
-                        title: "Lead DevSecOps Engineer",
+                        title: "Co-Founder",
                         company: "GetKasir (Enterprise POS Startup)",
                         date: "2019 - Present",
                         desc: [
@@ -513,13 +515,14 @@
                         company: "Malmora (Startup)",
                         date: "2020 - 2023",
                         desc: [
-                            "<strong>Automated</strong> full-stack testing and CI/CD pipelines for a high-scale mobile marketplace reseller platform.",
-                            "<strong>Orchestrated</strong> cloud staging environments, reducing infrastructure costs by 25% via serverless optimization."
+                            "<strong>Reseller</strong> & dropship platform for Muslim products focusing on Sulawesi and Eastern Indonesia.",
+                            "<strong>Simplifying</strong> online selling for users by handling packaging and logistics automatically.",
+                            "<strong>Optimizing</strong> digital distribution systems to reach broader regional markets."
                         ]
                     }
                 ],
                 projects: [
-                    { title: "Asisten Virtual AI", desc: "Conversational AI app with Simli, Voice AI, and LLM integration." },
+                    { title: "Lipsync Realtime Avatar AI", desc: "Conversational AI app with Lipsync Realtime, Voice AI, and LLM integration." },
                     { title: "Makaverse", desc: "High-availability infrastructure for Makassar's official Metaverse platform." },
                     { title: "Gov Email Cluster", desc: "Hardened Mailcow cluster supporting 200+ gov domains." },
                     { title: "PPID Parepare", desc: "Public transparency portal with Google Gemini AI integration." },
@@ -543,7 +546,7 @@
                 eduTitle: "Pendidikan",
                 projectsTitle: "Proyek Pilihan",
                 present: "Sekarang",
-                summary: "<strong>DevSecOps Engineer</strong> yang dinamis dengan pengalaman lebih dari 5 tahun dalam membangun ekosistem <strong>cloud dan on-premise server</strong> berperforma tinggi dan infrastruktur <em>self-healing</em>. Saya ahli dalam menyelaraskan pengembangan dan keamanan melalui orkestrasi <strong>Kubernetes</strong> dan otomatisasi berbasis <strong>Terraform</strong>. Dengan komitmen kuat pada prinsip <strong>Zero Trust</strong> dan <em>security-as-code</em>, saya membantu organisasi global untuk tumbuh pesat tanpa mengorbankan integritas sistem. Pemimpin proaktif dalam <strong>tim remote asinkron</strong>, berdedikasi untuk menghadirkan keunggulan operasional dan memperkuat aset digital dari ancaman modern.",
+                summary: "<strong>DevSecOps Engineer</strong> strategis dengan pengalaman lebih dari 8 tahun dalam membangun ekosistem <strong>cloud dan on-premise</strong> berkeamanan tinggi. Ahli dalam <strong>Kubernetes, Terraform</strong>, dan pipeline keamanan otomatis. Memiliki rekam jejak terbukti dalam mengamankan aset digital pemerintah dan menskalakan infrastruktur enterprise untuk platform retail global. Berdedikasi untuk menjembatani kesenjangan antara pengembangan dan keamanan melalui kepatuhan otomatis dan alur kerja CI/CD yang tangguh.",
                 skills: [
                     { name: "Infrastructure as Code (Terraform)", level: 90 },
                     { name: "Kubernetes (K8s) & Docker", level: 85 },
@@ -581,7 +584,7 @@
                         ]
                     },
                     {
-                        title: "Lead DevSecOps Engineer",
+                        title: "Co-Founder",
                         company: "GetKasir (Enterprise POS Startup)",
                         date: "2019 - Sekarang",
                         desc: [
@@ -595,13 +598,14 @@
                         company: "Malmora (Startup)",
                         date: "2020 - 2023",
                         desc: [
-                            "<strong>Otomatisasi</strong> testing full-stack dan pipeline CI/CD untuk platform reseller mobile marketplace.",
-                            "<strong>Mengorkestrasi</strong> lingkungan staging cloud, mengurangi biaya infra sebesar 25% via optimasi serverless."
+                            "<strong>Platform</strong> reseller & dropship produk muslim yang berfokus di Sulawesi dan Indonesia Timur.",
+                            "<strong>Memudahkan</strong> pengguna berjualan online tanpa perlu memikirkan pengemasan dan pengiriman barang.",
+                            "<strong>Mengoptimalkan</strong> sistem distribusi digital untuk menjangkau pasar regional yang lebih luas."
                         ]
                     }
                 ],
                 projects: [
-                    { title: "Asisten Virtual AI", desc: "Aplikasi Conversational AI dengan integrasi Simli, Voice AI, dan LLM." },
+                    { title: "Lipsync Realtime Avatar AI", desc: "Aplikasi Conversational AI dengan integrasi Lipsync Realtime, Voice AI, dan LLM." },
                     { title: "Makaverse", desc: "Infrastruktur high-availability untuk platform Metaverse resmi Makassar." },
                     { title: "Gov Email Cluster", desc: "Cluster Mailcow yang diperkuat untuk 200+ domain satuan kerja." },
                     { title: "PPID Parepare", desc: "Portal transparansi publik dengan integrasi Google Gemini AI." },

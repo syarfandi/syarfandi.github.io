@@ -1,24 +1,24 @@
 :root {
-  /* Light Mode (Default) */
-  --primary-color: #4f46e5;
-  --secondary-color: #7c3aed;
-  --accent-color: #0d9488;
-  --bg-color: #f9fafb;
-  --surface-color: rgba(255, 255, 255, 0.7);
-  --text-primary: #111827;
-  --text-secondary: #4b5563;
-  --glass-border: rgba(0, 0, 0, 0.1);
+  /* Navy & White Theme */
+  --primary-color: #1e3a8a; /* Navy Blue */
+  --secondary-color: #3b82f6; /* Modern Blue */
+  --accent-color: #60a5fa; /* Light Blue */
+  --bg-color: #ffffff; /* White background */
+  --surface-color: rgba(255, 255, 255, 0.8);
+  --text-primary: #0f172a; /* Dark Navy text */
+  --text-secondary: #475569;
+  --glass-border: rgba(30, 58, 138, 0.1);
 }
 
 .dark {
-  /* Dark Mode */
-  --primary-color: #6366f1;
-  --secondary-color: #8b5cf6;
-  --accent-color: #14b8a6;
-  --bg-color: #030712;
-  --surface-color: rgba(31, 41, 55, 0.4);
-  --text-primary: #f9fafb;
-  --text-secondary: #9ca3af;
+  /* Dark Navy Mode */
+  --primary-color: #60a5fa;
+  --secondary-color: #3b82f6;
+  --accent-color: #1e3a8a;
+  --bg-color: #0f172a; /* Deep Navy background */
+  --surface-color: rgba(30, 41, 59, 0.6);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
   --glass-border: rgba(255, 255, 255, 0.05);
 }
 
@@ -36,7 +36,8 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  line-height: 1.6;
+  line-height: 1.7;
+  font-size: 1.1rem;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -63,7 +64,7 @@ h6 {
 
 /* Utility classes */
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding-inline: 2rem;
 }
@@ -109,15 +110,15 @@ a {
 
 /* Base layouts */
 section {
-  padding: 2rem 0;
-  margin-bottom: 2rem;
+  padding: 4rem 0;
+  margin-bottom: 4rem;
   position: relative;
 }
 
 .heading-secondary {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 800;
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
   text-align: center;
 }
 
