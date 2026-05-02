@@ -342,14 +342,14 @@ const HeroSection = () => {
         .orb-1 { background: var(--primary-color); width: 600px; height: 600px; top: -200px; left: -200px; }
         .orb-2 { background: var(--secondary-color); width: 700px; height: 700px; bottom: -300px; right: -200px; }
         .hero-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 4rem; align-items: center; }
-        .hero-title { fontSize: clamp(3rem, 8vw, 6rem); lineHeight: 1.2; marginBottom: 3.5rem; fontWeight: 800; }
-        .hero-subheading { fontSize: 1.5rem; color: var(--primary-color); marginBottom: 2.5rem; letterSpacing: 0.2em; textTransform: uppercase; fontWeight: 700; }
-        .hero-description { fontSize: 1.25rem; color: var(--text-secondary); maxWidth: 750px; marginBottom: 6rem; line-height: 1.8; }
-        .hero-buttons { display: flex; gap: 2.5rem; flex-wrap: wrap; margin-top: 2rem; }
+        .hero-title { font-size: clamp(2.5rem, 8vw, 5rem); line-height: 1.2; margin-bottom: 2.5rem; font-weight: 800; }
+        .hero-subheading { font-size: 1.25rem; color: var(--primary-color); margin-bottom: 2rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; }
+        .hero-description { font-size: 1.15rem; color: var(--text-secondary); max-width: 750px; margin-bottom: 4rem; line-height: 1.8; }
+        .hero-buttons { display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 2rem; }
         .resume-modal-inline { overflow: hidden; margin-top: 2rem; }
         .resume-options-grid { padding: 1.5rem; border-radius: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.75rem; }
-        .resume-opt-btn { text-decoration: none; padding: 0.85rem; border-radius: 12px; display: flex; alignItems: center; justifyContent: center; transition: all 0.2s ease; text-align: center; }
-        .resume-opt-btn span { color: var(--text-primary); fontSize: 0.95rem; fontWeight: 600; }
+        .resume-opt-btn { text-decoration: none; padding: 0.85rem; border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; text-align: center; }
+        .resume-opt-btn span { color: var(--text-primary); font-size: 0.95rem; font-weight: 600; }
         
         .hero-image-container { position: relative; }
         .image-stack { position: relative; width: 100%; max-width: 450px; margin: 0 auto; }
@@ -365,11 +365,21 @@ const HeroSection = () => {
         }
 
         @media (max-width: 1024px) {
-          .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 3rem; }
+          .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 4rem; }
           .hero-buttons { justify-content: center; }
-          .hero-description { margin-inline: auto; }
+          .hero-description { margin-inline: auto; font-size: 1.15rem; }
           .hero-image-container { order: -1; }
           .image-stack { max-width: 350px; }
+          .hero-title { font-size: 3.5rem; }
+        }
+
+        @media (max-width: 600px) {
+          .hero-title { font-size: 2.5rem; margin-bottom: 2rem; }
+          .hero-subheading { font-size: 1.1rem; margin-bottom: 1.5rem; }
+          .hero-description { font-size: 1rem; margin-bottom: 3rem; }
+          .hero-buttons { gap: 1rem; flex-direction: column; width: 100%; }
+          .btn { width: 100%; justify-content: center; }
+          .floating-card { left: 0; right: 0; margin: 0 auto; width: max-content; bottom: -10px; }
         }
 
         .btn { display: inline-flex; align-items: center; padding: 1.2rem 2.5rem; font-weight: 700; font-size: 1.1rem; border-radius: 50px; transition: all 0.3s ease; cursor: pointer; }
@@ -390,10 +400,10 @@ const AboutSection = () => {
     <section id="about" className="container">
       <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4 }} className="glass about-card">
         <div className="about-grid">
-          <div>
-            <h2 className="heading-secondary" style={{ textAlign: 'left', marginBottom: '1.5rem' }}>{t('aboutMe')} <span className="text-gradient">{t('me')}</span></h2>
+          <div className="about-info">
+            <h2 className="heading-secondary" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>{t('aboutMe')} <span className="text-gradient">{t('me')}</span></h2>
             <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '1rem' }}>{t('aboutDesc')}</p>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginTop: '2rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', marginTop: '2rem' }}>
               <div className="info-item">
                 <MapPin color="var(--primary-color)" size={24} />
                 <div><h4 style={{ color: 'var(--text-primary)' }}>{t('location')}</h4><p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Makassar, Indonesia</p></div>
@@ -429,24 +439,28 @@ const AboutSection = () => {
       </motion.div>
       <style>{`
         .about-card { padding: 4rem; }
-        .about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center; }
-        .info-item { display: flex; align-items: flex-start; gap: 1rem; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; }
-        .stat-card { padding: 2rem; text-align: center; transition: transform 0.3s ease; }
+        .about-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; }
+        .about-info { max-width: 800px; margin: 0 auto; text-align: center; }
+        .info-item { display: flex; align-items: flex-start; gap: 1rem; text-align: left; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; justify-content: center; }
+        .stat-card { padding: 2rem 1rem; text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: center; }
         .stat-card:hover { transform: translateY(-5px); }
         .stat-card h3 { font-size: 2.5rem; margin-bottom: 0.5rem; }
         .stat-card p { color: var(--text-secondary); font-size: 0.9rem; font-weight: 500; }
         
         @media (max-width: 1024px) { 
-          .about-grid { grid-template-columns: 1fr; gap: 2rem; } 
           .about-card { padding: 3rem; }
+          .stats-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 768px) {
+          .stats-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 600px) {
-          .about-card { padding: 2rem 1.5rem; text-align: center; }
+          .about-card { padding: 2.5rem 1.25rem; text-align: center; }
           .info-item { flex-direction: column; align-items: center; text-align: center; }
-          .stats-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+          .stats-grid { grid-template-columns: 1fr; gap: 1rem; }
           .stat-card { padding: 1.5rem 1rem; }
-          .stat-card h3 { font-size: 1.8rem; }
+          .stat-card h3 { font-size: 2rem; }
         }
       `}</style>
     </section>
@@ -471,7 +485,7 @@ const ExperienceSection = () => {
       <h2 className="heading-secondary">{t('professional')} <span className="text-gradient">{t('journey')}</span></h2>
       <div className="timeline">
         {experiences.map((exp, index) => (
-          <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: index * 0.1 }} key={index} className="timeline-item glass">
+          <div key={index} className="timeline-item glass">
             <div className="timeline-icon"><Briefcase size={20} /></div>
             <div className="timeline-content">
               <span className="period">{exp.period}</span>
@@ -479,19 +493,29 @@ const ExperienceSection = () => {
               <h4 className="company">{exp.company}</h4>
               <p>{exp.desc}</p>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
       <style>{`
-        .timeline { position: relative; max-width: 800px; margin: 0 auto; }
+        .timeline { position: relative; max-width: 800px; margin: 0 auto; padding-left: 1rem; }
         .timeline::before { content: ''; position: absolute; top: 0; left: 24px; height: 100%; width: 2px; background: var(--glass-border); }
-        .timeline-item { position: relative; margin-bottom: 2rem; padding: 2rem; margin-left: 60px; }
-        .timeline-icon { position: absolute; left: -60px; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: var(--bg-color); border: 2px solid var(--primary-color); display: flex; align-items: center; justify-content: center; color: var(--primary-color); z-index: 1; }
-        .period { color: var(--accent-color); font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; display: inline-block; }
-        .timeline-content h3 { font-size: 1.25rem; margin-bottom: 0.25rem; }
-        .company { color: var(--text-secondary); font-weight: 400; margin-bottom: 1rem; }
-        .timeline-content p { color: var(--text-secondary); font-size: 0.95rem; }
-        @media (max-width: 768px) { .timeline::before { left: 20px; } .timeline-item { margin-left: 50px; padding: 1.5rem; } .timeline-icon { left: -50px; width: 40px; height: 40px; } }
+        .timeline-item { position: relative; margin-bottom: 2rem; padding: 2rem; margin-left: 45px; transition: transform 0.3s ease; }
+        .timeline-item:hover { transform: translateX(10px); }
+        .timeline-icon { position: absolute; left: -45px; top: 2rem; width: 44px; height: 44px; border-radius: 50%; background: var(--bg-color); border: 2px solid var(--primary-color); display: flex; align-items: center; justify-content: center; color: var(--primary-color); z-index: 1; transition: all 0.3s ease; }
+        .period { color: var(--accent-color); font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem; display: inline-block; }
+        .timeline-content h3 { font-size: 1.3rem; margin-bottom: 0.25rem; font-weight: 700; }
+        .company { color: var(--text-secondary); font-weight: 600; margin-bottom: 1rem; font-size: 1rem; }
+        .timeline-content p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; }
+        
+        @media (max-width: 768px) {
+          .timeline { padding-left: 0; }
+          .timeline::before { left: 15px; }
+          .timeline-item { margin-left: 35px; padding: 1.5rem; margin-bottom: 1.5rem; }
+          .timeline-icon { left: -35px; width: 32px; height: 32px; top: 1.5rem; }
+          .timeline-icon svg { width: 16px; height: 16px; }
+          .timeline-content h3 { font-size: 1.15rem; }
+          .company { font-size: 0.9rem; }
+        }
       `}</style>
     </section>
   );
@@ -527,19 +551,22 @@ const PortfolioSection = () => {
         ))}
       </div>
       <style>{`
-        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; }
-        @media (max-width: 600px) { 
-          .portfolio-grid { grid-template-columns: 1fr; } 
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; }
+        @media (max-width: 1024px) {
+          .portfolio-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+        }
+        @media (max-width: 768px) {
+          .portfolio-grid { grid-template-columns: 1fr; }
           .portfolio-card { text-align: center; align-items: center; }
           .card-header { flex-direction: column; gap: 1rem; align-items: center; }
         }
-        .portfolio-card { padding: 2rem; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .portfolio-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2); border-color: rgba(99, 102, 241, 0.3); }
-        .card-header { margin-bottom: 1.5rem; }
-        .badge { background: rgba(20, 184, 166, 0.1); color: var(--accent-color); padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.8rem; font-weight: 600; }
-        .portfolio-card h3 { font-size: 1.2rem; margin-bottom: 1rem; flex-grow: 1; }
-        .project-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color); font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease; }
-        .project-link:hover { color: var(--secondary-color); }
+        .portfolio-card { padding: 2.5rem; display: flex; flex-direction: column; transition: all 0.3s ease; }
+        .portfolio-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); border-color: var(--primary-color); }
+        .card-header { margin-bottom: 2rem; }
+        .badge { background: rgba(30, 58, 138, 0.1); color: var(--primary-color); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
+        .portfolio-card h3 { font-size: 1.3rem; margin-bottom: 1.5rem; flex-grow: 1; font-weight: 700; }
+        .project-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color); font-size: 0.95rem; font-weight: 700; transition: all 0.3s ease; }
+        .project-link:hover { color: var(--accent-color); transform: translateX(5px); }
       `}</style>
     </section>
   );
@@ -650,11 +677,13 @@ const SkillsSection = () => {
         .skill-bar-bg { height: 8px; background: var(--surface-color); border-radius: 4px; overflow: hidden; }
         .skill-bar-fill { height: 100%; background: linear-gradient(90deg, var(--primary-color), var(--accent-color)); border-radius: 4px; }
         @media (max-width: 992px) { 
-          .skills-layout { grid-template-columns: 1fr; gap: 2rem; text-align: center; } 
+          .skills-layout { grid-template-columns: 1fr; gap: 3rem; text-align: center; } 
+          .heading-secondary { text-align: center !important; }
         }
         @media (max-width: 600px) {
           .skill-info { font-size: 0.9rem; }
           .skill-item { text-align: left; }
+          .skill-bar-bg { height: 10px; }
         }
       `}</style>
     </section>
@@ -702,15 +731,16 @@ const ContactSection = () => {
         </div>
       </div>
       <style>{`
-        .contact-card { padding: 4rem; background: var(--surface-color); }
-        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; }
-        .contact-item { padding: 2rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1rem; transition: transform 0.3s ease; }
-        .contact-item:hover { transform: translateY(-5px); border-color: rgba(99, 102, 241, 0.3); }
-        .contact-item h4 { font-size: 1.1rem; }
-        .contact-item p { color: var(--text-secondary); font-size: 0.9rem; }
+        .contact-card { padding: 5rem; border-radius: 32px; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .contact-item { padding: 3rem 2rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; transition: all 0.3s ease; border-radius: 24px; }
+        .contact-item:hover { transform: translateY(-10px); border-color: var(--primary-color); background: rgba(255,255,255,0.05); }
+        .contact-item h4 { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); }
+        .contact-item p, .contact-item h3 { color: var(--text-secondary); font-size: 1rem; font-weight: 500; }
         @media (max-width: 768px) { 
           .contact-card { padding: 3rem 1.5rem; }
-          .contact-grid { grid-template-columns: 1fr; }
+          .contact-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+          .contact-item { padding: 2rem; }
         }
       `}</style>
     </section>
