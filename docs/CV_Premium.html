@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Achmad Syarfandi (Senior DevSecOps Engineer)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #3730a3;
+            --secondary: #0f172a;
+            --accent: #10b981;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg: #ffffff;
+            --border: #e2e8f0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 320px 1fr;
+        }
+
+        .sidebar { background-color: var(--secondary); color: white; padding: 40px; }
+        .profile-section { text-align: center; margin-bottom: 40px; }
+        .profile-section h1 { font-size: 24px; font-weight: 800; margin-bottom: 8px; line-height: 1.2; color: #fff; }
+        .profile-section .role { font-size: 14px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; }
+        .contact-info { margin-bottom: 40px; }
+        .contact-item { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 13px; }
+        .contact-item i { color: var(--accent); flex-shrink: 0; }
+        .contact-item a { color: #cbd5e1; text-decoration: none; transition: color 0.2s; }
+        .contact-item a:hover { color: white; }
+        .sidebar-section { margin-bottom: 35px; }
+        .sidebar-section h2 { font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid rgba(255, 255, 255, 0.1); color: #f1f5f9; }
+        .skill-list { list-style: none; }
+        .skill-item { margin-bottom: 12px; }
+        .skill-name { display: block; font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+        .skill-bar { height: 4px; background: rgba(255, 255, 255, 0.1); border-radius: 2px; overflow: hidden; }
+        .skill-progress { height: 100%; background: var(--accent); }
+        .main-content { padding: 40px 50px; }
+        .section { margin-bottom: 35px; }
+        .section-title { display: flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 700; color: var(--secondary); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .section-title i { color: var(--primary); }
+        .experience-item { margin-bottom: 25px; position: relative; }
+        .experience-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; }
+        .experience-title { font-size: 16px; font-weight: 700; color: var(--secondary); }
+        .experience-company { font-size: 14px; font-weight: 600; color: var(--primary); }
+        .experience-date { font-size: 12px; font-weight: 500; color: var(--text-muted); background: #f1f5f9; padding: 2px 8px; border-radius: 4px; }
+        .experience-desc { font-size: 13px; color: var(--text-muted); margin-top: 6px; list-style-position: outside; padding-left: 18px; }
+        .experience-desc li { margin-bottom: 4px; }
+        .education-item { margin-bottom: 15px; }
+        .education-degree { font-size: 15px; font-weight: 700; }
+        .education-school { font-size: 14px; color: var(--text-muted); }
+        .summary-text { font-size: 14px; color: var(--text-muted); margin-bottom: 10px; }
+        
+        .action-buttons {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+        .btn-action {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .btn-action:hover { transform: translateY(-2px); background: var(--primary); }
+        .back-btn { position: fixed; top: 20px; left: 20px; background: white; color: var(--secondary); border: 1px solid var(--border); padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: 600; z-index: 1000; display: flex; align-items: center; gap: 8px; }
+
+        @media (max-width: 768px) {
+            .resume-container { grid-template-columns: 1fr; }
+            body { padding: 0; }
+            .lang-toggle, .back-btn { position: static; display: block; width: fit-content; margin: 10px auto; }
+        }
+        @media print {
+            .lang-toggle, .back-btn { display: none; }
+            body { background: white; padding: 0; }
+            .resume-container { box-shadow: none; max-width: 100%; border-radius: 0; }
+            .sidebar { -webkit-print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+    <a href="/" class="back-btn"><i data-lucide="arrow-left" size="18"></i> <span>Portfolio</span></a>
+    
+    <div class="action-buttons">
+        <button id="shareBtn" class="btn-action"><i data-lucide="share-2" size="16"></i> <span id="shareText">Share</span></button>
+        <button id="downloadBtn" class="btn-action"><i data-lucide="download" size="16"></i> <span id="downloadText">PDF</span></button>
+        <button id="langBtn" class="btn-action"><i data-lucide="languages" size="16"></i> <span id="langText">EN</span></button>
+    </div>
+
+    <div class="resume-container">
+        <aside class="sidebar">
+            <div class="profile-section">
+                <h1>ACHMAD SYARFANDI</h1>
+                <p class="role" id="role">Senior DevSecOps Engineer</p>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-item"><i data-lucide="mail" size="16"></i><a href="mailto:syarfandi.achmad@gmail.com">syarfandi.achmad@gmail.com</a></div>
+                <div class="contact-item"><i data-lucide="phone" size="16"></i><span>+62 852-5652-2335</span></div>
+                <div class="contact-item"><i data-lucide="map-pin" size="16"></i><span id="locText">Makassar, Indonesia</span></div>
+                <div class="contact-item"><i data-lucide="globe" size="16"></i><a href="https://syarfandi.github.io" target="_blank">syarfandi.github.io</a></div>
+            </div>
+
+            <div class="sidebar-section">
+                <h2 id="skillsTitle">Core Skills</h2>
+                <div class="skill-list" id="skillList"></div>
+            </div>
+
+            <div class="sidebar-section">
+                <h2 id="certsTitle">Certifications</h2>
+                <div id="certList" style="font-size: 13px; color: #cbd5e1;"></div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="section">
+                <h2 class="section-title"><i data-lucide="user"></i> <span id="summaryTitle">Professional Summary</span></h2>
+                <p class="summary-text" id="summaryText"></p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title"><i data-lucide="briefcase"></i> <span id="expTitle">Experience</span></h2>
+                <div id="experienceList"></div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title"><i data-lucide="graduation-cap"></i> <span id="eduTitle">Education</span></h2>
+                <div class="education-item">
+                    <div class="education-degree">Bachelor of Computer Science (S.Kom)</div>
+                    <div class="education-school" id="eduInfo">GPA: 3.22 / 4.00</div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title"><i data-lucide="star"></i> <span id="projectsTitle">Featured Projects</span></h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;" id="projectsGrid"></div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                role: "Senior DevSecOps Engineer",
+                locText: "Makassar, Indonesia",
+                skillsTitle: "Core Skills",
+                certsTitle: "Certifications",
+                summaryTitle: "Professional Summary",
+                expTitle: "Experience",
+                eduTitle: "Education",
+                projectsTitle: "Featured Projects",
+                present: "Present",
+                summary: "Self-driven <strong>Senior DevSecOps Engineer</strong> with 8+ years of expertise in architecting resilient cloud infrastructures and automating security-first CI/CD pipelines. Expert in <strong>Terraform</strong> and <strong>Kubernetes</strong> orchestration, with a proven track record of scaling enterprise ecosystems and government platforms. Adept at <strong>asynchronous collaboration</strong> and managing high-availability systems in global remote environments.",
+                skills: [
+                    { name: "Infrastructure as Code (Terraform)", level: 90 },
+                    { name: "Kubernetes (K8s) & Docker", level: 85 },
+                    { name: "CI/CD Security (GitHub Actions)", level: 95 },
+                    { name: "Zero Trust & Cloud Security", level: 80 },
+                    { name: "Database Scaling (PostgreSQL)", level: 85 },
+                    { name: "Technical Documentation", level: 90 }
+                ],
+                certs: [
+                    { title: "National Cyber Exercise #10", issuer: "BSSN", date: "2024" },
+                    { title: "Samsung Next Apps Winner", issuer: "Samsung Indonesia", date: "2017" },
+                    { title: "Microsoft CityApp Participant", issuer: "Microsoft", date: "" }
+                ],
+                experiences: [
+                    {
+                        title: "Computer Specialist (Civil Servant)",
+                        company: "Regional Office of Ministry of Religious Affairs (South Sulawesi)",
+                        date: "2025 - Present",
+                        desc: [
+                            "<strong>Spearheaded</strong> digital transformation for regional services, migrating legacy apps to modern cloud architectures.",
+                            "<strong>Orchestrated</strong> the regional data infrastructure (<strong>Data Sulsel</strong>), supporting analysis for 9M+ residents.",
+                            "<strong>Strengthened</strong> security posture by implementing automated compliance and incident response protocols."
+                        ]
+                    },
+                    {
+                        title: "DevSecOps & Infrastructure Expert",
+                        company: "Dinas Kominfo & Disbud Makassar",
+                        date: "2023 - 2025",
+                        desc: [
+                            "<strong>Architected</strong> high-availability infrastructure for <strong>Makaverse</strong>, handling peak traffic for thousands of users.",
+                            "<strong>Secured</strong> government digital assets during <strong>BSSN National Cyber Exercise</strong> with 100% uptime.",
+                            "<strong>Automated</strong> CI/CD pipelines via <strong>GitHub Actions</strong>, reducing deployment-related downtime by 40%."
+                        ]
+                    },
+                    {
+                        title: "Lead DevSecOps Engineer",
+                        company: "GetKasir (Enterprise POS Startup)",
+                        date: "2019 - Present",
+                        desc: [
+                            "<strong>Scaled</strong> cloud infrastructure for a <strong>100+ module enterprise retail ecosystem</strong> supporting thousands of merchants.",
+                            "<strong>Engineered</strong> scalable database solutions using <strong>Supabase/PostgreSQL</strong> for high-concurrency retail loads.",
+                            "<strong>Standardized</strong> technical documentation for disaster recovery and asynchronous global collaboration."
+                        ]
+                    },
+                    {
+                        title: "SQA & DevSecOps Engineer",
+                        company: "Malmora (Startup)",
+                        date: "2020 - 2023",
+                        desc: [
+                            "<strong>Automated</strong> full-stack testing and CI/CD pipelines for a high-scale mobile marketplace reseller platform.",
+                            "<strong>Orchestrated</strong> cloud staging environments, reducing infrastructure costs by 25% via serverless optimization."
+                        ]
+                    }
+                ],
+                projects: [
+                    { title: "Kawan Sedarah", desc: "Real-time blood stock command center monitoring platform." },
+                    { title: "Data Sulsel", desc: "Integrated regional data monitoring for public religious services." }
+                ]
+            },
+            id: {
+                role: "Senior DevSecOps Engineer",
+                locText: "Makassar, Indonesia",
+                skillsTitle: "Keahlian Inti",
+                certsTitle: "Sertifikasi",
+                summaryTitle: "Ringkasan Profesional",
+                expTitle: "Pengalaman Kerja",
+                eduTitle: "Pendidikan",
+                projectsTitle: "Proyek Pilihan",
+                present: "Sekarang",
+                summary: "<strong>Senior DevSecOps Engineer</strong> yang sangat analitis dengan keahlian lebih dari 8 tahun dalam merancang infrastruktur cloud yang tangguh dan mengotomatisasi pipeline CI/CD yang mengutamakan keamanan. Pakar dalam orkestrasi <strong>Terraform</strong> dan <strong>Kubernetes</strong>, dengan rekam jejak terbukti dalam menskalakan ekosistem enterprise dan platform pemerintah. Mahir dalam <strong>kolaborasi asinkron</strong> dan mengelola sistem ketersediaan tinggi di lingkungan remote global.",
+                skills: [
+                    { name: "Infrastructure as Code (Terraform)", level: 90 },
+                    { name: "Kubernetes (K8s) & Docker", level: 85 },
+                    { name: "Keamanan CI/CD (GitHub Actions)", level: 95 },
+                    { name: "Zero Trust & Keamanan Cloud", level: 80 },
+                    { name: "Skalabilitas Database (PostgreSQL)", level: 85 },
+                    { name: "Dokumentasi Teknis", level: 90 }
+                ],
+                certs: [
+                    { title: "National Cyber Exercise #10", issuer: "BSSN", date: "2024" },
+                    { title: "Pemenang Samsung Next Apps", issuer: "Samsung Indonesia", date: "2017" },
+                    { title: "Peserta Microsoft CityApp", issuer: "Microsoft", date: "" }
+                ],
+                experiences: [
+                    {
+                        title: "Pranata Komputer (Civil Servant)",
+                        company: "Kanwil Kementerian Agama Prov. Sulawesi Selatan",
+                        date: "2025 - Sekarang",
+                        desc: [
+                            "<strong>Memimpin</strong> transformasi digital layanan regional, memigrasikan aplikasi warisan ke arsitektur cloud modern.",
+                            "<strong>Mengorkestrasi</strong> infrastruktur data regional (<strong>Data Sulsel</strong>), mendukung analisis untuk 9jt+ penduduk.",
+                            "<strong>Memperkuat</strong> postur keamanan dengan menerapkan kepatuhan otomatis dan protokol respon insiden."
+                        ]
+                    },
+                    {
+                        title: "Pakar DevSecOps & Infrastruktur",
+                        company: "Dinas Kominfo & Disbud Makassar",
+                        date: "2023 - 2025",
+                        desc: [
+                            "<strong>Merancang</strong> infrastruktur ketersediaan tinggi untuk <strong>Makaverse</strong>, menangani trafik puncak ribuan pengguna.",
+                            "<strong>Mengamankan</strong> aset digital pemerintah selama <strong>BSSN National Cyber Exercise</strong> dengan uptime 100%.",
+                            "<strong>Otomatisasi</strong> pipeline CI/CD via <strong>GitHub Actions</strong>, mengurangi downtime deployment sebesar 40%."
+                        ]
+                    },
+                    {
+                        title: "Lead DevSecOps Engineer",
+                        company: "GetKasir (Enterprise POS Startup)",
+                        date: "2019 - Sekarang",
+                        desc: [
+                            "<strong>Menskalakan</strong> infrastruktur cloud untuk <strong>ekosistem retail enterprise 100+ modul</strong>.",
+                            "<strong>Membangun</strong> solusi database skalabel menggunakan <strong>Supabase/PostgreSQL</strong> untuk beban transaksi tinggi.",
+                            "<strong>Standardisasi</strong> dokumentasi teknis untuk pemulihan bencana dan kolaborasi global asinkron."
+                        ]
+                    },
+                    {
+                        title: "SQA & DevSecOps Engineer",
+                        company: "Malmora (Startup)",
+                        date: "2020 - 2023",
+                        desc: [
+                            "<strong>Otomatisasi</strong> testing full-stack dan pipeline CI/CD untuk platform reseller mobile marketplace.",
+                            "<strong>Mengorkestrasi</strong> lingkungan staging cloud, mengurangi biaya infra sebesar 25% via optimasi serverless."
+                        ]
+                    }
+                ],
+                projects: [
+                    { title: "Kawan Sedarah", desc: "Platform monitoring stok darah real-time untuk respon darurat." },
+                    { title: "Data Sulsel", desc: "Monitoring data regional terintegrasi untuk layanan publik keagamaan." }
+                ]
+            }
+        };
+
+        let currentLang = 'en';
+
+        function updateContent() {
+            const t = translations[currentLang];
+            document.getElementById('role').innerText = t.role;
+            document.getElementById('locText').innerText = t.locText;
+            document.getElementById('skillsTitle').innerText = t.skillsTitle;
+            document.getElementById('certsTitle').innerText = t.certsTitle;
+            document.getElementById('summaryTitle').innerText = t.summaryTitle;
+            document.getElementById('expTitle').innerText = t.expTitle;
+            document.getElementById('eduTitle').innerText = t.eduTitle;
+            document.getElementById('projectsTitle').innerText = t.projectsTitle;
+            document.getElementById('summaryText').innerHTML = t.summary;
+
+            // Update Skills
+            const skillList = document.getElementById('skillList');
+            skillList.innerHTML = t.skills.map(s => `
+                <div class="skill-item">
+                    <span class="skill-name">${s.name}</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: ${s.level}%;"></div></div>
+                </div>
+            `).join('');
+
+            // Update Certs
+            const certList = document.getElementById('certList');
+            certList.innerHTML = t.certs.map(c => `
+                <p style="margin-bottom: 10px;">
+                    <strong style="color: white; display: block;">${c.title}</strong> 
+                    ${c.issuer} ${c.date ? '('+c.date+')' : ''}
+                </p>
+            `).join('');
+
+            // Update Experience
+            const expList = document.getElementById('experienceList');
+            expList.innerHTML = t.experiences.map(e => `
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <span class="experience-title">${e.title}</span>
+                        <span class="experience-date">${e.date}</span>
+                    </div>
+                    <div class="experience-company">${e.company}</div>
+                    <ul class="experience-desc">
+                        ${e.desc.map(d => `<li>${d}</li>`).join('')}
+                    </ul>
+                </div>
+            `).join('');
+
+            // Update Projects
+            const projectsGrid = document.getElementById('projectsGrid');
+            projectsGrid.innerHTML = t.projects.map(p => `
+                <div style="background: #f8fafc; padding: 12px; border-radius: 8px; border-left: 4px solid var(--primary);">
+                    <h4 style="font-size: 14px; margin-bottom: 4px;">${p.title}</h4>
+                    <p style="font-size: 12px; color: var(--text-muted);">${p.desc}</p>
+                </div>
+            `).join('');
+
+            document.getElementById('langText').innerText = currentLang === 'en' ? 'EN' : 'ID';
+            document.getElementById('downloadText').innerText = currentLang === 'en' ? 'PDF' : 'PDF';
+            document.getElementById('shareText').innerText = currentLang === 'en' ? 'Share' : 'Bagikan';
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        }
+
+        document.getElementById('langBtn').addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'id' : 'en';
+            updateContent();
+        });
+
+        document.getElementById('downloadBtn').addEventListener('click', () => {
+            window.print();
+        });
+
+        document.getElementById('shareBtn').addEventListener('click', async () => {
+            if (navigator.share) {
+                try {
+                    await navigator.share({
+                        title: 'Achmad Syarfandi - Senior DevSecOps Engineer CV',
+                        url: window.location.href
+                    });
+                } catch (err) {
+                    console.log('Error sharing:', err);
+                }
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert('Link copied to clipboard!');
+            }
+        });
+        
+        // Initialize content
+        updateContent();
+    </script>
+</body>
+</html>

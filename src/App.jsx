@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState, createContext, useContext } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
-import { Mail, Phone, MapPin, ExternalLink, Download, ChevronDown, Award, Briefcase, GraduationCap, Code, Github, Star, GitFork, Moon, Sun, Languages, Shield, Layout, Monitor, Cpu } from 'lucide-react';
+import { Mail, Phone, MapPin, ExternalLink, Download, ChevronDown, Award, Briefcase, GraduationCap, Code, Github, Star, GitFork, Moon, Sun, Languages, Shield, Layout, Monitor, Cpu, FileText } from 'lucide-react';
 
 const translations = {
   id: {
@@ -8,7 +8,7 @@ const translations = {
     heroGreeting: "Hai, Saya",
     heroDesc: "Bersemangat dalam membangun solusi digital yang berdampak, membina kerja sama tim yang solid, dan menghadirkan inovasi layanan publik yang prima.",
     hireMe: "Rekrut Saya",
-    resume: "Daftar Riwayat Hidup",
+    resume: "Resume DevOps (ID)",
     aboutMe: "Tentang",
     me: "Saya",
     aboutDesc: "Saya memiliki semangat alami untuk bekerja dalam tim untuk mencapai tim yang solid dan berkarakter. Memiliki kemampuan komunikasi yang baik, dapat bekerja dengan cepat dan efisien, serta selalu berkomitmen untuk memberikan pelayanan terbaik.",
@@ -42,9 +42,21 @@ const translations = {
     loadingRepos: "Memuat repositori...",
     
     // Experiences
-    exp1Title: "Tenaga Ahli AR/VR Developer",
-    exp1Company: "Dinas Kominfo Kota Makassar",
-    exp1Desc: "Mengembangkan ekosistem Makassar Metaverse (Makaverse), Virtual Lorong Wisata, MGC VR, dan berbagai aplikasi layanan publik berbasis web & VR.",
+    exp9Title: "Pranata Komputer (ASN)",
+    exp9Company: "Kanwil Kementerian Agama Prov. Sulawesi Selatan",
+    exp9Desc: "Mengelola transformasi digital layanan keagamaan, infrastruktur portal data (Data Sulsel), dan keamanan sistem informasi publik di lingkungan wilayah Sulawesi Selatan.",
+
+    exp1Title: "Tenaga Ahli DevSecOps & Infrastruktur",
+    exp1Company: "Dinas Kominfo & Disbud Kota Makassar",
+    exp1Desc: "Mengelola infrastruktur Makassar Metaverse (Makaverse), Virtual Tour Lorong Wisata, Virtual Museum Makassar, dan server email pemerintah.",
+    
+    exp7Title: "SQA & DevSecOps Engineer",
+    exp7Company: "Malmora (Startup)",
+    exp7Desc: "Mengelola DevSecOps dan Software Quality Assurance (SQA) untuk aplikasi mobile marketplace reseller dan toko online.",
+
+    exp8Title: "Lead DevSecOps Engineer",
+    exp8Company: "GetKasir (Startup)",
+    exp8Desc: "Merancang infrastruktur cloud untuk ekosistem retail enterprise dengan 100+ modul.",
     
     exp2Title: "Senior Staff Admin",
     exp2Company: "PT. Hammer Konstruksi Indonesia",
@@ -84,7 +96,7 @@ const translations = {
     heroGreeting: "Hi, I'm",
     heroDesc: "Passionate about building impactful digital solutions, fostering solid teamwork, and delivering excellent public service innovations.",
     hireMe: "Hire Me",
-    resume: "Resume",
+    resume: "Resume DevOps",
     aboutMe: "About",
     me: "Me",
     aboutDesc: "I have a natural passion for working in a team to achieve a solid and character-driven dynamic. I possess good communication skills, can work quickly and efficiently, and am always committed to providing the best service.",
@@ -118,9 +130,21 @@ const translations = {
     loadingRepos: "Loading repositories...",
 
     // Experiences
-    exp1Title: "AR/VR Developer Expert",
-    exp1Company: "Makassar City Communication and Informatics",
-    exp1Desc: "Developing Makassar Metaverse (Makaverse) ecosystem, Virtual Tourism, MGC VR, and various public service applications based on Web & VR.",
+    exp9Title: "Computer Specialist (Civil Servant)",
+    exp9Company: "Ministry of Religious Affairs (South Sulawesi)",
+    exp9Desc: "Managing digital transformation for religious services, regional data portal infrastructure (Data Sulsel), and public information system security.",
+
+    exp1Title: "DevSecOps & Infrastructure Expert",
+    exp1Company: "Dinas Kominfo & Disbud Makassar",
+    exp1Desc: "Managing infrastructure for Makassar Metaverse (Makaverse), Virtual Tour Lorong Wisata, Virtual Museum Makassar, and gov email servers.",
+    
+    exp7Title: "SQA & DevSecOps Engineer",
+    exp7Company: "Malmora (Startup)",
+    exp7Desc: "Managing DevSecOps and SQA for mobile marketplace reseller and online shop applications.",
+
+    exp8Title: "Lead DevSecOps Engineer",
+    exp8Company: "GetKasir (Startup)",
+    exp8Desc: "Designing cloud infrastructure for enterprise retail ecosystems with 100+ modules.",
     
     exp2Title: "Senior Admin Staff",
     exp2Company: "PT. Hammer Konstruksi Indonesia",
@@ -167,9 +191,10 @@ const App = () => {
   const [theme, setTheme] = useState('light');
 
   useEffect(() => {
-    const userLang = navigator.language || navigator.userLanguage || '';
-    if (userLang.toLowerCase().includes('id')) setLang('id');
-    else setLang('en');
+    if (window.location.pathname === '/devops' || window.location.pathname === '/devops/') {
+      window.location.href = '/devops/index.html';
+      return;
+    }
     document.documentElement.className = 'light';
   }, []);
 
@@ -233,8 +258,8 @@ const HeroSection = () => {
           <p style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto 2.5rem' }}>{t('heroDesc')}</p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="#contact" className="btn btn-primary glass">{t('hireMe')}</a>
-            <a href="/docs/CV-ANDI.pdf" target="_blank" className="btn btn-outline glass" rel="noreferrer">
-              <Download size={20} style={{ marginRight: '0.5rem', color: 'var(--text-primary)' }} /> <span style={{ color: 'var(--text-primary)' }}>{t('resume')}</span>
+            <a href="/devops/" target="_blank" className="btn btn-outline glass" rel="noreferrer">
+              <FileText size={20} style={{ marginRight: '0.5rem', color: 'var(--text-primary)' }} /> <span style={{ color: 'var(--text-primary)' }}>{t('resume')}</span>
             </a>
           </div>
         </motion.div>
@@ -327,7 +352,10 @@ const AboutSection = () => {
 const ExperienceSection = () => {
   const { t } = useTheme();
   const experiences = [
-    { title: t('exp1Title'), company: t('exp1Company'), period: `2023 - ${t('present')}`, desc: t('exp1Desc') },
+    { title: t('exp9Title'), company: t('exp9Company'), period: `2025 - ${t('present')}`, desc: t('exp9Desc') },
+    { title: t('exp1Title'), company: t('exp1Company'), period: "2023 - 2025", desc: t('exp1Desc') },
+    { title: t('exp8Title'), company: t('exp8Company'), period: "2019 - Present", desc: t('exp8Desc') },
+    { title: t('exp7Title'), company: t('exp7Company'), period: "2020 - 2023", desc: t('exp7Desc') },
     { title: t('exp2Title'), company: t('exp2Company'), period: "2020 - 2023", desc: t('exp2Desc') },
     { title: t('exp5Title'), company: t('exp5Company'), period: "2021 - 2024", desc: t('exp5Desc') },
     { title: t('exp3Title'), company: t('exp3Company'), period: "2018 - 2019", desc: t('exp3Desc') },
