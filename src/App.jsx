@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState, createContext, useContext } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
-import { Mail, Phone, MapPin, ExternalLink, Download, ChevronDown, Award, Briefcase, GraduationCap, Code, Github, Star, GitFork, Moon, Sun, Languages, Shield, Layout, Monitor, Cpu, FileText } from 'lucide-react';
+import { Mail, Phone, MapPin, ExternalLink, Download, ChevronDown, Award, Briefcase, GraduationCap, Code, Github, Star, GitFork, Moon, Sun, Languages, Shield, Layout, Monitor, Cpu, FileText, Lock, ShieldAlert, CheckCircle2 } from 'lucide-react';
 
 const translations = {
   id: {
@@ -8,9 +8,13 @@ const translations = {
     heroGreeting: "Hai, Saya",
     heroDesc: "Bersemangat dalam membangun solusi digital yang berdampak, membina kerja sama tim yang solid, dan menghadirkan inovasi layanan publik yang prima.",
     hireMe: "Rekrut Saya",
-    resume: "Pilih Resume",
+    resume: "Resume",
     selectResume: "Pilih Versi Resume",
     close: "Tutup",
+    pinTitle: "Masukkan PIN",
+    pinDesc: "Masukkan PIN untuk mengakses daftar resume",
+    pinWrong: "PIN salah, coba lagi",
+    pinUnlock: "Buka Kunci",
     aboutMe: "Tentang",
     me: "Saya",
     aboutDesc: "Saya memiliki semangat alami untuk bekerja dalam tim untuk mencapai tim yang solid dan berkarakter. Memiliki kemampuan komunikasi yang baik, dapat bekerja dengan cepat dan efisien, serta selalu berkomitmen untuk memberikan pelayanan terbaik.",
@@ -100,9 +104,13 @@ const translations = {
     heroGreeting: "Hi, I'm",
     heroDesc: "Passionate about building impactful digital solutions, fostering solid teamwork, and delivering excellent public service innovations.",
     hireMe: "Hire Me",
-    resume: "Select Resume",
+    resume: "Resume",
     selectResume: "Select Resume Version",
     close: "Close",
+    pinTitle: "Enter PIN",
+    pinDesc: "Enter PIN to access resume list",
+    pinWrong: "Wrong PIN, try again",
+    pinUnlock: "Unlock",
     aboutMe: "About",
     me: "Me",
     aboutDesc: "I have a natural passion for working in a team to achieve a solid and character-driven dynamic. I possess good communication skills, can work quickly and efficiently, and am always committed to providing the best service.",
@@ -250,12 +258,40 @@ const Navbar = () => {
 };
 
 const HeroSection = () => {
-  const { t } = useTheme();
+  const { t, theme, lang } = useTheme();
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
   const [showResumeModal, setShowResumeModal] = useState(false);
+  const [pinUnlocked, setPinUnlocked] = useState(false);
+  const [showPinModal, setShowPinModal] = useState(false);
+  const [pinValue, setPinValue] = useState('');
+  const [pinError, setPinError] = useState(false);
+  const [pinSuccess, setPinSuccess] = useState(false);
+  const pinInputRef = useRef(null);
+
+  const handlePinChange = (val) => {
+    const cleanVal = val.replace(/\D/g, '').slice(0, 6);
+    setPinValue(cleanVal);
+    setPinError(false);
+    
+    if (cleanVal.length === 6) {
+      if (cleanVal === '197395') {
+        setPinSuccess(true);
+        setTimeout(() => {
+          setPinUnlocked(true);
+          setShowPinModal(false);
+          setShowResumeModal(true);
+          setPinSuccess(false);
+          setPinValue('');
+        }, 800);
+      } else {
+        setPinError(true);
+        setTimeout(() => setPinValue(''), 500);
+      }
+    }
+  };
 
   const resumeOptions = [
     { title: "DevSecOps Engineer", path: "/devops/" },
@@ -312,7 +348,17 @@ const HeroSection = () => {
             <p className="hero-description">{t('heroDesc')}</p>
             <div className="hero-buttons">
               <a href="#contact" className="btn btn-primary glass">{t('hireMe')}</a>
-              <button onClick={() => setShowResumeModal(!showResumeModal)} className="btn btn-outline glass">
+              <button onClick={() => {
+                if (pinUnlocked) {
+                  setShowResumeModal(!showResumeModal);
+                } else {
+                  setShowPinModal(true);
+                  setPinValue('');
+                  setPinError(false);
+                  setPinSuccess(false);
+                  setTimeout(() => pinInputRef.current?.focus(), 100);
+                }
+              }} className="btn btn-outline glass">
                 <span style={{ color: 'var(--text-primary)' }}>{t('resume')}</span>
               </button>
             </div>
@@ -334,11 +380,94 @@ const HeroSection = () => {
           </motion.div>
         </div>
       </motion.div>
-
       <motion.div animate={{ y: [0, 10, 0] }} transition={{ repeat: Infinity, duration: 2 }} style={{ position: 'absolute', bottom: '2rem', left: '50%', transform: 'translateX(-50%)', opacity: 0.5, color: 'var(--text-primary)' }}>
         <ChevronDown size={32} />
       </motion.div>
+
+      {/* Adaptive Glass PIN Modal */}
+      {showPinModal && (
+        <div className="adaptive-pin-overlay" onClick={() => setShowPinModal(false)}>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 10 }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
+            onClick={e => e.stopPropagation()}
+            className="adaptive-pin-card glass"
+          >
+            <motion.div
+              animate={pinError ? { x: [-10, 10, -7, 7, -4, 4, 0] } : {}}
+              transition={{ duration: 0.4 }}
+              className="adaptive-pin-inner"
+            >
+              <div className={`adaptive-pin-icon ${pinError ? 'error' : ''} ${pinSuccess ? 'success' : ''}`}>
+                {pinSuccess ? <CheckCircle2 size={32} /> : (pinError ? <ShieldAlert size={32} /> : <Lock size={32} />)}
+              </div>
+
+              <h3 className="adaptive-pin-title">{pinSuccess ? (lang === 'id' ? "Akses Diberikan" : "Access Granted") : t('pinTitle')}</h3>
+              <p className="adaptive-pin-desc">{pinSuccess ? (lang === 'id' ? "Membuka daftar resume..." : "Unlocking resumes...") : t('pinDesc')}</p>
+              
+              <div className="adaptive-pin-slots" onClick={() => pinInputRef.current?.focus()}>
+                {[0,1,2,3,4,5].map(i => (
+                  <div key={i} className={`adaptive-pin-slot ${pinValue.length > i ? 'filled' : ''} ${pinValue.length === i ? 'active' : ''} ${pinError ? 'error' : ''} ${pinSuccess ? 'success' : ''}`}>
+                    {pinValue[i] ? (
+                      <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="slot-dot" />
+                    ) : (
+                      pinValue.length === i && !pinSuccess && !pinError && <div className="slot-cursor" />
+                    )}
+                  </div>
+                ))}
+              </div>
+              
+              <input
+                ref={pinInputRef}
+                type="tel"
+                inputMode="numeric"
+                autoComplete="one-time-code"
+                maxLength={6}
+                value={pinValue}
+                onChange={e => handlePinChange(e.target.value)}
+                className="pin-hidden-input"
+              />
+              
+              {pinError && (
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="adaptive-pin-error">
+                  {t('pinWrong')}
+                </motion.div>
+              )}
+            </motion.div>
+          </motion.div>
+        </div>
+      )}
+
       <style>{`
+        .adaptive-pin-overlay { position: fixed; inset: 0; z-index: 10000; display: flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .dark .adaptive-pin-overlay { background: rgba(0, 0, 0, 0.7); }
+        
+        .adaptive-pin-card { padding: 3rem 2rem; border-radius: 30px; text-align: center; max-width: 360px; width: 92%; box-shadow: 0 40px 100px rgba(0,0,0,0.15); border: 1px solid var(--glass-border); position: relative; overflow: hidden; }
+        
+        .adaptive-pin-icon { width: 64px; height: 64px; border-radius: 18px; background: var(--primary-color); color: white; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .adaptive-pin-icon.error { background: #ef4444; transform: scale(1.1); }
+        .adaptive-pin-icon.success { background: #10b981; transform: scale(1.1); }
+        
+        .adaptive-pin-title { color: var(--text-primary); font-size: 1.4rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+        .adaptive-pin-desc { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 2.5rem; line-height: 1.5; }
+        
+        .adaptive-pin-slots { display: flex; gap: 10px; justify-content: center; margin-bottom: 1rem; }
+        .adaptive-pin-slot { width: 44px; height: 56px; border-radius: 14px; border: 2px solid var(--glass-border); background: var(--glass-bg); display: flex; align-items: center; justify-content: center; transition: all 0.2s; position: relative; }
+        
+        .adaptive-pin-slot.active { border-color: var(--primary-color); box-shadow: 0 0 0 4px rgba(var(--primary-rgb, 96, 165, 250), 0.15); transform: translateY(-2px); }
+        .adaptive-pin-slot.filled { border-color: var(--primary-color); }
+        .adaptive-pin-slot.error { border-color: #ef4444; background: rgba(239, 68, 68, 0.05); }
+        .adaptive-pin-slot.success { border-color: #10b981; background: rgba(16, 185, 129, 0.05); }
+        
+        .slot-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--text-primary); }
+        .slot-cursor { width: 2px; height: 20px; background: var(--primary-color); animation: adaptiveBlink 1s infinite; }
+        @keyframes adaptiveBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        
+        .pin-hidden-input { position: absolute; opacity: 0; width: 0; height: 0; pointer-events: none; }
+        .adaptive-pin-error { color: #ef4444; font-size: 0.85rem; margin-top: 1.5rem; font-weight: 700; letter-spacing: 0.02em; }
+        
         .bg-orb { position: absolute; border-radius: 50%; filter: blur(120px); z-index: -1; opacity: 0.2; }
         .orb-1 { background: var(--primary-color); width: 600px; height: 600px; top: -200px; left: -200px; }
         .orb-2 { background: var(--secondary-color); width: 700px; height: 700px; bottom: -300px; right: -200px; }
@@ -372,6 +501,7 @@ const HeroSection = () => {
           .hero-image-container { order: -1; }
           .image-stack { max-width: 350px; }
           .hero-title { font-size: 3.5rem; }
+          .floating-card { left: 50%; transform: translateX(-50%); bottom: -20px; }
         }
 
         @media (max-width: 600px) {
