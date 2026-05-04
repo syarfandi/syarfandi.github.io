@@ -27,9 +27,9 @@ Data Engineer strategis dengan pengalaman lebih dari 8 tahun dalam merancang pip
 **Dinas Kominfo & Disbud Makassar** | Makassar, Indonesia
 *Pakar Infrastruktur & Data* | 2023 – 2025
 - Merekayasa solusi penyimpanan dan penyerapan data yang skalabel untuk platform manajemen keluhan perkotaan, menangani data multimedia volume tinggi.
-- Menerapkan sinkronisasi data real-time untuk platform Makaverse (Makassar Metaverse) menggunakan konfigurasi database konkurensi tinggi.
 - Mengelola lingkungan database on-premise yang kompleks untuk 200+ unit pemerintah, memastikan durabilitas dan ketersediaan data 99,9%.
 - Memimpin proyek migrasi data selama peningkatan infrastruktur kritis kota, menjaga nol kehilangan data.
+- Menerapkan sinkronisasi data real-time untuk platform Makaverse (Makassar Metaverse) menggunakan konfigurasi database konkurensi tinggi.
 
 **GetKasir (Enterprise POS Startup)** | Makassar, Indonesia
 *Co-Founder (Arsitektur Data)* | 2019 – Sekarang

@@ -27,9 +27,9 @@ Strategic Data Engineer with 8+ years of experience in architecting scalable dat
 **Dinas Kominfo & Disbud Makassar** | Makassar, Indonesia
 *Infrastructure & Data Expert* | 2023 – 2025
 - Engineered scalable data storage and ingestion solutions for urban complaint management platforms, handling high-volume multimedia data.
-- Implemented real-time data synchronization for the Makaverse (Makassar Metaverse) platform using high-concurrency database configurations.
 - Managed complex on-premise database environments for 200+ government units, ensuring 99.9% data durability and availability.
 - Led data migration projects during critical city-wide infrastructure upgrades, maintaining zero data loss.
+- Implemented real-time data synchronization for the Makaverse (Makassar Metaverse) platform using high-concurrency database configurations.
 
 **GetKasir (Enterprise POS Startup)** | Makassar, Indonesia
 *Co-Founder (Data Architecture)* | 2019 – Present

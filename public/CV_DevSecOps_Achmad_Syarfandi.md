@@ -28,14 +28,14 @@ Dynamic **DevSecOps Engineer** with 5+ years of experience in architecting high-
 
 ### DevSecOps & Infrastructure Expert | Department of Communication & Informatics (Diskominfo)
 *2023 – 2025 | Makassar, Indonesia*
-- **Architected** the high-availability infrastructure for **Makassar Metaverse (Makaverse)** and **Virtual Museum Makassar**, handling peak traffic of thousands of concurrent users.
 - **Engineered** a secure and resilient government email cluster using **Mailcow**, ensuring 99.99% availability and robust anti-spam/security filtering.
 - **Managed** complex on-prem server environments and infrastructure for over **200+ department domains (Satuan Kerja)** across the city government.
 - **Secured** government digital assets by leading the technical response team during the **BSSN National Cyber Exercise**, maintaining 100% uptime during simulated attacks.
+- **Architected** the high-availability infrastructure for **Makassar Metaverse (Makaverse)** and **Virtual Museum Makassar**, handling peak traffic of thousands of concurrent users.
 
 ### Co-Founder | GetKasir (Enterprise POS Startup)
 *2019 – Present| Remote/Project-based*
-- **Scaled** the cloud infrastructure for a massive **100+ module enterprise retail ecosystem**, supporting thousands of merchants nationwide.
+- **Scaled** the cloud infrastructure for a massive **100+ module enterprise retail ecosystem**.
 - **Integrated** biometric security protocols and automated identity verification systems into the production environment.
 - **Optimized** PostgreSQL database clusters and Supabase instances to handle high-concurrency retail transactions during peak periods.
 - **Standardized** technical documentation for infrastructure scaling and disaster recovery, enabling seamless asynchronous collaboration.

@@ -35,7 +35,7 @@ Highly analytical and self-driven **DevSecOps Engineer** with over 8 years of ex
 
 ### Lead DevSecOps Engineer | GetKasir (Enterprise POS Startup)
 *2019 – Present | Remote/Project-based*
-- **Scaled** the cloud infrastructure for a massive **100+ module enterprise retail ecosystem**, supporting thousands of merchants nationwide.
+- **Scaled** the cloud infrastructure for a massive **100+ module enterprise retail ecosystem**.
 - **Integrated** biometric security protocols and automated identity verification systems into the production environment.
 - **Optimized** PostgreSQL database clusters and Supabase instances to handle high-concurrency retail transactions during peak periods.
 - **Standardized** technical documentation for infrastructure scaling and disaster recovery, enabling seamless asynchronous collaboration.
