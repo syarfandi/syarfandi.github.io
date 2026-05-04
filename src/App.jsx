@@ -271,13 +271,18 @@ const HeroSection = () => {
   const [pinSuccess, setPinSuccess] = useState(false);
   const pinInputRef = useRef(null);
 
-  const handlePinChange = (val) => {
+  const handlePinChange = async (val) => {
     const cleanVal = val.replace(/\D/g, '').slice(0, 6);
     setPinValue(cleanVal);
     setPinError(false);
 
     if (cleanVal.length === 6) {
-      if (cleanVal === '197395') {
+      const msgUint8 = new TextEncoder().encode(cleanVal);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
+      if (hashHex === 'cfbb80a48e057f9507c1173fc30f1a72bb6d1009646b1a5d1162c53df472ba79') {
         setPinSuccess(true);
         setTimeout(() => {
           setPinUnlocked(true);
