@@ -28,8 +28,8 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 
 ### DevSecOps & Pakar Infrastruktur | Dinas Kominfo & Disbud Kota Makassar
 *2023 – 2025 | Makassar, Indonesia*
-- **Membangun** cluster email pemerintah yang aman dan tangguh menggunakan **Mailcow**, memastikan ketersediaan 99,99% serta filtrasi keamanan/anti-spam yang kuat.
 - **Mengelola** lingkungan server on-prem yang kompleks dan infrastruktur untuk lebih dari **200+ domain satuan kerja** di seluruh lingkungan pemerintah kota.
+- **Membangun** cluster email pemerintah yang aman dan tangguh menggunakan **Mailcow**, memastikan ketersediaan 99,99% serta filtrasi keamanan/anti-spam yang kuat.
 - **Mengamankan** aset digital pemerintah dengan memimpin tim respon teknis selama **BSSN National Cyber Exercise**, mempertahankan uptime 100% selama simulasi serangan.
 - **Merancang** infrastruktur high-availability untuk **Makassar Metaverse (Makaverse)** dan **Virtual Museum Makassar**, menangani beban trafik puncak ribuan pengguna bersamaan.
 

@@ -29,8 +29,8 @@ Reliable **Backend Developer** with 8+ years of experience in building scalable,
 
 ### DevSecOps & Infrastructure Expert | Department of Communication & Informatics (Diskominfo)
 *2023 – 2025 | Makassar, Indonesia*
-- **Developed** a high-concurrency **Mailcow** mail cluster backend handling 200+ government domains with automated provisioning scripts and DNS API integrations.
 - **Managed** PostgreSQL databases across 200+ on-premise server environments, implementing automated backup strategies, query optimization, and connection pooling.
+- **Developed** a high-concurrency **Mailcow** mail cluster backend handling 200+ government domains with automated provisioning scripts and DNS API integrations.
 - **Designed** RESTful APIs for the **Helpdesk Makassar** citizen complaint platform, supporting ticket lifecycle management and cross-department routing.
 - **Built** backend microservices for the **Makaverse** metaverse platform — WebSocket servers for real-time user state, session management APIs, and geospatial data endpoints.
 

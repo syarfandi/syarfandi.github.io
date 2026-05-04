@@ -29,8 +29,8 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 
 ### Pakar DevSecOps & Infrastruktur | Dinas Kominfo & Disbud Makassar
 *2023 – 2025 | Makassar, Indonesia*
-- **Mengembangkan** backend cluster email **Mailcow** berkonkurensi tinggi untuk 200+ domain pemerintah dengan skrip provisioning otomatis dan integrasi DNS API.
 - **Mengelola** database PostgreSQL di 200+ lingkungan server on-premise, mengimplementasikan strategi backup otomatis, optimasi query, dan connection pooling.
+- **Mengembangkan** backend cluster email **Mailcow** berkonkurensi tinggi untuk 200+ domain pemerintah dengan skrip provisioning otomatis dan integrasi DNS API.
 - **Merancang** RESTful API untuk platform pengaduan warga **Helpdesk Makassar**, mendukung manajemen siklus hidup tiket dan routing antar-departemen.
 - **Membangun** microservices backend untuk platform metaverse **Makaverse** — server WebSocket untuk status pengguna real-time, API manajemen sesi, dan endpoint data geospasial.
 

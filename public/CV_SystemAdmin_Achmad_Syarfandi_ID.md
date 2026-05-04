@@ -27,8 +27,8 @@ System Administrator yang andal dengan pengalaman lebih dari 8 tahun dalam menge
 
 **Dinas Kominfo & Disbud Makassar** | Makassar, Indonesia
 *System Administrator & DevSecOps* | 2023 – 2025
-- Merancang dan memelihara cluster email pemerintah yang aman menggunakan Mailcow untuk 200+ domain.
 - Mengadministrasi 200+ server on-premise (fisik dan virtual), mengoptimalkan alokasi sumber daya dan performa penyimpanan untuk unit kerja kota.
+- Merancang dan memelihara cluster email pemerintah yang aman menggunakan Mailcow untuk 200+ domain.
 - Memperkuat keamanan server Linux berdasarkan standar industri, mencapai uptime 99,9% untuk layanan kota.
 - Menjalankan prosedur pemulihan bencana dan migrasi server selama peningkatan infrastruktur kritis.
 - Memastikan uptime server 100% selama acara digital penting dan National Cyber Exercise (BSSN).

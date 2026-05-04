@@ -27,8 +27,8 @@ Reliable System Administrator with 8+ years of experience in managing high-avail
 
 **Dinas Kominfo & Disbud Makassar** | Makassar, Indonesia
 *System Administrator & DevSecOps* | 2023 – 2025
-- Engineered and maintained a secure government mail cluster using Mailcow, handling anti-spam/security for 200+ domains.
 - Administered 200+ on-premise servers (physical and virtual), optimizing resource allocation and storage performance for city-wide units.
+- Engineered and maintained a secure government mail cluster using Mailcow, handling anti-spam/security for 200+ domains.
 - Hardened Linux server security configurations based on industry standards, achieving 99.9% uptime for city-wide services.
 - Executed disaster recovery procedures and server migrations during critical infrastructure upgrades.
 - Ensured 100% server uptime during high-stakes digital events and National Cyber Exercises (BSSN).
