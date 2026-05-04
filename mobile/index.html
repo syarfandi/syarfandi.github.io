@@ -531,7 +531,7 @@
                     { title: "Kegiatan Sulsel", desc: "Event mobile app — QR attendance scanning, real-time participant sync, offline mode." },
                     { title: "Kawan Sedarah", desc: "Blood stock mobile — real-time alerts, location-based hospital finder, emergency mode." }
                 ],
-                atsFile: "/CV_MobileDeveloper_Achmad_Syarfandi.md",
+                atsFile: "../public/CV_MobileDeveloper_Achmad_Syarfandi.md",
                 viewLabels: { premium: "Visual", ats: "ATS" },
                 btnLabels: { share: "Share", pdf: "PDF", back: "Back" }
             },
@@ -613,7 +613,7 @@
                     { title: "Kegiatan Sulsel", desc: "Aplikasi mobile kegiatan — scan QR kehadiran, sync peserta real-time, mode offline." },
                     { title: "Kawan Sedarah", desc: "Stok darah mobile — alert real-time, pencari RS berbasis lokasi, mode darurat." }
                 ],
-                atsFile: "/CV_MobileDeveloper_Achmad_Syarfandi_ID.md",
+                atsFile: "../public/CV_MobileDeveloper_Achmad_Syarfandi_ID.md",
                 viewLabels: { premium: "Visual", ats: "ATS" },
                 btnLabels: { share: "Bagikan", pdf: "PDF", back: "Kembali" }
             }
@@ -685,8 +685,15 @@
 
             // ATS Content
             fetch(t.atsFile)
-                .then(r => r.text())
-                .then(md => { atsContent.innerHTML = marked.parse(md); });
+                .then(r => {
+                    if (!r.ok) throw new Error('File not found: ' + t.atsFile);
+                    return r.text();
+                })
+                .then(md => { atsContent.innerHTML = marked.parse(md); })
+                .catch(err => {
+                    console.error(err);
+                    atsContent.innerHTML = `<p style="color:red; padding: 20px;">Error loading CV: ${err.message}</p>`;
+                });
 
             if (typeof lucide !== 'undefined') lucide.createIcons();
         }

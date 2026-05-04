@@ -531,7 +531,7 @@
                     { title: "Email SLA Reports", desc: "Performance monitoring — uptime tracking, delivery rates, SLA compliance for 200+ domains." },
                     { title: "PPID Transparency", desc: "Public data reporting — information request tracking, response time analysis, compliance rates." }
                 ],
-                atsFile: "/CV_DataAnalyst_Achmad_Syarfandi.md",
+                atsFile: "../public/CV_DataAnalyst_Achmad_Syarfandi.md",
                 viewLabels: { premium: "Visual", ats: "ATS" },
                 btnLabels: { share: "Share", pdf: "PDF", back: "Back" }
             },
@@ -613,7 +613,7 @@
                     { title: "Email SLA Reports", desc: "Monitoring performa — pelacakan uptime, tingkat pengiriman, kepatuhan SLA 200+ domain." },
                     { title: "PPID Transparansi", desc: "Pelaporan data publik — pelacakan permintaan informasi, analisis waktu respons, tingkat kepatuhan." }
                 ],
-                atsFile: "/CV_DataAnalyst_Achmad_Syarfandi_ID.md",
+                atsFile: "../public/CV_DataAnalyst_Achmad_Syarfandi_ID.md",
                 viewLabels: { premium: "Visual", ats: "ATS" },
                 btnLabels: { share: "Bagikan", pdf: "PDF", back: "Kembali" }
             }
@@ -685,8 +685,15 @@
 
             // ATS Content
             fetch(t.atsFile)
-                .then(r => r.text())
-                .then(md => { atsContent.innerHTML = marked.parse(md); });
+                .then(r => {
+                    if (!r.ok) throw new Error('File not found: ' + t.atsFile);
+                    return r.text();
+                })
+                .then(md => { atsContent.innerHTML = marked.parse(md); })
+                .catch(err => {
+                    console.error(err);
+                    atsContent.innerHTML = `<p style="color:red; padding: 20px;">Error loading CV: ${err.message}</p>`;
+                });
 
             if (typeof lucide !== 'undefined') lucide.createIcons();
         }

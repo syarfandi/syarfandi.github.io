@@ -518,7 +518,7 @@
                     { title: "Retail Analytics Engine", desc: "Business intelligence layer for POS data using BigQuery and Grafana." },
                     { title: "Helpdesk Data Platform", desc: "Public complaint data management system with real-time tracking." }
                 ],
-                atsFile: "/CV_DataEngineer_Achmad_Syarfandi.md",
+                atsFile: "../public/CV_DataEngineer_Achmad_Syarfandi.md",
                 viewLabels: { premium: "Visual", ats: "ATS" },
                 btnLabels: { share: "Share", pdf: "PDF", back: "Back" }
             },
@@ -587,7 +587,7 @@
                     { title: "Engine Analitik Retail", desc: "Lapisan intelijen bisnis untuk data POS menggunakan BigQuery dan Grafana." },
                     { title: "Platform Data Helpdesk", desc: "Sistem manajemen data keluhan publik dengan pelacakan real-time." }
                 ],
-                atsFile: "/CV_DataEngineer_Achmad_Syarfandi_ID.md",
+                atsFile: "../public/CV_DataEngineer_Achmad_Syarfandi_ID.md",
                 viewLabels: { premium: "Visual", ats: "ATS" },
                 btnLabels: { share: "Bagikan", pdf: "PDF", back: "Kembali" }
             }
@@ -659,8 +659,15 @@
 
             // ATS Content
             fetch(t.atsFile)
-                .then(r => r.text())
-                .then(md => { atsContent.innerHTML = marked.parse(md); });
+                .then(r => {
+                    if (!r.ok) throw new Error('File not found: ' + t.atsFile);
+                    return r.text();
+                })
+                .then(md => { atsContent.innerHTML = marked.parse(md); })
+                .catch(err => {
+                    console.error(err);
+                    atsContent.innerHTML = `<p style="color:red; padding: 20px;">Error loading CV: ${err.message}</p>`;
+                });
 
             if (typeof lucide !== 'undefined') lucide.createIcons();
         }
