@@ -26,7 +26,7 @@ Reliable System Administrator with 8+ years of experience in managing high-avail
 - Architected digital distribution systems to reach broader regional markets.
 
 **Dinas Kominfo & Disbud Makassar** | Makassar, Indonesia
-*System Administrator & DevSecOps* | 2023 – 2025
+*System Administrator & DevOps* | 2023 – 2025
 - Administered 200+ on-premise servers (physical and virtual), optimizing resource allocation and storage performance for city-wide units.
 - Engineered and maintained a secure government mail cluster using Mailcow, handling anti-spam/security for 200+ domains.
 - Hardened Linux server security configurations based on industry standards, achieving 99.9% uptime for city-wide services.
@@ -41,7 +41,7 @@ Reliable System Administrator with 8+ years of experience in managing high-avail
 - Scaled infrastructure for retail ecosystem with 100+ modules.
 
 **Malmora (Startup)** | Makassar, Indonesia
-*SQA & DevSecOps Engineer* | 2020 – 2023
+*SQA & DevOps Engineer* | 2020 – 2023
 - Managed infrastructure for a regional reseller and dropship platform.
 - Simplified technical operations for non-technical users by automating logistics and packaging workflows.
 

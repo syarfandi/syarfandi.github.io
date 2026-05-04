@@ -27,7 +27,7 @@ Reliable **Backend Developer** with 8+ years of experience in building scalable,
 - **Implemented** JWT-based authentication, row-level security (RLS), and automated database migrations for multi-tenant government services.
 - **Automated** internal reporting workflows through custom backend scripts, reducing manual data processing time by 60%.
 
-### DevSecOps & Infrastructure Expert | Department of Communication & Informatics (Diskominfo)
+### DevOps & Infrastructure Expert | Department of Communication & Informatics (Diskominfo)
 *2023 – 2025 | Makassar, Indonesia*
 - **Managed** PostgreSQL databases across 200+ on-premise server environments, implementing automated backup strategies, query optimization, and connection pooling.
 - **Developed** a high-concurrency **Mailcow** mail cluster backend handling 200+ government domains with automated provisioning scripts and DNS API integrations.
@@ -41,7 +41,7 @@ Reliable **Backend Developer** with 8+ years of experience in building scalable,
 - **Implemented** Supabase Realtime subscriptions, webhook integrations, and background job queues (Bull/Redis) for merchant dashboard synchronization.
 - **Built** inventory management APIs with batch processing, stock reconciliation logic, and multi-branch data synchronization.
 
-### SQA & DevSecOps Engineer | Malmora (Startup)
+### SQA & DevOps Engineer | Malmora (Startup)
 *2020 – 2023 | Remote*
 - **Built** the backend API layer for a reseller & dropship e-commerce platform serving Sulawesi and Eastern Indonesia markets.
 - **Implemented** order processing pipelines, inventory synchronization services, and automated logistics integration with third-party courier APIs.

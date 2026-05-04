@@ -95,8 +95,8 @@
         const shareText = document.getElementById('shareText');
 
         const files = {
-            en: 'CV_DevSecOps_Achmad_Syarfandi.md',
-            id: 'CV_DevSecOps_Achmad_Syarfandi_ID.md'
+            en: 'CV_DevOps_Achmad_Syarfandi.md',
+            id: 'CV_DevOps_Achmad_Syarfandi_ID.md'
         };
 
         function loadCV(lang) {
@@ -130,7 +130,7 @@
             if (navigator.share) {
                 try {
                     await navigator.share({
-                        title: 'Achmad Syarfandi - DevSecOps ATS CV',
+                        title: 'Achmad Syarfandi - DevOps ATS CV',
                         url: window.location.href
                     });
                 } catch (err) {

@@ -26,7 +26,7 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Merancang** pipeline pelaporan SQL otomatis (stored procedures + cron) menggantikan alur Excel manual, mengurangi waktu pembuatan laporan 70%.
 - **Membuat** scorecard KPI mingguan dan laporan ringkasan eksekutif untuk pimpinan regional, mendukung keputusan berbasis data.
 
-### Pakar DevSecOps & Infrastruktur | Diskominfo Makassar
+### Pakar DevOps & Infrastruktur | Diskominfo Makassar
 *2023 – 2025 | Makassar*
 - **Menganalisis** data keluhan warga **Helpdesk Makassar** — kategorisasi, analisis tren, skor prioritas membantu pejabat menyelesaikan masalah 40% lebih cepat.
 - **Memantau** kepatuhan SLA 200+ domain email pemerintah, membuat laporan performa bulanan dengan rekomendasi.
@@ -38,7 +38,7 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Mengoptimalkan** query SQL untuk dataset transaksi besar (jutaan baris), mengurangi waktu laporan dari menit ke detik.
 - **Menetapkan** standar kualitas data — validasi otomatis, deteksi duplikat, pemeriksaan integritas untuk data merchant.
 
-### SQA & DevSecOps Engineer | Malmora (Startup)
+### SQA & DevOps Engineer | Malmora (Startup)
 *2020 – 2023 | Remote*
 - **Melacak** KPI e-commerce — tingkat konversi, nilai pesanan rata-rata, abandonment keranjang, performa penjual.
 - **Membangun** laporan performa produk — best-seller, inventori slow-moving, pola permintaan musiman.

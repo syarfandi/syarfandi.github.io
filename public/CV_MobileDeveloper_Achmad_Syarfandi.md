@@ -26,7 +26,7 @@ Strategic **Mobile Developer** with 8+ years of experience architecting high-per
 - **Built** mobile-responsive admin with gesture navigation, pull-to-refresh, push notifications via Supabase.
 - **Optimized** rendering to consistent 60fps across low-end Android devices.
 
-### DevSecOps & Infrastructure Expert | Diskominfo Makassar
+### DevOps & Infrastructure Expert | Diskominfo Makassar
 *2023 – 2025 | Makassar*
 - **Built** **Al-Haram VR** Unity app — Samsung Gear VR, **Top 10 Samsung Next Apps 4.0** nationwide.
 - **Developed** mobile **Helpdesk Makassar** — camera complaints, offline drafting, native gestures.
@@ -40,7 +40,7 @@ Strategic **Mobile Developer** with 8+ years of experience architecting high-per
 - **Optimized** checkout with haptic feedback, gesture shortcuts — 35% faster transactions.
 - **Published** on Google Play with CodePush OTA, crash monitoring, staged rollouts.
 
-### SQA & DevSecOps Engineer | Malmora (Startup)
+### SQA & DevOps Engineer | Malmora (Startup)
 *2020 – 2023 | Remote*
 - **Developed** Malmora mobile marketplace — infinite scroll, cart, one-tap ordering.
 - **Implemented** push notifications, deep linking, biometric auth for secure checkout.

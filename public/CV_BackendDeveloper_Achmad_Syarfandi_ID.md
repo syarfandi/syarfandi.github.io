@@ -27,7 +27,7 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Mengimplementasikan** autentikasi berbasis JWT, row-level security (RLS), dan migrasi database otomatis untuk layanan pemerintah multi-tenant.
 - **Mengotomasi** alur kerja pelaporan internal melalui skrip backend kustom, mengurangi waktu pemrosesan data manual sebesar 60%.
 
-### Pakar DevSecOps & Infrastruktur | Dinas Kominfo & Disbud Makassar
+### Pakar DevOps & Infrastruktur | Dinas Kominfo & Disbud Makassar
 *2023 – 2025 | Makassar, Indonesia*
 - **Mengelola** database PostgreSQL di 200+ lingkungan server on-premise, mengimplementasikan strategi backup otomatis, optimasi query, dan connection pooling.
 - **Mengembangkan** backend cluster email **Mailcow** berkonkurensi tinggi untuk 200+ domain pemerintah dengan skrip provisioning otomatis dan integrasi DNS API.
@@ -41,7 +41,7 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Mengimplementasikan** Supabase Realtime subscriptions, integrasi webhook, dan background job queue (Bull/Redis) untuk sinkronisasi dashboard merchant.
 - **Membangun** API manajemen inventori dengan batch processing, logika rekonsiliasi stok, dan sinkronisasi data multi-cabang.
 
-### SQA & DevSecOps Engineer | Malmora (Startup)
+### SQA & DevOps Engineer | Malmora (Startup)
 *2020 – 2023 | Remote*
 - **Membangun** layer API backend untuk platform e-commerce reseller & dropship yang melayani pasar Sulawesi dan Indonesia Timur.
 - **Mengimplementasikan** pipeline pemrosesan pesanan, layanan sinkronisasi inventori, dan integrasi logistik otomatis dengan API kurir pihak ketiga.

@@ -27,7 +27,7 @@ Versatile **Fullstack Developer** with 8+ years of experience engineering end-to
 - **Automated** CI/CD pipelines with GitHub Actions, reducing deployment time from hours to minutes across staging and production environments.
 - **Implemented** JWT-based authentication, row-level security (RLS), and automated database migrations for secure multi-tenant architectures.
 
-### DevSecOps & Infrastructure Expert | Department of Communication & Informatics (Diskominfo)
+### DevOps & Infrastructure Expert | Department of Communication & Informatics (Diskominfo)
 *2023 – 2025 | Makassar, Indonesia*
 - **Developed** the **Helpdesk Makassar** citizen portal end-to-end — responsive React UI, ticket lifecycle management API, and cross-department routing backend.
 - **Built** admin dashboards and automated provisioning scripts for **Mailcow** email cluster serving 200+ government domains with monitoring and alerting.
@@ -41,7 +41,7 @@ Versatile **Fullstack Developer** with 8+ years of experience engineering end-to
 - **Optimized** full-stack performance: React code-splitting and lazy loading on frontend, SQL query tuning and Redis caching on backend — 40% faster response times.
 - **Built** multi-branch data sync, webhook integrations, and background job queues (Bull/Redis) for automated merchant workflows.
 
-### SQA & DevSecOps Engineer | Malmora (Startup)
+### SQA & DevOps Engineer | Malmora (Startup)
 *2020 – 2023 | Remote*
 - **Built** full-stack e-commerce platform for reseller & dropship — React storefront + Node.js order processing backend serving Sulawesi and Eastern Indonesia.
 - **Implemented** product catalog UI components, shopping cart state management, and backend APIs for inventory synchronization and courier integration.

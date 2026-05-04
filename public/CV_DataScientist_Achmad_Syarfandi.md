@@ -26,7 +26,7 @@ Insightful **Data Scientist** with 8+ years extracting actionable intelligence f
 - **Developed** predictive models for resource allocation, using historical data to forecast demand across 24 regencies.
 - **Integrated** **Google Gemini AI** into public portals (PPID), implementing NLP-powered document search and automated response generation.
 
-### DevSecOps & Infrastructure Expert | Diskominfo Makassar
+### DevOps & Infrastructure Expert | Diskominfo Makassar
 *2023 – 2025 | Makassar*
 - **Built** sentiment analysis models for **Helpdesk Makassar** complaint data — NLP classification to auto-prioritize critical urban issues.
 - **Developed** anomaly detection algorithms for government email clusters, identifying patterns across 200+ domains.
@@ -38,7 +38,7 @@ Insightful **Data Scientist** with 8+ years extracting actionable intelligence f
 - **Developed** merchant clustering (K-Means/DBSCAN) for churn risk identification and targeted marketing segments.
 - **Designed** automated ETL pipelines for high-volume transaction data — cleaning, feature engineering, aggregation.
 
-### SQA & DevSecOps Engineer | Malmora (Startup)
+### SQA & DevOps Engineer | Malmora (Startup)
 *2020 – 2023 | Remote*
 - **Analyzed** sales data and purchase patterns to optimize product ranking and recommendation algorithms.
 - **Built** A/B testing frameworks for conversion optimization, analyzing statistical significance on order completion.

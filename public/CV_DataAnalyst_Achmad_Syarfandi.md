@@ -26,7 +26,7 @@ Detail-oriented **Data Analyst** with 8+ years transforming raw data into action
 - **Designed** automated SQL reporting pipelines (stored procedures + cron jobs) replacing manual Excel workflows, reducing report generation time by 70%.
 - **Created** weekly KPI scorecards and executive summary reports for regional leadership, enabling data-driven policy decisions.
 
-### DevSecOps & Infrastructure Expert | Diskominfo Makassar
+### DevOps & Infrastructure Expert | Diskominfo Makassar
 *2023 – 2025 | Makassar*
 - **Analyzed** citizen complaint data for **Helpdesk Makassar** — categorization, trend analysis, priority scoring helping officials resolve issues 40% faster.
 - **Monitored** SLA compliance for 200+ government email domains, producing monthly performance reports with recommendations.
@@ -38,7 +38,7 @@ Detail-oriented **Data Analyst** with 8+ years transforming raw data into action
 - **Optimized** SQL queries for large transaction datasets (millions of rows), reducing report time from minutes to seconds.
 - **Established** data quality standards — automated validation, duplicate detection, integrity checks for enterprise merchant data.
 
-### SQA & DevSecOps Engineer | Malmora (Startup)
+### SQA & DevOps Engineer | Malmora (Startup)
 *2020 – 2023 | Remote*
 - **Tracked** e-commerce KPIs — conversion rates, average order value, cart abandonment, seller performance across regional markets.
 - **Built** product performance reports identifying best-sellers, slow-moving inventory, seasonal demand patterns.

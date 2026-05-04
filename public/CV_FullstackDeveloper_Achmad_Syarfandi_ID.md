@@ -27,7 +27,7 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Mengotomasi** pipeline CI/CD dengan GitHub Actions, mengurangi waktu deployment dari berjam-jam menjadi hitungan menit di lingkungan staging dan produksi.
 - **Mengimplementasikan** autentikasi berbasis JWT, row-level security (RLS), dan migrasi database otomatis untuk arsitektur multi-tenant yang aman.
 
-### Pakar DevSecOps & Infrastruktur | Dinas Kominfo & Disbud Makassar
+### Pakar DevOps & Infrastruktur | Dinas Kominfo & Disbud Makassar
 *2023 – 2025 | Makassar, Indonesia*
 - **Mengembangkan** portal warga **Helpdesk Makassar** end-to-end — UI React responsif, API manajemen siklus hidup tiket, dan backend routing antar-departemen.
 - **Membangun** dashboard admin dan skrip provisioning otomatis untuk cluster email **Mailcow** melayani 200+ domain pemerintah dengan monitoring dan alerting.
@@ -41,7 +41,7 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Mengoptimalkan** performa full-stack: code-splitting dan lazy loading React di frontend, SQL query tuning dan Redis caching di backend — 40% lebih cepat.
 - **Membangun** sinkronisasi data multi-cabang, integrasi webhook, dan background job queue (Bull/Redis) untuk alur kerja merchant otomatis.
 
-### SQA & DevSecOps Engineer | Malmora (Startup)
+### SQA & DevOps Engineer | Malmora (Startup)
 *2020 – 2023 | Remote*
 - **Membangun** platform e-commerce full-stack untuk reseller & dropship — storefront React + backend pemrosesan pesanan Node.js melayani Sulawesi dan Indonesia Timur.
 - **Mengimplementasikan** komponen UI katalog produk, manajemen state keranjang belanja, dan API backend untuk sinkronisasi inventori dan integrasi kurir.

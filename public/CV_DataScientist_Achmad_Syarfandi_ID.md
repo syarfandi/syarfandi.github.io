@@ -26,7 +26,7 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Mengembangkan** model prediktif untuk alokasi sumber daya, menggunakan data historis meramalkan permintaan di 24 kabupaten/kota.
 - **Mengintegrasikan** **Google Gemini AI** ke portal publik (PPID), mengimplementasikan pencarian dokumen NLP dan generasi respons otomatis.
 
-### Pakar DevSecOps & Infrastruktur | Diskominfo Makassar
+### Pakar DevOps & Infrastruktur | Diskominfo Makassar
 *2023 – 2025 | Makassar*
 - **Membangun** model analisis sentimen untuk data keluhan **Helpdesk Makassar** — klasifikasi NLP untuk auto-prioritisasi masalah kritis.
 - **Mengembangkan** algoritma deteksi anomali untuk cluster email pemerintah, mengidentifikasi pola di 200+ domain.
@@ -38,7 +38,7 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Mengembangkan** clustering merchant (K-Means/DBSCAN) untuk identifikasi risiko churn dan segmen pemasaran tertarget.
 - **Merancang** pipeline ETL otomatis untuk data transaksi volume tinggi — pembersihan, feature engineering, agregasi.
 
-### SQA & DevSecOps Engineer | Malmora (Startup)
+### SQA & DevOps Engineer | Malmora (Startup)
 *2020 – 2023 | Remote*
 - **Menganalisis** data penjualan dan pola pembelian untuk optimasi peringkat produk dan algoritma rekomendasi.
 - **Membangun** framework A/B testing untuk optimasi konversi, menganalisis signifikansi statistik terhadap penyelesaian pesanan.

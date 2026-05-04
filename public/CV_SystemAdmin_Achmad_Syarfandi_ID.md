@@ -26,7 +26,7 @@ System Administrator yang andal dengan pengalaman lebih dari 8 tahun dalam menge
 - Merancang sistem distribusi digital untuk menjangkau pasar regional yang lebih luas.
 
 **Dinas Kominfo & Disbud Makassar** | Makassar, Indonesia
-*System Administrator & DevSecOps* | 2023 – 2025
+*System Administrator & DevOps* | 2023 – 2025
 - Mengadministrasi 200+ server on-premise (fisik dan virtual), mengoptimalkan alokasi sumber daya dan performa penyimpanan untuk unit kerja kota.
 - Merancang dan memelihara cluster email pemerintah yang aman menggunakan Mailcow untuk 200+ domain.
 - Memperkuat keamanan server Linux berdasarkan standar industri, mencapai uptime 99,9% untuk layanan kota.
@@ -41,7 +41,7 @@ System Administrator yang andal dengan pengalaman lebih dari 8 tahun dalam menge
 - Menskalakan infrastruktur untuk ekosistem retail dengan 100+ modul.
 
 **Malmora (Startup)** | Makassar, Indonesia
-*SQA & DevSecOps Engineer* | 2020 – 2023
+*SQA & DevOps Engineer* | 2020 – 2023
 - Mengelola infrastruktur untuk platform reseller dan dropship regional.
 - Menyederhanakan operasi teknis bagi pengguna non-teknis dengan mengotomatisasi alur kerja logistik dan pengemasan.
 

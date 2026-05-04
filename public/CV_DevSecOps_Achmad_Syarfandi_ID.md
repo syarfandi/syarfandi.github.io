@@ -1,16 +1,16 @@
 # Syarfandi "Andi" Achmad
-**DevSecOps Engineer | Spesialis Infrastruktur Cloud & Keamanan**
+**DevOps Engineer | Spesialis Infrastruktur Cloud & Keamanan**
 Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 [Portfolio: syarfandi.github.io](https://syarfandi.github.io) | [LinkedIn](https://linkedin.com/in/syarfandi)
 
 ---
 
 ## Ringkasan Profesional
-**DevSecOps Engineer** yang dinamis dengan pengalaman lebih dari 5 tahun dalam membangun ekosistem **cloud server dan on-premise server** berperforma tinggi dan infrastruktur *self-healing*. Saya ahli dalam menyelaraskan pengembangan dan keamanan melalui orkestrasi **Kubernetes** dan otomatisasi berbasis **Terraform**. Dengan komitmen kuat pada prinsip **Zero Trust** dan *security-as-code*, saya membantu organisasi global untuk tumbuh pesat tanpa mengorbankan integritas sistem. Pemimpin proaktif dalam **tim remote asinkron**, berdedikasi untuk menghadirkan keunggulan operasional dan memperkuat aset digital dari ancaman modern.
+**DevOps Engineer** yang dinamis dengan pengalaman lebih dari 5 tahun dalam membangun ekosistem **cloud server dan on-premise server** berperforma tinggi dan infrastruktur *self-healing*. Saya ahli dalam menyelaraskan pengembangan dan keamanan melalui orkestrasi **Kubernetes** dan otomatisasi berbasis **Terraform**. Dengan komitmen kuat pada prinsip **Zero Trust** dan *security-as-code*, saya membantu organisasi global untuk tumbuh pesat tanpa mengorbankan integritas sistem. Pemimpin proaktif dalam **tim remote asinkron**, berdedikasi untuk menghadirkan keunggulan operasional dan memperkuat aset digital dari ancaman modern.
 
 ## Kompetensi Teknis Utama
 - **Infrastruktur & Orkestrasi**: Kubernetes (K8s), Terraform (IaC), Docker, Helm, AWS/GCP, Vercel/Netlify, Administrasi Sistem Linux.
-- **Keamanan & Kepatuhan**: DevSecOps (SAST/DAST), Prinsip Arsitektur Zero Trust, Respon Insiden BSSN, Keamanan Serverless.
+- **Keamanan & Kepatuhan**: DevOps (SAST/DAST), Prinsip Arsitektur Zero Trust, Respon Insiden BSSN, Keamanan Serverless.
 - **CI/CD & Otomatisasi**: GitHub Actions, GitLab CI, Jenkins, PM2, Scripting Python/Bash.
 - **Data & Middleware**: Supabase, PostgreSQL (Optimasi & Skalabilitas), Arsitektur API RESTful, Redis.
 - **Soft Skills**: Kolaborasi Asinkron, Penulisan Teknis, Kepemimpinan Tim Remote, Perencanaan Strategis.
@@ -26,7 +26,7 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Memperkuat** postur keamanan organisasi dengan menerapkan pemeriksaan kepatuhan otomatis dan protokol respon insiden standar.
 - **Mengotomatisasi** alur kerja pelaporan internal, mengurangi waktu pemrosesan data manual sebesar 60% melalui skrip integrasi kustom.
 
-### DevSecOps & Pakar Infrastruktur | Dinas Kominfo & Disbud Kota Makassar
+### DevOps & Pakar Infrastruktur | Dinas Kominfo & Disbud Kota Makassar
 *2023 – 2025 | Makassar, Indonesia*
 - **Mengelola** lingkungan server on-prem yang kompleks dan infrastruktur untuk lebih dari **200+ domain satuan kerja** di seluruh lingkungan pemerintah kota.
 - **Membangun** cluster email pemerintah yang aman dan tangguh menggunakan **Mailcow**, memastikan ketersediaan 99,99% serta filtrasi keamanan/anti-spam yang kuat.
@@ -40,7 +40,7 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Mengoptimalkan** klaster database PostgreSQL dan instance Supabase untuk menangani transaksi retail konkurensi tinggi selama periode puncak.
 - **Menstandarisasi** dokumentasi teknis untuk skalabilitas infrastruktur dan pemulihan bencana, memungkinkan kolaborasi asinkron yang lancar.
 
-### SQA & DevSecOps Engineer | Malmora (Startup)
+### SQA & DevOps Engineer | Malmora (Startup)
 *2020 – 2023 | Remote*
 - **Mengotomatisasi** framework pengujian full-stack dan pipeline CI/CD untuk platform **Mobile Marketplace Reseller** skala besar.
 - **Merampingkan** siklus rilis aplikasi mobile, memastikan pengiriman fitur yang cepat sambil tetap mempertahankan standar kualitas yang ketat.

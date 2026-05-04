@@ -26,7 +26,7 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Membangun** admin mobile-responsive dengan navigasi gestur, pull-to-refresh, push notification via Supabase.
 - **Mengoptimalkan** rendering konsisten 60fps di perangkat Android low-end.
 
-### Pakar DevSecOps & Infrastruktur | Diskominfo Makassar
+### Pakar DevOps & Infrastruktur | Diskominfo Makassar
 *2023 – 2025 | Makassar*
 - **Membangun** aplikasi Unity **Al-Haram VR** — Samsung Gear VR, **Top 10 Samsung Next Apps 4.0** nasional.
 - **Mengembangkan** mobile **Helpdesk Makassar** — pengaduan kamera, drafting offline, gestur native.
@@ -40,7 +40,7 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Mengoptimalkan** checkout dengan haptic feedback, shortcut gestur — 35% lebih cepat.
 - **Mempublikasikan** di Google Play dengan CodePush OTA, monitoring crash, staged rollout.
 
-### SQA & DevSecOps Engineer | Malmora (Startup)
+### SQA & DevOps Engineer | Malmora (Startup)
 *2020 – 2023 | Remote*
 - **Mengembangkan** mobile marketplace Malmora — infinite scroll, keranjang, pemesanan satu ketukan.
 - **Mengimplementasikan** push notification, deep linking, auth biometrik untuk checkout aman.

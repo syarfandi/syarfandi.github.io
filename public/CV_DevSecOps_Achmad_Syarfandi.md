@@ -1,16 +1,16 @@
 # Syarfandi "Andi" Achmad
-**DevSecOps Engineer | Cloud Infrastructure & Security Specialist**
+**DevOps Engineer | Cloud Infrastructure & Security Specialist**
 Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 [Portfolio: syarfandi.github.io](https://syarfandi.github.io) | [LinkedIn](https://linkedin.com/in/syarfandi)
 
 ---
 
 ## Professional Summary
-Dynamic **DevSecOps Engineer** with 5+ years of experience in architecting high-performance **cloud server and on-premise server** ecosystems and self-healing infrastructure. Expert at bridging development and security through **Kubernetes** orchestration and **Terraform** automation. With a strong commitment to **Zero Trust** principles and security-as-code, I help global organizations scale rapidly without compromising system integrity. A proactive leader in **asynchronous remote teams**, dedicated to delivering operational excellence and hardening digital assets against modern threats.
+Dynamic **DevOps Engineer** with 5+ years of experience in architecting high-performance **cloud server and on-premise server** ecosystems and self-healing infrastructure. Expert at bridging development and security through **Kubernetes** orchestration and **Terraform** automation. With a strong commitment to **Zero Trust** principles and security-as-code, I help global organizations scale rapidly without compromising system integrity. A proactive leader in **asynchronous remote teams**, dedicated to delivering operational excellence and hardening digital assets against modern threats.
 
 ## Core Technical Competencies
 - **Infrastructure & Orchestration**: Kubernetes (K8s), Terraform (IaC), Docker, Helm, AWS/GCP, Vercel/Netlify, Linux System Administration.
-- **Security & Compliance**: DevSecOps (SAST/DAST), Zero Trust Architecture principles, BSSN Incident Response, Serverless Security.
+- **Security & Compliance**: DevOps (SAST/DAST), Zero Trust Architecture principles, BSSN Incident Response, Serverless Security.
 - **CI/CD & Automation**: GitHub Actions, GitLab CI, Jenkins, PM2, Python/Bash Scripting.
 - **Data & Middleware**: Supabase, PostgreSQL (Optimization & Scaling), RESTful API Architecture, Redis.
 - **Soft Skills**: Asynchronous Collaboration, Technical Writing, Remote Team Leadership, Strategic Planning.
@@ -26,7 +26,7 @@ Dynamic **DevSecOps Engineer** with 5+ years of experience in architecting high-
 - **Strengthened** organizational security posture by implementing automated compliance checks and standardized incident response protocols.
 - **Automated** internal reporting workflows, reducing manual data processing time by 60% through custom integration scripts.
 
-### DevSecOps & Infrastructure Expert | Department of Communication & Informatics (Diskominfo)
+### DevOps & Infrastructure Expert | Department of Communication & Informatics (Diskominfo)
 *2023 – 2025 | Makassar, Indonesia*
 - **Managed** complex on-prem server environments and infrastructure for over **200+ department domains (Satuan Kerja)** across the city government.
 - **Engineered** a secure and resilient government email cluster using **Mailcow**, ensuring 99.99% availability and robust anti-spam/security filtering.
@@ -40,7 +40,7 @@ Dynamic **DevSecOps Engineer** with 5+ years of experience in architecting high-
 - **Optimized** PostgreSQL database clusters and Supabase instances to handle high-concurrency retail transactions during peak periods.
 - **Standardized** technical documentation for infrastructure scaling and disaster recovery, enabling seamless asynchronous collaboration.
 
-### SQA & DevSecOps Engineer | Malmora (Startup)
+### SQA & DevOps Engineer | Malmora (Startup)
 *2020 – 2023 | Remote*
 - **Automated** full-stack testing frameworks and CI/CD pipelines for a high-scale **Mobile Marketplace Reseller** platform.
 - **Streamlined** mobile app release cycles, ensuring rapid delivery of features while maintaining rigorous quality standards.
@@ -73,7 +73,7 @@ Dynamic **DevSecOps Engineer** with 5+ years of experience in architecting high-
 ---
 
 ## Global Market Competitiveness (Keywords for 2026+)
-To stay competitive in the global DevSecOps market, I am actively implementing and refining:
+To stay competitive in the global DevOps market, I am actively implementing and refining:
 - **Zero Trust Architecture**: Identity-aware proxies, micro-segmentation, and "Never Trust, Always Verify" principles.
 - **Serverless Security**: Securing AWS Lambda/Cloud Functions, API Gateway throttling, and automated IAM least-privilege auditing.
 - **GitOps**: Using ArgoCD/Flux for automated infrastructure synchronization.

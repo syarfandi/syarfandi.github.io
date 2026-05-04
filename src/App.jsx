@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, ExternalLink, Download, ChevronDown, Award, Briefc
 
 const translations = {
   id: {
-    heroRole: "IT Professional, DevSecOps & Developer",
+    heroRole: "IT Professional, DevOps & Developer",
     heroGreeting: "Hai, Saya",
     heroDesc: "Bersemangat dalam membangun solusi digital yang berdampak, membina kerja sama tim yang solid, dan menghadirkan inovasi layanan publik yang prima.",
     hireMe: "Rekrut Saya",
@@ -54,11 +54,11 @@ const translations = {
     exp9Company: "Kanwil Kementerian Agama Prov. Sulawesi Selatan",
     exp9Desc: "Mengelola transformasi digital layanan keagamaan, infrastruktur portal data (Data Sulsel), dan keamanan sistem informasi publik di lingkungan wilayah Sulawesi Selatan.",
 
-    exp1Title: "Tenaga Ahli DevSecOps & Infrastruktur",
+    exp1Title: "Tenaga Ahli DevOps & Infrastruktur",
     exp1Company: "Dinas Kominfo & Disbud Kota Makassar",
     exp1Desc: "Mengelola infrastruktur Makassar Metaverse (Makaverse), Virtual Tour Lorong Wisata, Virtual Museum Makassar, dan server email pemerintah.",
 
-    exp7Title: "SQA & DevSecOps Engineer",
+    exp7Title: "SQA & DevOps Engineer",
     exp7Company: "Malmora (Startup)",
     exp7Desc: "Platform reseller & dropship produk muslim yang berfokus di Sulawesi dan Indonesia Timur, memudahkan pengguna berjualan online tanpa ribet logistik.",
 
@@ -100,7 +100,7 @@ const translations = {
     certCityApp: "Microsoft CityApp Appathon Participant"
   },
   en: {
-    heroRole: "IT Professional, DevSecOps & Developer",
+    heroRole: "IT Professional, DevOps & Developer",
     heroGreeting: "Hi, I'm",
     heroDesc: "Passionate about building impactful digital solutions, fostering solid teamwork, and delivering excellent public service innovations.",
     hireMe: "Hire Me",
@@ -150,11 +150,11 @@ const translations = {
     exp9Company: "Ministry of Religious Affairs (South Sulawesi)",
     exp9Desc: "Managing digital transformation for religious services, regional data portal infrastructure (Data Sulsel), and public information system security.",
 
-    exp1Title: "DevSecOps & Infrastructure Expert",
+    exp1Title: "DevOps & Infrastructure Expert",
     exp1Company: "Dinas Kominfo & Disbud Makassar",
     exp1Desc: "Managing infrastructure for Makassar Metaverse (Makaverse), Virtual Tour Lorong Wisata, Virtual Museum Makassar, and gov email servers.",
 
-    exp7Title: "SQA & DevSecOps Engineer",
+    exp7Title: "SQA & DevOps Engineer",
     exp7Company: "Malmora (Startup)",
     exp7Desc: "Reseller & dropship platform for Muslim products in Sulawesi and Eastern Indonesia, simplifying online selling by handling logistics.",
 
@@ -294,7 +294,7 @@ const HeroSection = () => {
   };
 
   const resumeOptions = [
-    { title: "DevSecOps Engineer", path: "/devops/" },
+    { title: "DevOps Engineer", path: "/devops/" },
     { title: "Cloud Engineer", path: "/cloud/" },
     { title: "Frontend Developer", path: "/frontend/" },
     { title: "Backend Developer", path: "/backend/" },
