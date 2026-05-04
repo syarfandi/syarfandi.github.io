@@ -283,7 +283,7 @@ const HeroSection = () => {
       const hashArray = Array.from(new Uint8Array(hashBuffer));
       const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 
-      if (hashHex === '9575e5e488fd2bfcd5d677c7557f291a15e3d556901c2f319ce353f0c6f3bbb7') {
+      if (hashHex === 'e33280798c9d1d5b0229c4fa3e667e757483f0b748566aab80dbc513e0b5132f') {
         setPinSuccess(true);
         setTimeout(() => {
           setPinUnlocked(true);
