@@ -49,8 +49,8 @@ IPK: 3.22 / 4.00
 
 ## PROYEK PILIHAN
 - **Gudang Data Sulsel:** Platform konsolidasi data skala regional untuk 9jt+ catatan publik.
-- **Data Sync Makaverse:** Lapisan konsistensi status dunia real-time untuk Metaverse Makassar.
 - **Data Layer POS Enterprise:** Database transaksi konkurensi tinggi untuk ribuan pedagang retail.
 - **Hub ETL Otomatis:** Hub pipeline terpusat untuk migrasi dan pembersihan data pemerintah.
 - **Engine Analitik Retail:** Lapisan intelijen bisnis untuk data POS menggunakan BigQuery dan Grafana.
 - **Platform Data Helpdesk:** Sistem manajemen data keluhan publik dengan pelacakan real-time.
+- **Data Sync Makaverse:** Lapisan konsistensi status dunia real-time untuk Metaverse Makassar.

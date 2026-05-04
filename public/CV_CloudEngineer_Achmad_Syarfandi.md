@@ -28,10 +28,10 @@ Dynamic **Cloud Engineer** with 8+ years of experience in architecting high-perf
 
 ### Cloud Solution Architect | Department of Communication & Informatics (Diskominfo)
 *2023 – 2025 | Makassar, Indonesia*
-- **Architected** the high-availability infrastructure for **Makassar Metaverse (Makaverse)** and **Virtual Museum Makassar**, handling peak traffic of thousands of concurrent users.
 - **Engineered** a secure and resilient government email cluster using **Mailcow**, ensuring 99.99% availability and robust anti-spam/security filtering.
 - **Managed** complex on-prem server environments and infrastructure for over **200+ department domains (Satuan Kerja)** across the city government.
 - **Secured** government digital assets by leading the technical response team during the **BSSN National Cyber Exercise**, maintaining 100% uptime during simulated attacks.
+- **Architected** the high-availability infrastructure for **Makassar Metaverse (Makaverse)** and **Virtual Museum Makassar**, handling peak traffic of thousands of concurrent users.
 
 ### Co-Founder | GetKasir (Enterprise POS Startup)
 *2019 – Present| Remote/Project-based*
@@ -56,7 +56,6 @@ Dynamic **Cloud Engineer** with 8+ years of experience in architecting high-perf
 
 ## Technical Projects
 - **Lipsync Realtime Avatar AI**: Developed a conversational AI application integrating LLMs, Voice AI, and Simli for immersive user interactions.
-- **Makaverse (Makassar Metaverse)**: Architected a high-availability cloud infrastructure for the city's flagship metaverse platform.
 - **Government Email Cluster**: Built and secured a Mailcow-based email infrastructure supporting over 200 government domains.
 - **PPID Parepare Transparency Portal**: Engineered an official transparency portal with Google Gemini AI integration for public information.
 - **Kegiatan Sulsel (Activity Management)**: Built a regional activity tracking and attendance system using Next.js, Supabase, and QR Codes.
@@ -64,6 +63,7 @@ Dynamic **Cloud Engineer** with 8+ years of experience in architecting high-perf
 - **Data Sulsel**: Managed a regional data monitoring platform for public religious services, serving 9 million residents.
 - **Helpdesk Makassar**: Developed a scalable citizen service portal for urban complaint management and public service tracking.
 - **Kawan Sedarah**: Built a real-time blood stock monitoring command center for emergency response using Supabase and React.
+- **Makaverse (Makassar Metaverse)**: Architected a high-availability cloud infrastructure for the city's flagship metaverse platform.
 
 ## Certifications & Awards
 - **National Cyber Exercise #10** – BSSN (2024)

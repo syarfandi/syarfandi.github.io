@@ -29,10 +29,10 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 
 ### Pakar DevSecOps & Infrastruktur | Dinas Kominfo & Disbud Makassar
 *2023 – 2025 | Makassar, Indonesia*
-- **Membangun** microservices backend untuk platform metaverse **Makaverse** — server WebSocket untuk status pengguna real-time, API manajemen sesi, dan endpoint data geospasial.
 - **Mengembangkan** backend cluster email **Mailcow** berkonkurensi tinggi untuk 200+ domain pemerintah dengan skrip provisioning otomatis dan integrasi DNS API.
 - **Mengelola** database PostgreSQL di 200+ lingkungan server on-premise, mengimplementasikan strategi backup otomatis, optimasi query, dan connection pooling.
 - **Merancang** RESTful API untuk platform pengaduan warga **Helpdesk Makassar**, mendukung manajemen siklus hidup tiket dan routing antar-departemen.
+- **Membangun** microservices backend untuk platform metaverse **Makaverse** — server WebSocket untuk status pengguna real-time, API manajemen sesi, dan endpoint data geospasial.
 
 ### Co-Founder | GetKasir (Enterprise POS Startup)
 *2019 – Sekarang | Remote/Project-based*
@@ -59,12 +59,12 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **GetKasir Enterprise POS**: Backend full-stack untuk ekosistem retail 100+ modul — inventori, penjualan, pelaporan, sinkronisasi multi-cabang (Node.js, PostgreSQL, Supabase).
 - **Lipsync Realtime Avatar AI**: Orkestrasi API backend untuk Conversational AI — routing LLM, pemrosesan Voice AI, streaming WebSocket (TypeScript, Supabase).
 - **Portal Data Sulsel**: Backend data warehouse dengan stored procedure PostgreSQL, view agregasi, dan RESTful analytics API (PLpgSQL, Node.js).
-- **Makaverse (Makassar Metaverse)**: Microservices backend — server WebSocket, API sesi, endpoint data geospasial (Node.js, WebSocket).
 - **PPID Parepare**: Backend portal transparansi pemerintah dengan integrasi Google Gemini AI dan manajemen konten otomatis (TypeScript, Supabase).
 - **Kegiatan Sulsel**: Backend manajemen kegiatan — API pendaftaran, pelacakan kehadiran berbasis QR, sinkronisasi peserta real-time (Next.js, Supabase).
 - **Kawan Sedarah**: Monitoring stok darah darurat — ingesti data real-time, API alerting, backend dashboard (TypeScript, Supabase Realtime).
 - **Gov Email Cluster**: Administrasi backend Mailcow — provisioning domain otomatis, integrasi DNS, skrip monitoring (Docker, Bash).
 - **Malmora**: Backend e-commerce — pemrosesan pesanan, sinkronisasi inventori, API katalog multi-vendor, integrasi kurir (Node.js, PostgreSQL).
+- **Makaverse (Makassar Metaverse)**: Microservices backend — server WebSocket, API sesi, endpoint data geospasial (Node.js, WebSocket).
 
 ## Sertifikasi & Penghargaan
 - **National Cyber Exercise #10** – BSSN (2024)

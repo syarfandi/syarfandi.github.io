@@ -29,8 +29,8 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 ### Pakar DevSecOps & Infrastruktur | Diskominfo Makassar
 *2023 – 2025 | Makassar*
 - **Menganalisis** data keluhan warga **Helpdesk Makassar** — kategorisasi, analisis tren, skor prioritas membantu pejabat menyelesaikan masalah 40% lebih cepat.
-- **Membuat** dashboard engagement **Makaverse** — durasi sesi, retensi, heatmap penggunaan puncak, analisis funnel konversi.
 - **Memantau** kepatuhan SLA 200+ domain email pemerintah, membuat laporan performa bulanan dengan rekomendasi.
+- **Membuat** dashboard engagement **Makaverse** — durasi sesi, retensi, heatmap penggunaan puncak, analisis funnel konversi.
 
 ### Co-Founder | GetKasir (Enterprise POS)
 *2019 – Sekarang | Remote*
@@ -50,11 +50,11 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Data Sulsel Dashboard**: Analitik interaktif 9jt+ data — grafik, filter, scorecard KPI, laporan otomatis.
 - **GetKasir Merchant BI**: Analitik POS — ringkasan penjualan, breakdown revenue, ranking produk, perbandingan cabang.
 - **Helpdesk Analytics**: Analisis keluhan — kategorisasi, skor prioritas, pelacakan resolusi, laporan tren.
-- **Makaverse Engagement**: Analitik pengguna — pelacakan sesi, retensi, heatmap, funnel konversi.
 - **Kawan Sedarah Monitor**: Dashboard stok darah — level real-time, alert kekurangan, perbandingan RS.
 - **Kegiatan Sulsel**: Pelaporan kehadiran — data QR, tingkat partisipasi, ringkasan kegiatan.
 - **Malmora Market Intel**: Pelaporan e-commerce — performa penjualan, tren produk, metrik logistik.
 - **Email SLA Reports**: Monitoring performa — uptime, tingkat pengiriman, kepatuhan SLA 200+ domain.
+- **Makaverse Engagement**: Analitik pengguna — pelacakan sesi, retensi, heatmap, funnel konversi.
 
 ## Penghargaan
 - **National Cyber Exercise #10** – BSSN (2024)

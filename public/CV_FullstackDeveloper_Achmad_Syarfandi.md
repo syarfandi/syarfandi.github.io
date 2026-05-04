@@ -29,10 +29,10 @@ Versatile **Fullstack Developer** with 8+ years of experience engineering end-to
 
 ### DevSecOps & Infrastructure Expert | Department of Communication & Informatics (Diskominfo)
 *2023 – 2025 | Makassar, Indonesia*
-- **Architected** the full-stack **Makaverse** platform — React/Three.js immersive frontend + WebSocket backend for real-time multiplayer and geospatial data rendering.
 - **Developed** the **Helpdesk Makassar** citizen portal end-to-end — responsive React UI, ticket lifecycle management API, and cross-department routing backend.
 - **Built** admin dashboards and automated provisioning scripts for **Mailcow** email cluster serving 200+ government domains with monitoring and alerting.
 - **Engineered** the **Virtual Museum Makassar** — 360° panoramic React frontend with interactive 3D asset loading and backend content management API.
+- **Architected** the full-stack **Makaverse** platform — React/Three.js immersive frontend + WebSocket backend for real-time multiplayer and geospatial data rendering.
 
 ### Co-Founder | GetKasir (Enterprise POS Startup)
 *2019 – Present | Remote/Project-based*
@@ -59,13 +59,13 @@ Versatile **Fullstack Developer** with 8+ years of experience engineering end-to
 - **GetKasir Enterprise POS**: 100+ module retail ecosystem — React merchant dashboard + Node.js/PostgreSQL backend + Supabase Realtime sync.
 - **Lipsync Realtime Avatar AI**: Conversational AI — React UI + WebSocket streaming + LLM API orchestration + Supabase backend (TypeScript).
 - **Portal Data Sulsel**: Government data portal — React analytics dashboard + PLpgSQL data warehouse + real-time aggregation API (Node.js).
-- **Makaverse (Makassar Metaverse)**: City metaverse — Three.js/React immersive frontend + WebSocket multiplayer backend + geospatial APIs.
 - **PPID Kemenag Parepare**: Gov transparency portal — Next.js SSR frontend + Google Gemini AI backend integration + Supabase CMS.
 - **Kegiatan Sulsel**: Event management — Next.js frontend + Supabase backend + QR-based attendance tracking + real-time participant sync.
 - **Kawan Sedarah (Blood Stock)**: Emergency monitoring — React dashboard + Supabase Realtime data ingestion + alerting API backend.
 - **Helpdesk Makassar**: Citizen service portal — responsive React UI + Node.js ticket management API + cross-department routing.
 - **Malmora**: E-commerce platform — React storefront + Node.js order processing backend + courier API integration + multi-vendor catalog.
 - **Virtual Museum Makassar**: Cultural heritage — 360° panoramic React viewer + 3D asset loader + backend content management API.
+- **Makaverse (Makassar Metaverse)**: City metaverse — Three.js/React immersive frontend + WebSocket multiplayer backend + geospatial APIs.
 
 ## Certifications & Awards
 - **National Cyber Exercise #10** – BSSN (2024)

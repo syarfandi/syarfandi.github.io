@@ -56,7 +56,6 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 
 ## Proyek Teknis
 - **Lipsync Realtime Avatar AI**: Mengembangkan aplikasi Conversational AI yang mengintegrasikan LLM, Voice AI, dan Simli untuk interaksi pengguna yang mendalam.
-- **Makaverse (Makassar Metaverse)**: Merancang infrastruktur cloud high-availability untuk platform metaverse unggulan pemerintah kota.
 - **Gov Email Cluster**: Membangun dan mengamankan infrastruktur email berbasis Mailcow yang mendukung lebih dari 200 domain satuan kerja.
 - **Portal Transparansi PPID Parepare**: Membangun portal transparansi resmi dengan integrasi Google Gemini AI untuk keterbukaan informasi publik.
 - **Kegiatan Sulsel (Manajemen Kegiatan)**: Membangun sistem pelacakan kegiatan dan absensi regional menggunakan Next.js, Supabase, dan QR Code.
@@ -64,6 +63,7 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Data Sulsel**: Mengelola platform monitoring data regional untuk layanan publik keagamaan bagi 9 juta penduduk.
 - **Helpdesk Makassar**: Membangun portal layanan warga yang skalabel untuk manajemen keluhan kota dan pelacakan layanan publik.
 - **Kawan Sedarah**: Membangun pusat komando monitoring stok darah real-time untuk respon darurat menggunakan Supabase dan React.
+- **Makaverse (Makassar Metaverse)**: Merancang infrastruktur cloud high-availability untuk platform metaverse unggulan pemerintah kota.
 
 ## Sertifikasi & Penghargaan
 - **National Cyber Exercise #10** – BSSN (2024)

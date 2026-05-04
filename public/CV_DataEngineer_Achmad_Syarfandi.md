@@ -49,8 +49,8 @@ GPA: 3.22 / 4.00
 
 ## FEATURED PROJECTS
 - **Data Sulsel Warehouse:** Regional-scale data consolidation platform for 9M+ public records.
-- **Makaverse Data Sync:** Real-time world-state consistency layer for Makassar's Metaverse.
 - **Enterprise POS Data Layer:** High-concurrency transactional database for thousands of retail merchants.
 - **Automated ETL Hub:** Centralized pipeline hub for government data migration and cleaning.
 - **Retail Analytics Engine:** Business intelligence layer for POS data using BigQuery and Grafana.
 - **Helpdesk Data Platform:** Public complaint data management system with real-time tracking.
+- **Makaverse Data Sync:** Real-time world-state consistency layer for Makassar's Metaverse.

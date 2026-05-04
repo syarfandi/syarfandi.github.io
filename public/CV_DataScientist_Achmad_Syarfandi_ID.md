@@ -29,8 +29,8 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 ### Pakar DevSecOps & Infrastruktur | Diskominfo Makassar
 *2023 – 2025 | Makassar*
 - **Membangun** model analisis sentimen untuk data keluhan **Helpdesk Makassar** — klasifikasi NLP untuk auto-prioritisasi masalah kritis.
-- **Menganalisis** data trafik dan perilaku pengguna **Makaverse**, mengoptimalkan alokasi sumber daya dan mengurangi biaya infrastruktur 30%.
 - **Mengembangkan** algoritma deteksi anomali untuk cluster email pemerintah, mengidentifikasi pola di 200+ domain.
+- **Menganalisis** data trafik dan perilaku pengguna **Makaverse**, mengoptimalkan alokasi sumber daya dan mengurangi biaya infrastruktur 30%.
 
 ### Co-Founder | GetKasir (Enterprise POS)
 *2019 – Sekarang | Remote*
@@ -51,10 +51,10 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **GetKasir Forecasting**: Prediksi penjualan — ARIMA/Prophet, clustering merchant, peramalan permintaan.
 - **Lipsync Avatar AI**: Integrasi NLP/LLM — routing Gemini, voice-to-text, analisis percakapan.
 - **Helpdesk Sentimen**: Klasifikasi keluhan NLP — analisis sentimen, auto-prioritisasi, tren.
-- **Makaverse Analytics**: Perilaku pengguna — pola trafik, heatmap sesi, optimasi sumber daya.
 - **Kawan Sedarah**: Prediksi stok darah — monitoring real-time, peramalan kekurangan, alert.
 - **Malmora Market**: Analitik e-commerce — peringkat produk, pola pembelian, A/B testing.
 - **PPID AI Search**: Pencarian dokumen NLP — Gemini AI, respons otomatis, analisis query.
+- **Makaverse Analytics**: Perilaku pengguna — pola trafik, heatmap sesi, optimasi sumber daya.
 
 ## Penghargaan
 - **National Cyber Exercise #10** – BSSN (2024)

@@ -29,8 +29,8 @@ Insightful **Data Scientist** with 8+ years extracting actionable intelligence f
 ### DevSecOps & Infrastructure Expert | Diskominfo Makassar
 *2023 – 2025 | Makassar*
 - **Built** sentiment analysis models for **Helpdesk Makassar** complaint data — NLP classification to auto-prioritize critical urban issues.
-- **Analyzed** traffic and user behavior data for **Makaverse**, optimizing resource allocation and reducing infrastructure costs by 30%.
 - **Developed** anomaly detection algorithms for government email clusters, identifying patterns across 200+ domains.
+- **Analyzed** traffic and user behavior data for **Makaverse**, optimizing resource allocation and reducing infrastructure costs by 30%.
 
 ### Co-Founder | GetKasir (Enterprise POS)
 *2019 – Present | Remote*
@@ -51,10 +51,10 @@ Insightful **Data Scientist** with 8+ years extracting actionable intelligence f
 - **GetKasir Forecasting**: Sales prediction — ARIMA/Prophet, merchant clustering, demand forecasting.
 - **Lipsync Avatar AI**: NLP/LLM integration — Gemini routing, voice-to-text, conversational analysis.
 - **Helpdesk Sentiment**: NLP complaint classification — sentiment analysis, auto-prioritization, trends.
-- **Makaverse Analytics**: User behavior — traffic patterns, session heatmaps, resource optimization.
 - **Kawan Sedarah**: Blood stock prediction — real-time monitoring, shortage forecasting, alerts.
 - **Malmora Market**: E-commerce analytics — product ranking, purchase patterns, A/B testing.
 - **PPID AI Search**: NLP document search — Gemini AI, automated responses, query analysis.
+- **Makaverse Analytics**: User behavior — traffic patterns, session heatmaps, resource optimization.
 
 ## Awards
 - **National Cyber Exercise #10** – BSSN (2024)

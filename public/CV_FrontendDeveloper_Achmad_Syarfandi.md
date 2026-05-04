@@ -29,10 +29,10 @@ Creative and technical **Frontend Developer** with 8+ years of experience in cra
 
 ### Senior UI/UX Developer | Department of Communication & Informatics (Diskominfo)
 *2023 – 2025 | Makassar, Indonesia*
-- **Built** immersive web-based 3D environments and interactive interfaces for **Makaverse**, the official metaverse platform of Makassar.
 - **Designed** and implemented a unified design system for city government digital services, ensuring visual consistency across 200+ units.
 - **Optimized** frontend performance for high-traffic public portals, reducing initial load times and improving Lighthouse scores significantly.
 - **Won** recognition for excellence in UI/UX and web innovation during government-led digital transformation challenges.
+- **Built** immersive web-based 3D environments and interactive interfaces for **Makaverse**, the official metaverse platform of Makassar.
 
 ### Co-Founder | GetKasir (Enterprise POS Startup)
 *2019 – Present| Remote/Project-based*
@@ -57,11 +57,11 @@ Creative and technical **Frontend Developer** with 8+ years of experience in cra
 
 ## Technical Projects
 - **Lipsync Realtime Avatar AI**: Built a highly interactive conversational AI UI using Next.js and real-time voice/video synchronization.
-- **Makaverse (Makassar Metaverse)**: Developed the frontend architecture and UI for Makassar's flagship 3D web platform.
 - **PPID Parepare Transparency Portal**: Engineered an official transparency portal focusing on information hierarchy and accessibility.
 - **Kegiatan Sulsel (Activity Management)**: Built a responsive activity tracking UI with real-time QR code scanning and attendance status.
 - **Data Sulsel**: Developed a comprehensive regional data monitoring dashboard with interactive SVG maps and charts.
 - **Helpdesk Makassar**: Created a scalable citizen service UI for managing urban complaints with real-time status updates.
+- **Makaverse (Makassar Metaverse)**: Developed the frontend architecture and UI for Makassar's flagship 3D web platform.
 
 ## Certifications & Awards
 - **National Cyber Exercise #10** – BSSN (2024)

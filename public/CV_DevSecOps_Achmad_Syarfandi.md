@@ -56,7 +56,6 @@ Dynamic **DevSecOps Engineer** with 5+ years of experience in architecting high-
 
 ## Technical Projects
 - **Lipsync Realtime Avatar AI**: Developed a conversational AI application integrating LLMs, Voice AI, and Simli for immersive user interactions.
-- **Makaverse (Makassar Metaverse)**: Architected a high-availability cloud infrastructure for the city's flagship metaverse platform.
 - **Government Email Cluster**: Built and secured a Mailcow-based email infrastructure supporting over 200 government domains.
 - **PPID Parepare Transparency Portal**: Engineered an official transparency portal with Google Gemini AI integration for public information.
 - **Kegiatan Sulsel (Activity Management)**: Built a regional activity tracking and attendance system using Next.js, Supabase, and QR Codes.
@@ -64,6 +63,7 @@ Dynamic **DevSecOps Engineer** with 5+ years of experience in architecting high-
 - **Data Sulsel**: Managed a regional data monitoring platform for public religious services, serving 9 million residents.
 - **Helpdesk Makassar**: Developed a scalable citizen service portal for urban complaint management and public service tracking.
 - **Kawan Sedarah**: Built a real-time blood stock monitoring command center for emergency response using Supabase and React.
+- **Makaverse (Makassar Metaverse)**: Architected a high-availability cloud infrastructure for the city's flagship metaverse platform.
 
 ## Certifications & Awards
 - **National Cyber Exercise #10** – BSSN (2024)
