@@ -30,7 +30,6 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 *2023 – 2025 | Makassar*
 - **Menganalisis** data keluhan warga **Helpdesk Makassar** — kategorisasi, analisis tren, skor prioritas membantu pejabat menyelesaikan masalah 40% lebih cepat.
 - **Memantau** kepatuhan SLA 200+ domain email pemerintah, membuat laporan performa bulanan dengan rekomendasi.
-- **Membuat** dashboard engagement **Makaverse** — durasi sesi, retensi, heatmap penggunaan puncak, analisis funnel konversi.
 
 ### Co-Founder | GetKasir (Enterprise POS)
 *2019 – Sekarang | Remote*
@@ -54,7 +53,6 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Kegiatan Sulsel**: Pelaporan kehadiran — data QR, tingkat partisipasi, ringkasan kegiatan.
 - **Malmora Market Intel**: Pelaporan e-commerce — performa penjualan, tren produk, metrik logistik.
 - **Email SLA Reports**: Monitoring performa — uptime, tingkat pengiriman, kepatuhan SLA 200+ domain.
-- **Makaverse Engagement**: Analitik pengguna — pelacakan sesi, retensi, heatmap, funnel konversi.
 
 ## Penghargaan
 - **National Cyber Exercise #10** – BSSN (2024)

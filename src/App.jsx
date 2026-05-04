@@ -56,7 +56,7 @@ const translations = {
 
     exp1Title: "Tenaga Ahli DevOps & Infrastruktur",
     exp1Company: "Dinas Kominfo & Disbud Kota Makassar",
-    exp1Desc: "Mengelola infrastruktur Makassar Metaverse (Makaverse), Virtual Tour Lorong Wisata, Virtual Museum Makassar, dan server email pemerintah.",
+    exp1Desc: "Mengelola infrastruktur Virtual Tour Lorong Wisata, Virtual Museum Makassar, dan server email pemerintah.",
 
     exp7Title: "SQA & DevOps Engineer",
     exp7Company: "Malmora (Startup)",
@@ -152,7 +152,7 @@ const translations = {
 
     exp1Title: "DevOps & Infrastructure Expert",
     exp1Company: "Dinas Kominfo & Disbud Makassar",
-    exp1Desc: "Managing infrastructure for Makassar Metaverse (Makaverse), Virtual Tour Lorong Wisata, Virtual Museum Makassar, and gov email servers.",
+    exp1Desc: "Managing infrastructure for Virtual Tour Lorong Wisata, Virtual Museum Makassar, and gov email servers.",
 
     exp7Title: "SQA & DevOps Engineer",
     exp7Company: "Malmora (Startup)",
@@ -666,7 +666,6 @@ const PortfolioSection = () => {
   // All projects unified — sorted by complexity, mixed between featured & repo
   const allProjects = [
     { id: 'getkasir', title: 'GetKasir Enterprise POS', desc: lang === 'id' ? 'Ekosistem retail raksasa kelas Enterprise yang menggabungkan kecanggihan AI, keamanan biometrik, dan skalabilitas cloud (100+ Modul).' : 'Enterprise-class giant retail ecosystem combining AI sophistication, biometric security, and cloud scalability (100+ Modules).', badge: 'JavaScript', url: 'https://getkasir.com' },
-    { id: 'makaverse', title: 'Makaverse (Makassar Metaverse)', desc: lang === 'id' ? 'Platform metaverse skala kota pertama di Sulawesi — menggabungkan 3D WebGL, real-time multiplayer, dan data geospasial Kota Makassar dalam satu pengalaman imersif berbasis browser.' : "Makassar's first city-scale metaverse platform — combining 3D WebGL, real-time multiplayer, and geospatial city data into a single browser-based immersive experience.", badge: t('typeVR'), url: 'https://makaverse.makassarkota.go.id' },
     { id: 'asistenvirtual', title: 'Lipsync Realtime Avatar AI', desc: lang === 'id' ? 'Aplikasi Conversational AI canggih berbasis web yang menggabungkan kecerdasan buatan mutakhir (Lipsync Realtime, Voice AI, LLM) dengan antarmuka visual yang memukau.' : 'Advanced web-based Conversational AI app combining cutting-edge AI (Lipsync Realtime, Voice AI, LLM) with stunning visual interfaces.', badge: 'TypeScript', url: 'https://asistenvirtual.ai' },
     { id: 'malmora', title: 'Malmora (Reseller & Dropship)', desc: lang === 'id' ? 'Platform aplikasi reseller & dropship yang berfokus pada produk kebutuhan muslim-muslimah, memudahkan pengguna berjualan online tanpa memikirkan pengemasan dan pengiriman di wilayah Sulawesi & Indonesia Timur.' : 'Reseller & dropship app platform focused on Muslim lifestyle products, enabling users to sell online without handling packaging or shipping across Sulawesi and Eastern Indonesia.', badge: t('typeWeb'), url: 'https://malmora.com' },
     { id: 'datasulsel', title: 'Portal Data Sulsel', desc: lang === 'id' ? 'Portal data terpadu untuk pengelolaan, monitoring, dan analisis statistik data keagamaan di seluruh wilayah Sulawesi Selatan secara real-time.' : 'Integrated data portal for real-time management, monitoring, and analysis of religious statistical data across South Sulawesi.', badge: 'PLpgSQL', url: 'https://datasulsel.com' },

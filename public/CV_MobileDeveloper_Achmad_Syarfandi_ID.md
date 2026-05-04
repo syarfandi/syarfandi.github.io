@@ -31,7 +31,6 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Membangun** aplikasi Unity **Al-Haram VR** — Samsung Gear VR, **Top 10 Samsung Next Apps 4.0** nasional.
 - **Mengembangkan** mobile **Helpdesk Makassar** — pengaduan kamera, drafting offline, gestur native.
 - **Merekayasa** mobile **Virtual Museum** — navigasi sentuh 360°, pinch-to-zoom, viewing akselerometer.
-- **Merancang** mobile **Makaverse** — navigasi 3D sentuh, gyroscope, rendering GPU adaptif.
 
 ### Co-Founder | GetKasir (Enterprise POS)
 *2019 – Sekarang | Remote*
@@ -56,7 +55,6 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Helpdesk Mobile**: Aplikasi warga — pengaduan kamera, drafting offline, push notification.
 - **Kegiatan Sulsel**: Aplikasi kegiatan — scan QR kehadiran, sync real-time, mode offline.
 - **Kawan Sedarah**: Stok darah — alert real-time, pencari RS, mode darurat.
-- **Makaverse Mobile**: Metaverse — 3D sentuh, gyroscope, rendering GPU adaptif.
 
 ## Penghargaan
 - **Top 10** – Samsung Next Apps 4.0 Gear VR (2017) ⭐

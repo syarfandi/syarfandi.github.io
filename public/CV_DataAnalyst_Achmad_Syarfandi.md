@@ -30,7 +30,6 @@ Detail-oriented **Data Analyst** with 8+ years transforming raw data into action
 *2023 – 2025 | Makassar*
 - **Analyzed** citizen complaint data for **Helpdesk Makassar** — categorization, trend analysis, priority scoring helping officials resolve issues 40% faster.
 - **Monitored** SLA compliance for 200+ government email domains, producing monthly performance reports with recommendations.
-- **Created** user engagement dashboards for **Makaverse** — session duration, retention rates, peak usage heatmaps, conversion funnel analysis.
 
 ### Co-Founder | GetKasir (Enterprise POS)
 *2019 – Present | Remote*
@@ -54,7 +53,6 @@ Detail-oriented **Data Analyst** with 8+ years transforming raw data into action
 - **Kegiatan Sulsel**: Attendance reporting — QR scan data, participation rates, activity summaries.
 - **Malmora Market Intel**: E-commerce reporting — sales performance, product trends, logistics metrics.
 - **Email SLA Reports**: Performance monitoring — uptime, delivery rates, SLA compliance for 200+ domains.
-- **Makaverse Engagement**: User analytics — session tracking, retention rates, heatmaps, conversion funnels.
 
 ## Awards
 - **National Cyber Exercise #10** – BSSN (2024)

@@ -31,7 +31,6 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Mengelola** lingkungan server on-prem yang kompleks dan infrastruktur untuk lebih dari **200+ domain satuan kerja** di seluruh lingkungan pemerintah kota.
 - **Membangun** cluster email pemerintah yang aman dan tangguh menggunakan **Mailcow**, memastikan ketersediaan 99,99% serta filtrasi keamanan/anti-spam yang kuat.
 - **Mengamankan** aset digital pemerintah dengan memimpin tim respon teknis selama **BSSN National Cyber Exercise**, mempertahankan uptime 100% selama simulasi serangan.
-- **Merancang** infrastruktur high-availability untuk **Makassar Metaverse (Makaverse)** dan **Virtual Museum Makassar**, menangani beban trafik puncak ribuan pengguna bersamaan.
 
 ### Co-Founder | GetKasir (Startup Enterprise POS)
 *2019 – Sekarang| Remote/Berbasis Proyek*
@@ -63,7 +62,6 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Data Sulsel**: Mengelola platform monitoring data regional untuk layanan publik keagamaan bagi 9 juta penduduk.
 - **Helpdesk Makassar**: Membangun portal layanan warga yang skalabel untuk manajemen keluhan kota dan pelacakan layanan publik.
 - **Kawan Sedarah**: Membangun pusat komando monitoring stok darah real-time untuk respon darurat menggunakan Supabase dan React.
-- **Makaverse (Makassar Metaverse)**: Merancang infrastruktur cloud high-availability untuk platform metaverse unggulan pemerintah kota.
 
 ## Sertifikasi & Penghargaan
 - **National Cyber Exercise #10** – BSSN (2024)

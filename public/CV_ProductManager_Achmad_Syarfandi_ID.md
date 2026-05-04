@@ -28,7 +28,6 @@ Product Manager strategis dengan pengalaman lebih dari 8 tahun dalam memimpin pr
 - Menetapkan roadmap strategis untuk alat komunikasi aman seluruh kota, memprioritaskan privasi pengguna dan keandalan infrastruktur untuk 200+ domain pemerintah.
 - Memfasilitasi kolaborasi pemangku kepentingan di 200+ unit pemerintah untuk memastikan kesesuaian produk-pasar untuk layanan digital internal dan publik.
 - Berhasil memimpin peluncuran platform Helpdesk seluruh kota, menyederhanakan manajemen keluhan warga.
-- Mengelola pengembangan produk Makaverse (Makassar Metaverse), berkoordinasi antara tim kreatif 3D, pengembang teknis, dan unit pemerintah.
 
 **GetKasir (Enterprise POS Startup)** | Makassar, Indonesia
 *Co-Founder (Product Lead)* | 2019 – Sekarang
@@ -52,4 +51,3 @@ IPK: 3.22 / 4.00
 - **Helpdesk Makassar:** Sistem manajemen dan pelacakan keluhan warga dari awal hingga akhir.
 - **Infrastruktur Email Pemerintah:** Platform komunikasi aman strategis untuk unit kerja pemerintah.
 - **Hub Kegiatan Sulsel:** Produk manajemen acara dan pendaftaran yang disederhanakan untuk kegiatan regional.
-- **Metaverse Makaverse:** Produk unggulan metaverse skala kota dan ekosistem digital Makassar.

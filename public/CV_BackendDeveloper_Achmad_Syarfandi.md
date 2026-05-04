@@ -32,7 +32,6 @@ Reliable **Backend Developer** with 8+ years of experience in building scalable,
 - **Managed** PostgreSQL databases across 200+ on-premise server environments, implementing automated backup strategies, query optimization, and connection pooling.
 - **Developed** a high-concurrency **Mailcow** mail cluster backend handling 200+ government domains with automated provisioning scripts and DNS API integrations.
 - **Designed** RESTful APIs for the **Helpdesk Makassar** citizen complaint platform, supporting ticket lifecycle management and cross-department routing.
-- **Built** backend microservices for the **Makaverse** metaverse platform — WebSocket servers for real-time user state, session management APIs, and geospatial data endpoints.
 
 ### Co-Founder | GetKasir (Enterprise POS Startup)
 *2019 – Present | Remote/Project-based*
@@ -64,7 +63,6 @@ Reliable **Backend Developer** with 8+ years of experience in building scalable,
 - **Kawan Sedarah**: Emergency blood stock monitoring — real-time data ingestion, alerting APIs, dashboard backend (TypeScript, Supabase Realtime).
 - **Gov Email Cluster**: Mailcow backend administration — automated domain provisioning, DNS integration, monitoring scripts (Docker, Bash).
 - **Malmora**: E-commerce backend — order processing, inventory sync, multi-vendor catalog APIs, courier integration (Node.js, PostgreSQL).
-- **Makaverse (Makassar Metaverse)**: Backend microservices — WebSocket servers, session APIs, geospatial data endpoints (Node.js, WebSocket).
 
 ## Certifications & Awards
 - **National Cyber Exercise #10** – BSSN (2024)

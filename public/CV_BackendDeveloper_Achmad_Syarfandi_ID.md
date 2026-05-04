@@ -32,7 +32,6 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Mengelola** database PostgreSQL di 200+ lingkungan server on-premise, mengimplementasikan strategi backup otomatis, optimasi query, dan connection pooling.
 - **Mengembangkan** backend cluster email **Mailcow** berkonkurensi tinggi untuk 200+ domain pemerintah dengan skrip provisioning otomatis dan integrasi DNS API.
 - **Merancang** RESTful API untuk platform pengaduan warga **Helpdesk Makassar**, mendukung manajemen siklus hidup tiket dan routing antar-departemen.
-- **Membangun** microservices backend untuk platform metaverse **Makaverse** — server WebSocket untuk status pengguna real-time, API manajemen sesi, dan endpoint data geospasial.
 
 ### Co-Founder | GetKasir (Enterprise POS Startup)
 *2019 – Sekarang | Remote/Project-based*
@@ -64,7 +63,6 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Kawan Sedarah**: Monitoring stok darah darurat — ingesti data real-time, API alerting, backend dashboard (TypeScript, Supabase Realtime).
 - **Gov Email Cluster**: Administrasi backend Mailcow — provisioning domain otomatis, integrasi DNS, skrip monitoring (Docker, Bash).
 - **Malmora**: Backend e-commerce — pemrosesan pesanan, sinkronisasi inventori, API katalog multi-vendor, integrasi kurir (Node.js, PostgreSQL).
-- **Makaverse (Makassar Metaverse)**: Microservices backend — server WebSocket, API sesi, endpoint data geospasial (Node.js, WebSocket).
 
 ## Sertifikasi & Penghargaan
 - **National Cyber Exercise #10** – BSSN (2024)

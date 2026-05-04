@@ -32,7 +32,6 @@ Creative and technical **Frontend Developer** with 8+ years of experience in cra
 - **Designed** and implemented a unified design system for city government digital services, ensuring visual consistency across 200+ units.
 - **Optimized** frontend performance for high-traffic public portals, reducing initial load times and improving Lighthouse scores significantly.
 - **Won** recognition for excellence in UI/UX and web innovation during government-led digital transformation challenges.
-- **Built** immersive web-based 3D environments and interactive interfaces for **Makaverse**, the official metaverse platform of Makassar.
 
 ### Co-Founder | GetKasir (Enterprise POS Startup)
 *2019 – Present| Remote/Project-based*
@@ -61,7 +60,6 @@ Creative and technical **Frontend Developer** with 8+ years of experience in cra
 - **Kegiatan Sulsel (Activity Management)**: Built a responsive activity tracking UI with real-time QR code scanning and attendance status.
 - **Data Sulsel**: Developed a comprehensive regional data monitoring dashboard with interactive SVG maps and charts.
 - **Helpdesk Makassar**: Created a scalable citizen service UI for managing urban complaints with real-time status updates.
-- **Makaverse (Makassar Metaverse)**: Developed the frontend architecture and UI for Makassar's flagship 3D web platform.
 
 ## Certifications & Awards
 - **National Cyber Exercise #10** – BSSN (2024)

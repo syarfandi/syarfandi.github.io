@@ -29,7 +29,6 @@ Strategic Data Engineer with 8+ years of experience in architecting scalable dat
 - Engineered scalable data storage and ingestion solutions for urban complaint management platforms, handling high-volume multimedia data.
 - Managed complex on-premise database environments for 200+ government units, ensuring 99.9% data durability and availability.
 - Led data migration projects during critical city-wide infrastructure upgrades, maintaining zero data loss.
-- Implemented real-time data synchronization for the Makaverse (Makassar Metaverse) platform using high-concurrency database configurations.
 
 **GetKasir (Enterprise POS Startup)** | Makassar, Indonesia
 *Co-Founder (Data Architecture)* | 2019 – Present
@@ -53,4 +52,3 @@ GPA: 3.22 / 4.00
 - **Automated ETL Hub:** Centralized pipeline hub for government data migration and cleaning.
 - **Retail Analytics Engine:** Business intelligence layer for POS data using BigQuery and Grafana.
 - **Helpdesk Data Platform:** Public complaint data management system with real-time tracking.
-- **Makaverse Data Sync:** Real-time world-state consistency layer for Makassar's Metaverse.

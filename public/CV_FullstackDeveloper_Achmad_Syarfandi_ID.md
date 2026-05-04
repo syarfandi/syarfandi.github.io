@@ -32,7 +32,6 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Mengembangkan** portal warga **Helpdesk Makassar** end-to-end — UI React responsif, API manajemen siklus hidup tiket, dan backend routing antar-departemen.
 - **Membangun** dashboard admin dan skrip provisioning otomatis untuk cluster email **Mailcow** melayani 200+ domain pemerintah dengan monitoring dan alerting.
 - **Merekayasa** **Virtual Museum Makassar** — frontend panoramik 360° React dengan loading aset 3D interaktif dan API backend manajemen konten.
-- **Merancang arsitektur** platform full-stack **Makaverse** — frontend imersif React/Three.js + backend WebSocket untuk multiplayer real-time dan rendering data geospasial.
 
 ### Co-Founder | GetKasir (Enterprise POS Startup)
 *2019 – Sekarang | Remote/Project-based*
@@ -65,7 +64,6 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Helpdesk Makassar**: Portal layanan warga — UI React responsif + API manajemen tiket Node.js + routing antar-departemen.
 - **Malmora**: Platform e-commerce — storefront React + backend pemrosesan pesanan Node.js + integrasi API kurir + katalog multi-vendor.
 - **Virtual Museum Makassar**: Warisan budaya — viewer panoramik 360° React + loader aset 3D + API backend manajemen konten.
-- **Makaverse (Makassar Metaverse)**: Metaverse kota — frontend imersif Three.js/React + backend multiplayer WebSocket + API geospasial.
 
 ## Sertifikasi & Penghargaan
 - **National Cyber Exercise #10** – BSSN (2024)

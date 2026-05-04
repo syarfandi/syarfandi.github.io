@@ -31,7 +31,6 @@ Strategic **Mobile Developer** with 8+ years of experience architecting high-per
 - **Built** **Al-Haram VR** Unity app — Samsung Gear VR, **Top 10 Samsung Next Apps 4.0** nationwide.
 - **Developed** mobile **Helpdesk Makassar** — camera complaints, offline drafting, native gestures.
 - **Engineered** **Virtual Museum** mobile — 360° touch navigation, pinch-to-zoom, accelerometer viewing.
-- **Architected** mobile **Makaverse** — touch 3D navigation, gyroscope, adaptive GPU rendering.
 
 ### Co-Founder | GetKasir (Enterprise POS)
 *2019 – Present | Remote*
@@ -56,7 +55,6 @@ Strategic **Mobile Developer** with 8+ years of experience architecting high-per
 - **Helpdesk Mobile**: Citizen app — camera complaints, offline drafting, push notifications.
 - **Kegiatan Sulsel**: Event app — QR attendance, real-time sync, offline mode.
 - **Kawan Sedarah**: Blood stock — real-time alerts, hospital finder, emergency mode.
-- **Makaverse Mobile**: Metaverse — touch 3D, gyroscope, adaptive GPU rendering.
 
 ## Awards
 - **Top 10** – Samsung Next Apps 4.0 Gear VR (2017) ⭐

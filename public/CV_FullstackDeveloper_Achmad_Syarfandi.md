@@ -32,7 +32,6 @@ Versatile **Fullstack Developer** with 8+ years of experience engineering end-to
 - **Developed** the **Helpdesk Makassar** citizen portal end-to-end — responsive React UI, ticket lifecycle management API, and cross-department routing backend.
 - **Built** admin dashboards and automated provisioning scripts for **Mailcow** email cluster serving 200+ government domains with monitoring and alerting.
 - **Engineered** the **Virtual Museum Makassar** — 360° panoramic React frontend with interactive 3D asset loading and backend content management API.
-- **Architected** the full-stack **Makaverse** platform — React/Three.js immersive frontend + WebSocket backend for real-time multiplayer and geospatial data rendering.
 
 ### Co-Founder | GetKasir (Enterprise POS Startup)
 *2019 – Present | Remote/Project-based*
@@ -65,7 +64,6 @@ Versatile **Fullstack Developer** with 8+ years of experience engineering end-to
 - **Helpdesk Makassar**: Citizen service portal — responsive React UI + Node.js ticket management API + cross-department routing.
 - **Malmora**: E-commerce platform — React storefront + Node.js order processing backend + courier API integration + multi-vendor catalog.
 - **Virtual Museum Makassar**: Cultural heritage — 360° panoramic React viewer + 3D asset loader + backend content management API.
-- **Makaverse (Makassar Metaverse)**: City metaverse — Three.js/React immersive frontend + WebSocket multiplayer backend + geospatial APIs.
 
 ## Certifications & Awards
 - **National Cyber Exercise #10** – BSSN (2024)

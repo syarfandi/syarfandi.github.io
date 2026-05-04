@@ -29,7 +29,6 @@ Data Engineer strategis dengan pengalaman lebih dari 8 tahun dalam merancang pip
 - Merekayasa solusi penyimpanan dan penyerapan data yang skalabel untuk platform manajemen keluhan perkotaan, menangani data multimedia volume tinggi.
 - Mengelola lingkungan database on-premise yang kompleks untuk 200+ unit pemerintah, memastikan durabilitas dan ketersediaan data 99,9%.
 - Memimpin proyek migrasi data selama peningkatan infrastruktur kritis kota, menjaga nol kehilangan data.
-- Menerapkan sinkronisasi data real-time untuk platform Makaverse (Makassar Metaverse) menggunakan konfigurasi database konkurensi tinggi.
 
 **GetKasir (Enterprise POS Startup)** | Makassar, Indonesia
 *Co-Founder (Arsitektur Data)* | 2019 – Sekarang
@@ -53,4 +52,3 @@ IPK: 3.22 / 4.00
 - **Hub ETL Otomatis:** Hub pipeline terpusat untuk migrasi dan pembersihan data pemerintah.
 - **Engine Analitik Retail:** Lapisan intelijen bisnis untuk data POS menggunakan BigQuery dan Grafana.
 - **Platform Data Helpdesk:** Sistem manajemen data keluhan publik dengan pelacakan real-time.
-- **Data Sync Makaverse:** Lapisan konsistensi status dunia real-time untuk Metaverse Makassar.

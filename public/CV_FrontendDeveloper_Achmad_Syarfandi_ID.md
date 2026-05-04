@@ -32,7 +32,6 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Merancang** dan menerapkan sistem desain terpadu untuk layanan digital pemerintah kota, memastikan konsistensi visual di 200+ unit.
 - **Mengoptimalkan** performa frontend untuk portal publik trafik tinggi, secara signifikan mengurangi waktu muat awal dan meningkatkan skor Lighthouse.
 - **Memenangkan** penghargaan atas keunggulan UI/UX dan inovasi web selama tantangan transformasi digital pemerintah.
-- **Membangun** lingkungan 3D berbasis web yang imersif dan antarmuka interaktif untuk **Makaverse**, platform metaverse resmi Makassar.
 
 ### Co-Founder | GetKasir (Enterprise POS Startup)
 *2019 – Sekarang| Remote/Berbasis Proyek*
@@ -61,7 +60,6 @@ Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
 - **Kegiatan Sulsel (Activity Management)**: Membangun UI pelacakan kegiatan yang responsif dengan pemindaian kode QR real-time dan status kehadiran.
 - **Data Sulsel**: Mengembangkan dashboard pemantauan data regional yang komprehensif dengan peta SVG interaktif dan grafik.
 - **Helpdesk Makassar**: Membuat UI layanan warga yang skalabel untuk manajemen keluhan kota dengan pembaruan status real-time.
-- **Makaverse (Makassar Metaverse)**: Mengembangkan arsitektur frontend dan UI untuk platform web 3D unggulan Makassar.
 
 ## Sertifikasi & Penghargaan
 - **National Cyber Exercise #10** – BSSN (2024)
