@@ -277,12 +277,13 @@ const HeroSection = () => {
     setPinError(false);
 
     if (cleanVal.length === 6) {
-      const msgUint8 = new TextEncoder().encode(cleanVal);
+      const salt = "syarfandi_portfolio_2026_!@#";
+      const msgUint8 = new TextEncoder().encode(cleanVal + salt);
       const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
       const hashArray = Array.from(new Uint8Array(hashBuffer));
       const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 
-      if (hashHex === 'cfbb80a48e057f9507c1173fc30f1a72bb6d1009646b1a5d1162c53df472ba79') {
+      if (hashHex === '9575e5e488fd2bfcd5d677c7557f291a15e3d556901c2f319ce353f0c6f3bbb7') {
         setPinSuccess(true);
         setTimeout(() => {
           setPinUnlocked(true);
