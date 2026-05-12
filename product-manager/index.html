@@ -727,54 +727,74 @@
         toggleEN.onclick = () => setLang('en');
         toggleID.onclick = () => setLang('id');
 
-                        document.getElementById('downloadBtn').addEventListener('click', async () => {
-            const element = view === 'premium' ? premiumView : atsView;
+        document.getElementById('downloadBtn').addEventListener('click', async () => {
+            const sourceElement = view === 'premium' ? premiumView : atsContent;
             const downloadLabel = document.getElementById('downloadLabel');
             const originalLabel = downloadLabel.innerText;
             
             downloadLabel.innerText = "...";
             
-            // Force temporary style for better PDF capture
-            const originalStyle = element.style.cssText;
-            element.style.width = "900px"; // Standard width for capture
-            element.style.boxShadow = "none";
-            element.style.borderRadius = "0";
-            
-            const opt = {
-                margin: 0,
-                filename: `CV_Syarfandi_product-manager_${lang}.pdf`,
-                image: { type: 'jpeg', quality: 1.0 },
-                html2canvas: { 
-                    scale: 2, 
-                    useCORS: true, 
-                    scrollY: 0,
-                    windowWidth: 900
-                },
-                jsPDF: { unit: 'mm', orientation: 'portrait' }
-            };
-
             try {
-                // Calculate element dimensions to make it single page
-                const widthPx = 900;
-                const heightPx = element.scrollHeight;
+                // Create a clone to avoid affecting the live UI and ensure clean capture
+                const clone = sourceElement.cloneNode(true);
                 
-                // Convert px to mm (1px = 0.264583mm)
+                // Set styles for the clone to ensure it's captured correctly
+                Object.assign(clone.style, {
+                    position: "absolute",
+                    top: "-9999px",
+                    left: "0",
+                    width: "1000px",
+                    height: "auto",
+                    overflow: "visible",
+                    display: "block", // Ensure it's visible for capture
+                    opacity: "1",
+                    background: "white",
+                    boxShadow: "none",
+                    borderRadius: "0"
+                });
+                
+                document.body.appendChild(clone);
+                
+                // Force icons to render in clone if they use Lucide
+                if (window.lucide) window.lucide.createIcons({ node: clone });
+                
+                // Wait for any resources to stabilize
+                await new Promise(resolve => setTimeout(resolve, 500));
+
+                const opt = {
+                    margin: 0,
+                    filename: `CV_Syarfandi_product-manager_${lang}.pdf`,
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { 
+                        scale: 2, 
+                        useCORS: true, 
+                        allowTaint: true,
+                        letterRendering: true,
+                        width: 1000,
+                        windowWidth: 1000,
+                    },
+                    jsPDF: { unit: 'mm', orientation: 'portrait' }
+                };
+
+                const widthPx = 1000;
+                const heightPx = clone.scrollHeight;
                 const mmWidth = widthPx * 0.264583;
-                const mmHeight = (heightPx * 0.264583) + 2; // +2 for safety margin
+                const mmHeight = (heightPx * 0.264583) + 2;
                 
                 opt.jsPDF.format = [mmWidth, mmHeight];
 
-                await html2pdf().set(opt).from(element).save();
+                await html2pdf().set(opt).from(clone).save();
+                
+                document.body.removeChild(clone);
             } catch (err) {
                 console.error("PDF Error:", err);
                 alert("Error generating PDF. Please try again.");
             } finally {
-                element.style.cssText = originalStyle;
                 downloadLabel.innerText = originalLabel;
             }
         });
 
-        document.getElementById('shareBtn').addEventListener('click', async () => {
+document.getElementById('shareBtn').addEventListener('click', async () => {
             const url = window.location.href;
             if (navigator.share) {
                 try { await navigator.share({ title: 'Achmad Syarfandi CV', url }); } catch (e) { }
