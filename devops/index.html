@@ -35,6 +35,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         :root {
             --primary: #1e3a8a;
@@ -345,27 +346,156 @@
         }
 
         @media print {
+
+            /* Definisi Named Pages untuk kontrol margin yang berbeda */
+            @page premium {
+                size: A4;
+                margin: 0;
+            }
+
+            @page ats {
+                size: A4;
+                margin: 20mm;
+            }
+
             .nav-container {
                 display: none !important;
             }
 
             body {
                 padding: 0;
+                margin: 0;
                 background: white;
             }
 
-            .resume-container,
-            .markdown-body {
-                margin-top: 0 !important;
+            /* Sembunyikan view yang tidak aktif saat print */
+            #premium-view:not(.active),
+            #ats-view:not(.active) {
+                display: none !important;
+            }
+
+            /* Terapkan Named Page ke masing-masing View */
+            #premium-view.active {
+                page: premium;
+                display: grid !important;
+                grid-template-columns: 280px 1fr;
+                width: 100% !important;
                 max-width: 100% !important;
-                box-shadow: none;
-                border: none;
+                min-height: 297mm;
+            }
+
+            #ats-view.active {
+                page: ats;
             }
 
             .sidebar {
-                background: linear-gradient(135deg, var(--primary), var(--secondary));
-                color: white;
-                padding: 40px;
+                background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+                color: white !important;
+                padding: 40px 30px !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                min-height: 297mm;
+            }
+
+            .main-content {
+                padding: 40px 40px !important;
+                background: white !important;
+            }
+
+            /* Pengaturan khusus untuk ATS View saat print */
+            #ats-view.active .markdown-body {
+                display: block !important;
+                padding: 0 !important;
+                /* Margin sudah diatur oleh @page ats */
+                margin: 0 !important;
+                max-width: 100% !important;
+                width: 100% !important;
+                border: none !important;
+                box-shadow: none !important;
+                font-size: 11pt;
+                line-height: 1.5;
+                color: #000;
+            }
+
+            /* Mencegah pemotongan judul section di kedua mode */
+            .section-title,
+            .experience-header,
+            .markdown-body h1,
+            .markdown-body h2,
+            .markdown-body h3 {
+                break-inside: avoid-page !important;
+                break-after: avoid-page !important;
+                page-break-inside: avoid !important;
+                page-break-after: avoid !important;
+                margin-top: 1.2em !important; /* Sedikit lebih rapat agar muat */
+                margin-bottom: 0.6em !important;
+            }
+
+            /* Mencegah paragraf pengantar terpisah dari list di bawahnya */
+            .markdown-body h2+p,
+            .markdown-body h3+p {
+                break-after: avoid-page !important;
+                page-break-after: avoid !important;
+                margin-bottom: 0.4em !important;
+            }
+
+            /* Izinkan list panjang terbagi, tapi list pendek harus tetap menyatu */
+            .markdown-body ul,
+            .markdown-body ol {
+                break-inside: avoid-page !important; /* Prioritaskan menyatu */
+                page-break-inside: avoid !important;
+                orphans: 5; /* Jangan sisakan kurang dari 5 baris di akhir halaman */
+                widows: 5;  /* Jangan sisakan kurang dari 5 baris di awal halaman baru */
+            }
+
+            /* Memaksa list untuk menarik elemen sebelumnya (judul/pengantar) */
+            .markdown-body p+ul,
+            .markdown-body p+ol {
+                break-before: avoid-page !important;
+                page-break-before: avoid !important;
+            }
+
+            /* Teknik kuat mencegah pemotongan poin individu */
+            .markdown-body li {
+                display: block !important;
+                break-inside: avoid-page !important;
+                page-break-inside: avoid !important;
+                margin-bottom: 0.3em !important;
+                position: relative;
+                padding-left: 1.2em !important;
+            }
+
+            .markdown-body li::before {
+                content: "•";
+                position: absolute;
+                left: 0;
+                font-weight: bold;
+            }
+
+            .section,
+            .experience-item,
+            .markdown-body p {
+                break-inside: avoid-page !important;
+                page-break-inside: avoid !important;
+                margin-bottom: 1em !important;
+                orphans: 3;
+                widows: 3;
+            }
+
+            .markdown-body h2 {
+                border-bottom: 2px solid #333 !important;
+                padding-bottom: 0.2em !important;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                font-size: 14pt !important;
+            }
+
+            .markdown-body hr {
+                break-before: avoid !important;
+                break-after: avoid !important;
+                border: none;
+                border-top: 1px solid #eee;
+                margin: 2em 0;
             }
         }
     </style>
@@ -391,7 +521,8 @@
                 </button>
             </div>
             <div class="segmented-control">
-                <button id="toggleEN" class="segment-btn active"><i data-lucide="globe" style="width:14px"></i> EN</button>
+                <button id="toggleEN" class="segment-btn active"><i data-lucide="globe" style="width:14px"></i>
+                    EN</button>
                 <button id="toggleID" class="segment-btn"><i data-lucide="globe" style="width:14px"></i> ID</button>
             </div>
         </div>
@@ -733,7 +864,78 @@
         toggleEN.onclick = () => setLang('en');
         toggleID.onclick = () => setLang('id');
 
-        document.getElementById('downloadBtn').addEventListener('click', () => window.print());
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            const activeView = view === 'premium' ? premiumView : atsView;
+            const originalBtnText = this.innerHTML;
+            
+            this.innerHTML = '<i data-lucide="loader-2" class="animate-spin"></i> Processing...';
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+            this.disabled = true;
+
+            // Memastikan posisi scroll di paling atas sebelum proses dimulai
+            window.scrollTo(0, 0);
+
+            setTimeout(() => {
+                const widthPx = activeView.offsetWidth;
+                const heightPx = activeView.offsetHeight;
+                const mmWidth = widthPx * 0.264583;
+                const mmHeight = heightPx * 0.264583;
+
+                const opt = {
+                    margin: 0,
+                    filename: `CV_Syarfandi_Achmad_${view.toUpperCase()}.pdf`,
+                    image: { type: 'jpeg', quality: 1 },
+                    html2canvas: { 
+                        scale: 3, 
+                        useCORS: true,
+                        logging: false,
+                        scrollY: 0,
+                        onclone: (clonedDoc) => {
+                            // RESET TOTAL: Inilah kunci untuk menghilangkan area putih atas
+                            clonedDoc.body.style.paddingTop = '0';
+                            clonedDoc.body.style.margin = '0';
+                            
+                            const clonedElement = clonedDoc.getElementById(activeView.id);
+                            if (clonedElement) {
+                                clonedElement.style.boxShadow = 'none';
+                                clonedElement.style.border = 'none';
+                                clonedElement.style.margin = '0';
+                                clonedElement.style.paddingTop = '0';
+                                
+                                // Pastikan elemen pertama di dalamnya juga mepet ke atas
+                                const innerContent = clonedElement.querySelector('.markdown-body') || clonedElement;
+                                if (innerContent.firstElementChild) {
+                                    innerContent.firstElementChild.style.marginTop = '0';
+                                    innerContent.firstElementChild.style.paddingTop = '0';
+                                }
+
+                                if (view === 'premium') {
+                                    clonedElement.style.display = 'grid';
+                                } else {
+                                    clonedElement.style.padding = '0 40px 40px 40px';
+                                }
+                            }
+                        }
+                    },
+                    jsPDF: { 
+                        unit: 'mm', 
+                        format: [mmWidth, mmHeight], 
+                        orientation: 'portrait'
+                    }
+                };
+
+                html2pdf().set(opt).from(activeView).save().then(() => {
+                    this.innerHTML = originalBtnText;
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                    this.disabled = false;
+                }).catch(err => {
+                    console.error('PDF Error:', err);
+                    this.innerHTML = originalBtnText;
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                    this.disabled = false;
+                });
+            }, 300); // Berikan sedikit waktu lebih untuk scroll reset
+        });
 
         document.getElementById('shareBtn').addEventListener('click', async () => {
             const url = window.location.href;
