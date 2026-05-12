@@ -391,7 +391,7 @@
                 border: none !important;
             }
         }</style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    
 </head>
 
 <body>
@@ -753,59 +753,84 @@
         toggleEN.onclick = () => setLang('en');
         toggleID.onclick = () => setLang('id');
 
-        document.getElementById('downloadBtn').addEventListener('click', async () => {
+        document.getElementById('downloadBtn').addEventListener('click', () => {
             const isPremium = view === 'premium';
             const element = isPremium ? premiumView : atsContent;
-            const downloadLabel = document.getElementById('downloadLabel');
-            const originalLabel = downloadLabel.innerText;
             
-            downloadLabel.innerText = "...";
+            // 1. Hitung tinggi (Tetap gunakan logika ATS yang sudah bagus, tapi perbaiki akurasi Visual)
+            const heightMm = Math.ceil(element.scrollHeight * 0.264583) + (isPremium ? 25 : 20);
             
-            try {
-                const clone = element.cloneNode(true);
-                Object.assign(clone.style, {
-                    position: 'absolute',
-                    left: '0',
-                    top: '10000px',
-                    width: element.offsetWidth + 'px',
-                    display: isPremium ? 'grid' : 'block',
-                    background: 'white',
-                    opacity: '1',
-                    visibility: 'visible',
-                    margin: '0',
-                    boxShadow: 'none'
-                });
+            const printStyle = document.createElement('style');
+            printStyle.id = 'dynamic-print-style';
+            printStyle.innerHTML = `
+                @media print {
+                    @page { 
+                        size: 210mm ${heightMm}mm; 
+                        margin: 0 !important; 
+                    }
+                    html, body { 
+                        margin: 0 !important; 
+                        padding: 0 !important; 
+                        width: 210mm !important;
+                        height: ${heightMm}mm !important;
+                        overflow: hidden !important;
+                        background: white !important;
+                    }
+                    .nav-container, .theme-switch, #downloadBtn { display: none !important; }
+                    
+                    /* CSS Khusus Visual (Premium) */
+                    #premium-view {
+                        display: ${isPremium ? 'grid' : 'none'} !important;
+                        position: absolute !important;
+                        top: 0 !important;
+                        left: 0 !important;
+                        width: 210mm !important;
+                        height: auto !important;
+                        margin: 0 !important;
+                        padding: 0 !important;
+                        box-shadow: none !important;
+                        border: none !important;
+                    }
+                    
+                    #premium-view * {
+                        break-inside: avoid !important; /* Cegah elemen di dalam visual terpotong */
+                    }
 
-                if (!isPremium) {
-                    const markdown = clone.querySelector('.markdown-body') || clone;
-                    markdown.style.display = 'block';
-                    markdown.style.padding = '60px';
+                    /* CSS Khusus ATS (JANGAN DIUBAH SETTINGANNYA) */
+                    #ats-view { 
+                        display: ${!isPremium ? 'block' : 'none'} !important; 
+                        position: absolute !important;
+                        top: 0 !important;
+                        left: 0 !important;
+                        width: 210mm !important;
+                        margin: 0 !important;
+                    }
+                    .markdown-body { 
+                        display: ${!isPremium ? 'block' : 'none'} !important;
+                        padding: 40px !important;
+                    }
+
+                    * { 
+                        -webkit-print-color-adjust: exact !important; 
+                        print-color-adjust: exact !important;
+                    }
                 }
+            `;
+            document.head.appendChild(printStyle);
 
-                document.body.appendChild(clone);
-                await new Promise(r => setTimeout(r, 1000));
+            
+            // 2. Set judul halaman sementara sebagai nama file PDF
+            const originalTitle = document.title;
+            document.title = `CV_Syarfandi_Backend_${lang.toUpperCase()}`;
 
-                const widthPx = clone.offsetWidth;
-                const heightPx = clone.scrollHeight;
-                const mmWidth = widthPx * 0.264583;
-                const mmHeight = (heightPx * 0.264583);
+            window.print();
 
-                const opt = {
-                    margin: 0,
-                    filename: `CV_Syarfandi_Backend_${lang}.pdf`,
-                    image: { type: 'jpeg', quality: 0.98 },
-                    html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff' },
-                    jsPDF: { unit: 'mm', format: [mmWidth, mmHeight], orientation: 'portrait', compress: true }
-                };
-
-                await html2pdf().set(opt).from(clone).save();
-                document.body.removeChild(clone);
-            } catch (err) {
-                console.error("PDF Error:", err);
-                alert("Gagal membuat PDF.");
-            } finally {
-                downloadLabel.innerText = originalLabel;
-            }
+            // 3. Kembalikan judul asli
+            setTimeout(() => {
+                document.title = originalTitle;
+                const s = document.getElementById('dynamic-print-style');
+                if (s) s.remove();
+            }, 1000);
         });
 
         document.getElementById('shareBtn').addEventListener('click', async () => {

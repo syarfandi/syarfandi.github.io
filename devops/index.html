@@ -824,9 +824,16 @@
             `;
             document.head.appendChild(printStyle);
 
+            
+            // 2. Set judul halaman sementara sebagai nama file PDF
+            const originalTitle = document.title;
+            document.title = `CV_Syarfandi_DevOps_${lang.toUpperCase()}`;
+
             window.print();
 
+            // 3. Kembalikan judul asli
             setTimeout(() => {
+                document.title = originalTitle;
                 const s = document.getElementById('dynamic-print-style');
                 if (s) s.remove();
             }, 1000);
