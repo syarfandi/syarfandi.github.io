@@ -68,6 +68,85 @@
             border-radius: 6px;
             box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
         }
+
+        /* Optimasi PDF/Print khusus A4 */
+        @media print {
+            @page {
+                size: A4;
+                margin: 15mm;
+            }
+            html, body {
+                background-color: #fff !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                display: block !important; /* Nonaktifkan flex saat print */
+                height: auto !important;
+                overflow: visible !important;
+            }
+            .action-buttons, .back-btn {
+                display: none !important;
+            }
+            .markdown-body {
+                max-width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                border: none !important;
+                box-shadow: none !important;
+                width: 100% !important;
+                color: #000 !important;
+                display: block !important;
+                overflow: visible !important;
+            }
+            
+            /* Sembunyikan elemen dekoratif github-markdown yang mungkin mengganggu */
+            .markdown-body::before, .markdown-body::after {
+                display: none !important;
+            }
+
+            /* Aturan Agresif untuk Judul */
+            h1, h2, h3, h4, h5, h6 {
+                page-break-after: avoid !important;
+                break-after: avoid !important;
+                orphans: 5;
+                widows: 5;
+            }
+
+            /* Memastikan section yang dibungkus JS tidak terpotong */
+            .cv-section {
+                display: block !important;
+                page-break-inside: avoid !important;
+                break-inside: avoid-page !important;
+                margin-bottom: 15px !important;
+                position: relative !important;
+            }
+
+            /* List items jangan terbelah */
+            li {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+
+            h2 {
+                margin-top: 1.5em !important;
+                border-bottom: 1px solid #eee !important;
+                padding-bottom: 0.3em !important;
+                page-break-after: avoid !important;
+            }
+
+            hr {
+                border: none !important;
+                border-top: 1px solid #ddd !important;
+                margin: 2em 0 !important;
+                page-break-after: always !important; /* Paksa halaman baru di setiap pemisah section utama jika diinginkan */
+                visibility: hidden; /* Sembunyikan garisnya agar bersih */
+            }
+
+            /* Memastikan konten tidak terpotong di tepi */
+            * {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -108,6 +187,36 @@
                 })
                 .then(text => {
                     content.innerHTML = marked.parse(text);
+                    
+                    // Logika pembungkusan yang lebih andal
+                    const elements = Array.from(content.children);
+                    content.innerHTML = ''; // Kosongkan dulu
+                    
+                    let currentSection = null;
+                    
+                    elements.forEach(el => {
+                        // h2 dan h3 memicu section baru
+                        if (el.tagName === 'H2' || el.tagName === 'H3') {
+                            currentSection = document.createElement('div');
+                            currentSection.className = 'cv-section';
+                            content.appendChild(currentSection);
+                            currentSection.appendChild(el);
+                        } else if (currentSection && el.tagName !== 'HR') {
+                            // Masukkan ke section yang ada
+                            currentSection.appendChild(el);
+                        } else {
+                            // Untuk elemen di awal (seperti header kontak) atau HR
+                            if (el.tagName === 'HR') {
+                                currentSection = null;
+                                content.appendChild(el);
+                            } else {
+                                const wrapper = document.createElement('div');
+                                wrapper.className = 'cv-section';
+                                wrapper.appendChild(el);
+                                content.appendChild(wrapper);
+                            }
+                        }
+                    });
                 })
                 .catch(err => {
                     content.innerHTML = `<h1 style="color:red">Error loading CV</h1><p>${err.message}</p>`;
