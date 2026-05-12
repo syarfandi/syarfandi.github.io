@@ -57,8 +57,6 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 
 ---
 
----
-
 ## Proyek Teknis
 - **Lipsync Realtime Avatar AI**: Mengembangkan aplikasi Conversational AI yang mengintegrasikan LLM, Voice AI, dan Simli untuk interaksi pengguna yang mendalam.
 - **Gov Email Cluster**: Membangun dan mengamankan infrastruktur email berbasis Mailcow yang mendukung lebih dari 200 domain satuan kerja.
@@ -73,3 +71,11 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **National Cyber Exercise #10** – BSSN (2024)
 - **Pemenang Top 10** – Samsung Indonesia Next Apps 4.0 Gear VR Challenge (2017)
 - **Microsoft CityApp Appathon** – Peserta & Developer
+
+
+## Peta Jalan Teknis Masa Depan
+Untuk tetap kompetitif di pasar global DevOps & Infrastruktur, saya aktif menerapkan:
+- **Arsitektur Zero Trust**: Proxy berbasis identitas dan prinsip 'Jangan Pernah Percaya, Selalu Verifikasi'.
+- **Keamanan eBPF**: Observabilitas tingkat kernel yang mendalam dan pemantauan keamanan real-time.
+- **GitOps**: Menggunakan ArgoCD/Flux untuk sinkronisasi infrastruktur yang otomatis dan deklaratif.
+- **Keamanan Serverless**: Mengamankan fungsi AWS Lambda/Edge dan audit IAM least-privilege otomatis.

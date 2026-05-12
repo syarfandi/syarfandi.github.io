@@ -66,3 +66,11 @@ Insightful **Data Scientist** with 8+ years extracting actionable intelligence f
 
 ## Keywords (ATS)
 Python, Pandas, NumPy, SciPy, Scikit-Learn, TensorFlow, Machine Learning, Deep Learning, NLP, LLM, Gemini AI, Statistical Modeling, Predictive Analytics, Time-Series, ARIMA, Prophet, K-Means, DBSCAN, Clustering, Classification, Regression, Anomaly Detection, Sentiment Analysis, A/B Testing, Hypothesis Testing, Feature Engineering, ETL, Data Pipeline, PostgreSQL, SQL, Data Warehousing, Supabase, Data Visualization, Matplotlib, Seaborn, D3.js, Jupyter, Data Cleaning, Data Wrangling, Geospatial Analysis, Dashboard Development, Business Intelligence.
+
+
+## Future-Ready Technical Roadmap
+To stay competitive in the global Data & Analytics market, I am actively implementing:
+- **Predictive Analytics**: Implementing advanced ML models for forecasting and trend analysis.
+- **Real-time Streaming**: Building low-latency data pipelines using Apache Flink and Spark Streaming.
+- **Vector Databases for LLMs**: Architecting data storage for large language model retrieval (RAG).
+- **Automated Data Governance**: Ensuring data compliance and quality through automated AI-driven auditing.

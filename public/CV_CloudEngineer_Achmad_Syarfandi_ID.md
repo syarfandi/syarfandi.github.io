@@ -49,7 +49,6 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **Mengelola** administrasi organisasi dan mengoordinasikan pengurus periode 2021-2026.
 - **Mengoptimalkan** manajemen aset komunitas dan dokumentasi digital untuk operasional masjid.
 
-
 ---
 
 ## Proyek Teknis
@@ -74,11 +73,17 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 
 ---
 
----
-
 ## Daya Saing Pasar Global (Kata Kunci untuk 2026+)
 Untuk tetap kompetitif di pasar Cloud Engineering global, saya aktif menerapkan dan menyempurnakan:
 - **Cloud FinOps**: Menerapkan pemantauan biaya real-time, peringatan anggaran, dan otomatisasi penyesuaian ukuran sumber daya untuk memaksimalkan ROI.
 - **Strategi Multi-Cloud**: Merancang solusi portabel di seluruh AWS, GCP, dan Azure untuk menghindari vendor lock-in dan meningkatkan ketangguhan.
 - **Evolusi Serverless**: Memanfaatkan AWS Lambda, GCP Cloud Run, dan arsitektur Event-driven untuk sistem skala tinggi dengan perawatan rendah.
 - **Tata Kelola Cloud**: Menegakkan kepatuhan sebagai kode (compliance-as-code) dan audit IAM otomatis untuk menjaga keamanan pada skala besar.
+
+
+## Peta Jalan Teknis Masa Depan
+Untuk tetap kompetitif di pasar global DevOps & Infrastruktur, saya aktif menerapkan:
+- **Arsitektur Zero Trust**: Proxy berbasis identitas dan prinsip 'Jangan Pernah Percaya, Selalu Verifikasi'.
+- **Keamanan eBPF**: Observabilitas tingkat kernel yang mendalam dan pemantauan keamanan real-time.
+- **GitOps**: Menggunakan ArgoCD/Flux untuk sinkronisasi infrastruktur yang otomatis dan deklaratif.
+- **Keamanan Serverless**: Mengamankan fungsi AWS Lambda/Edge dan audit IAM least-privilege otomatis.

@@ -76,7 +76,13 @@ Reliable **Backend Developer** with 8+ years of experience in building scalable,
 
 ---
 
----
-
 ## Backend Expertise Keywords (ATS Optimized)
 Node.js, Express.js, Next.js API Routes, PostgreSQL, Supabase, REST API, GraphQL, WebSocket, JWT Authentication, OAuth, Redis, Docker, GitHub Actions, CI/CD, Database Optimization, SQL Query Tuning, Indexing, Database Migration, Row-Level Security (RLS), Serverless Functions, Edge Functions, Background Jobs, Bull Queue, PM2, Nginx, Linux, Microservices, API Gateway, Webhook Integration, Real-time Data Streaming, Multi-tenant Architecture, Database Partitioning, Connection Pooling.
+
+
+## Future-Ready Technical Roadmap
+To stay competitive in the global Backend market, I am actively implementing:
+- **Distributed Systems**: Designing highly-available, event-driven architectures with Kafka and RabbitMQ.
+- **AI-Driven APIs**: Integrating AI models directly into backend pipelines for real-time intelligence.
+- **Vector Databases**: Implementing Pinecone/Milvus for efficient AI similarity searches and RAG systems.
+- **Edge Databases**: Utilizing distributed databases like Turso/Supabase Edge for low-latency global data access.

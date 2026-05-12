@@ -77,7 +77,13 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 
 ---
 
----
-
 ## Kata Kunci Keahlian Fullstack (Optimasi ATS)
 React, Next.js, TypeScript, JavaScript, Node.js, Express.js, Fastify, PostgreSQL, Supabase, REST API, GraphQL, WebSocket, Three.js, Framer Motion, Tailwind CSS, Desain Responsif, SSR, SSG, RSC, Server Components, Autentikasi JWT, OAuth, Redis, Docker, GitHub Actions, CI/CD, Vercel, Optimasi Database, SQL Query Tuning, Indexing, Migrasi Database, Row-Level Security (RLS), Supabase Realtime, Edge Functions, Serverless Functions, Background Jobs, Bull Queue, PM2, Nginx, Linux, Arsitektur Full-Stack, Pengembangan End-to-End, Code-Splitting, Lazy Loading, State Management, Component Design.
+
+
+## Peta Jalan Teknis Masa Depan
+Untuk tetap kompetitif di pasar global Backend, saya aktif menerapkan:
+- **Sistem Terdistribusi**: Merancang arsitektur event-driven yang tersedia tinggi dengan Kafka dan RabbitMQ.
+- **API Berbasis AI**: Mengintegrasikan model AI langsung ke pipeline backend untuk kecerdasan real-time.
+- **Database Vektor**: Menerapkan Pinecone/Milvus untuk pencarian kemiripan AI dan sistem RAG yang efisien.
+- **Database Edge**: Memanfaatkan database terdistribusi seperti Turso/Supabase Edge untuk akses data global latensi rendah.

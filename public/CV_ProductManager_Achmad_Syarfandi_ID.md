@@ -57,3 +57,10 @@ IPK: 3.22 / 4.00
   *IPK: 3.22 / 4.00*
 
 ---
+
+## Peta Jalan Strategis Masa Depan
+Untuk tetap kompetitif di pasar global Manajemen Produk, saya aktif menerapkan:
+- **Product-Led Growth (PLG)**: Menerapkan strategi berbasis data untuk mendorong akuisisi dan retensi pengguna.
+- **Pengambilan Keputusan Berbasis AI**: Menggunakan analitik tingkat lanjut untuk otomatisasi roadmap dan prioritas produk.
+- **Roadmapping Agilitas Tinggi**: Mengadopsi penemuan berkelanjutan dan prinsip lean product untuk iterasi cepat.
+- **Growth Hacking**: Menguasai pertumbuhan berbasis eksperimen untuk menskalakan produk di pasar kompetitif.

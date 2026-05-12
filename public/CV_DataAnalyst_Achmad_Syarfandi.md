@@ -66,3 +66,11 @@ Detail-oriented **Data Analyst** with 8+ years transforming raw data into action
 
 ## Keywords (ATS)
 SQL, PostgreSQL, Excel, Google Sheets, Pivot Tables, VBA, VLOOKUP, Data Analysis, Data Visualization, D3.js, Chart.js, Python, Pandas, Matplotlib, Seaborn, Jupyter, Dashboard Development, Business Intelligence, KPI Tracking, Reporting, Data Cleaning, ETL, Data Quality, Data Validation, Data Governance, Stored Procedures, CTEs, Window Functions, Trend Analysis, Heatmaps, Conversion Funnel, A/B Testing, SLA Monitoring, Executive Reports, Data Storytelling, Supabase, Data Aggregation, Automated Reporting, Data-Driven Decision Making.
+
+
+## Future-Ready Technical Roadmap
+To stay competitive in the global Data & Analytics market, I am actively implementing:
+- **Predictive Analytics**: Implementing advanced ML models for forecasting and trend analysis.
+- **Real-time Streaming**: Building low-latency data pipelines using Apache Flink and Spark Streaming.
+- **Vector Databases for LLMs**: Architecting data storage for large language model retrieval (RAG).
+- **Automated Data Governance**: Ensuring data compliance and quality through automated AI-driven auditing.

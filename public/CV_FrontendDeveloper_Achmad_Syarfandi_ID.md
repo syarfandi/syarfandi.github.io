@@ -50,7 +50,6 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **Mengelola** administrasi organisasi dan mengoordinasikan pengurus periode 2021-2026.
 - **Mengoptimalkan** manajemen aset komunitas dan dokumentasi digital untuk operasional masjid.
 
-
 ---
 
 ## Proyek Teknis
@@ -72,11 +71,17 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 
 ---
 
----
-
 ## Daya Saing Pasar Global (Kata Kunci untuk 2026+)
 Untuk tetap kompetitif di pasar Frontend global, saya aktif menerapkan:
 - **Server-Driven UI**: Membangun antarmuka fleksibel yang beradaptasi berdasarkan konfigurasi dari backend.
 - **Performa Web**: Penguasaan Core Web Vitals, ISR (Incremental Static Regeneration), dan rendering sisi Edge.
 - **Aksesibilitas (a11y)**: Memastikan kepatuhan WCAG dan desain inklusif untuk audiens global.
 - **AI-Powered UI**: Mengintegrasikan LLM dan AI generatif langsung ke dalam pengalaman pengguna untuk antarmuka yang lebih cerdas.
+
+
+## Peta Jalan Teknis Masa Depan
+Untuk tetap kompetitif di pasar global Frontend, saya aktif menerapkan:
+- **Micro-Frontends**: Arsitektur sistem frontend yang skalabel menggunakan module federation dan deployment mandiri.
+- **WebAssembly (Wasm)**: Mengintegrasikan modul C++/Rust berperforma tinggi langsung ke aplikasi web.
+- **UI Berbasis AI**: Mengintegrasikan LLM dan AI generatif untuk menciptakan pengalaman pengguna yang cerdas.
+- **Edge-side Rendering (ESR)**: Mengoptimalkan performa dengan memindahkan logika rendering ke tepi jaringan (edge).

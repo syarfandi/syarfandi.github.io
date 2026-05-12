@@ -57,3 +57,10 @@ GPA: 3.22 / 4.00
   *GPA: 3.22 / 4.00*
 
 ---
+
+## Future-Ready Strategic Roadmap
+To stay competitive in the global Product management market, I am actively implementing:
+- **Product-Led Growth (PLG)**: Implementing data-driven strategies to drive user acquisition and retention.
+- **AI-Driven Decision Making**: Using advanced analytics to automate product roadmapping and prioritization.
+- **High-Agility Roadmapping**: Adopting continuous discovery and lean product principles for rapid iteration.
+- **Growth Hacking**: Mastering experimental-led growth to scale products in competitive markets.

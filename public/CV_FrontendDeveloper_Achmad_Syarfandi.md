@@ -50,7 +50,6 @@ Creative and technical **Frontend Developer** with 8+ years of experience in cra
 - **Managed** organizational administration and coordinated the 2021-2026 board of directors.
 - **Optimized** community asset management and digital documentation for the mosque's operations.
 
-
 ---
 
 ## Technical Projects
@@ -72,11 +71,9 @@ Creative and technical **Frontend Developer** with 8+ years of experience in cra
 
 ---
 
----
-
-## Global Market Competitiveness (Keywords for 2026+)
+## Future-Ready Technical Roadmap
 To stay competitive in the global Frontend market, I am actively implementing:
-- **Server-Driven UI**: Building flexible interfaces that adapt based on backend-driven configurations.
-- **Web Performance**: Mastery of Core Web Vitals, ISR (Incremental Static Regeneration), and Edge-side rendering.
-- **Accessibility (a11y)**: Ensuring WCAG compliance and inclusive design for global audiences.
-- **AI-Powered UI**: Integrating LLMs and generative AI directly into the user experience for smarter interfaces.
+- **Micro-Frontends**: Architecting scalable frontend systems using module federation and independent deployments.
+- **WebAssembly (Wasm)**: Integrating high-performance C++/Rust modules directly into web applications.
+- **AI-Powered UI**: Integrating LLMs and generative AI to create smarter, adaptive user experiences.
+- **Edge-side Rendering (ESR)**: Optimizing performance by moving rendering logic to the network edge.

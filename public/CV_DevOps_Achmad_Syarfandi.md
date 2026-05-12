@@ -49,7 +49,6 @@ Dynamic **DevOps Engineer** with 5+ years of experience in architecting high-per
 - **Managed** organizational administration and coordinated the 2021-2026 board of directors.
 - **Optimized** community asset management and digital documentation for the mosque's operations.
 
-
 ---
 
 ## Technical Projects
@@ -74,11 +73,9 @@ Dynamic **DevOps Engineer** with 5+ years of experience in architecting high-per
 
 ---
 
----
-
-## Global Market Competitiveness (Keywords for 2026+)
-To stay competitive in the global DevOps market, I am actively implementing and refining:
-- **Zero Trust Architecture**: Identity-aware proxies, micro-segmentation, and "Never Trust, Always Verify" principles.
-- **Serverless Security**: Securing AWS Lambda/Cloud Functions, API Gateway throttling, and automated IAM least-privilege auditing.
-- **GitOps**: Using ArgoCD/Flux for automated infrastructure synchronization.
-- **eBPF Security**: Deep kernel-level observability and security monitoring.
+## Future-Ready Technical Roadmap
+To stay competitive in the global DevOps & Infrastructure market, I am actively implementing:
+- **Zero Trust Architecture**: Identity-aware proxies and 'Never Trust, Always Verify' principles.
+- **eBPF Security**: Deep kernel-level observability and real-time security monitoring.
+- **GitOps**: Using ArgoCD/Flux for automated and declarative infrastructure synchronization.
+- **Serverless Security**: Securing AWS Lambda/Edge functions and automated IAM least-privilege auditing.

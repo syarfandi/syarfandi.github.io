@@ -68,3 +68,11 @@ Strategic **Mobile Developer** with 8+ years of experience architecting high-per
 
 ## Keywords (ATS)
 React Native, Flutter, Dart, iOS, Android, Cross-Platform, Mobile UI/UX, Unity, VR/AR, Progressive Web App, PWA, Expo, Redux, Zustand, Bloc, Riverpod, AsyncStorage, SQLite, Hive, Offline-First, Camera API, Barcode Scanner, QR Code, Bluetooth, Push Notifications, FCM, APNs, Deep Linking, Biometric Auth, Touch Gestures, Haptic Feedback, 60fps, App Store, Google Play, CodePush, Fastlane, TestFlight, Detox, Appium, React Navigation, Reanimated, Lottie, WebSocket, Supabase Realtime, REST API, JWT.
+
+
+## Future-Ready Technical Roadmap
+To stay competitive in the global Frontend market, I am actively implementing:
+- **Micro-Frontends**: Architecting scalable frontend systems using module federation and independent deployments.
+- **WebAssembly (Wasm)**: Integrating high-performance C++/Rust modules directly into web applications.
+- **AI-Powered UI**: Integrating LLMs and generative AI to create smarter, adaptive user experiences.
+- **Edge-side Rendering (ESR)**: Optimizing performance by moving rendering logic to the network edge.

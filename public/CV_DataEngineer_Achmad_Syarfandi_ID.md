@@ -58,3 +58,10 @@ IPK: 3.22 / 4.00
   *IPK: 3.22 / 4.00*
 
 ---
+
+## Peta Jalan Teknis Masa Depan
+Untuk tetap kompetitif di pasar global DevOps & Infrastruktur, saya aktif menerapkan:
+- **Arsitektur Zero Trust**: Proxy berbasis identitas dan prinsip 'Jangan Pernah Percaya, Selalu Verifikasi'.
+- **Keamanan eBPF**: Observabilitas tingkat kernel yang mendalam dan pemantauan keamanan real-time.
+- **GitOps**: Menggunakan ArgoCD/Flux untuk sinkronisasi infrastruktur yang otomatis dan deklaratif.
+- **Keamanan Serverless**: Mengamankan fungsi AWS Lambda/Edge dan audit IAM least-privilege otomatis.

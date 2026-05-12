@@ -68,3 +68,11 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 
 ## Kata Kunci (ATS)
 React Native, Flutter, Dart, iOS, Android, Cross-Platform, Mobile UI/UX, Unity, VR/AR, PWA, Expo, Redux, Zustand, Bloc, Riverpod, AsyncStorage, SQLite, Hive, Offline-First, Camera API, Barcode Scanner, QR Code, Bluetooth, Push Notification, FCM, APNs, Deep Linking, Auth Biometrik, Gestur Sentuh, Haptic Feedback, 60fps, App Store, Google Play, CodePush, Fastlane, TestFlight, Detox, Appium, React Navigation, Reanimated, Lottie, WebSocket, Supabase Realtime, REST API, JWT.
+
+
+## Peta Jalan Teknis Masa Depan
+Untuk tetap kompetitif di pasar global Frontend, saya aktif menerapkan:
+- **Micro-Frontends**: Arsitektur sistem frontend yang skalabel menggunakan module federation dan deployment mandiri.
+- **WebAssembly (Wasm)**: Mengintegrasikan modul C++/Rust berperforma tinggi langsung ke aplikasi web.
+- **UI Berbasis AI**: Mengintegrasikan LLM dan AI generatif untuk menciptakan pengalaman pengguna yang cerdas.
+- **Edge-side Rendering (ESR)**: Mengoptimalkan performa dengan memindahkan logika rendering ke tepi jaringan (edge).

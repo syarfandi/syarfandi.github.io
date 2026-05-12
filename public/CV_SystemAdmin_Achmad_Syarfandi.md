@@ -67,3 +67,10 @@ GPA: 3.22 / 4.00
   *GPA: 3.22 / 4.00*
 
 ---
+
+## Future-Ready Technical Roadmap
+To stay competitive in the global DevOps & Infrastructure market, I am actively implementing:
+- **Zero Trust Architecture**: Identity-aware proxies and 'Never Trust, Always Verify' principles.
+- **eBPF Security**: Deep kernel-level observability and real-time security monitoring.
+- **GitOps**: Using ArgoCD/Flux for automated and declarative infrastructure synchronization.
+- **Serverless Security**: Securing AWS Lambda/Edge functions and automated IAM least-privilege auditing.

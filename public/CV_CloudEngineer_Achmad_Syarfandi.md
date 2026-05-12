@@ -49,7 +49,6 @@ Dynamic **Cloud Engineer** with 8+ years of experience in architecting high-perf
 - **Managed** organizational administration and coordinated the 2021-2026 board of directors.
 - **Optimized** community asset management and digital documentation for the mosque's operations.
 
-
 ---
 
 ## Technical Projects
@@ -74,11 +73,9 @@ Dynamic **Cloud Engineer** with 8+ years of experience in architecting high-perf
 
 ---
 
----
-
-## Global Market Competitiveness (Keywords for 2026+)
-To stay competitive in the global Cloud Engineering market, I am actively implementing and refining:
-- **Cloud FinOps**: Implementing real-time cost monitoring, budget alerts, and automated resource right-sizing to maximize ROI.
-- **Multi-Cloud Strategy**: Architecting portable solutions across AWS, GCP, and Azure to avoid vendor lock-in and enhance resilience.
-- **Serverless Evolution**: Leveraging AWS Lambda, GCP Cloud Run, and Event-driven architectures for high-scale, low-maintenance systems.
-- **Cloud Governance**: Enforcing compliance-as-code and automated IAM auditing to maintain security at scale.
+## Future-Ready Technical Roadmap
+To stay competitive in the global DevOps & Infrastructure market, I am actively implementing:
+- **Zero Trust Architecture**: Identity-aware proxies and 'Never Trust, Always Verify' principles.
+- **eBPF Security**: Deep kernel-level observability and real-time security monitoring.
+- **GitOps**: Using ArgoCD/Flux for automated and declarative infrastructure synchronization.
+- **Serverless Security**: Securing AWS Lambda/Edge functions and automated IAM least-privilege auditing.
