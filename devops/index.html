@@ -772,16 +772,23 @@
             window.scrollTo(0, 0);
 
             try {
-                // PAKSA elemen terlihat oleh renderer (PENTING untuk menghindari blank)
+                // PAKSA elemen terlihat dan bersihkan segala margin/padding pengganggu
                 const originalDisplay = element.style.display;
                 const originalOpacity = element.style.opacity;
                 const originalVisibility = element.style.visibility;
+                const originalMargin = element.style.margin;
+                const originalBodyPadding = document.body.style.padding;
+                const originalBodyMargin = document.body.style.margin;
                 
                 element.style.display = 'block';
                 element.style.opacity = '1';
                 element.style.visibility = 'visible';
+                element.style.margin = '0';
+                element.style.padding = '0';
+                document.body.style.padding = '0';
+                document.body.style.margin = '0';
 
-                await new Promise(r => setTimeout(r, 500));
+                await new Promise(r => setTimeout(r, 600));
 
                 const opt = {
                     margin: 0,
@@ -793,15 +800,16 @@
                         allowTaint: true,
                         backgroundColor: '#ffffff',
                         scrollY: 0,
-                        windowWidth: element.offsetWidth
+                        windowWidth: element.offsetWidth,
+                        letterRendering: true // Memperbaiki akurasi teks/link
                     },
-                    jsPDF: { unit: 'mm', orientation: 'portrait' }
+                    jsPDF: { unit: 'mm', orientation: 'portrait', compress: true }
                 };
 
                 const widthPx = element.offsetWidth;
                 const heightPx = element.scrollHeight;
                 const mmWidth = widthPx * 0.264583;
-                const mmHeight = (heightPx * 0.264583);
+                const mmHeight = (heightPx * 0.264583) - 0.5; // Penyesuaian presisi
                 
                 opt.jsPDF.format = [mmWidth, mmHeight];
 
@@ -811,6 +819,9 @@
                 element.style.display = originalDisplay;
                 element.style.opacity = originalOpacity;
                 element.style.visibility = originalVisibility;
+                element.style.margin = originalMargin;
+                document.body.style.padding = originalBodyPadding;
+                document.body.style.margin = originalBodyMargin;
             } catch (err) {
                 console.error("PDF Error:", err);
                 alert("Gagal membuat PDF: " + err.message);
