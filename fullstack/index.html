@@ -391,6 +391,7 @@
                 border: none !important;
             }
         }</style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 
 <body>
@@ -752,7 +753,52 @@
         toggleEN.onclick = () => setLang('en');
         toggleID.onclick = () => setLang('id');
 
-        document.getElementById('downloadBtn').addEventListener('click', () => window.print());
+                        document.getElementById('downloadBtn').addEventListener('click', async () => {
+            const element = view === 'premium' ? premiumView : atsView;
+            const downloadLabel = document.getElementById('downloadLabel');
+            const originalLabel = downloadLabel.innerText;
+            
+            downloadLabel.innerText = "...";
+            
+            // Force temporary style for better PDF capture
+            const originalStyle = element.style.cssText;
+            element.style.width = "900px"; // Standard width for capture
+            element.style.boxShadow = "none";
+            element.style.borderRadius = "0";
+            
+            const opt = {
+                margin: 0,
+                filename: `CV_Syarfandi_fullstack_${lang}.pdf`,
+                image: { type: 'jpeg', quality: 1.0 },
+                html2canvas: { 
+                    scale: 2, 
+                    useCORS: true, 
+                    scrollY: 0,
+                    windowWidth: 900
+                },
+                jsPDF: { unit: 'mm', orientation: 'portrait' }
+            };
+
+            try {
+                // Calculate element dimensions to make it single page
+                const widthPx = 900;
+                const heightPx = element.scrollHeight;
+                
+                // Convert px to mm (1px = 0.264583mm)
+                const mmWidth = widthPx * 0.264583;
+                const mmHeight = (heightPx * 0.264583) + 2; // +2 for safety margin
+                
+                opt.jsPDF.format = [mmWidth, mmHeight];
+
+                await html2pdf().set(opt).from(element).save();
+            } catch (err) {
+                console.error("PDF Error:", err);
+                alert("Error generating PDF. Please try again.");
+            } finally {
+                element.style.cssText = originalStyle;
+                downloadLabel.innerText = originalLabel;
+            }
+        });
 
         document.getElementById('shareBtn').addEventListener('click', async () => {
             const url = window.location.href;
