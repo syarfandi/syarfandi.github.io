@@ -772,23 +772,25 @@
             window.scrollTo(0, 0);
 
             try {
-                // PAKSA elemen terlihat dan bersihkan segala margin/padding pengganggu
-                const originalDisplay = element.style.display;
-                const originalOpacity = element.style.opacity;
-                const originalVisibility = element.style.visibility;
-                const originalMargin = element.style.margin;
-                const originalBodyPadding = document.body.style.padding;
-                const originalBodyMargin = document.body.style.margin;
+                // PAKSA elemen terlihat dan bersihkan SEMUA margin/padding untuk akurasi
+                const originalStyle = element.style.cssText;
                 
                 element.style.display = 'block';
                 element.style.opacity = '1';
                 element.style.visibility = 'visible';
-                element.style.margin = '0';
-                element.style.padding = '0';
-                document.body.style.padding = '0';
-                document.body.style.margin = '0';
+                element.style.marginTop = '0';
+                element.style.marginBottom = '0';
+                element.style.paddingTop = '0';
+                element.style.boxShadow = 'none';
 
-                await new Promise(r => setTimeout(r, 600));
+                await new Promise(r => setTimeout(r, 500));
+
+                const widthPx = element.offsetWidth;
+                const heightPx = element.scrollHeight;
+                
+                // Konversi px ke mm (1px = 0.264583mm)
+                const mmWidth = widthPx * 0.264583;
+                const mmHeight = (heightPx * 0.264583);
 
                 const opt = {
                     margin: 0,
@@ -800,28 +802,23 @@
                         allowTaint: true,
                         backgroundColor: '#ffffff',
                         scrollY: 0,
-                        windowWidth: element.offsetWidth,
-                        letterRendering: true // Memperbaiki akurasi teks/link
+                        scrollX: 0,
+                        windowWidth: widthPx,
+                        windowHeight: heightPx
                     },
-                    jsPDF: { unit: 'mm', orientation: 'portrait', compress: true }
+                    jsPDF: { 
+                        unit: 'mm', 
+                        format: [mmWidth, mmHeight], 
+                        orientation: 'portrait',
+                        compress: true
+                    }
                 };
 
-                const widthPx = element.offsetWidth;
-                const heightPx = element.scrollHeight;
-                const mmWidth = widthPx * 0.264583;
-                const mmHeight = (heightPx * 0.264583) - 0.5; // Penyesuaian presisi
-                
-                opt.jsPDF.format = [mmWidth, mmHeight];
-
+                // Gunakan html2pdf dengan penanganan khusus untuk link
                 await html2pdf().set(opt).from(element).save();
                 
-                // Kembalikan style
-                element.style.display = originalDisplay;
-                element.style.opacity = originalOpacity;
-                element.style.visibility = originalVisibility;
-                element.style.margin = originalMargin;
-                document.body.style.padding = originalBodyPadding;
-                document.body.style.margin = originalBodyMargin;
+                // Kembalikan style asli
+                element.style.cssText = originalStyle;
             } catch (err) {
                 console.error("PDF Error:", err);
                 alert("Gagal membuat PDF: " + err.message);
