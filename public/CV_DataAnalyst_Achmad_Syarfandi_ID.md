@@ -59,7 +59,10 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **Microsoft CityApp** – Peserta
 
 ## Pendidikan
-**S.Kom** | IPK: 3.22 / 4.00
+- **Sarjana Komputer (S.Kom)** | UIN Alauddin Makassar
+  *IPK: 3.22 / 4.00*
+
+---
 
 ## Kata Kunci (ATS)
 SQL, PostgreSQL, Excel, Google Sheets, Pivot Tables, VBA, VLOOKUP, Analisis Data, Visualisasi Data, D3.js, Chart.js, Python, Pandas, Matplotlib, Seaborn, Jupyter, Pengembangan Dashboard, Business Intelligence, Pelacakan KPI, Pelaporan, Pembersihan Data, ETL, Kualitas Data, Validasi Data, Tata Kelola Data, Stored Procedures, CTEs, Window Functions, Analisis Tren, Heatmap, Funnel Konversi, A/B Testing, Monitoring SLA, Laporan Eksekutif, Data Storytelling, Supabase, Agregasi Data, Pelaporan Otomatis, Pengambilan Keputusan Berbasis Data.

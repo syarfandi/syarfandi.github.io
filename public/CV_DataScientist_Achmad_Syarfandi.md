@@ -59,7 +59,10 @@ Insightful **Data Scientist** with 8+ years extracting actionable intelligence f
 - **Microsoft CityApp** – Participant
 
 ## Education
-**S.Kom** | GPA: 3.22 / 4.00
+- **Bachelor of Computer Science (S.Kom)** | UIN Alauddin Makassar
+  *GPA: 3.22 / 4.00*
+
+---
 
 ## Keywords (ATS)
 Python, Pandas, NumPy, SciPy, Scikit-Learn, TensorFlow, Machine Learning, Deep Learning, NLP, LLM, Gemini AI, Statistical Modeling, Predictive Analytics, Time-Series, ARIMA, Prophet, K-Means, DBSCAN, Clustering, Classification, Regression, Anomaly Detection, Sentiment Analysis, A/B Testing, Hypothesis Testing, Feature Engineering, ETL, Data Pipeline, PostgreSQL, SQL, Data Warehousing, Supabase, Data Visualization, Matplotlib, Seaborn, D3.js, Jupyter, Data Cleaning, Data Wrangling, Geospatial Analysis, Dashboard Development, Business Intelligence.

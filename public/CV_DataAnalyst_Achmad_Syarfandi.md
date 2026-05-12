@@ -59,7 +59,10 @@ Detail-oriented **Data Analyst** with 8+ years transforming raw data into action
 - **Microsoft CityApp** – Participant
 
 ## Education
-**S.Kom** | GPA: 3.22 / 4.00
+- **Bachelor of Computer Science (S.Kom)** | UIN Alauddin Makassar
+  *GPA: 3.22 / 4.00*
+
+---
 
 ## Keywords (ATS)
 SQL, PostgreSQL, Excel, Google Sheets, Pivot Tables, VBA, VLOOKUP, Data Analysis, Data Visualization, D3.js, Chart.js, Python, Pandas, Matplotlib, Seaborn, Jupyter, Dashboard Development, Business Intelligence, KPI Tracking, Reporting, Data Cleaning, ETL, Data Quality, Data Validation, Data Governance, Stored Procedures, CTEs, Window Functions, Trend Analysis, Heatmaps, Conversion Funnel, A/B Testing, SLA Monitoring, Executive Reports, Data Storytelling, Supabase, Data Aggregation, Automated Reporting, Data-Driven Decision Making.

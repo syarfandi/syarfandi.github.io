@@ -71,7 +71,10 @@ Reliable **Backend Developer** with 8+ years of experience in building scalable,
 ---
 
 ## Education
-**Bachelor of Computer Science (S.Kom)** | GPA: 3.22 / 4.00
+- **Bachelor of Computer Science (S.Kom)** | UIN Alauddin Makassar
+  *GPA: 3.22 / 4.00*
+
+---
 
 ---
 

@@ -60,3 +60,10 @@ GPA: 3.22 / 4.00
 - **Automated Backup System:** Multi-layered disaster recovery solution using rsync and cloud storage.
 - **Zabbix Monitoring:** Real-time infrastructure health monitoring with custom alerting.
 - **VPN Gateway:** Secure remote access infrastructure for government employees.
+
+
+## Education
+- **Bachelor of Computer Science (S.Kom)** | UIN Alauddin Makassar
+  *GPA: 3.22 / 4.00*
+
+---

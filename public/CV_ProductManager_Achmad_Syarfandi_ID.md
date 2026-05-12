@@ -50,3 +50,10 @@ IPK: 3.22 / 4.00
 - **Helpdesk Makassar:** Sistem manajemen dan pelacakan keluhan warga dari awal hingga akhir.
 - **Infrastruktur Email Pemerintah:** Platform komunikasi aman strategis untuk unit kerja pemerintah.
 - **Hub Kegiatan Sulsel:** Produk manajemen acara dan pendaftaran yang disederhanakan untuk kegiatan regional.
+
+
+## Pendidikan
+- **Sarjana Komputer (S.Kom)** | UIN Alauddin Makassar
+  *IPK: 3.22 / 4.00*
+
+---

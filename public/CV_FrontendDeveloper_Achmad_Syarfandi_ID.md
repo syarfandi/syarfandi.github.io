@@ -65,6 +65,13 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **Top 10 Pemenang** – Samsung Indonesia Next Apps 4.0 Gear VR Challenge (2017)
 - **Microsoft CityApp Appathon** – Peserta & Pengembang
 
+
+## Pendidikan
+- **Sarjana Komputer (S.Kom)** | UIN Alauddin Makassar
+  *IPK: 3.22 / 4.00*
+
+---
+
 ---
 
 ## Daya Saing Pasar Global (Kata Kunci untuk 2026+)

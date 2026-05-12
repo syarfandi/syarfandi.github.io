@@ -72,7 +72,10 @@ Versatile **Fullstack Developer** with 8+ years of experience engineering end-to
 ---
 
 ## Education
-**Bachelor of Computer Science (S.Kom)** | GPA: 3.22 / 4.00
+- **Bachelor of Computer Science (S.Kom)** | UIN Alauddin Makassar
+  *GPA: 3.22 / 4.00*
+
+---
 
 ---
 

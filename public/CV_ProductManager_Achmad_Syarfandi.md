@@ -50,3 +50,10 @@ GPA: 3.22 / 4.00
 - **Helpdesk Makassar:** End-to-end citizen complaint management and tracking system.
 - **Gov Email Infrastructure:** Strategic secure communication platform for government work units.
 - **Kegiatan Sulsel Hub:** Streamlined event management and registration product for regional activities.
+
+
+## Education
+- **Bachelor of Computer Science (S.Kom)** | UIN Alauddin Makassar
+  *GPA: 3.22 / 4.00*
+
+---

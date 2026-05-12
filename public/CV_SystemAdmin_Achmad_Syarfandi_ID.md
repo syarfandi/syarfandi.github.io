@@ -60,3 +60,10 @@ IPK: 3.22 / 4.00
 - **Sistem Backup Otomatis:** Solusi pemulihan bencana berlapis menggunakan rsync dan cloud storage.
 - **Monitoring Zabbix:** Pemantauan kesehatan infrastruktur real-time dengan notifikasi kustom.
 - **Gateway VPN:** Infrastruktur akses jarak jauh yang aman untuk pegawai pemerintah.
+
+
+## Pendidikan
+- **Sarjana Komputer (S.Kom)** | UIN Alauddin Makassar
+  *IPK: 3.22 / 4.00*
+
+---
