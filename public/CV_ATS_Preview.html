@@ -113,11 +113,11 @@
 
             /* Memastikan section yang dibungkus JS tidak terpotong */
             .cv-section {
-                display: block !important;
+                display: table !important;
+                width: 100% !important;
                 page-break-inside: avoid !important;
                 break-inside: avoid-page !important;
                 margin-bottom: 15px !important;
-                position: relative !important;
             }
 
             /* List items jangan terbelah */
@@ -137,15 +137,22 @@
                 border: none !important;
                 border-top: 1px solid #ddd !important;
                 margin: 2em 0 !important;
-                page-break-after: always !important; /* Paksa halaman baru di setiap pemisah section utama jika diinginkan */
-                visibility: hidden; /* Sembunyikan garisnya agar bersih */
+                page-break-after: always !important;
+                visibility: hidden;
             }
 
             /* Memastikan konten tidak terpotong di tepi */
             * {
                 -webkit-print-color-adjust: exact !important;
-                color-adjust: exact !important;
+                print-color-adjust: exact !important;
             }
+        }
+
+        /* Border bantuan untuk verifikasi di layar (tidak ikut diprint) */
+        .cv-section {
+            outline: 2px solid red !important;
+            margin-bottom: 10px;
+            padding: 5px;
         }
     </style>
 </head>
@@ -186,26 +193,28 @@
                     return response.text();
                 })
                 .then(text => {
-                    content.innerHTML = marked.parse(text);
+                    const rawHtml = marked.parse(text);
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = rawHtml;
                     
-                    // Logika pembungkusan yang lebih andal
-                    const elements = Array.from(content.children);
-                    content.innerHTML = ''; // Kosongkan dulu
+                    console.log("Starting aggressive section wrapping...");
+                    content.innerHTML = ''; 
                     
                     let currentSection = null;
+                    const elements = Array.from(tempDiv.children);
                     
                     elements.forEach(el => {
-                        // h2 dan h3 memicu section baru
-                        if (el.tagName === 'H2' || el.tagName === 'H3') {
+                        // Jika heading, buat section baru
+                        if (/^H[1-6]$/.test(el.tagName)) {
                             currentSection = document.createElement('div');
                             currentSection.className = 'cv-section';
                             content.appendChild(currentSection);
                             currentSection.appendChild(el);
                         } else if (currentSection && el.tagName !== 'HR') {
-                            // Masukkan ke section yang ada
+                            // Masukkan ke section yang sedang aktif
                             currentSection.appendChild(el);
                         } else {
-                            // Untuk elemen di awal (seperti header kontak) atau HR
+                            // Jika bukan heading dan belum ada section, atau jika HR
                             if (el.tagName === 'HR') {
                                 currentSection = null;
                                 content.appendChild(el);
@@ -214,9 +223,13 @@
                                 wrapper.className = 'cv-section';
                                 wrapper.appendChild(el);
                                 content.appendChild(wrapper);
+                                // Jangan jadikan ini currentSection agar heading berikutnya tetap memicu section baru
                             }
                         }
                     });
+                    
+                    console.log("Wrapping complete.");
+                    lucide.createIcons();
                 })
                 .catch(err => {
                     content.innerHTML = `<h1 style="color:red">Error loading CV</h1><p>${err.message}</p>`;
