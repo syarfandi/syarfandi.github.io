@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Resume (EN) - Achmad Syarfandi</title>
+    <link rel="icon" type="image/png" href="/profile.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root { --primary: #1e3a8a; --secondary: #0f172a; --accent: #3b82f6; --text-main: #0f172a; --text-muted: #475569; --bg: #ffffff; --border: rgba(30, 58, 138, 0.1); }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: #f6f8fa; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
+        .nav-container { position: fixed; top: 20px; left: 20px; right: 20px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; }
+        .btn-compact { display: flex; align-items: center; gap: 6px; padding: 8px 16px; background: #fff; color: var(--secondary); border: 1px solid var(--border); border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; text-decoration: none; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .btn-compact.primary { background: var(--secondary); color: white; }
+        .resume-container { background: var(--bg); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); border-radius: 12px; overflow: hidden; display: grid; grid-template-columns: 300px 1fr; width: 100%; max-width: 900px; margin-top: 40px; }
+        .sidebar { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 40px; }
+        .profile-img { width: 140px; height: 140px; border-radius: 50%; border: 4px solid var(--accent); margin-bottom: 20px; object-fit: cover; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); }
+        .profile-section h1 { font-size: 24px; font-weight: 800; margin-bottom: 8px; color: #fff; }
+        .profile-section .role { font-size: 14px; font-weight: 600; color: var(--accent); text-transform: uppercase; }
+        .contact-info { margin-bottom: 40px; margin-top: 30px; }
+        .contact-item { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 13px; }
+        .contact-item i { color: var(--accent); }
+        .contact-item a { color: #cbd5e1; text-decoration: none; }
+        .sidebar-section { margin-bottom: 35px; }
+        .sidebar-section h2 { font-size: 16px; font-weight: 700; text-transform: uppercase; margin-bottom: 20px; border-bottom: 2px solid rgba(255, 255, 255, 0.1); color: #f1f5f9; padding-bottom: 8px; }
+        .skill-item { margin-bottom: 12px; }
+        .skill-name { display: block; font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+        .skill-bar { height: 4px; background: rgba(255, 255, 255, 0.1); border-radius: 2px; overflow: hidden; }
+        .skill-progress { height: 100%; background: var(--accent); }
+        .main-content { padding: 40px 50px; background: white; }
+        .section { margin-bottom: 35px; }
+        .section-title { display: flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 700; color: var(--secondary); margin-bottom: 20px; text-transform: uppercase; }
+        .section-title i { color: var(--primary); }
+        .experience-item { margin-bottom: 25px; }
+        .experience-header { display: flex; justify-content: space-between; margin-bottom: 6px; }
+        .experience-title { font-size: 16px; font-weight: 700; }
+        .experience-company { font-size: 14px; font-weight: 600; color: var(--primary); }
+        .experience-date { font-size: 12px; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; }
+        .experience-desc { font-size: 13px; color: var(--text-muted); padding-left: 18px; }
+        @media (max-width: 768px) { .resume-container { grid-template-columns: 1fr; } .nav-container { position: static; margin-bottom: 20px; } }
+        @media print {
+            @page { size: A4; margin: 0; }
+            .nav-container { display: none !important; }
+            body { padding: 0; background: white; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .resume-container { box-shadow: none; border-radius: 0; grid-template-columns: 300px 1fr; margin-top: 0; width: 100%; max-width: 100%; display: grid !important; }
+            .resume-container::before { content: ""; position: fixed; top: 0; left: 0; width: 300px; height: 100%; background: linear-gradient(135deg, var(--primary), var(--secondary)); z-index: -1; -webkit-print-color-adjust: exact; }
+            .sidebar { background: transparent !important; color: white !important; }
+            .main-content { background: white !important; }
+            .section { break-inside: avoid; }
+            .section-title, .experience-header { break-after: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <a href="/" class="btn-compact primary"><i data-lucide="arrow-left" style="width:16px"></i> Back</a>
+        <button onclick="window.print()" class="btn-compact"><i data-lucide="download" style="width:16px"></i> PDF</button>
+    </div>
+    <div class="resume-container">
+        <aside class="sidebar">
+            <div class="profile-section">
+                <img src="/profile.png" class="profile-img">
+                <h1>ACHMAD SYARFANDI</h1>
+                <p class="role">Senior DevOps Engineer</p>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item"><i data-lucide="mail"></i><a href="mailto:syarfandi.achmad@gmail.com">syarfandi.achmad@gmail.com</a></div>
+                <div class="contact-item"><i data-lucide="phone"></i><span>+62 852-5652-2335</span></div>
+                <div class="contact-item"><i data-lucide="map-pin"></i><span>Makassar, Indonesia</span></div>
+                <div class="contact-item"><i data-lucide="globe"></i><a href="https://syarfandi.github.io">syarfandi.github.io</a></div>
+            </div>
+            <div class="sidebar-section">
+                <h2>Core Skills</h2>
+                <div id="skillsList"></div>
+            </div>
+            <div class="sidebar-section">
+                <h2>Certifications</h2>
+                <div id="certsList"></div>
+            </div>
+        </aside>
+        <main class="main-content">
+            <section class="section">
+                <h2 class="section-title"><i data-lucide="user"></i> Professional Summary</h2>
+                <p id="summaryText" class="summary-text"></p>
+            </section>
+            <section class="section">
+                <h2 class="section-title"><i data-lucide="briefcase"></i> Experience</h2>
+                <div id="expList"></div>
+            </section>
+            <section class="section">
+                <h2 class="section-title"><i data-lucide="graduation-cap"></i> Education</h2>
+                <div class="education-item">
+                    <div class="education-degree">Bachelor of Computer Science (S.Kom)</div>
+                    <div class="education-school">GPA: 3.22 / 4.00</div>
+                </div>
+            </section>
+            <section class="section">
+                <h2 class="section-title"><i data-lucide="star"></i> Featured Projects</h2>
+                <div id="projectsGrid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;"></div>
+            </section>
+        </main>
+    </div>
+    <script>
+        const data = {
+            summary: "Strategic <strong>DevOps Engineer</strong> with 8+ years of experience in architecting high-security <strong>cloud and on-premise</strong> ecosystems. Expert in <strong>Kubernetes, Terraform</strong>, and automated security pipelines.",
+            skills: [
+                { name: "Infrastructure as Code (Terraform)", level: 90 },
+                { name: "Kubernetes (K8s) & Docker", level: 85 },
+                { name: "CI/CD Security (GitHub Actions)", level: 95 },
+                { name: "Zero Trust & Cloud Security", level: 80 },
+                { name: "Technical Documentation", level: 90 }
+            ],
+            certs: [
+                { title: "National Cyber Exercise #10", issuer: "BSSN", date: "2024" },
+                { title: "Samsung Next Apps Winner", issuer: "Samsung Indonesia", date: "2017" }
+            ],
+            experiences: [
+                { title: "Computer Specialist (Civil Servant)", company: "Ministry of Religious Affairs", date: "2025 - Present", desc: ["Spearheaded digital transformation for regional services.", "Orchestrated Data Sulsel infrastructure for 9M+ residents."] },
+                { title: "DevOps & Infrastructure Expert", company: "Dinas Kominfo Makassar", date: "2023 - 2025", desc: ["Managed on-prem server environments with 200+ domains.", "Secured assets during BSSN National Cyber Exercise."] }
+            ],
+            projects: [
+                { title: "Lipsync Realtime Avatar AI", desc: "Conversational AI with Lipsync integration." },
+                { title: "Kawan Sedarah", desc: "Real-time emergency blood stock monitoring." }
+            ]
+        };
+
+        document.getElementById('summaryText').innerHTML = data.summary;
+        document.getElementById('skillsList').innerHTML = data.skills.map(s => `<div class="skill-item"><span class="skill-name">${s.name}</span><div class="skill-bar"><div class="skill-progress" style="width:${s.level}%"></div></div></div>`).join('');
+        document.getElementById('certsList').innerHTML = data.certs.map(c => `<p style="margin-bottom:10px; font-size:13px"><strong style="display:block; color:white">${c.title}</strong> ${c.issuer} (${c.date})</p>`).join('');
+        document.getElementById('expList').innerHTML = data.experiences.map(e => `<div class="experience-item"><div class="experience-header"><span class="experience-title">${e.title}</span><span class="experience-date">${e.date}</span></div><div class="experience-company">${e.company}</div><ul class="experience-desc">${e.desc.map(d => `<li>${d}</li>`).join('')}</ul></div>`).join('');
+        document.getElementById('projectsGrid').innerHTML = data.projects.map(p => `<div style="background:#f8fafc; padding:12px; border-radius:8px; border-left:4px solid var(--primary);"><h4 style="font-size:14px; margin-bottom:4px">${p.title}</h4><p style="font-size:12px; color:var(--text-muted)">${p.desc}</p></div>`).join('');
+        lucide.createIcons();
+    </script>
+</body>
+</html>

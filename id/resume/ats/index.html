@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS Resume (ID) - Achmad Syarfandi</title>
+    <link rel="icon" type="image/png" href="/profile.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        :root { --primary: #1e3a8a; --secondary: #0f172a; --text-main: #0f172a; --bg: #ffffff; --border: rgba(30, 58, 138, 0.1); }
+        body { font-family: 'Inter', sans-serif; background-color: #f6f8fa; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
+        .nav-container { position: fixed; top: 20px; left: 20px; right: 20px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; }
+        .btn-compact { display: flex; align-items: center; gap: 6px; padding: 8px 16px; background: #fff; color: var(--secondary); border: 1px solid var(--border); border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; text-decoration: none; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .btn-compact.primary { background: var(--secondary); color: white; }
+        .markdown-body { padding: 60px; background-color: #fff; border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 8px 24px rgba(149,157,165,0.1); width: 100%; max-width: 900px; margin-top: 40px; }
+        @media (max-width: 768px) { .markdown-body { padding: 30px; } .nav-container { position: static; margin-bottom: 20px; } }
+        @media print { .nav-container { display: none !important; } body { padding: 0; background: white; } .markdown-body { margin-top: 0 !important; max-width: 100% !important; border: none; box-shadow: none; } }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <a href="/" class="btn-compact primary"><i data-lucide="arrow-left" style="width:16px"></i> Kembali</a>
+        <button onclick="window.print()" class="btn-compact"><i data-lucide="download" style="width:16px"></i> PDF</button>
+    </div>
+    <article class="markdown-body" id="content"></article>
+    <script>
+        lucide.createIcons();
+        fetch('/CV_DevOps_Achmad_Syarfandi_ID.md')
+            .then(r => r.text())
+            .then(md => { document.getElementById('content').innerHTML = marked.parse(md); });
+    </script>
+</body>
+</html>
