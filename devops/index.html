@@ -790,14 +790,15 @@
                 
                 // Konversi px ke mm (1px = 0.264583mm)
                 const mmWidth = widthPx * 0.264583;
-                const mmHeight = (heightPx * 0.264583);
+                // Tambahkan buffer 10mm di bawah agar jspdf tidak membuat halaman baru
+                const mmHeight = (heightPx * 0.264583) + 10;
 
                 const opt = {
                     margin: 0,
                     filename: `CV_Syarfandi_DevOps_${lang}.pdf`,
                     image: { type: 'jpeg', quality: 1.0 },
                     html2canvas: { 
-                        scale: 2, 
+                        scale: 1, // Skala 1 lebih akurat untuk posisi link
                         useCORS: true,
                         allowTaint: true,
                         backgroundColor: '#ffffff',
@@ -810,11 +811,11 @@
                         unit: 'mm', 
                         format: [mmWidth, mmHeight], 
                         orientation: 'portrait',
-                        compress: true
+                        compress: true,
+                        putOnlyUsedFonts: true
                     }
                 };
 
-                // Gunakan html2pdf dengan penanganan khusus untuk link
                 await html2pdf().set(opt).from(element).save();
                 
                 // Kembalikan style asli
