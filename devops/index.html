@@ -379,6 +379,7 @@
                 color: white !important;
                 padding: 30px !important;
                 -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
 
             .main-content {
@@ -766,33 +767,32 @@
             
             downloadLabel.innerText = "...";
             
-            // Save original scroll position
+            // Simpan posisi scroll
             const scrollY = window.scrollY;
-            const scrollX = window.scrollX;
-            
-            // Scroll to top to ensure clean capture
             window.scrollTo(0, 0);
-            
+
             try {
-                // Give browser time to stabilize after scroll
-                await new Promise(r => setTimeout(r, 300));
+                // PAKSA elemen terlihat oleh renderer (PENTING untuk menghindari blank)
+                const originalDisplay = element.style.display;
+                const originalOpacity = element.style.opacity;
+                const originalVisibility = element.style.visibility;
                 
-                const originalStyle = element.style.cssText;
-                // Force background and remove any potential hidden overflows
-                element.style.background = "white";
-                element.style.overflow = "visible";
-                element.style.height = "auto";
-                
+                element.style.display = 'block';
+                element.style.opacity = '1';
+                element.style.visibility = 'visible';
+
+                await new Promise(r => setTimeout(r, 500));
+
                 const opt = {
                     margin: 0,
-                    filename: `CV_Syarfandi_devops_${lang}.pdf`,
-                    image: { type: 'jpeg', quality: 0.98 },
+                    filename: `CV_Syarfandi_DevOps_${lang}.pdf`,
+                    image: { type: 'jpeg', quality: 1.0 },
                     html2canvas: { 
                         scale: 2, 
                         useCORS: true,
                         allowTaint: true,
+                        backgroundColor: '#ffffff',
                         scrollY: 0,
-                        scrollX: 0,
                         windowWidth: element.offsetWidth
                     },
                     jsPDF: { unit: 'mm', orientation: 'portrait' }
@@ -801,19 +801,21 @@
                 const widthPx = element.offsetWidth;
                 const heightPx = element.scrollHeight;
                 const mmWidth = widthPx * 0.264583;
-                const mmHeight = (heightPx * 0.264583) + 2;
+                const mmHeight = (heightPx * 0.264583);
                 
                 opt.jsPDF.format = [mmWidth, mmHeight];
 
                 await html2pdf().set(opt).from(element).save();
                 
-                element.style.cssText = originalStyle;
+                // Kembalikan style
+                element.style.display = originalDisplay;
+                element.style.opacity = originalOpacity;
+                element.style.visibility = originalVisibility;
             } catch (err) {
                 console.error("PDF Error:", err);
-                alert("Error: " + err.message);
+                alert("Gagal membuat PDF: " + err.message);
             } finally {
-                // Restore scroll position
-                window.scrollTo(scrollX, scrollY);
+                window.scrollTo(0, scrollY);
                 downloadLabel.innerText = originalLabel;
             }
         });
