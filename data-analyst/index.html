@@ -821,7 +821,8 @@
             
             // 2. Set judul halaman sementara sebagai nama file PDF
             const originalTitle = document.title;
-            document.title = `CV_Syarfandi_DataAnalyst_${lang.toUpperCase()}`;
+            const suffix = isPremium ? "" : "_ATS";
+            document.title = `CV_Syarfandi_DataAnalyst${suffix}_${lang.toUpperCase()}`;
 
             window.print();
 
