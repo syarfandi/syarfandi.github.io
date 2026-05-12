@@ -743,7 +743,7 @@
         }
 
         togglePremium.onclick = () => setView('premium');
-        toggleATS.onclick = () => setView('ats');
+                toggleATS.onclick = () => setView('ats');
 
         function setLang(l) {
             lang = l;
@@ -760,90 +760,77 @@
         toggleEN.onclick = () => setLang('en');
         toggleID.onclick = () => setLang('id');
 
-        document.getElementById('downloadBtn').addEventListener('click', () => {
+        document.getElementById('downloadBtn').addEventListener('click', async () => {
             const isPremium = view === 'premium';
             const element = isPremium ? premiumView : atsContent;
+            const downloadLabel = document.getElementById('downloadLabel');
+            const originalLabel = downloadLabel.innerText;
             
-            // 1. Hitung tinggi elemen secara agresif (ambil yang paling tinggi)
-            let heightPx = element.scrollHeight;
-            if (isPremium) {
-                const sidebar = element.querySelector('.sidebar');
-                const main = element.querySelector('.main-content');
-                heightPx = Math.max(
-                    element.scrollHeight,
-                    sidebar ? sidebar.scrollHeight : 0,
-                    main ? main.scrollHeight : 0
-                );
-            }
+            downloadLabel.innerText = "...";
             
-            // Tambahkan buffer 20mm untuk keamanan agar tidak terpotong
-            const heightMm = Math.ceil(heightPx * 0.264583) + 20;
-            
-            // 2. Suntikkan style khusus print yang sangat ketat
-            const printStyle = document.createElement('style');
-            printStyle.id = 'dynamic-print-style';
-            printStyle.innerHTML = `
-                @media print {
-                    @page { 
-                        size: 210mm ${heightMm}mm; 
-                        margin: 0; 
-                    }
-                    html, body { 
-                        margin: 0 !important; 
-                        padding: 0 !important; 
-                        width: 210mm !important;
-                        height: auto !important;
-                        overflow: visible !important;
-                        background: white !important;
-                    }
-                    .nav-container, .theme-switch, #downloadBtn { display: none !important; }
-                    
-                    #premium-view, #ats-view { 
-                        display: none !important;
-                    }
+            try {
+                // 1. Simpan style asli
+                const originalStyle = element.style.cssText;
+                
+                // 2. Paksa elemen berada di paling depan dan terlihat (untuk menghindari blank)
+                Object.assign(element.style, {
+                    position: 'fixed',
+                    top: '0',
+                    left: '0',
+                    zIndex: '10000',
+                    width: '100%',
+                    background: 'white',
+                    display: isPremium ? 'grid' : 'block',
+                    opacity: '1',
+                    visibility: 'visible'
+                });
 
-                    #premium-view { 
-                        display: ${isPremium ? 'grid' : 'none'} !important; 
-                        position: relative !important;
-                        width: 210mm !important;
-                        margin: 0 !important;
-                        box-shadow: none !important;
-                        min-height: ${heightMm}mm !important;
-                    }
-
-                    #ats-view { 
-                        display: ${!isPremium ? 'block' : 'none'} !important; 
-                        position: relative !important;
-                        width: 210mm !important;
-                        margin: 0 !important;
-                        min-height: ${heightMm}mm !important;
-                    }
-
-                    .markdown-body { 
-                        border: none !important; 
-                        box-shadow: none !important; 
-                        margin: 0 !important; 
-                        padding: 60px !important;
-                        width: 100% !important;
-                        background: white !important;
-                    }
-
-                    /* Paksa warna agar muncul */
-                    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+                if (!isPremium) {
+                    const markdown = element.querySelector('.markdown-body') || element;
+                    markdown.style.display = 'block';
+                    markdown.style.padding = '60px';
                 }
-            `;
-            document.head.appendChild(printStyle);
 
-            window.print();
+                // Berikan waktu render singkat
+                await new Promise(r => setTimeout(r, 500));
 
-            // 4. Bersihkan style setelah dialog cetak ditutup
-            setTimeout(() => {
-                const styleToRemove = document.getElementById('dynamic-print-style');
-                if (styleToRemove) styleToRemove.remove();
-            }, 1000);
+                const widthPx = element.offsetWidth;
+                const heightPx = element.scrollHeight;
+                const mmWidth = widthPx * 0.264583;
+                const mmHeight = (heightPx * 0.264583);
+
+                const opt = {
+                    margin: 0,
+                    filename: `CV_Syarfandi_DevOps_${lang}.pdf`,
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { 
+                        scale: 2, 
+                        useCORS: true,
+                        allowTaint: true,
+                        backgroundColor: '#ffffff',
+                        scrollY: 0
+                    },
+                    jsPDF: { 
+                        unit: 'mm', 
+                        format: [mmWidth, mmHeight], 
+                        orientation: 'portrait',
+                        compress: true
+                    }
+                };
+
+                await html2pdf().set(opt).from(element).save();
+                
+                // 3. Kembalikan style asli
+                element.style.cssText = originalStyle;
+            } catch (err) {
+                console.error("PDF Error:", err);
+                alert("Gagal membuat PDF.");
+            } finally {
+                downloadLabel.innerText = originalLabel;
+            }
         });
 
-document.getElementById('shareBtn').addEventListener('click', async () => {
+        document.getElementById('shareBtn').addEventListener('click', async () => {
             const url = window.location.href;
             if (navigator.share) {
                 try { await navigator.share({ title: 'Achmad Syarfandi CV', url }); } catch (e) { }

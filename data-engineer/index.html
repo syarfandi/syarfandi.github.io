@@ -710,7 +710,7 @@
         }
 
         togglePremium.onclick = () => setView('premium');
-        toggleATS.onclick = () => setView('ats');
+                toggleATS.onclick = () => setView('ats');
 
         function setLang(l) {
             lang = l;
@@ -728,65 +728,61 @@
         toggleID.onclick = () => setLang('id');
 
         document.getElementById('downloadBtn').addEventListener('click', async () => {
-            const element = view === 'premium' ? premiumView : atsContent;
+            const isPremium = view === 'premium';
+            const element = isPremium ? premiumView : atsContent;
             const downloadLabel = document.getElementById('downloadLabel');
             const originalLabel = downloadLabel.innerText;
             
             downloadLabel.innerText = "...";
             
-            // Save original scroll position
-            const scrollY = window.scrollY;
-            const scrollX = window.scrollX;
-            
-            // Scroll to top to ensure clean capture
-            window.scrollTo(0, 0);
-            
             try {
-                // Give browser time to stabilize after scroll
-                await new Promise(r => setTimeout(r, 300));
-                
-                const originalStyle = element.style.cssText;
-                // Force background and remove any potential hidden overflows
-                element.style.background = "white";
-                element.style.overflow = "visible";
-                element.style.height = "auto";
-                
+                const clone = element.cloneNode(true);
+                Object.assign(clone.style, {
+                    position: 'absolute',
+                    left: '0',
+                    top: '10000px',
+                    width: element.offsetWidth + 'px',
+                    display: isPremium ? 'grid' : 'block',
+                    background: 'white',
+                    opacity: '1',
+                    visibility: 'visible',
+                    margin: '0',
+                    boxShadow: 'none'
+                });
+
+                if (!isPremium) {
+                    const markdown = clone.querySelector('.markdown-body') || clone;
+                    markdown.style.display = 'block';
+                    markdown.style.padding = '60px';
+                }
+
+                document.body.appendChild(clone);
+                await new Promise(r => setTimeout(r, 1000));
+
+                const widthPx = clone.offsetWidth;
+                const heightPx = clone.scrollHeight;
+                const mmWidth = widthPx * 0.264583;
+                const mmHeight = (heightPx * 0.264583);
+
                 const opt = {
                     margin: 0,
-                    filename: `CV_Syarfandi_data-engineer_${lang}.pdf`,
+                    filename: `CV_Syarfandi_DataEngineer_${lang}.pdf`,
                     image: { type: 'jpeg', quality: 0.98 },
-                    html2canvas: { 
-                        scale: 2, 
-                        useCORS: true,
-                        allowTaint: true,
-                        scrollY: 0,
-                        scrollX: 0,
-                        windowWidth: element.offsetWidth
-                    },
-                    jsPDF: { unit: 'mm', orientation: 'portrait' }
+                    html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff' },
+                    jsPDF: { unit: 'mm', format: [mmWidth, mmHeight], orientation: 'portrait', compress: true }
                 };
 
-                const widthPx = element.offsetWidth;
-                const heightPx = element.scrollHeight;
-                const mmWidth = widthPx * 0.264583;
-                const mmHeight = (heightPx * 0.264583) + 2;
-                
-                opt.jsPDF.format = [mmWidth, mmHeight];
-
-                await html2pdf().set(opt).from(element).save();
-                
-                element.style.cssText = originalStyle;
+                await html2pdf().set(opt).from(clone).save();
+                document.body.removeChild(clone);
             } catch (err) {
                 console.error("PDF Error:", err);
-                alert("Error: " + err.message);
+                alert("Gagal membuat PDF.");
             } finally {
-                // Restore scroll position
-                window.scrollTo(scrollX, scrollY);
                 downloadLabel.innerText = originalLabel;
             }
         });
 
-document.getElementById('shareBtn').addEventListener('click', async () => {
+        document.getElementById('shareBtn').addEventListener('click', async () => {
             const url = window.location.href;
             if (navigator.share) {
                 try { await navigator.share({ title: 'Achmad Syarfandi CV', url }); } catch (e) { }
