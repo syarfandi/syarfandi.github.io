@@ -1,7 +1,6 @@
 # SYARFANDI "ANDI" ACHMAD
 **Data Engineer**
-Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
-[syarfandi.github.io](https://syarfandi.github.io) | [LinkedIn](https://linkedin.com/in/syarfandi)
+Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfandi.achmad@gmail.com | [Portfolio: syarfandi.github.io/data-engineer](https://syarfandi.github.io/data-engineer) | [LinkedIn](https://linkedin.com/in/syarfandi)
 
 ## RINGKASAN PROFESIONAL
 Data Engineer strategis dengan pengalaman lebih dari 8 tahun dalam merancang pipa data yang skalabel dan lingkungan database yang tangguh. Ahli dalam proses ETL/ELT, optimasi PostgreSQL performa tinggi, dan penyerapan data real-time menggunakan Supabase dan Kafka. Sukses dalam mengonsolidasikan data skala regional (9jt+ data) dan mengelola lapisan data retail yang kompleks. Berkomitmen untuk menghadirkan integritas data dan sistem ketersediaan tinggi untuk analitik misi kritis.

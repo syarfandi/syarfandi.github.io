@@ -1,7 +1,6 @@
 # Syarfandi "Andi" Achmad
 **Mobile Developer | Cross-Platform & Mobile-First Specialist**
-Makassar, Indonesia | +62 852-5652-2335 | syarfandi.achmad@gmail.com
-[Portfolio: syarfandi.github.io](https://syarfandi.github.io) | [LinkedIn](https://linkedin.com/in/syarfandi)
+Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfandi.achmad@gmail.com | [Portfolio: syarfandi.github.io/mobile](https://syarfandi.github.io/mobile) | [LinkedIn](https://linkedin.com/in/syarfandi)
 
 ---
 
