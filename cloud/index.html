@@ -391,7 +391,7 @@
                 border: none !important;
             }
         }</style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 </head>
 
 <body>
@@ -762,13 +762,22 @@
             
             downloadLabel.innerText = "...";
             
+            // Save original scroll position
+            const scrollY = window.scrollY;
+            const scrollX = window.scrollX;
+            
+            // Scroll to top to ensure clean capture
+            window.scrollTo(0, 0);
+            
             try {
-                // Standardize element for capture without cloning to avoid blank issues
-                const originalStyle = element.style.cssText;
+                // Give browser time to stabilize after scroll
+                await new Promise(r => setTimeout(r, 300));
                 
-                // Temporarily disable any transforms or weird positioning
-                element.style.transform = "none";
-                element.style.transition = "none";
+                const originalStyle = element.style.cssText;
+                // Force background and remove any potential hidden overflows
+                element.style.background = "white";
+                element.style.overflow = "visible";
+                element.style.height = "auto";
                 
                 const opt = {
                     margin: 0,
@@ -777,19 +786,16 @@
                     html2canvas: { 
                         scale: 2, 
                         useCORS: true,
-                        logging: false,
-                        letterRendering: true,
-                        // Important: capture the full scroll height
-                        scrollY: -window.scrollY,
-                        windowWidth: document.documentElement.offsetWidth
+                        allowTaint: true,
+                        scrollY: 0,
+                        scrollX: 0,
+                        windowWidth: element.offsetWidth
                     },
                     jsPDF: { unit: 'mm', orientation: 'portrait' }
                 };
 
-                // Calculate dimensions
                 const widthPx = element.offsetWidth;
                 const heightPx = element.scrollHeight;
-                
                 const mmWidth = widthPx * 0.264583;
                 const mmHeight = (heightPx * 0.264583) + 2;
                 
@@ -802,11 +808,13 @@
                 console.error("PDF Error:", err);
                 alert("Error: " + err.message);
             } finally {
+                // Restore scroll position
+                window.scrollTo(scrollX, scrollY);
                 downloadLabel.innerText = originalLabel;
             }
         });
 
-        document.getElementById('shareBtn').addEventListener('click', async () => {
+document.getElementById('shareBtn').addEventListener('click', async () => {
             const url = window.location.href;
             if (navigator.share) {
                 try { await navigator.share({ title: 'Achmad Syarfandi CV', url }); } catch (e) { }
