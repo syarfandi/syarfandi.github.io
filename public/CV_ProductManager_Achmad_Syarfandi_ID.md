@@ -51,7 +51,6 @@ IPK: 3.22 / 4.00
 - **Infrastruktur Email Pemerintah:** Platform komunikasi aman strategis untuk unit kerja pemerintah.
 - **Hub Kegiatan Sulsel:** Produk manajemen acara dan pendaftaran yang disederhanakan untuk kegiatan regional.
 
-
 ## Pendidikan
 - **Sarjana Komputer (S.Kom)** | UIN Alauddin Makassar
   *IPK: 3.22 / 4.00*

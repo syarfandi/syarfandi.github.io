@@ -52,7 +52,6 @@ GPA: 3.22 / 4.00
 - **Retail Analytics Engine:** Business intelligence layer for POS data using BigQuery and Grafana.
 - **Helpdesk Data Platform:** Public complaint data management system with real-time tracking.
 
-
 ## Education
 - **Bachelor of Computer Science (S.Kom)** | UIN Alauddin Makassar
   *GPA: 3.22 / 4.00*

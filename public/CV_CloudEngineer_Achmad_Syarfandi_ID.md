@@ -66,7 +66,6 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **Top 10 Pemenang** – Samsung Indonesia Next Apps 4.0 Gear VR Challenge (2017)
 - **Microsoft CityApp Appathon** – Peserta & Pengembang
 
-
 ## Pendidikan
 - **Sarjana Komputer (S.Kom)** | UIN Alauddin Makassar
   *IPK: 3.22 / 4.00*
@@ -79,7 +78,6 @@ Untuk tetap kompetitif di pasar Cloud Engineering global, saya aktif menerapkan 
 - **Strategi Multi-Cloud**: Merancang solusi portabel di seluruh AWS, GCP, dan Azure untuk menghindari vendor lock-in dan meningkatkan ketangguhan.
 - **Evolusi Serverless**: Memanfaatkan AWS Lambda, GCP Cloud Run, dan arsitektur Event-driven untuk sistem skala tinggi dengan perawatan rendah.
 - **Tata Kelola Cloud**: Menegakkan kepatuhan sebagai kode (compliance-as-code) dan audit IAM otomatis untuk menjaga keamanan pada skala besar.
-
 
 ## Peta Jalan Teknis Masa Depan
 Untuk tetap kompetitif di pasar global DevOps & Infrastruktur, saya aktif menerapkan:

@@ -80,7 +80,6 @@ Versatile **Fullstack Developer** with 8+ years of experience engineering end-to
 ## Fullstack Expertise Keywords (ATS Optimized)
 React, Next.js, TypeScript, JavaScript, Node.js, Express.js, Fastify, PostgreSQL, Supabase, REST API, GraphQL, WebSocket, Three.js, Framer Motion, Tailwind CSS, Responsive Design, SSR, SSG, RSC, Server Components, JWT Authentication, OAuth, Redis, Docker, GitHub Actions, CI/CD, Vercel, Database Optimization, SQL Query Tuning, Indexing, Database Migration, Row-Level Security (RLS), Supabase Realtime, Edge Functions, Serverless Functions, Background Jobs, Bull Queue, PM2, Nginx, Linux, Full-Stack Architecture, End-to-End Development, Code-Splitting, Lazy Loading, State Management, Component Design.
 
-
 ## Future-Ready Technical Roadmap
 To stay competitive in the global Backend market, I am actively implementing:
 - **Distributed Systems**: Designing highly-available, event-driven architectures with Kafka and RabbitMQ.

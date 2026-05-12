@@ -64,7 +64,6 @@ Creative and technical **Frontend Developer** with 8+ years of experience in cra
 - **Top 10 Winner** – Samsung Indonesia Next Apps 4.0 Gear VR Challenge (2017)
 - **Microsoft CityApp Appathon** – Participant & Developer
 
-
 ## Education
 - **Bachelor of Computer Science (S.Kom)** | UIN Alauddin Makassar
   *GPA: 3.22 / 4.00*

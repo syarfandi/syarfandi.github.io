@@ -66,7 +66,6 @@ Dynamic **Cloud Engineer** with 8+ years of experience in architecting high-perf
 - **Top 10 Winner** – Samsung Indonesia Next Apps 4.0 Gear VR Challenge (2017)
 - **Microsoft CityApp Appathon** – Participant & Developer
 
-
 ## Education
 - **Bachelor of Computer Science (S.Kom)** | UIN Alauddin Makassar
   *GPA: 3.22 / 4.00*

@@ -52,7 +52,6 @@ IPK: 3.22 / 4.00
 - **Engine Analitik Retail:** Lapisan intelijen bisnis untuk data POS menggunakan BigQuery dan Grafana.
 - **Platform Data Helpdesk:** Sistem manajemen data keluhan publik dengan pelacakan real-time.
 
-
 ## Pendidikan
 - **Sarjana Komputer (S.Kom)** | UIN Alauddin Makassar
   *IPK: 3.22 / 4.00*

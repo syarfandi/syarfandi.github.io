@@ -49,8 +49,6 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **Mengelola** administrasi organisasi dan mengoordinasikan pengurus periode 2021-2026.
 - **Mengoptimalkan** manajemen aset komunitas dan dokumentasi digital untuk operasional masjid.
 
-
-
 ## Pendidikan
 - **Sarjana Komputer (S.Kom)** | UIN Alauddin Makassar
   *IPK: 3.22 / 4.00*
@@ -71,7 +69,6 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **National Cyber Exercise #10** – BSSN (2024)
 - **Pemenang Top 10** – Samsung Indonesia Next Apps 4.0 Gear VR Challenge (2017)
 - **Microsoft CityApp Appathon** – Peserta & Developer
-
 
 ## Peta Jalan Teknis Masa Depan
 Untuk tetap kompetitif di pasar global DevOps & Infrastruktur, saya aktif menerapkan:

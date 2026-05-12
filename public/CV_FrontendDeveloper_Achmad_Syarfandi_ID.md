@@ -64,7 +64,6 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **Top 10 Pemenang** – Samsung Indonesia Next Apps 4.0 Gear VR Challenge (2017)
 - **Microsoft CityApp Appathon** – Peserta & Pengembang
 
-
 ## Pendidikan
 - **Sarjana Komputer (S.Kom)** | UIN Alauddin Makassar
   *IPK: 3.22 / 4.00*
@@ -77,7 +76,6 @@ Untuk tetap kompetitif di pasar Frontend global, saya aktif menerapkan:
 - **Performa Web**: Penguasaan Core Web Vitals, ISR (Incremental Static Regeneration), dan rendering sisi Edge.
 - **Aksesibilitas (a11y)**: Memastikan kepatuhan WCAG dan desain inklusif untuk audiens global.
 - **AI-Powered UI**: Mengintegrasikan LLM dan AI generatif langsung ke dalam pengalaman pengguna untuk antarmuka yang lebih cerdas.
-
 
 ## Peta Jalan Teknis Masa Depan
 Untuk tetap kompetitif di pasar global Frontend, saya aktif menerapkan:

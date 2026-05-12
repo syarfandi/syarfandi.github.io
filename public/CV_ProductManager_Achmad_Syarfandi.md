@@ -51,7 +51,6 @@ GPA: 3.22 / 4.00
 - **Gov Email Infrastructure:** Strategic secure communication platform for government work units.
 - **Kegiatan Sulsel Hub:** Streamlined event management and registration product for regional activities.
 
-
 ## Education
 - **Bachelor of Computer Science (S.Kom)** | UIN Alauddin Makassar
   *GPA: 3.22 / 4.00*
