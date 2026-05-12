@@ -76,9 +76,6 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 
 ---
 
-## Kata Kunci Keahlian Backend (Optimasi ATS)
-Node.js, Express.js, Next.js API Routes, PostgreSQL, Supabase, REST API, GraphQL, WebSocket, Autentikasi JWT, OAuth, Redis, Docker, GitHub Actions, CI/CD, Optimasi Database, SQL Query Tuning, Indexing, Migrasi Database, Row-Level Security (RLS), Serverless Functions, Edge Functions, Background Jobs, Bull Queue, PM2, Nginx, Linux, Microservices, API Gateway, Integrasi Webhook, Streaming Data Real-time, Arsitektur Multi-tenant, Partisi Database, Connection Pooling.
-
 ## Peta Jalan Teknis Masa Depan
 Untuk tetap kompetitif di pasar global Backend, saya aktif menerapkan:
 - **Sistem Terdistribusi**: Merancang arsitektur event-driven yang tersedia tinggi dengan Kafka dan RabbitMQ.
