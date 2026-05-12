@@ -806,48 +806,7 @@
             }
         });
 
-document.body.appendChild(clone);
-                
-                // Force icons to render in clone if they use Lucide
-                if (window.lucide) window.lucide.createIcons({ node: clone });
-                
-                // Wait for any resources to stabilize
-                await new Promise(resolve => setTimeout(resolve, 500));
-
-                const opt = {
-                    margin: 0,
-                    filename: `CV_Syarfandi_frontend_${lang}.pdf`,
-                    image: { type: 'jpeg', quality: 0.98 },
-                    html2canvas: { 
-                        scale: 2, 
-                        useCORS: true, 
-                        allowTaint: true,
-                        letterRendering: true,
-                        width: 1000,
-                        windowWidth: 1000,
-                    },
-                    jsPDF: { unit: 'mm', orientation: 'portrait' }
-                };
-
-                const widthPx = 1000;
-                const heightPx = clone.scrollHeight;
-                const mmWidth = widthPx * 0.264583;
-                const mmHeight = (heightPx * 0.264583) + 2;
-                
-                opt.jsPDF.format = [mmWidth, mmHeight];
-
-                await html2pdf().set(opt).from(clone).save();
-                
-                document.body.removeChild(clone);
-            } catch (err) {
-                console.error("PDF Error:", err);
-                alert("Error generating PDF. Please try again.");
-            } finally {
-                downloadLabel.innerText = originalLabel;
-            }
-        });
-
-document.getElementById('shareBtn').addEventListener('click', async () => {
+        document.getElementById('shareBtn').addEventListener('click', async () => {
             const url = window.location.href;
             if (navigator.share) {
                 try { await navigator.share({ title: 'Achmad Syarfandi CV', url }); } catch (e) { }
