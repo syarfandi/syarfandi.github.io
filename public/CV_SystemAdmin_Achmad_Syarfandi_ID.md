@@ -1,6 +1,6 @@
 # SYARFANDI "ANDI" ACHMAD
 **System Administrator**
-Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfandi.achmad@gmail.com | [Portfolio: syarfandi.github.io/sysadmin](https://syarfandi.github.io/sysadmin) | [LinkedIn](https://linkedin.com/in/syarfandi)
+Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfandi.achmad@gmail.com | [Portfolio: syarfandi.github.io](https://syarfandi.github.io) | [LinkedIn](https://linkedin.com/in/syarfandi)
 
 ## RINGKASAN PROFESIONAL
 System Administrator yang andal dengan pengalaman lebih dari 8 tahun dalam mengelola lingkungan server on-premise dan cloud ketersediaan tinggi. Ahli dalam administrasi Linux (Ubuntu/CentOS/Debian), penguatan server, dan jaringan kompleks. Memiliki rekam jejak terbukti dalam mengelola cluster mail server (Mailcow) dan infrastruktur pemerintah regional. Berdedikasi untuk memastikan uptime 99,9% dan keamanan yang kuat melalui pemeliharaan proaktif, otomatisasi, dan strategi pencadangan.

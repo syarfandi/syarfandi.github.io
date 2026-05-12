@@ -1,6 +1,6 @@
 # SYARFANDI "ANDI" ACHMAD
 **Product Manager**
-Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfandi.achmad@gmail.com | [Portfolio: syarfandi.github.io/product-manager](https://syarfandi.github.io/product-manager) | [LinkedIn](https://linkedin.com/in/syarfandi)
+Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfandi.achmad@gmail.com | [Portfolio: syarfandi.github.io](https://syarfandi.github.io) | [LinkedIn](https://linkedin.com/in/syarfandi)
 
 ## RINGKASAN PROFESIONAL
 Product Manager strategis dengan pengalaman lebih dari 8 tahun dalam memimpin produk digital berdampak tinggi dari tahap penemuan hingga peluncuran. Ahli dalam Strategi Produk, Perencanaan Roadmap, dan menjembatani kesenjangan antara tim teknis yang kompleks dan tujuan bisnis. Memiliki rekam jejak terbukti dalam mendorong transformasi digital di pemerintahan dan menskalakan ekosistem startup besar. Berdedikasi untuk menghadirkan solusi yang berpusat pada pengguna dan berbasis data untuk memecahkan masalah dunia nyata.

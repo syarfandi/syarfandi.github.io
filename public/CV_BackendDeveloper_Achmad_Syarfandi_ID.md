@@ -1,6 +1,6 @@
 # Syarfandi "Andi" Achmad
 **Backend Developer | Spesialis Arsitektur API & Skalabilitas Database**
-Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfandi.achmad@gmail.com | [Portfolio: syarfandi.github.io/backend](https://syarfandi.github.io/backend) | [LinkedIn](https://linkedin.com/in/syarfandi)
+Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfandi.achmad@gmail.com | [Portfolio: syarfandi.github.io](https://syarfandi.github.io) | [LinkedIn](https://linkedin.com/in/syarfandi)
 
 ---
 
