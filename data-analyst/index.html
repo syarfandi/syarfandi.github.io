@@ -754,32 +754,57 @@
         toggleID.onclick = () => setLang('id');
 
         document.getElementById('downloadBtn').addEventListener('click', async () => {
-            const sourceElement = view === 'premium' ? premiumView : atsContent;
+            const element = view === 'premium' ? premiumView : atsContent;
             const downloadLabel = document.getElementById('downloadLabel');
             const originalLabel = downloadLabel.innerText;
             
             downloadLabel.innerText = "...";
             
             try {
-                // Create a clone to avoid affecting the live UI and ensure clean capture
-                const clone = sourceElement.cloneNode(true);
+                // Standardize element for capture without cloning to avoid blank issues
+                const originalStyle = element.style.cssText;
                 
-                // Set styles for the clone to ensure it's captured correctly
-                Object.assign(clone.style, {
-                    position: "absolute",
-                    top: "-9999px",
-                    left: "0",
-                    width: "1000px",
-                    height: "auto",
-                    overflow: "visible",
-                    display: "block", // Ensure it's visible for capture
-                    opacity: "1",
-                    background: "white",
-                    boxShadow: "none",
-                    borderRadius: "0"
-                });
+                // Temporarily disable any transforms or weird positioning
+                element.style.transform = "none";
+                element.style.transition = "none";
                 
-                document.body.appendChild(clone);
+                const opt = {
+                    margin: 0,
+                    filename: `CV_Syarfandi_data-analyst_${lang}.pdf`,
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { 
+                        scale: 2, 
+                        useCORS: true,
+                        logging: false,
+                        letterRendering: true,
+                        // Important: capture the full scroll height
+                        scrollY: -window.scrollY,
+                        windowWidth: document.documentElement.offsetWidth
+                    },
+                    jsPDF: { unit: 'mm', orientation: 'portrait' }
+                };
+
+                // Calculate dimensions
+                const widthPx = element.offsetWidth;
+                const heightPx = element.scrollHeight;
+                
+                const mmWidth = widthPx * 0.264583;
+                const mmHeight = (heightPx * 0.264583) + 2;
+                
+                opt.jsPDF.format = [mmWidth, mmHeight];
+
+                await html2pdf().set(opt).from(element).save();
+                
+                element.style.cssText = originalStyle;
+            } catch (err) {
+                console.error("PDF Error:", err);
+                alert("Error: " + err.message);
+            } finally {
+                downloadLabel.innerText = originalLabel;
+            }
+        });
+
+document.body.appendChild(clone);
                 
                 // Force icons to render in clone if they use Lucide
                 if (window.lucide) window.lucide.createIcons({ node: clone });
