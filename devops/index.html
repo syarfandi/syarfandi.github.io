@@ -764,69 +764,31 @@
             const isPremium = view === 'premium';
             const element = isPremium ? premiumView : atsContent;
             const downloadLabel = document.getElementById('downloadLabel');
-            const originalLabel = downloadLabel.innerText;
             
             downloadLabel.innerText = "...";
             
             try {
-                // 1. Simpan style asli
-                const originalStyle = element.style.cssText;
-                
-                // 2. Paksa elemen berada di paling depan dan terlihat (untuk menghindari blank)
-                Object.assign(element.style, {
-                    position: 'fixed',
-                    top: '0',
-                    left: '0',
-                    zIndex: '10000',
-                    width: '100%',
-                    background: 'white',
-                    display: isPremium ? 'grid' : 'block',
-                    opacity: '1',
-                    visibility: 'visible'
+                // Gunakan html2canvas langsung (Tanpa html2pdf) untuk diagnosa
+                const canvas = await html2canvas(element, {
+                    useCORS: true,
+                    scale: 2,
+                    backgroundColor: '#ffffff',
+                    scrollY: -window.scrollY
                 });
 
-                if (!isPremium) {
-                    const markdown = element.querySelector('.markdown-body') || element;
-                    markdown.style.display = 'block';
-                    markdown.style.padding = '60px';
-                }
-
-                // Berikan waktu render singkat
-                await new Promise(r => setTimeout(r, 500));
-
-                const widthPx = element.offsetWidth;
-                const heightPx = element.scrollHeight;
-                const mmWidth = widthPx * 0.264583;
-                const mmHeight = (heightPx * 0.264583);
-
-                const opt = {
-                    margin: 0,
-                    filename: `CV_Syarfandi_DevOps_${lang}.pdf`,
-                    image: { type: 'jpeg', quality: 0.98 },
-                    html2canvas: { 
-                        scale: 2, 
-                        useCORS: true,
-                        allowTaint: true,
-                        backgroundColor: '#ffffff',
-                        scrollY: 0
-                    },
-                    jsPDF: { 
-                        unit: 'mm', 
-                        format: [mmWidth, mmHeight], 
-                        orientation: 'portrait',
-                        compress: true
-                    }
-                };
-
-                await html2pdf().set(opt).from(element).save();
+                // Coba download sebagai gambar PNG
+                const imgData = canvas.toDataURL('image/png');
+                const link = document.createElement('a');
+                link.href = imgData;
+                link.download = `DIAGNOSA_CV_${subdir}.png`;
+                link.click();
                 
-                // 3. Kembalikan style asli
-                element.style.cssText = originalStyle;
+                alert("Diagnosa: Jika gambar yang terunduh TIDAK putih, berarti html2canvas normal. Jika putih, berarti masalah ada di rendering canvas.");
             } catch (err) {
-                console.error("PDF Error:", err);
-                alert("Gagal membuat PDF.");
+                console.error("Diagnosis Error:", err);
+                alert("Gagal diagnosa: " + err.message);
             } finally {
-                downloadLabel.innerText = originalLabel;
+                downloadLabel.innerText = "PDF";
             }
         });
 
