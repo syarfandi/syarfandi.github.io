@@ -759,7 +759,7 @@
             const element = isPremium ? premiumView : atsContent;
             
             // 1. Hitung tinggi (Tetap gunakan logika ATS yang sudah bagus, tapi perbaiki akurasi Visual)
-            const heightMm = Math.ceil(element.scrollHeight * 0.264583) + (isPremium ? 25 : 20);
+            const heightMm = Math.ceil(element.scrollHeight * 0.264583) + (isPremium ? 20 : 15);
             
             const printStyle = document.createElement('style');
             printStyle.id = 'dynamic-print-style';
@@ -811,23 +811,32 @@
                         break-inside: avoid !important; /* Cegah elemen di dalam visual terpotong */
                     }
 
-                    /* CSS Khusus ATS (JANGAN DIUBAH SETTINGANNYA) */
+                    /* CSS Khusus ATS */
                     #ats-view { 
                         display: ${!isPremium ? 'block' : 'none'} !important; 
                         position: absolute !important;
                         top: 0 !important;
                         left: 0 !important;
                         width: 210mm !important;
+                        height: auto !important;
                         margin: 0 !important;
+                        padding: 0 !important;
+                        overflow: hidden !important;
                     }
                     .markdown-body { 
                         display: ${!isPremium ? 'block' : 'none'} !important;
+                        padding: 30px !important;
+                        margin: 0 !important;
+                        background: white !important;
+                        height: auto !important;
+                    } !important;
                         padding: 40px !important;
                     }
 
                     * { 
                         -webkit-print-color-adjust: exact !important; 
                         print-color-adjust: exact !important;
+                        break-inside: avoid !important;
                     }
                 }
             `;
