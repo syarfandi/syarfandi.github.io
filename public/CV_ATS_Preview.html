@@ -193,37 +193,42 @@
                     return response.text();
                 })
                 .then(text => {
+                    console.log("Markdown loaded, parsing...");
                     const rawHtml = marked.parse(text);
                     const tempDiv = document.createElement('div');
                     tempDiv.innerHTML = rawHtml;
                     
-                    console.log("Starting aggressive section wrapping...");
+                    // Pastikan skrip berjalan dengan mengubah warna background sebentar
+                    document.body.style.border = "10px solid yellow";
+                    setTimeout(() => { document.body.style.border = "none"; }, 2000);
+                    
                     content.innerHTML = ''; 
                     
                     let currentSection = null;
                     const elements = Array.from(tempDiv.children);
                     
                     elements.forEach(el => {
-                        // Jika heading, buat section baru
                         if (/^H[1-6]$/.test(el.tagName)) {
                             currentSection = document.createElement('div');
                             currentSection.className = 'cv-section';
+                            // Paksa style di sini agar pasti muncul
+                            currentSection.style.outline = "2px solid red";
+                            currentSection.style.display = "block";
+                            currentSection.style.marginBottom = "15px";
                             content.appendChild(currentSection);
                             currentSection.appendChild(el);
                         } else if (currentSection && el.tagName !== 'HR') {
-                            // Masukkan ke section yang sedang aktif
                             currentSection.appendChild(el);
                         } else {
-                            // Jika bukan heading dan belum ada section, atau jika HR
                             if (el.tagName === 'HR') {
                                 currentSection = null;
                                 content.appendChild(el);
                             } else {
                                 const wrapper = document.createElement('div');
                                 wrapper.className = 'cv-section';
+                                wrapper.style.outline = "2px solid red";
                                 wrapper.appendChild(el);
                                 content.appendChild(wrapper);
-                                // Jangan jadikan ini currentSection agar heading berikutnya tetap memicu section baru
                             }
                         }
                     });
