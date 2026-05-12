@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Halaman Tidak Ditemukan</title>
+    <!-- Otomatis kembali ke beranda dalam 3 detik -->
+    <meta http-equiv="refresh" content="3;url=/">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #0f172a;
+            --accent: #3b82f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary);
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+        }
+
+        .error-code {
+            font-size: 120px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        p {
+            color: #64748b;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .redirect-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .countdown {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            font-size: 12px;
+        }
+
+        .back-home {
+            margin-top: 20px;
+            display: block;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .back-home:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error-code">404</div>
+        <h1>Ups! Halaman Hilang</h1>
+        <p>Sepertinya Anda tersesat di infrastruktur yang salah. Halaman yang Anda cari tidak tersedia atau telah dipindahkan.</p>
+        
+        <div class="redirect-box">
+            <i data-lucide="loader-2" class="animate-spin" style="width:16px; animation: spin 1s linear infinite;"></i>
+            Kembali ke Beranda dalam <span class="countdown" id="timer">3</span> detik
+        </div>
+
+        <a href="/" class="back-home">Klik di sini jika tidak berpindah otomatis</a>
+    </div>
+
+    <style>
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin {
+            animation: spin 1s linear infinite;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Inisialisasi ikon
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+            
+            let seconds = 3;
+            const timerElement = document.getElementById('timer');
+            
+            if (timerElement) {
+                const countdown = setInterval(() => {
+                    seconds--;
+                    if (seconds >= 0) {
+                        timerElement.textContent = seconds;
+                    }
+                    
+                    if (seconds <= 0) {
+                        clearInterval(countdown);
+                        // Redirect ke beranda (root domain)
+                        window.location.href = window.location.origin + '/';
+                    }
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+</html>
