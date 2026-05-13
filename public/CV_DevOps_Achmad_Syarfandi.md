@@ -1,16 +1,17 @@
 # Syarfandi "Andi" Achmad
-**DevOps Engineer | Cloud Infrastructure & Security Specialist**
+**DevOps / SRE Engineer | Cloud Infrastructure & Security Specialist**
 Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfandi.achmad@gmail.com | [Portfolio: syarfandi.github.io](https://syarfandi.github.io) | [LinkedIn](https://linkedin.com/in/syarfandi)
 
 ---
 
 ## Professional Summary
-Dynamic **DevOps Engineer** with 5+ years of experience in architecting high-performance **cloud server and on-premise server** ecosystems and self-healing infrastructure. Expert at bridging development and security through **Kubernetes** orchestration and **Terraform** automation. With a strong commitment to **Zero Trust** principles and security-as-code, I help global organizations scale rapidly without compromising system integrity. A proactive leader in **asynchronous remote teams**, dedicated to delivering operational excellence and hardening digital assets against modern threats.
+Dynamic **DevOps / SRE Engineer** with 4+ years of experience in architecting **high-availability (99.9% uptime)** systems and self-healing infrastructure. Expert at bridging development and security through **Kubernetes** orchestration and **Terraform** automation. Focused on **Observability** and **Toil Reduction**, I help global organizations scale rapidly while maintaining rock-solid system integrity. A proactive leader in **asynchronous remote teams**, dedicated to operational excellence and proactive incident management.
 
 ## Core Technical Competencies
-- **Infrastructure & Orchestration**: Kubernetes (K8s), Terraform (IaC), Docker, Helm, AWS/GCP, Vercel/Netlify, Linux System Administration.
+- **Infrastructure & Orchestration**: Kubernetes (K8s), Terraform (IaC), Docker, Helm, AWS/GCP, Linux System Administration.
+- **Observability & Reliability**: Prometheus, Grafana, SLIs/SLOs/SLAs monitoring, Incident Response, Post-mortem analysis, Error Budgets.
 - **Security & Compliance**: DevOps (SAST/DAST), Zero Trust Architecture principles, BSSN Incident Response, Serverless Security.
-- **CI/CD & Automation**: GitHub Actions, GitLab CI, Jenkins, PM2, Python/Bash Scripting.
+- **CI/CD & Automation**: GitHub Actions, GitLab CI, Jenkins, PM2, Python/Bash/Go Scripting (Toil Reduction).
 - **Data & Middleware**: Supabase, PostgreSQL (Optimization & Scaling), RESTful API Architecture, Redis.
 - **Soft Skills**: Asynchronous Collaboration, Technical Writing, Remote Team Leadership, Strategic Planning.
 
@@ -77,4 +78,5 @@ To stay competitive in the global DevOps & Infrastructure market, I am actively 
 - **Zero Trust Architecture**: Identity-aware proxies and 'Never Trust, Always Verify' principles.
 - **eBPF Security**: Deep kernel-level observability and real-time security monitoring.
 - **GitOps**: Using ArgoCD/Flux for automated and declarative infrastructure synchronization.
+- **Chaos Engineering**: Implementing fault injection and resilience testing using Chaos Mesh or Gremlin.
 - **Serverless Security**: Securing AWS Lambda/Edge functions and automated IAM least-privilege auditing.

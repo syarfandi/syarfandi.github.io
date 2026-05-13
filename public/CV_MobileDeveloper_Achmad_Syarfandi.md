@@ -5,7 +5,7 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 ---
 
 ## Professional Summary
-Strategic **Mobile Developer** with 8+ years of experience architecting high-performance cross-platform mobile applications. Expert in **React Native, Flutter**, native Android/iOS patterns, and **mobile-first UI/UX**. Award-winning innovator (**Samsung Next Apps Top 10**) with production apps in enterprise retail, government, and VR. Dedicated to 60fps experiences, offline-first architectures, and seamless API integrations.
+Strategic **Mobile Developer** with 4+ years of experience architecting high-performance cross-platform mobile applications. Expert in **React Native, Flutter**, native Android/iOS patterns, and **mobile-first UI/UX**. Award-winning innovator (**Samsung Next Apps Top 10**) with production apps in enterprise retail, government, and VR. Dedicated to 60fps experiences, offline-first architectures, and seamless API integrations.
 
 ## Core Competencies
 - **Mobile**: React Native (iOS/Android), Flutter/Dart, Unity (VR/AR), PWA, Expo, React Navigation, Reanimated, Lottie.

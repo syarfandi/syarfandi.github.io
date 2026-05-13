@@ -5,7 +5,7 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 ---
 
 ## Professional Summary
-Detail-oriented **Data Analyst** with 8+ years transforming raw data into actionable business intelligence. Expert in **SQL, Excel/Google Sheets, Python**, and **interactive dashboard development**. Proven track record building data monitoring platforms for government (9M+ records) and enterprise retail (100+ module POS). Skilled at compelling data narratives through visualizations, automated reporting, and KPI tracking.
+Detail-oriented **Data Analyst** with 4+ years transforming raw data into actionable business intelligence. Expert in **SQL, Excel/Google Sheets, Python**, and **interactive dashboard development**. Proven track record building data monitoring platforms for government (9M+ records) and enterprise retail (100+ module POS). Skilled at compelling data narratives through visualizations, automated reporting, and KPI tracking.
 
 ## Core Competencies
 - **SQL**: PostgreSQL (Advanced Queries, Stored Procedures, CTEs, Window Functions), Supabase, Data Aggregation.

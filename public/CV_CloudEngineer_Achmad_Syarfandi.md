@@ -1,11 +1,11 @@
 # Syarfandi "Andi" Achmad
-**Cloud Engineer | Cloud Architecture & Infrastructure Specialist**
+**Cloud / SRE Engineer | Cloud Architecture & Infrastructure Specialist**
 Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfandi.achmad@gmail.com | [Portfolio: syarfandi.github.io](https://syarfandi.github.io) | [LinkedIn](https://linkedin.com/in/syarfandi)
 
 ---
 
 ## Professional Summary
-Dynamic **Cloud Engineer** with 8+ years of experience in architecting high-performance **cloud and on-premise server** ecosystems and scalable infrastructure. Expert at designing and implementing robust cloud solutions using **AWS, GCP**, and **Kubernetes**. Dedicated to delivering operational excellence through automated **Terraform** workflows and cloud-native optimizations. A proactive leader in **asynchronous remote teams**, focused on driving digital transformation and maximizing cloud ROI for global organizations.
+Dynamic **Cloud Engineer** with 4+ years of experience in architecting high-performance **cloud and on-premise server** ecosystems and scalable infrastructure. Expert at designing and implementing robust cloud solutions using **AWS, GCP**, and **Kubernetes**. Dedicated to delivering operational excellence through automated **Terraform** workflows and cloud-native optimizations. A proactive leader in **asynchronous remote teams**, focused on driving digital transformation and maximizing cloud ROI for global organizations.
 
 ## Core Technical Competencies
 - **Infrastructure & Orchestration**: Kubernetes (K8s), Terraform (IaC), Docker, Helm, AWS/GCP, Vercel/Netlify/Firebase, Linux System Administration.

@@ -5,7 +5,7 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 ---
 
 ## Ringkasan Profesional
-**Fullstack Developer** serbabisa dengan pengalaman lebih dari 8 tahun merekayasa platform digital end-to-end — dari UI yang presisi hingga API backend berperforma tinggi. Ahli dalam ekosistem frontend **React/Next.js** dan backend **Node.js/PostgreSQL/Supabase**. Memiliki rekam jejak terbukti menghadirkan aplikasi production-grade untuk instansi pemerintah dan startup enterprise, menangani jutaan data dengan uptime 99,9%. Bersemangat pada arsitektur bersih, desain responsif, dan pengiriman fitur yang memukau pengguna.
+**Fullstack Developer** serbabisa dengan pengalaman lebih dari 4 tahun merekayasa platform digital end-to-end — dari UI yang presisi hingga API backend berperforma tinggi. Ahli dalam ekosistem frontend **React/Next.js** dan backend **Node.js/PostgreSQL/Supabase**. Memiliki rekam jejak terbukti menghadirkan aplikasi production-grade untuk instansi pemerintah dan startup enterprise, menangani jutaan data dengan uptime 99,9%. Bersemangat pada arsitektur bersih, desain responsif, dan pengiriman fitur yang memukau pengguna.
 
 ## Kompetensi Teknis Inti
 - **Frontend**: React, Next.js (SSR, SSG, RSC), TypeScript, JavaScript (ES6+), Three.js, Framer Motion, Tailwind CSS, Desain Responsif.

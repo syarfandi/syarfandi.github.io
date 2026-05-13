@@ -5,7 +5,7 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 ---
 
 ## Professional Summary
-Reliable **Backend Developer** with 8+ years of experience in building scalable, high-performance server-side architectures. Expert in **Node.js, API Design**, and the **PostgreSQL/Supabase** ecosystem. Proven track record of designing complex database schemas, optimizing query performance for high-volume transactions, and ensuring 99.9% system uptime for enterprise and government platforms. Dedicated to writing clean, maintainable code and architecting data-intensive applications for production-grade scale.
+Reliable **Backend Developer** with 4+ years of experience in building scalable, high-performance server-side architectures. Expert in **Node.js, API Design**, and the **PostgreSQL/Supabase** ecosystem. Proven track record of designing complex database schemas, optimizing query performance for high-volume transactions, and ensuring 99.9% system uptime for enterprise and government platforms. Dedicated to writing clean, maintainable code and architecting data-intensive applications for production-grade scale.
 
 ## Core Technical Competencies
 - **Backend Frameworks**: Node.js, Express.js, Next.js (API Routes), Fastify, PM2 Process Management.

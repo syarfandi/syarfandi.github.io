@@ -5,7 +5,7 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 ---
 
 ## Professional Summary
-Creative and technical **Frontend Developer** with 8+ years of experience in crafting immersive, high-performance web applications. Expert in **React, Next.js**, and modern CSS architectures to deliver stunning user experiences. Dedicated to building responsive, accessible, and SEO-optimized interfaces that drive engagement. A proactive leader in **asynchronous remote teams**, focused on bridging the gap between design and technology to deliver premium digital products.
+Creative and technical **Frontend Developer** with 4+ years of experience in crafting immersive, high-performance web applications. Expert in **React, Next.js**, and modern CSS architectures to deliver stunning user experiences. Dedicated to building responsive, accessible, and SEO-optimized interfaces that drive engagement. A proactive leader in **asynchronous remote teams**, focused on bridging the gap between design and technology to deliver premium digital products.
 
 ## Core Technical Competencies
 - **Frontend Stack**: React, Next.js (App Router), TypeScript, JavaScript (ES6+), HTML5, CSS3.

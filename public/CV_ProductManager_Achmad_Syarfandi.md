@@ -3,7 +3,7 @@
 Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfandi.achmad@gmail.com | [Portfolio: syarfandi.github.io](https://syarfandi.github.io) | [LinkedIn](https://linkedin.com/in/syarfandi)
 
 ## PROFESSIONAL SUMMARY
-Strategic Product Manager with 8+ years of experience in leading high-impact digital products from discovery to launch. Expert in Product Strategy, Roadmap Planning, and bridging the gap between complex technical teams and business objectives. Proven track record of driving digital transformation in government and scaling large-scale startup ecosystems. Dedicated to delivering user-centric, data-driven solutions that solve real-world problems.
+Strategic Product Manager with 4+ years of experience in leading high-impact digital products from discovery to launch. Expert in Product Strategy, Roadmap Planning, and bridging the gap between complex technical teams and business objectives. Proven track record of driving digital transformation in government and scaling large-scale startup ecosystems. Dedicated to delivering user-centric, data-driven solutions that solve real-world problems.
 
 ## TECHNICAL SKILLS
 - **Product Management:** Strategy & Vision, Roadmap Planning, Prioritization (RICE/Kano), Market Research

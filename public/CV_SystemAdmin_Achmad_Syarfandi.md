@@ -1,9 +1,9 @@
 # SYARFANDI "ANDI" ACHMAD
-**System Administrator**
+**System Administrator / SRE**
 Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfandi.achmad@gmail.com | [Portfolio: syarfandi.github.io](https://syarfandi.github.io) | [LinkedIn](https://linkedin.com/in/syarfandi)
 
 ## PROFESSIONAL SUMMARY
-Reliable System Administrator with 8+ years of experience in managing high-availability on-premise and cloud server environments. Expert in Linux (Ubuntu/CentOS/Debian) administration, server hardening, and complex networking. Proven track record of managing massive mail server clusters (Mailcow) and regional government infrastructure. Dedicated to ensuring 99.9% uptime and robust security through proactive maintenance, automation, and backup strategies.
+Reliable System Administrator with 4+ years of experience in managing high-availability on-premise and cloud server environments. Expert in Linux (Ubuntu/CentOS/Debian) administration, server hardening, and complex networking. Proven track record of managing massive mail server clusters (Mailcow) and regional government infrastructure. Dedicated to ensuring 99.9% uptime and robust security through proactive maintenance, automation, and backup strategies.
 
 ## TECHNICAL SKILLS
 - **OS Administration:** Linux (Ubuntu, CentOS, Debian, RHEL), Windows Server

@@ -300,7 +300,7 @@ const HeroSection = () => {
   };
 
   const resumeOptions = [
-    { title: "DevOps Engineer", path: "/devops/" },
+    { title: "DevOps / SRE Engineer", path: "/devops/" },
     { title: "Cloud Engineer", path: "/cloud/" },
     { title: "Frontend Developer", path: "/frontend/" },
     { title: "Backend Developer", path: "/backend/" },

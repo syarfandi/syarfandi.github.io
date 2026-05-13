@@ -5,7 +5,7 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 ---
 
 ## Professional Summary
-Insightful **Data Scientist** with 8+ years extracting actionable intelligence from complex datasets. Expert in **Python, Machine Learning, Statistical Modeling**, and **Predictive Analytics** using real-world production data. Proven track record delivering data-driven solutions for government (9M+ citizen records) and enterprise retail (100+ module POS). Skilled at building ML pipelines, interactive dashboards, and AI-powered applications.
+Insightful **Data Scientist** with 4+ years extracting actionable intelligence from complex datasets. Expert in **Python, Machine Learning, Statistical Modeling**, and **Predictive Analytics** using real-world production data. Proven track record delivering data-driven solutions for government (9M+ citizen records) and enterprise retail (100+ module POS). Skilled at building ML pipelines, interactive dashboards, and AI-powered applications.
 
 ## Core Competencies
 - **ML/AI**: Scikit-Learn, TensorFlow, ARIMA/Prophet, K-Means, DBSCAN, NLP, LLM Integration (Gemini AI), Anomaly Detection.
