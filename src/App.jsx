@@ -381,11 +381,10 @@ const HeroSection = () => {
             exit={{ opacity: 0, scale: 0.95, y: 10 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
             onClick={e => e.stopPropagation()}
-            className="adaptive-pin-card glass"
-            style={{ maxWidth: '800px', width: '90%' }}
+            className="resume-modal-card glass"
           >
-            <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
-              <h3 className="heading-tertiary" style={{ margin: 0 }}>{t('selectResume')}</h3>
+            <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+              <h3 className="heading-tertiary" style={{ margin: 0, fontSize: '1.8rem', color: 'var(--text-primary)' }}>{t('selectResume')}</h3>
             </div>
             <div className="resume-options-grid">
               {resumeOptions.map((opt, i) => (
@@ -394,8 +393,8 @@ const HeroSection = () => {
                 </a>
               ))}
             </div>
-            <div style={{ marginTop: '2rem', textAlign: 'center' }}>
-              <button onClick={() => setShowResumeModal(false)} className="btn btn-outline glass" style={{ padding: '0.5rem 1.5rem', color: 'var(--text-primary)' }}>
+            <div style={{ marginTop: '2.5rem', textAlign: 'center' }}>
+              <button onClick={() => setShowResumeModal(false)} className="btn btn-outline glass" style={{ padding: '0.8rem 2.5rem', color: 'var(--text-primary)', borderRadius: '9999px', fontWeight: 'bold' }}>
                 {t('close')}
               </button>
             </div>
@@ -423,9 +422,13 @@ const HeroSection = () => {
         .hero-btn-secondary { background: var(--bg-primary); color: var(--text-primary); border-radius: 9999px; padding: 1.2rem 2.5rem; font-weight: 700; font-size: 1.1rem; text-decoration: none; border: 1px solid var(--glass-border); cursor: pointer; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05); display: inline-flex; align-items: center; justify-content: center; }
         .hero-btn-secondary:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); }
         .resume-modal-inline { overflow: hidden; margin-top: 2rem; }
-        .resume-options-grid { padding: 1.5rem; border-radius: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.75rem; }
-        .resume-opt-btn { text-decoration: none; padding: 0.85rem; border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; text-align: center; }
-        .resume-opt-btn span { color: var(--text-primary); font-size: 0.95rem; font-weight: 600; }
+        
+        .resume-modal-card { padding: 3rem 2rem; border-radius: 24px; text-align: center; width: 92%; max-width: 900px; box-shadow: 0 40px 100px rgba(0,0,0,0.15); border: 1px solid var(--glass-border); position: relative; overflow: hidden; background: var(--bg-primary); margin: auto; }
+        .resume-options-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+        .resume-opt-btn { text-decoration: none; padding: 1.2rem; border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; text-align: center; background: var(--bg-primary); border: 1px solid var(--glass-border); box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        .resume-opt-btn span { color: var(--text-primary); font-size: 1rem; font-weight: 700; }
+        .resume-opt-btn:hover { background: var(--primary-color) !important; transform: translateY(-3px); border-color: var(--primary-color); }
+        .resume-opt-btn:hover span { color: white !important; }
         
         .hero-image-container { position: relative; }
         .image-stack { position: relative; width: 100%; max-width: 450px; margin: 0 auto; }
