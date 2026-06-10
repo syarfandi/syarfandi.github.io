@@ -43,3 +43,7 @@ Thumbs.db
 .agent
 ECC/
 .DS_Store
+.vercel
+
+# Local Netlify folder
+.netlify
