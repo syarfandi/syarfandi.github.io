@@ -68,6 +68,9 @@ IPK: 3.22 / 4.00
 
 ---
 
+## Kata Kunci Keahlian Data Engineer
+Python, SQL, Apache Airflow, dbt, Apache Spark, Kafka, BigQuery, Snowflake, Redshift, ETL/ELT Pipelines, Data Warehousing, Data Modeling, PostgreSQL, GCP, AWS, Docker, Kubernetes, CI/CD for Data, Data Quality, Distributed Computing.
+
 ## Peta Jalan Teknis Masa Depan
 Untuk tetap kompetitif di pasar global DevOps & Infrastruktur, saya aktif menerapkan:
 - **Arsitektur Zero Trust**: Proxy berbasis identitas dan prinsip 'Jangan Pernah Percaya, Selalu Verifikasi'.

@@ -76,6 +76,9 @@ GPA: 3.22 / 4.00
 
 ---
 
+## System Administrator Expertise Keywords
+Linux (Ubuntu/CentOS), Windows Server, Bash/Shell Scripting, Active Directory, Network Administration, TCP/IP, DNS, DHCP, VPN, Firewall, Nginx, Apache, Virtualization (Proxmox, VMware), Docker, Backup & Recovery, Monitoring (Zabbix, Nagios), Security Auditing, Hardware Maintenance, IT Support.
+
 ## Future-Ready Technical Roadmap
 To stay competitive in the global DevOps & Infrastructure market, I am actively implementing:
 - **Zero Trust Architecture**: Identity-aware proxies and 'Never Trust, Always Verify' principles.

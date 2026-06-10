@@ -87,6 +87,9 @@ Untuk tetap kompetitif di pasar Frontend global, saya aktif menerapkan:
 - **Aksesibilitas (a11y)**: Memastikan kepatuhan WCAG dan desain inklusif untuk audiens global.
 - **AI-Powered UI**: Mengintegrasikan LLM dan AI generatif langsung ke dalam pengalaman pengguna untuk antarmuka yang lebih cerdas.
 
+## Kata Kunci Keahlian Frontend
+React, Next.js, Vue.js, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, SASS/SCSS, Framer Motion, Three.js, WebGL, Responsive Design, UI/UX, State Management, Redux, Zustand, React Query, Webpack, Vite, SSR, SSG, Accessibility (a11y), Web Performance Optimization.
+
 ## Peta Jalan Teknis Masa Depan
 Untuk tetap kompetitif di pasar global Frontend, saya aktif menerapkan:
 - **Micro-Frontends**: Arsitektur sistem frontend yang skalabel menggunakan module federation dan deployment mandiri.

@@ -83,6 +83,9 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 
 ---
 
+## Kata Kunci Keahlian Backend
+Node.js, Express.js, Fastify, NestJS, Python, Go, REST API, GraphQL, gRPC, WebSocket, PostgreSQL, MySQL, MongoDB, Redis, Kafka, RabbitMQ, Supabase, Microservices, System Architecture, Database Optimization, SQL Tuning, Indexing, CI/CD, Docker, Kubernetes, AWS, GCP, Nginx, Linux, JWT Authentication, OAuth, Background Jobs, Bull Queue, PM2.
+
 ## Peta Jalan Teknis Masa Depan
 Untuk tetap kompetitif di pasar global Backend, saya aktif menerapkan:
 - **Sistem Terdistribusi**: Merancang arsitektur event-driven yang tersedia tinggi dengan Kafka dan RabbitMQ.

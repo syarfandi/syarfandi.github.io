@@ -72,6 +72,9 @@ Insightful **Data Scientist** with 4+ years extracting actionable intelligence f
 
 ---
 
+## Data Scientist Expertise Keywords
+Python, SQL, Machine Learning, Deep Learning, Scikit-Learn, TensorFlow, PyTorch, Pandas, NumPy, NLP, LLMs, Computer Vision, Predictive Modeling, Statistics, Time Series Forecasting, A/B Testing, Feature Engineering, Model Deployment, Jupyter, MLOps.
+
 ## Future-Ready Technical Roadmap
 To stay competitive in the global Data & Analytics market, I am actively implementing:
 - **Predictive Analytics**: Implementing advanced ML models for forecasting and trend analysis.

@@ -72,6 +72,9 @@ Detail-oriented **Data Analyst** with 4+ years transforming raw data into action
 
 ---
 
+## Data Analyst Expertise Keywords
+SQL, PostgreSQL, BigQuery, Python, Pandas, NumPy, Data Visualization, Tableau, Looker, Power BI, Metabase, Excel, Statistics, A/B Testing, Data Cleaning, EDA, Predictive Analytics, Metrics Tracking, Google Analytics, Data Storytelling.
+
 ## Future-Ready Technical Roadmap
 To stay competitive in the global Data & Analytics market, I am actively implementing:
 - **Predictive Analytics**: Implementing advanced ML models for forecasting and trend analysis.

@@ -72,6 +72,9 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 
 ---
 
+## Kata Kunci Keahlian Data Scientist
+Python, SQL, Machine Learning, Deep Learning, Scikit-Learn, TensorFlow, PyTorch, Pandas, NumPy, NLP, LLMs, Computer Vision, Predictive Modeling, Statistics, Time Series Forecasting, A/B Testing, Feature Engineering, Model Deployment, Jupyter, MLOps.
+
 ## Peta Jalan Teknis Masa Depan
 Untuk tetap kompetitif di pasar global Data & Analitik, saya aktif menerapkan:
 - **Analitik Prediktif**: Menerapkan model ML tingkat lanjut untuk perkiraan dan analisis tren.

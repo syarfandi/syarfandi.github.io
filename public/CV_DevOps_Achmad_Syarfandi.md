@@ -80,6 +80,9 @@ Dynamic **DevOps / SRE Engineer** with 4+ years of experience in architecting **
 
 ---
 
+## DevOps Expertise Keywords
+Linux, Bash, Git, GitHub Actions, GitLab CI, Jenkins, Docker, Kubernetes, Terraform, Ansible, AWS, GCP, Prometheus, Grafana, ELK Stack, Datadog, SRE, Chaos Engineering, Zero Trust Security, DevSecOps, Nginx, CI/CD Pipelines, Infrastructure as Code.
+
 ## Future-Ready Technical Roadmap
 To stay competitive in the global DevOps & Infrastructure market, I am actively implementing:
 - **Zero Trust Architecture**: Identity-aware proxies and 'Never Trust, Always Verify' principles.

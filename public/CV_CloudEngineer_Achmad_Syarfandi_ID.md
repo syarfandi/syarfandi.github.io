@@ -86,6 +86,9 @@ Untuk tetap kompetitif di pasar Cloud Engineering global, saya aktif menerapkan 
 - **Evolusi Serverless**: Memanfaatkan AWS Lambda, GCP Cloud Run, dan arsitektur Event-driven untuk sistem skala tinggi dengan perawatan rendah.
 - **Tata Kelola Cloud**: Menegakkan kepatuhan sebagai kode (compliance-as-code) dan audit IAM otomatis untuk menjaga keamanan pada skala besar.
 
+## Kata Kunci Keahlian Cloud
+AWS, Google Cloud Platform (GCP), Azure, Terraform, CloudFormation, Kubernetes, Docker, Serverless, Lambda, Cloud Run, IAM, VPC, Load Balancing, CDN, Route53, S3, Cloud Storage, Observability, CloudWatch, Stackdriver, Infrastructure as Code (IaC), High Availability, Disaster Recovery, Cloud Security, FinOps.
+
 ## Peta Jalan Teknis Masa Depan
 Untuk tetap kompetitif di pasar global DevOps & Infrastruktur, saya aktif menerapkan:
 - **Arsitektur Zero Trust**: Proxy berbasis identitas dan prinsip 'Jangan Pernah Percaya, Selalu Verifikasi'.

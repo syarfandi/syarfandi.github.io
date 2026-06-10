@@ -67,6 +67,9 @@ IPK: 3.22 / 4.00
 
 ---
 
+## Kata Kunci Keahlian Product Manager
+Product Strategy, Agile, Scrum, Kanban, Jira, Trello, PRD (Product Requirements Document), User Stories, Roadmap Planning, Wireframing, Figma, A/B Testing, Metrics/KPI Tracking, User Research, Stakeholder Management, Go-to-Market Strategy, Data-Driven Decision Making, Cross-functional Leadership.
+
 ## Peta Jalan Strategis Masa Depan
 Untuk tetap kompetitif di pasar global Manajemen Produk, saya aktif menerapkan:
 - **Product-Led Growth (PLG)**: Menerapkan strategi berbasis data untuk mendorong akuisisi dan retensi pengguna.

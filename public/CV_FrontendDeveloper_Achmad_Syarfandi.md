@@ -80,6 +80,9 @@ Creative and technical **Frontend Developer** with 4+ years of experience in cra
 
 ---
 
+## Frontend Expertise Keywords
+React, Next.js, Vue.js, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, SASS/SCSS, Framer Motion, Three.js, WebGL, Responsive Design, UI/UX, State Management, Redux, Zustand, React Query, Webpack, Vite, SSR, SSG, Accessibility (a11y), Web Performance Optimization.
+
 ## Future-Ready Technical Roadmap
 To stay competitive in the global Frontend market, I am actively implementing:
 - **Micro-Frontends**: Architecting scalable frontend systems using module federation and independent deployments.

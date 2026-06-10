@@ -74,6 +74,9 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 
 ---
 
+## Kata Kunci Keahlian Mobile
+React Native, Flutter, Dart, iOS, Android, TypeScript, JavaScript, Mobile UI/UX, State Management, Redux, Provider, Riverpod, REST API, GraphQL, Firebase, SQLite, Push Notifications, App Store Deployment, Play Store Deployment, CI/CD for Mobile (Fastlane), Performance Optimization.
+
 ## Peta Jalan Teknis Masa Depan
 Untuk tetap kompetitif di pasar global Frontend, saya aktif menerapkan:
 - **Micro-Frontends**: Arsitektur sistem frontend yang skalabel menggunakan module federation dan deployment mandiri.

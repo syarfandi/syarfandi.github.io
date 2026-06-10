@@ -76,6 +76,9 @@ IPK: 3.22 / 4.00
 
 ---
 
+## Kata Kunci Keahlian System Administrator
+Linux (Ubuntu/CentOS), Windows Server, Bash/Shell Scripting, Active Directory, Network Administration, TCP/IP, DNS, DHCP, VPN, Firewall, Nginx, Apache, Virtualization (Proxmox, VMware), Docker, Backup & Recovery, Monitoring (Zabbix, Nagios), Security Auditing, Hardware Maintenance, IT Support.
+
 ## Peta Jalan Teknis Masa Depan
 Untuk tetap kompetitif di pasar global DevOps & Infrastruktur, saya aktif menerapkan:
 - **Arsitektur Zero Trust**: Proxy berbasis identitas dan prinsip 'Jangan Pernah Percaya, Selalu Verifikasi'.

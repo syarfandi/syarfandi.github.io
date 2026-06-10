@@ -68,6 +68,9 @@ GPA: 3.22 / 4.00
 
 ---
 
+## Data Engineer Expertise Keywords
+Python, SQL, Apache Airflow, dbt, Apache Spark, Kafka, BigQuery, Snowflake, Redshift, ETL/ELT Pipelines, Data Warehousing, Data Modeling, PostgreSQL, GCP, AWS, Docker, Kubernetes, CI/CD for Data, Data Quality, Distributed Computing.
+
 ## Future-Ready Technical Roadmap
 To stay competitive in the global DevOps & Infrastructure market, I am actively implementing:
 - **Zero Trust Architecture**: Identity-aware proxies and 'Never Trust, Always Verify' principles.

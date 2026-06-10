@@ -67,6 +67,9 @@ GPA: 3.22 / 4.00
 
 ---
 
+## Product Manager Expertise Keywords
+Product Strategy, Agile, Scrum, Kanban, Jira, Trello, PRD (Product Requirements Document), User Stories, Roadmap Planning, Wireframing, Figma, A/B Testing, Metrics/KPI Tracking, User Research, Stakeholder Management, Go-to-Market Strategy, Data-Driven Decision Making, Cross-functional Leadership.
+
 ## Future-Ready Strategic Roadmap
 To stay competitive in the global Product management market, I am actively implementing:
 - **Product-Led Growth (PLG)**: Implementing data-driven strategies to drive user acquisition and retention.

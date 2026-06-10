@@ -79,6 +79,9 @@ Dynamic **Cloud Engineer** with 4+ years of experience in architecting high-perf
 
 ---
 
+## Cloud Expertise Keywords
+AWS, Google Cloud Platform (GCP), Azure, Terraform, CloudFormation, Kubernetes, Docker, Serverless, Lambda, Cloud Run, IAM, VPC, Load Balancing, CDN, Route53, S3, Cloud Storage, Observability, CloudWatch, Stackdriver, Infrastructure as Code (IaC), High Availability, Disaster Recovery, Cloud Security, FinOps.
+
 ## Future-Ready Technical Roadmap
 To stay competitive in the global DevOps & Infrastructure market, I am actively implementing:
 - **Zero Trust Architecture**: Identity-aware proxies and 'Never Trust, Always Verify' principles.

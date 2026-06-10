@@ -74,6 +74,9 @@ Strategic **Mobile Developer** with 4+ years of experience architecting high-per
 
 ---
 
+## Mobile Expertise Keywords
+React Native, Flutter, Dart, iOS, Android, TypeScript, JavaScript, Mobile UI/UX, State Management, Redux, Provider, Riverpod, REST API, GraphQL, Firebase, SQLite, Push Notifications, App Store Deployment, Play Store Deployment, CI/CD for Mobile (Fastlane), Performance Optimization.
+
 ## Future-Ready Technical Roadmap
 To stay competitive in the global Frontend market, I am actively implementing:
 - **Micro-Frontends**: Architecting scalable frontend systems using module federation and independent deployments.

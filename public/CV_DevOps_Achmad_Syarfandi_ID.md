@@ -76,6 +76,9 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **Pemenang Top 10** – Samsung Indonesia Next Apps 4.0 Gear VR Challenge (2017)
 - **Microsoft CityApp Appathon** – Peserta & Developer
 
+## Kata Kunci Keahlian DevOps
+Linux, Bash, Git, GitHub Actions, GitLab CI, Jenkins, Docker, Kubernetes, Terraform, Ansible, AWS, GCP, Prometheus, Grafana, ELK Stack, Datadog, SRE, Chaos Engineering, Zero Trust Security, DevSecOps, Nginx, CI/CD Pipelines, Infrastructure as Code.
+
 ## Peta Jalan Teknis Masa Depan
 Untuk tetap kompetitif di pasar global DevOps & Infrastruktur, saya aktif menerapkan:
 - **Arsitektur Zero Trust**: Proxy berbasis identitas dan prinsip 'Jangan Pernah Percaya, Selalu Verifikasi'.

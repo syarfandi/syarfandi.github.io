@@ -72,6 +72,9 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 
 ---
 
+## Kata Kunci Keahlian Data Analyst
+SQL, PostgreSQL, BigQuery, Python, Pandas, NumPy, Data Visualization, Tableau, Looker, Power BI, Metabase, Excel, Statistics, A/B Testing, Data Cleaning, EDA, Predictive Analytics, Metrics Tracking, Google Analytics, Data Storytelling.
+
 ## Peta Jalan Teknis Masa Depan
 Untuk tetap kompetitif di pasar global Data & Analitik, saya aktif menerapkan:
 - **Analitik Prediktif**: Menerapkan model ML tingkat lanjut untuk perkiraan dan analisis tren.
