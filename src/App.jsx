@@ -721,7 +721,7 @@ const PortfolioSection = () => {
     { id: 'kegiatansulsel', title: 'QR Scanner Presence App', desc: lang === 'id' ? 'Solusi <strong>presensi modern</strong> yang memanfaatkan pemindaian <strong>QR Code</strong> untuk mencatat kehadiran peserta secara instan, dibangun di atas stack <strong>Next.js</strong> + <strong>Supabase</strong> dengan sinkronisasi <strong>real-time</strong>.' : 'A modern <strong>attendance solution</strong> leveraging <strong>QR Code</strong> scanning for instant participant check-in, built on a <strong>Next.js</strong> + <strong>Supabase</strong> stack with <strong>real-time</strong> sync.', url: 'https://creativebooster.vercel.app' },
     { id: 'malmora', title: 'Malmora (Reseller & Dropship)', desc: lang === 'id' ? 'Marketplace <strong>reseller & dropship</strong> yang dirancang khusus untuk produk kebutuhan muslim, memungkinkan siapa saja berjualan tanpa stok fisik di kawasan <strong>Sulawesi & Indonesia Timur</strong>.' : 'A <strong>reseller & dropship</strong> marketplace tailored for Muslim lifestyle products, enabling anyone to sell without physical stock across <strong>Sulawesi and Eastern Indonesia</strong>.', url: 'https://malmora.com' },
     { id: 'emailserver', title: 'Email Server Makassar Gov', desc: lang === 'id' ? 'Kluster email berskala kota berbasis <strong>Mailcow</strong> yang melayani <strong>200+ domain</strong> resmi Pemerintah Kota Makassar, diperkuat dengan protokol keamanan <strong>SPF/DKIM/DMARC</strong> dan konfigurasi <strong>high-availability</strong>.' : 'A city-scale <strong>Mailcow</strong>-based email cluster serving <strong>200+ official domains</strong> for Makassar City Government, hardened with <strong>SPF/DKIM/DMARC</strong> security protocols and <strong>high-availability</strong> setup.', url: 'https://mail.makassarkota.go.id' },
-    { id: 'helpdesk', title: 'Helpdesk Kota Makassar', desc: lang === 'id' ? 'Sistem <strong>e-government</strong> untuk penanganan <strong>aduan warga</strong> secara digital — mencakup <strong>tracking tiket real-time</strong>, eskalasi otomatis, dan integrasi lintas <strong>OPD Kota Makassar</strong>.' : 'An <strong>e-government</strong> system for handling <strong>citizen complaints</strong> digitally — featuring <strong>real-time ticket tracking</strong>, automated escalation, and cross-department integration across <strong>Makassar City agencies</strong>.', url: 'https://helpdesk.makassarkota.go.id' },
+    { id: 'helpdesk', title: 'Helpdesk Kota Makassar', desc: lang === 'id' ? 'Sistem <strong>e-government</strong> untuk penanganan <strong>aduan warga</strong> secara digital — mencakup <strong>tracking tiket real-time</strong>, eskalasi otomatis, dan integrasi lintas <strong>OPD Kota Makassar</strong>.' : 'An <strong>e-government</strong> system for handling <strong>citizen complaints</strong> digitally — featuring <strong>real-time ticket tracking</strong>, automated escalation, and cross-department integration across <strong>Makassar City agencies</strong>.', url: null },
     { id: 'virtualmuseum', title: 'Virtual Museum Makassar', desc: lang === 'id' ? 'Pengalaman museum digital yang imersif dengan tur <strong>panorama 360°</strong>, koleksi <strong>artefak 3D</strong> interaktif, dan narasi <strong>audio-visual</strong> untuk melestarikan warisan budaya Sulawesi Selatan.' : 'An immersive digital museum experience with <strong>360° panoramic</strong> tours, interactive <strong>3D artifact</strong> collections, and <strong>audio-visual</strong> narratives preserving South Sulawesi cultural heritage.', url: null },
     { id: 'alharamvr', title: 'Al-Haram VR', desc: lang === 'id' ? 'Simulasi <strong>virtual reality</strong> berpresisi tinggi dari <strong>Masjidil Haram</strong> dan <strong>Masjid Nabawi</strong>, dikembangkan dengan <strong>Unity</strong> dan dioptimalkan untuk <strong>headset VR</strong> maupun perangkat mobile sebagai media edukasi haji & umrah.' : 'A high-precision <strong>virtual reality</strong> simulation of <strong>Al-Masjid Al-Haram</strong> and <strong>Al-Masjid An-Nabawi</strong>, developed in <strong>Unity</strong> and optimized for both <strong>VR headsets</strong> and mobile devices as a Hajj & Umrah educational tool.', url: null },
     { id: 'paralluta', title: 'Paralluta (Lalu Lintas)', desc: lang === 'id' ? 'Platform cerdas untuk <strong>manajemen lalu lintas</strong> Kota Makassar — meliputi <strong>pemantauan kondisi jalan</strong>, pencatatan pelanggaran, dan <strong>koordinasi petugas lapangan</strong> secara terpusat.' : 'A smart platform for <strong>traffic management</strong> in Makassar City — covering <strong>road condition monitoring</strong>, violation logging, and centralized <strong>field officer coordination</strong>.', url: null },
@@ -766,26 +766,26 @@ const PortfolioSection = () => {
           const CardWrapper = item.url ? 'a' : 'div';
           const linkProps = item.url ? { href: item.url, target: '_blank', rel: 'noreferrer' } : {};
           return (
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: idx * 0.03 }} key={item.id}>
-              <CardWrapper {...linkProps} className="portfolio-card">
-                <div className="card-image-container">
-                  <img 
-                    src={
-                      item.isPublicRepo && item.url
-                        ? `https://opengraph.githubassets.com/1/${item.url.replace('https://github.com/', '')}`
-                        : item.url
-                          ? `/projects/${item.id}.jpg`
-                          : `https://picsum.photos/seed/${item.id}/600/400`
-                    }
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src = `https://picsum.photos/seed/${item.id}/600/400`;
-                    }}
-                    alt={item.title} 
-                    className="card-image" 
-                    loading="lazy" 
-                  />
-                </div>
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: idx * 0.03 }} key={item.id} style={{ display: 'flex', height: '100%' }}>
+              <CardWrapper {...linkProps} className={`portfolio-card ${!item.url && !item.isPublicRepo ? 'text-only' : ''}`}>
+                {item.url && (
+                  <div className="card-image-container">
+                    <img
+                      src={
+                        item.isPublicRepo
+                          ? `https://opengraph.githubassets.com/1/${item.url.replace('https://github.com/', '')}`
+                          : `/projects/${item.id}.jpg`
+                      }
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.parentElement.style.display = 'none';
+                      }}
+                      alt={item.title}
+                      className="card-image"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
                 <div className="card-content">
                   <h3>{item.title}</h3>
                   <p dangerouslySetInnerHTML={{ __html: item.desc }} />
@@ -808,6 +808,7 @@ const PortfolioSection = () => {
           .portfolio-card { text-align: center; align-items: center; }
         }
         .portfolio-card { background: var(--bg-primary); border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); padding: 0; display: flex; flex-direction: column; transition: all 0.3s ease; overflow: hidden; border: 1px solid var(--glass-border); text-decoration: none; cursor: pointer; height: 100%; }
+        .portfolio-card.text-only { height: 100%; }
         .portfolio-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); border-color: var(--primary-color); }
         .card-image-container { width: 100%; height: 200px; overflow: hidden; border-bottom: 1px solid var(--glass-border); }
         .card-image { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
