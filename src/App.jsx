@@ -769,7 +769,22 @@ const PortfolioSection = () => {
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: idx * 0.03 }} key={item.id}>
               <CardWrapper {...linkProps} className="portfolio-card">
                 <div className="card-image-container">
-                  <img src={`https://picsum.photos/seed/${item.id}/600/400`} alt={item.title} className="card-image" loading="lazy" />
+                  <img 
+                    src={
+                      item.isPublicRepo && item.url
+                        ? `https://opengraph.githubassets.com/1/${item.url.replace('https://github.com/', '')}`
+                        : item.url
+                          ? `/projects/${item.id}.jpg`
+                          : `https://picsum.photos/seed/${item.id}/600/400`
+                    }
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = `https://picsum.photos/seed/${item.id}/600/400`;
+                    }}
+                    alt={item.title} 
+                    className="card-image" 
+                    loading="lazy" 
+                  />
                 </div>
                 <div className="card-content">
                   <h3>{item.title}</h3>
