@@ -281,39 +281,36 @@ const HeroSection = () => {
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
   const [showResumeModal, setShowResumeModal] = useState(false);
   const [pinUnlocked, setPinUnlocked] = useState(false);
-  const [showPinModal, setShowPinModal] = useState(false);
-  const [pinValue, setPinValue] = useState('');
-  const [pinError, setPinError] = useState(false);
-  const [pinSuccess, setPinSuccess] = useState(false);
-  const pinInputRef = useRef(null);
 
-  const handlePinChange = async (val) => {
-    const cleanVal = val.replace(/\D/g, '').slice(0, 6);
-    setPinValue(cleanVal);
-    setPinError(false);
+  useEffect(() => {
+    let currentPin = '';
+    const handleKeyDown = async (e) => {
+      if (pinUnlocked) return;
+      
+      if (/^\d$/.test(e.key)) {
+        currentPin += e.key;
+        if (currentPin.length > 6) {
+          currentPin = currentPin.slice(-6);
+        }
+        
+        if (currentPin.length === 6) {
+          const salt = "syarfandi_portfolio_2026_!@#";
+          const msgUint8 = new TextEncoder().encode(currentPin + salt);
+          const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
+          const hashArray = Array.from(new Uint8Array(hashBuffer));
+          const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 
-    if (cleanVal.length === 6) {
-      const salt = "syarfandi_portfolio_2026_!@#";
-      const msgUint8 = new TextEncoder().encode(cleanVal + salt);
-      const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
-      const hashArray = Array.from(new Uint8Array(hashBuffer));
-      const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-
-      if (hashHex === 'e33280798c9d1d5b0229c4fa3e667e757483f0b748566aab80dbc513e0b5132f') {
-        setPinSuccess(true);
-        setTimeout(() => {
-          setPinUnlocked(true);
-          setShowPinModal(false);
-          setShowResumeModal(true);
-          setPinSuccess(false);
-          setPinValue('');
-        }, 800);
-      } else {
-        setPinError(true);
-        setTimeout(() => setPinValue(''), 500);
+          if (hashHex === 'e33280798c9d1d5b0229c4fa3e667e757483f0b748566aab80dbc513e0b5132f') {
+            setPinUnlocked(true);
+            setShowResumeModal(true);
+          }
+        }
       }
-    }
-  };
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [pinUnlocked]);
 
   const resumeOptions = [
     { title: "Fullstack Developer", path: "/fullstack/" },
@@ -362,19 +359,11 @@ const HeroSection = () => {
             <div className="hero-buttons">
               <a href="#portfolio" className="hero-btn-primary">{t('viewProjects')}</a>
               <a href="#contact" className="hero-btn-secondary">{t('hireMe')}</a>
-              <button onClick={() => {
-                if (pinUnlocked) {
-                  setShowResumeModal(true);
-                } else {
-                  setShowPinModal(true);
-                  setPinValue('');
-                  setPinError(false);
-                  setPinSuccess(false);
-                  setTimeout(() => pinInputRef.current?.focus(), 100);
-                }
-              }} className="hero-btn-secondary">
-                <span>{t('resume')}</span>
-              </button>
+              {pinUnlocked && (
+                <button onClick={() => setShowResumeModal(true)} className="hero-btn-secondary">
+                  <span>{t('resume')}</span>
+                </button>
+              )}
             </div>
           </motion.div>
         </div>
@@ -414,89 +403,9 @@ const HeroSection = () => {
         </div>
       )}
 
-      {/* Adaptive Glass PIN Modal */}
-      {showPinModal && (
-        <div className="adaptive-pin-overlay" onClick={() => setShowPinModal(false)}>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 10 }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
-            onClick={e => e.stopPropagation()}
-            className="adaptive-pin-card glass"
-          >
-            <motion.div
-              animate={pinError ? { x: [-10, 10, -7, 7, -4, 4, 0] } : {}}
-              transition={{ duration: 0.4 }}
-              className="adaptive-pin-inner"
-            >
-              <div className={`adaptive-pin-icon ${pinError ? 'error' : ''} ${pinSuccess ? 'success' : ''}`}>
-                {pinSuccess ? <CheckCircle2 size={32} /> : (pinError ? <ShieldAlert size={32} /> : <Lock size={32} />)}
-              </div>
-
-              <h3 className="adaptive-pin-title">{pinSuccess ? (lang === 'id' ? "Akses Diberikan" : "Access Granted") : t('pinTitle')}</h3>
-              <p className="adaptive-pin-desc">{pinSuccess ? (lang === 'id' ? "Membuka daftar resume..." : "Unlocking resumes...") : t('pinDesc')}</p>
-
-              <div className="adaptive-pin-slots" onClick={() => pinInputRef.current?.focus()}>
-                {[0, 1, 2, 3, 4, 5].map(i => (
-                  <div key={i} className={`adaptive-pin-slot ${pinValue.length > i ? 'filled' : ''} ${pinValue.length === i ? 'active' : ''} ${pinError ? 'error' : ''} ${pinSuccess ? 'success' : ''}`}>
-                    {pinValue[i] ? (
-                      <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="slot-dot" />
-                    ) : (
-                      pinValue.length === i && !pinSuccess && !pinError && <div className="slot-cursor" />
-                    )}
-                  </div>
-                ))}
-              </div>
-
-              <input
-                ref={pinInputRef}
-                type="tel"
-                inputMode="numeric"
-                autoComplete="one-time-code"
-                maxLength={6}
-                value={pinValue}
-                onChange={e => handlePinChange(e.target.value)}
-                className="pin-hidden-input"
-              />
-
-              {pinError && (
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="adaptive-pin-error">
-                  {t('pinWrong')}
-                </motion.div>
-              )}
-            </motion.div>
-          </motion.div>
-        </div>
-      )}
-
       <style>{`
         .adaptive-pin-overlay { position: fixed; inset: 0; z-index: 10000; display: flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
         .dark .adaptive-pin-overlay { background: rgba(0, 0, 0, 0.7); }
-        
-        .adaptive-pin-card { padding: 3rem 2rem; border-radius: 30px; text-align: center; max-width: 360px; width: 92%; box-shadow: 0 40px 100px rgba(0,0,0,0.15); border: 1px solid var(--glass-border); position: relative; overflow: hidden; }
-        
-        .adaptive-pin-icon { width: 64px; height: 64px; border-radius: 18px; background: var(--primary-color); color: white; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-        .adaptive-pin-icon.error { background: #ef4444; transform: scale(1.1); }
-        .adaptive-pin-icon.success { background: #10b981; transform: scale(1.1); }
-        
-        .adaptive-pin-title { color: var(--text-primary); font-size: 1.4rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
-        .adaptive-pin-desc { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 2.5rem; line-height: 1.5; }
-        
-        .adaptive-pin-slots { display: flex; gap: 10px; justify-content: center; margin-bottom: 1rem; }
-        .adaptive-pin-slot { width: 44px; height: 56px; border-radius: 14px; border: 2px solid var(--glass-border); background: var(--glass-bg); display: flex; align-items: center; justify-content: center; transition: all 0.2s; position: relative; }
-        
-        .adaptive-pin-slot.active { border-color: var(--primary-color); box-shadow: 0 0 0 4px rgba(var(--primary-rgb, 96, 165, 250), 0.15); transform: translateY(-2px); }
-        .adaptive-pin-slot.filled { border-color: var(--primary-color); }
-        .adaptive-pin-slot.error { border-color: #ef4444; background: rgba(239, 68, 68, 0.05); }
-        .adaptive-pin-slot.success { border-color: #10b981; background: rgba(16, 185, 129, 0.05); }
-        
-        .slot-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--text-primary); }
-        .slot-cursor { width: 2px; height: 20px; background: var(--primary-color); animation: adaptiveBlink 1s infinite; }
-        @keyframes adaptiveBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-        
-        .pin-hidden-input { position: absolute; opacity: 0; width: 0; height: 0; pointer-events: none; }
-        .adaptive-pin-error { color: #ef4444; font-size: 0.85rem; margin-top: 1.5rem; font-weight: 700; letter-spacing: 0.02em; }
         
         .bg-orb { position: absolute; border-radius: 50%; filter: blur(120px); z-index: -1; opacity: 0.2; }
         .orb-1 { background: var(--primary-color); width: 600px; height: 600px; top: -200px; left: -200px; }
