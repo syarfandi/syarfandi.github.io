@@ -266,7 +266,7 @@ const Navbar = () => {
         <Languages size={18} color="var(--primary-color)" />
         <span style={{ color: 'var(--text-primary)' }}>{lang === 'id' ? 'ID' : 'EN'}</span>
       </button>
-      <button onClick={toggleTheme} className="glass nav-btn icon-only">
+      <button onClick={toggleTheme} className="glass nav-btn icon-only" aria-label="Toggle Theme">
         {theme === 'light' ? <Moon size={20} color="var(--primary-color)" /> : <Sun size={20} color="var(--primary-color)" />}
       </button>
     </div>
@@ -340,7 +340,7 @@ const HeroSection = () => {
           >
             <div className="image-stack">
               <div className="image-bg-blob"></div>
-              <img src="/Andi.png" alt='Syarfandi "Andi" Achmad' className="hero-img-main" />
+              <img src="/Andi.png" alt='Syarfandi "Andi" Achmad' className="hero-img-main" width="450" height="450" fetchpriority="high" />
             </div>
           </motion.div>
 
