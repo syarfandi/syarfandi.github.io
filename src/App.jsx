@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, ExternalLink, Download, ChevronDown, Award, Briefc
 
 const translations = {
   id: {
-    heroRole: "IT Professional, DevOps & Developer",
+    heroRole: "Full Stack Developer & DevOps",
     heroGreeting: "Hai, Saya",
     heroDesc: "Bersemangat dalam membangun solusi digital yang berdampak, membina kerja sama tim yang solid, dan menghadirkan inovasi layanan publik yang prima.",
     hireMe: "Rekrut Saya",
@@ -94,13 +94,14 @@ const translations = {
 
     // Certificates details
     certBSSN: "National Cyber Exercise #10 - BSSN",
+    certBSSN8: "National Cyber Exercise #8 - BSSN",
     certSamsung: "Winner Top 10 - Samsung Indonesia Next Apps 4.0 Gear VR Challenge",
     certEnglish: "IELTS 5.5 & TOEFL Proficiency - Access English School",
     certBlender: "Workshop Animasi Blender 3D",
     certCityApp: "Microsoft CityApp Appathon Participant"
   },
   en: {
-    heroRole: "IT Professional, DevOps & Developer",
+    heroRole: "Full Stack Developer & DevOps",
     heroGreeting: "Hi, I'm",
     heroDesc: "Passionate about building impactful digital solutions, fostering solid teamwork, and delivering excellent public service innovations.",
     hireMe: "Hire Me",
@@ -190,6 +191,7 @@ const translations = {
 
     // Certificates details
     certBSSN: "National Cyber Exercise #10 - BSSN",
+    certBSSN8: "National Cyber Exercise #8 - BSSN",
     certSamsung: "Winner Top 10 - Samsung Indonesia Next Apps 4.0 Gear VR Challenge",
     certEnglish: "IELTS 5.5 & TOEFL Proficiency - Access English School",
     certBlender: "Blender 3D Animation Workshop",
@@ -230,8 +232,8 @@ const App = () => {
         <Navbar />
         <HeroSection />
         <AboutSection />
-        <ExperienceSection />
         <PortfolioSection />
+        <ExperienceSection />
         <GithubSection />
         <SkillsSection />
         <CertificatesSection />
@@ -612,7 +614,7 @@ const ExperienceSection = () => {
     { title: t('exp8Title'), company: t('exp8Company'), period: `2019 - ${t('present')}`, desc: t('exp8Desc') },
     { title: t('exp7Title'), company: t('exp7Company'), period: "2020 - 2023", desc: t('exp7Desc') },
     { title: t('exp2Title'), company: t('exp2Company'), period: "2020 - 2023", desc: t('exp2Desc') },
-    { title: t('exp5Title'), company: t('exp5Company'), period: "2021 - 2026", desc: t('exp5Desc') },
+    // { title: t('exp5Title'), company: t('exp5Company'), period: "2021 - 2026", desc: t('exp5Desc') },
     { title: t('exp3Title'), company: t('exp3Company'), period: "2018 - 2019", desc: t('exp3Desc') },
     { title: t('exp6Title'), company: t('exp6Company'), period: "2014 - 2017", desc: t('exp6Desc') },
     { title: t('exp4Title'), company: t('exp4Company'), period: "2016 - 2019", desc: t('exp4Desc') },
@@ -620,38 +622,33 @@ const ExperienceSection = () => {
   return (
     <section id="experience" className="container">
       <h2 className="heading-secondary">{t('professional')} <span className="text-gradient">{t('journey')}</span></h2>
-      <div className="timeline">
+      <div className="experience-grid">
         {experiences.map((exp, index) => (
-          <div key={index} className="timeline-item glass">
-            <div className="timeline-icon"><Briefcase size={20} /></div>
-            <div className="timeline-content">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: index * 0.05 }} key={index} className="experience-card glass">
+            <div className="experience-header">
+              <div className="experience-icon"><Briefcase size={20} /></div>
               <span className="period">{exp.period}</span>
-              <h3 style={{ color: 'var(--text-primary)' }}>{exp.title}</h3>
-              <h4 className="company">{exp.company}</h4>
-              <p>{exp.desc}</p>
             </div>
-          </div>
+            <h3 style={{ color: 'var(--text-primary)' }}>{exp.title}</h3>
+            <h4 className="company">{exp.company}</h4>
+            <p>{exp.desc}</p>
+          </motion.div>
         ))}
       </div>
       <style>{`
-        .timeline { position: relative; max-width: 800px; margin: 0 auto; padding-left: 1rem; }
-        .timeline::before { content: ''; position: absolute; top: 0; left: 24px; height: 100%; width: 2px; background: var(--glass-border); }
-        .timeline-item { position: relative; margin-bottom: 2rem; padding: 2rem; margin-left: 45px; transition: transform 0.3s ease; }
-        .timeline-item:hover { transform: translateX(10px); }
-        .timeline-icon { position: absolute; left: -45px; top: 2rem; width: 44px; height: 44px; border-radius: 50%; background: var(--bg-color); border: 2px solid var(--primary-color); display: flex; align-items: center; justify-content: center; color: var(--primary-color); z-index: 1; transition: all 0.3s ease; }
-        .period { color: var(--accent-color); font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem; display: inline-block; }
-        .timeline-content h3 { font-size: 1.3rem; margin-bottom: 0.25rem; font-weight: 700; }
-        .company { color: var(--text-secondary); font-weight: 600; margin-bottom: 1rem; font-size: 1rem; }
-        .timeline-content p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; }
+        .experience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .experience-card { padding: 2rem; display: flex; flex-direction: column; transition: all 0.3s ease; }
+        .experience-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); border-color: var(--primary-color); }
+        .experience-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+        .experience-icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(30, 58, 138, 0.1); color: var(--primary-color); display: flex; align-items: center; justify-content: center; }
+        .period { color: var(--accent-color); font-size: 0.85rem; font-weight: 700; background: var(--surface-color); padding: 0.4rem 1rem; border-radius: 50px; }
+        .experience-card h3 { font-size: 1.25rem; margin-bottom: 0.25rem; font-weight: 700; line-height: 1.4; }
+        .company { color: var(--text-secondary); font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem; }
+        .experience-card p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; flex-grow: 1; }
         
         @media (max-width: 768px) {
-          .timeline { padding-left: 0; }
-          .timeline::before { left: 15px; }
-          .timeline-item { margin-left: 35px; padding: 1.5rem; margin-bottom: 1.5rem; }
-          .timeline-icon { left: -35px; width: 32px; height: 32px; top: 1.5rem; }
-          .timeline-icon svg { width: 16px; height: 16px; }
-          .timeline-content h3 { font-size: 1.15rem; }
-          .company { font-size: 0.9rem; }
+          .experience-grid { grid-template-columns: 1fr; }
+          .experience-card { padding: 1.5rem; }
         }
       `}</style>
     </section>
@@ -710,16 +707,21 @@ const PortfolioSection = () => {
       <div className="portfolio-grid">
         {combined.map((item, idx) => (
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: idx * 0.03 }} key={item.id} className="portfolio-card glass">
-            <div className="card-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <span className="badge">{item.badge}</span>
+            <div className="card-image-container">
+              <img src={`https://picsum.photos/seed/${item.id}/600/400`} alt={item.title} className="card-image" loading="lazy" />
             </div>
-            <h3 style={{ color: 'var(--text-primary)' }}>{item.title}</h3>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '1.5rem', flexGrow: 1, lineHeight: 1.7 }}>{item.desc}</p>
-            {item.url && (
-              <a href={item.url} target="_blank" rel="noreferrer" className="project-link">
-                {item.isPublicRepo ? t('viewRepo') : 'Lihat Aplikasi'} <ExternalLink size={16} />
-              </a>
-            )}
+            <div className="card-content">
+              <div className="card-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <span className="badge">{item.badge}</span>
+              </div>
+              <h3 style={{ color: 'var(--text-primary)' }}>{item.title}</h3>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '1.5rem', flexGrow: 1, lineHeight: 1.7 }}>{item.desc}</p>
+              {item.url && (
+                <a href={item.url} target="_blank" rel="noreferrer" className="project-link">
+                  {item.isPublicRepo ? t('viewRepo') : (lang === 'id' ? 'Lihat Aplikasi' : 'View App')} <ExternalLink size={16} />
+                </a>
+              )}
+            </div>
           </motion.div>
         ))}
       </div>
@@ -736,9 +738,13 @@ const PortfolioSection = () => {
           .portfolio-card { text-align: center; align-items: center; }
           .card-header { flex-direction: column; gap: 1rem; align-items: center; }
         }
-        .portfolio-card { padding: 2.5rem; display: flex; flex-direction: column; transition: all 0.3s ease; }
+        .portfolio-card { padding: 0; display: flex; flex-direction: column; transition: all 0.3s ease; overflow: hidden; }
         .portfolio-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); border-color: var(--primary-color); }
-        .card-header { margin-bottom: 2rem; }
+        .card-image-container { width: 100%; height: 170px; overflow: hidden; border-bottom: 1px solid var(--glass-border); }
+        .card-image { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .portfolio-card:hover .card-image { transform: scale(1.05); }
+        .card-content { padding: 1.5rem 1.75rem; display: flex; flex-direction: column; flex-grow: 1; }
+        .card-header { margin-bottom: 1.25rem; }
         .badge { background: rgba(30, 58, 138, 0.1); color: var(--primary-color); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
         .portfolio-card h3 { font-size: 1.3rem; margin-bottom: 1.5rem; font-weight: 700; }
         .project-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color); font-size: 0.95rem; font-weight: 700; transition: all 0.3s ease; }
@@ -799,6 +805,7 @@ const SkillsSection = () => {
 const CertificatesSection = () => {
   const { t } = useTheme();
   const certs = [
+    { title: t('certBSSN8'), issuer: "BSSN", date: "2024", icon: <Shield size={32} /> },
     { title: t('certBSSN'), issuer: "BSSN", date: "2024", icon: <Shield size={32} /> },
     { title: t('certSamsung'), issuer: "Samsung Indonesia & Dicoding", date: "2017", icon: <Award size={32} /> },
     { title: t('certEnglish'), issuer: "Access English School", date: "2018", icon: <Languages size={32} /> },
