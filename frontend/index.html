@@ -761,22 +761,22 @@
             const element = isPremium ? premiumView : atsContent;
             
             // 1. Hitung tinggi (Tetap gunakan logika ATS yang sudah bagus, tapi perbaiki akurasi Visual)
-            const heightMm = Math.ceil(element.scrollHeight * 0.264583) + (isPremium ? 20 : 15);
+            const heightMm = Math.ceil(element.scrollHeight * 0.264583) + (isPremium ? 20 : 40);
             
             const printStyle = document.createElement('style');
             printStyle.id = 'dynamic-print-style';
             printStyle.innerHTML = `
                 @media print {
                     @page { 
-                        size: ${isPremium ? `210mm ${heightMm}mm` : 'a4'}; 
+                        size: 210mm ${heightMm}mm; 
                         margin: ${isPremium ? '0 !important;' : '15mm !important;'} 
                     }
                     html, body { 
                         margin: 0 !important; 
                         padding: 0 !important; 
                         width: 100% !important;
-                        height: ${isPremium ? heightMm + 'mm' : 'auto'} !important;
-                        overflow: ${isPremium ? 'hidden' : 'visible'} !important;
+                        height: ${heightMm}mm !important;
+                        overflow: hidden !important;
                         background: white !important;
                     }
                     .nav-container, .theme-switch, #downloadBtn { display: none !important; }
