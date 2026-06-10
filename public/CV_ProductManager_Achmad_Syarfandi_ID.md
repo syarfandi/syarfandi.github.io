@@ -13,6 +13,13 @@ Product Manager strategis dengan pengalaman lebih dari 4 tahun dalam memimpin pr
 - **Data & Analitik:** Pengambilan Keputusan Berbasis Data, Google Analytics, Looker Studio, Mixpanel
 - **Manajemen Pemangku Kepentingan:** Kepemimpinan Lintas Fungsi, Hubungan Klien, Manajemen Risiko
 
+## PROYEK PILIHAN
+- **Platform Data Sulsel:** Produk monitoring data regional terpadu untuk 9jt+ layanan keagamaan.
+- **Suite POS Enterprise:** Ekosistem manajemen retail komprehensif dengan 100+ modul terintegrasi.
+- **Helpdesk Makassar:** Sistem manajemen dan pelacakan keluhan warga dari awal hingga akhir.
+- **Infrastruktur Email Pemerintah:** Platform komunikasi aman strategis untuk unit kerja pemerintah.
+- **Hub Kegiatan Sulsel:** Produk manajemen acara dan pendaftaran yang disederhanakan untuk kegiatan regional.
+
 ## PENGALAMAN PROFESIONAL
 
 **Kanwil Kementerian Agama Prov. Sulawesi Selatan** | Makassar, Indonesia
@@ -43,13 +50,6 @@ IPK: 3.22 / 4.00
 - **National Cyber Exercise #10** - BSSN (2024)
 - **Pemenang Samsung Next Apps** - Samsung Indonesia (2017)
 - **Peserta Microsoft CityApp** - Microsoft
-
-## PROYEK PILIHAN
-- **Platform Data Sulsel:** Produk monitoring data regional terpadu untuk 9jt+ layanan keagamaan.
-- **Suite POS Enterprise:** Ekosistem manajemen retail komprehensif dengan 100+ modul terintegrasi.
-- **Helpdesk Makassar:** Sistem manajemen dan pelacakan keluhan warga dari awal hingga akhir.
-- **Infrastruktur Email Pemerintah:** Platform komunikasi aman strategis untuk unit kerja pemerintah.
-- **Hub Kegiatan Sulsel:** Produk manajemen acara dan pendaftaran yang disederhanakan untuk kegiatan regional.
 
 ## Pendidikan
 - **Sarjana Komputer (S.Kom)** | UIN Alauddin Makassar

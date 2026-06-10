@@ -15,6 +15,15 @@ Insightful **Data Scientist** with 4+ years extracting actionable intelligence f
 - **Statistics**: Hypothesis Testing, Regression, Classification, A/B Testing, Time-Series Analysis, Bayesian Methods.
 - **Tools**: Git, Docker, GitHub Actions, Jupyter, Google Colab, Linux.
 
+## Projects
+- **Data Sulsel Analytics**: Statistical engine for 9M+ records — PostgreSQL aggregation, trend analysis, dashboards.
+- **GetKasir Forecasting**: Sales prediction — ARIMA/Prophet, merchant clustering, demand forecasting.
+- **Lipsync Avatar AI**: NLP/LLM integration — Gemini routing, voice-to-text, conversational analysis.
+- **Helpdesk Sentiment**: NLP complaint classification — sentiment analysis, auto-prioritization, trends.
+- **Kawan Sedarah**: Blood stock prediction — real-time monitoring, shortage forecasting, alerts.
+- **Malmora Market**: E-commerce analytics — product ranking, purchase patterns, A/B testing.
+- **PPID AI Search**: NLP document search — Gemini AI, automated responses, query analysis.
+
 ---
 
 ## Experience
@@ -43,15 +52,6 @@ Insightful **Data Scientist** with 4+ years extracting actionable intelligence f
 - **Developed** regional market dashboards tracking seller performance, demand trends, and logistics metrics.
 
 ---
-
-## Projects
-- **Data Sulsel Analytics**: Statistical engine for 9M+ records — PostgreSQL aggregation, trend analysis, dashboards.
-- **GetKasir Forecasting**: Sales prediction — ARIMA/Prophet, merchant clustering, demand forecasting.
-- **Lipsync Avatar AI**: NLP/LLM integration — Gemini routing, voice-to-text, conversational analysis.
-- **Helpdesk Sentiment**: NLP complaint classification — sentiment analysis, auto-prioritization, trends.
-- **Kawan Sedarah**: Blood stock prediction — real-time monitoring, shortage forecasting, alerts.
-- **Malmora Market**: E-commerce analytics — product ranking, purchase patterns, A/B testing.
-- **PPID AI Search**: NLP document search — Gemini AI, automated responses, query analysis.
 
 ## Awards
 - **National Cyber Exercise #10** – BSSN (2024)

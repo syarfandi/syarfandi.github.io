@@ -14,6 +14,13 @@ Data Engineer strategis dengan pengalaman lebih dari 4 tahun dalam merancang pip
 - **Infrastruktur & Cloud:** GCP, AWS, Terraform, Docker, Kubernetes, Proxmox VE
 - **Monitoring & BI:** Zabbix, Prometheus, Grafana, Tableau, Google Looker Studio
 
+## PROYEK PILIHAN
+- **Gudang Data Sulsel:** Platform konsolidasi data skala regional untuk 9jt+ catatan publik.
+- **Data Layer POS Enterprise:** Database transaksi konkurensi tinggi untuk ribuan pedagang retail.
+- **Hub ETL Otomatis:** Hub pipeline terpusat untuk migrasi dan pembersihan data pemerintah.
+- **Engine Analitik Retail:** Lapisan intelijen bisnis untuk data POS menggunakan BigQuery dan Grafana.
+- **Platform Data Helpdesk:** Sistem manajemen data keluhan publik dengan pelacakan real-time.
+
 ## PENGALAMAN PROFESIONAL
 
 **Kanwil Kementerian Agama Prov. Sulawesi Selatan** | Makassar, Indonesia
@@ -44,13 +51,6 @@ IPK: 3.22 / 4.00
 - **National Cyber Exercise #10** - BSSN (2024)
 - **Pemenang Samsung Next Apps** - Samsung Indonesia (2017)
 - **Peserta Microsoft CityApp** - Microsoft
-
-## PROYEK PILIHAN
-- **Gudang Data Sulsel:** Platform konsolidasi data skala regional untuk 9jt+ catatan publik.
-- **Data Layer POS Enterprise:** Database transaksi konkurensi tinggi untuk ribuan pedagang retail.
-- **Hub ETL Otomatis:** Hub pipeline terpusat untuk migrasi dan pembersihan data pemerintah.
-- **Engine Analitik Retail:** Lapisan intelijen bisnis untuk data POS menggunakan BigQuery dan Grafana.
-- **Platform Data Helpdesk:** Sistem manajemen data keluhan publik dengan pelacakan real-time.
 
 ## Pendidikan
 - **Sarjana Komputer (S.Kom)** | UIN Alauddin Makassar

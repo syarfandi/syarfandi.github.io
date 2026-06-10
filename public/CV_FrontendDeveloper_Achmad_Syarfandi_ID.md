@@ -15,6 +15,13 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **Alat & Alur Kerja**: GitHub Actions, Vercel, Netlify, Vite, Webpack, Figma (Design-to-Code).
 - **Soft Skills**: Prinsip Desain UI/UX, Penulisan Teknis, Kolaborasi Jarak Jauh, Agile/Scrum.
 
+## Proyek Teknis
+- **Lipsync Realtime Avatar AI**: Membangun UI AI percakapan yang sangat interaktif menggunakan Next.js dan sinkronisasi suara/video real-time.
+- **PPID Parepare Transparency Portal**: Membangun portal transparansi resmi dengan fokus pada hierarki informasi dan aksesibilitas.
+- **Kegiatan Sulsel (Activity Management)**: Membangun UI pelacakan kegiatan yang responsif dengan pemindaian kode QR real-time dan status kehadiran.
+- **Data Sulsel**: Mengembangkan dashboard pemantauan data regional yang komprehensif dengan peta SVG interaktif dan grafik.
+- **Helpdesk Makassar**: Membuat UI layanan warga yang skalabel untuk manajemen keluhan kota dengan pembaruan status real-time.
+
 ---
 
 ## Pengalaman Kerja
@@ -51,13 +58,6 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **Mengoptimalkan** manajemen aset komunitas dan dokumentasi digital untuk operasional masjid.
 
 ---
-
-## Proyek Teknis
-- **Lipsync Realtime Avatar AI**: Membangun UI AI percakapan yang sangat interaktif menggunakan Next.js dan sinkronisasi suara/video real-time.
-- **PPID Parepare Transparency Portal**: Membangun portal transparansi resmi dengan fokus pada hierarki informasi dan aksesibilitas.
-- **Kegiatan Sulsel (Activity Management)**: Membangun UI pelacakan kegiatan yang responsif dengan pemindaian kode QR real-time dan status kehadiran.
-- **Data Sulsel**: Mengembangkan dashboard pemantauan data regional yang komprehensif dengan peta SVG interaktif dan grafik.
-- **Helpdesk Makassar**: Membuat UI layanan warga yang skalabel untuk manajemen keluhan kota dengan pembaruan status real-time.
 
 ## Sertifikasi & Penghargaan
 - **National Cyber Exercise #10** – BSSN (2024)

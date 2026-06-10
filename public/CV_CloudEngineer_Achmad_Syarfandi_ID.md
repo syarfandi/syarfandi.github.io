@@ -14,6 +14,16 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **Data & Middleware**: Supabase, PostgreSQL (Optimasi & Penskalaan), Arsitektur API RESTful, Redis.
 - **Soft Skills**: Kolaborasi Asinkron, Penulisan Teknis, Kepemimpinan Tim Jarak Jauh, Perencanaan Strategis.
 
+## Proyek Teknis
+- **Lipsync Realtime Avatar AI**: Mengembangkan aplikasi AI percakapan yang mengintegrasikan LLM, Voice AI, dan Simli untuk interaksi pengguna yang imersif.
+- **Gov Email Cluster**: Membangun dan mengamankan infrastruktur email berbasis Mailcow yang mendukung lebih dari 200 domain pemerintah.
+- **PPID Parepare Transparency Portal**: Membangun portal transparansi resmi dengan integrasi Google Gemini AI untuk informasi publik.
+- **Kegiatan Sulsel (Activity Management)**: Membangun sistem pelacakan kegiatan regional dan absensi menggunakan Next.js, Supabase, dan Kode QR.
+- **Cyber Incident Response SOP**: Merumuskan protokol respon insiden otomatis dan standar keamanan untuk sistem IT pemerintah kota.
+- **Data Sulsel**: Mengelola platform pemantauan data regional untuk layanan publik keagamaan, melayani 9 juta penduduk.
+- **Helpdesk Makassar**: Mengembangkan portal layanan warga yang skalabel untuk manajemen keluhan perkotaan dan pelacakan layanan publik.
+- **Kawan Sedarah**: Membangun pusat komando pemantauan stok darah real-time untuk respon darurat menggunakan Supabase dan React.
+
 ---
 
 ## Pengalaman Kerja
@@ -50,16 +60,6 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **Mengoptimalkan** manajemen aset komunitas dan dokumentasi digital untuk operasional masjid.
 
 ---
-
-## Proyek Teknis
-- **Lipsync Realtime Avatar AI**: Mengembangkan aplikasi AI percakapan yang mengintegrasikan LLM, Voice AI, dan Simli untuk interaksi pengguna yang imersif.
-- **Gov Email Cluster**: Membangun dan mengamankan infrastruktur email berbasis Mailcow yang mendukung lebih dari 200 domain pemerintah.
-- **PPID Parepare Transparency Portal**: Membangun portal transparansi resmi dengan integrasi Google Gemini AI untuk informasi publik.
-- **Kegiatan Sulsel (Activity Management)**: Membangun sistem pelacakan kegiatan regional dan absensi menggunakan Next.js, Supabase, dan Kode QR.
-- **Cyber Incident Response SOP**: Merumuskan protokol respon insiden otomatis dan standar keamanan untuk sistem IT pemerintah kota.
-- **Data Sulsel**: Mengelola platform pemantauan data regional untuk layanan publik keagamaan, melayani 9 juta penduduk.
-- **Helpdesk Makassar**: Mengembangkan portal layanan warga yang skalabel untuk manajemen keluhan perkotaan dan pelacakan layanan publik.
-- **Kawan Sedarah**: Membangun pusat komando pemantauan stok darah real-time untuk respon darurat menggunakan Supabase dan React.
 
 ## Sertifikasi & Penghargaan
 - **National Cyber Exercise #10** – BSSN (2024)

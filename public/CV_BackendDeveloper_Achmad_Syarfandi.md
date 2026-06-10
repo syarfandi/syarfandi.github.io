@@ -15,6 +15,16 @@ Reliable **Backend Developer** with 4+ years of experience in building scalable,
 - **Cloud & Serverless**: Vercel Serverless Functions, Supabase Edge Functions, Cloud-native Architecture, Background Job Queues.
 - **Soft Skills**: Asynchronous Collaboration, Technical Documentation, Remote Team Leadership, System Design.
 
+## Technical Projects
+- **GetKasir Enterprise POS**: Full-stack backend for 100+ module retail ecosystem — inventory, sales, reporting, multi-branch sync (Node.js, PostgreSQL, Supabase).
+- **Lipsync Realtime Avatar AI**: Backend API orchestration for Conversational AI — LLM routing, Voice AI processing, WebSocket streaming (TypeScript, Supabase).
+- **Portal Data Sulsel**: Data warehouse backend with PostgreSQL stored procedures, aggregation views, and RESTful analytics API (PLpgSQL, Node.js).
+- **PPID Parepare**: Government transparency portal backend with Google Gemini AI integration and automated content management (TypeScript, Supabase).
+- **Kegiatan Sulsel**: Activity management backend — registration API, QR-based attendance tracking, real-time participant sync (Next.js, Supabase).
+- **Kawan Sedarah**: Emergency blood stock monitoring — real-time data ingestion, alerting APIs, dashboard backend (TypeScript, Supabase Realtime).
+- **Gov Email Cluster**: Mailcow backend administration — automated domain provisioning, DNS integration, monitoring scripts (Docker, Bash).
+- **Malmora**: E-commerce backend — order processing, inventory sync, multi-vendor catalog APIs, courier integration (Node.js, PostgreSQL).
+
 ---
 
 ## Professional Experience
@@ -52,16 +62,6 @@ Reliable **Backend Developer** with 4+ years of experience in building scalable,
 - **Digitized** community asset management through custom database solutions and automated reporting tools.
 
 ---
-
-## Technical Projects
-- **GetKasir Enterprise POS**: Full-stack backend for 100+ module retail ecosystem — inventory, sales, reporting, multi-branch sync (Node.js, PostgreSQL, Supabase).
-- **Lipsync Realtime Avatar AI**: Backend API orchestration for Conversational AI — LLM routing, Voice AI processing, WebSocket streaming (TypeScript, Supabase).
-- **Portal Data Sulsel**: Data warehouse backend with PostgreSQL stored procedures, aggregation views, and RESTful analytics API (PLpgSQL, Node.js).
-- **PPID Parepare**: Government transparency portal backend with Google Gemini AI integration and automated content management (TypeScript, Supabase).
-- **Kegiatan Sulsel**: Activity management backend — registration API, QR-based attendance tracking, real-time participant sync (Next.js, Supabase).
-- **Kawan Sedarah**: Emergency blood stock monitoring — real-time data ingestion, alerting APIs, dashboard backend (TypeScript, Supabase Realtime).
-- **Gov Email Cluster**: Mailcow backend administration — automated domain provisioning, DNS integration, monitoring scripts (Docker, Bash).
-- **Malmora**: E-commerce backend — order processing, inventory sync, multi-vendor catalog APIs, courier integration (Node.js, PostgreSQL).
 
 ## Certifications & Awards
 - **National Cyber Exercise #10** – BSSN (2024)

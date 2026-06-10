@@ -15,6 +15,15 @@ Detail-oriented **Data Analyst** with 4+ years transforming raw data into action
 - **Reporting**: KPI Tracking, Executive Summaries, Weekly/Monthly Reports, SLA Monitoring, Data Storytelling.
 - **Data Quality**: ETL Pipelines, Data Validation, Duplicate Detection, Integrity Checks, Data Governance.
 
+## Projects
+- **Data Sulsel Dashboard**: Interactive analytics for 9M+ records — charts, filters, KPI scorecards, automated reports.
+- **GetKasir Merchant BI**: POS analytics — sales summaries, revenue breakdown, product rankings, branch comparison.
+- **Helpdesk Analytics**: Complaint analysis — categorization, priority scoring, resolution tracking, trend reports.
+- **Kawan Sedarah Monitor**: Blood stock dashboards — real-time levels, shortage alerts, hospital comparison.
+- **Kegiatan Sulsel**: Attendance reporting — QR scan data, participation rates, activity summaries.
+- **Malmora Market Intel**: E-commerce reporting — sales performance, product trends, logistics metrics.
+- **Email SLA Reports**: Performance monitoring — uptime, delivery rates, SLA compliance for 200+ domains.
+
 ---
 
 ## Experience
@@ -43,15 +52,6 @@ Detail-oriented **Data Analyst** with 4+ years transforming raw data into action
 - **Created** logistics dashboards tracking delivery times, fulfillment rates, regional shipping cost analysis.
 
 ---
-
-## Projects
-- **Data Sulsel Dashboard**: Interactive analytics for 9M+ records — charts, filters, KPI scorecards, automated reports.
-- **GetKasir Merchant BI**: POS analytics — sales summaries, revenue breakdown, product rankings, branch comparison.
-- **Helpdesk Analytics**: Complaint analysis — categorization, priority scoring, resolution tracking, trend reports.
-- **Kawan Sedarah Monitor**: Blood stock dashboards — real-time levels, shortage alerts, hospital comparison.
-- **Kegiatan Sulsel**: Attendance reporting — QR scan data, participation rates, activity summaries.
-- **Malmora Market Intel**: E-commerce reporting — sales performance, product trends, logistics metrics.
-- **Email SLA Reports**: Performance monitoring — uptime, delivery rates, SLA compliance for 200+ domains.
 
 ## Awards
 - **National Cyber Exercise #10** – BSSN (2024)

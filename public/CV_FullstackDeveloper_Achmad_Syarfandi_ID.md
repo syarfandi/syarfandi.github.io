@@ -15,6 +15,17 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **DevOps & Deployment**: Docker, GitHub Actions, Vercel, Nginx, Administrasi Server Linux, Pipeline CI/CD.
 - **Soft Skills**: Kepemilikan End-to-End, Dokumentasi Teknis, Kolaborasi Asinkron, Kepemimpinan Tim Remote.
 
+## Proyek Teknis (Full-Stack)
+- **GetKasir Enterprise POS**: Ekosistem retail 100+ modul — dashboard React merchant + backend Node.js/PostgreSQL + sinkronisasi Supabase Realtime.
+- **Lipsync Realtime Avatar AI**: Conversational AI — UI React + streaming WebSocket + orkestrasi API LLM + backend Supabase (TypeScript).
+- **Portal Data Sulsel**: Portal data pemerintah — dashboard analitik React + data warehouse PLpgSQL + API agregasi real-time (Node.js).
+- **PPID Kemenag Parepare**: Portal transparansi pemerintah — frontend SSR Next.js + integrasi backend Google Gemini AI + CMS Supabase.
+- **Kegiatan Sulsel**: Manajemen kegiatan — frontend Next.js + backend Supabase + pelacakan kehadiran QR + sinkronisasi peserta real-time.
+- **Kawan Sedarah (Stok Darah)**: Monitoring darurat — dashboard React + ingesti data Supabase Realtime + API backend alerting.
+- **Helpdesk Makassar**: Portal layanan warga — UI React responsif + API manajemen tiket Node.js + routing antar-departemen.
+- **Malmora**: Platform e-commerce — storefront React + backend pemrosesan pesanan Node.js + integrasi API kurir + katalog multi-vendor.
+- **Virtual Museum Makassar**: Warisan budaya — viewer panoramik 360° React + loader aset 3D + API backend manajemen konten.
+
 ---
 
 ## Pengalaman Profesional
@@ -52,17 +63,6 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **Mendigitalisasi** manajemen aset komunitas melalui solusi full-stack kustom dan dashboard pelaporan otomatis.
 
 ---
-
-## Proyek Teknis (Full-Stack)
-- **GetKasir Enterprise POS**: Ekosistem retail 100+ modul — dashboard React merchant + backend Node.js/PostgreSQL + sinkronisasi Supabase Realtime.
-- **Lipsync Realtime Avatar AI**: Conversational AI — UI React + streaming WebSocket + orkestrasi API LLM + backend Supabase (TypeScript).
-- **Portal Data Sulsel**: Portal data pemerintah — dashboard analitik React + data warehouse PLpgSQL + API agregasi real-time (Node.js).
-- **PPID Kemenag Parepare**: Portal transparansi pemerintah — frontend SSR Next.js + integrasi backend Google Gemini AI + CMS Supabase.
-- **Kegiatan Sulsel**: Manajemen kegiatan — frontend Next.js + backend Supabase + pelacakan kehadiran QR + sinkronisasi peserta real-time.
-- **Kawan Sedarah (Stok Darah)**: Monitoring darurat — dashboard React + ingesti data Supabase Realtime + API backend alerting.
-- **Helpdesk Makassar**: Portal layanan warga — UI React responsif + API manajemen tiket Node.js + routing antar-departemen.
-- **Malmora**: Platform e-commerce — storefront React + backend pemrosesan pesanan Node.js + integrasi API kurir + katalog multi-vendor.
-- **Virtual Museum Makassar**: Warisan budaya — viewer panoramik 360° React + loader aset 3D + API backend manajemen konten.
 
 ## Sertifikasi & Penghargaan
 - **National Cyber Exercise #10** – BSSN (2024)

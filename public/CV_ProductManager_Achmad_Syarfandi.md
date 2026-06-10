@@ -13,6 +13,13 @@ Strategic Product Manager with 4+ years of experience in leading high-impact dig
 - **Data & Analytics:** Data-Driven Decision Making, Google Analytics, Looker Studio, Mixpanel
 - **Stakeholder Management:** Cross-functional Leadership, Client Relations, Risk Management
 
+## FEATURED PROJECTS
+- **Data Sulsel Platform:** Unified regional data monitoring product for 9M+ religious services.
+- **Enterprise POS Suite:** Comprehensive retail management ecosystem with 100+ integrated modules.
+- **Helpdesk Makassar:** End-to-end citizen complaint management and tracking system.
+- **Gov Email Infrastructure:** Strategic secure communication platform for government work units.
+- **Kegiatan Sulsel Hub:** Streamlined event management and registration product for regional activities.
+
 ## PROFESSIONAL EXPERIENCE
 
 **Regional Office of Ministry of Religious Affairs (South Sulawesi)** | Makassar, Indonesia
@@ -43,13 +50,6 @@ GPA: 3.22 / 4.00
 - **National Cyber Exercise #10** - BSSN (2024)
 - **Samsung Next Apps Winner** - Samsung Indonesia (2017)
 - **Microsoft CityApp Participant** - Microsoft
-
-## FEATURED PROJECTS
-- **Data Sulsel Platform:** Unified regional data monitoring product for 9M+ religious services.
-- **Enterprise POS Suite:** Comprehensive retail management ecosystem with 100+ integrated modules.
-- **Helpdesk Makassar:** End-to-end citizen complaint management and tracking system.
-- **Gov Email Infrastructure:** Strategic secure communication platform for government work units.
-- **Kegiatan Sulsel Hub:** Streamlined event management and registration product for regional activities.
 
 ## Education
 - **Bachelor of Computer Science (S.Kom)** | UIN Alauddin Makassar

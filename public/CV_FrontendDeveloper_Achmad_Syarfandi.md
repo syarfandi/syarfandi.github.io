@@ -15,6 +15,13 @@ Creative and technical **Frontend Developer** with 4+ years of experience in cra
 - **Tools & Workflow**: GitHub Actions, Vercel, Netlify, Vite, Webpack, Figma (Design-to-Code).
 - **Soft Skills**: UI/UX Design Principles, Technical Writing, Remote Collaboration, Agile/Scrum.
 
+## Technical Projects
+- **Lipsync Realtime Avatar AI**: Built a highly interactive conversational AI UI using Next.js and real-time voice/video synchronization.
+- **PPID Parepare Transparency Portal**: Engineered an official transparency portal focusing on information hierarchy and accessibility.
+- **Kegiatan Sulsel (Activity Management)**: Built a responsive activity tracking UI with real-time QR code scanning and attendance status.
+- **Data Sulsel**: Developed a comprehensive regional data monitoring dashboard with interactive SVG maps and charts.
+- **Helpdesk Makassar**: Created a scalable citizen service UI for managing urban complaints with real-time status updates.
+
 ---
 
 ## Professional Experience
@@ -51,13 +58,6 @@ Creative and technical **Frontend Developer** with 4+ years of experience in cra
 - **Optimized** community asset management and digital documentation for the mosque's operations.
 
 ---
-
-## Technical Projects
-- **Lipsync Realtime Avatar AI**: Built a highly interactive conversational AI UI using Next.js and real-time voice/video synchronization.
-- **PPID Parepare Transparency Portal**: Engineered an official transparency portal focusing on information hierarchy and accessibility.
-- **Kegiatan Sulsel (Activity Management)**: Built a responsive activity tracking UI with real-time QR code scanning and attendance status.
-- **Data Sulsel**: Developed a comprehensive regional data monitoring dashboard with interactive SVG maps and charts.
-- **Helpdesk Makassar**: Created a scalable citizen service UI for managing urban complaints with real-time status updates.
 
 ## Certifications & Awards
 - **National Cyber Exercise #10** – BSSN (2024)

@@ -15,6 +15,15 @@ Strategic **Mobile Developer** with 4+ years of experience architecting high-per
 - **Performance**: 60fps Rendering, Image Optimization, Bundle Reduction, Memory Management.
 - **Publishing**: App Store, Google Play, CodePush OTA, Fastlane, GitHub Actions, TestFlight.
 
+## Projects
+- **GetKasir Mobile POS**: React Native — barcode, Bluetooth printing, offline transactions, multi-device sync.
+- **Al-Haram VR**: Unity VR — Samsung Gear VR, Top 10 Samsung Next Apps 4.0.
+- **Malmora Mobile**: E-commerce — catalog, cart, push notifications, biometric auth.
+- **Data Sulsel Mobile**: PWA — offline dashboards, touch analytics for field officers.
+- **Helpdesk Mobile**: Citizen app — camera complaints, offline drafting, push notifications.
+- **Kegiatan Sulsel**: Event app — QR attendance, real-time sync, offline mode.
+- **Kawan Sedarah**: Blood stock — real-time alerts, hospital finder, emergency mode.
+
 ---
 
 ## Experience
@@ -45,15 +54,6 @@ Strategic **Mobile Developer** with 4+ years of experience architecting high-per
 - **Optimized** images with progressive JPEG, lazy loading, CDN — 50% faster loads.
 
 ---
-
-## Projects
-- **GetKasir Mobile POS**: React Native — barcode, Bluetooth printing, offline transactions, multi-device sync.
-- **Al-Haram VR**: Unity VR — Samsung Gear VR, Top 10 Samsung Next Apps 4.0.
-- **Malmora Mobile**: E-commerce — catalog, cart, push notifications, biometric auth.
-- **Data Sulsel Mobile**: PWA — offline dashboards, touch analytics for field officers.
-- **Helpdesk Mobile**: Citizen app — camera complaints, offline drafting, push notifications.
-- **Kegiatan Sulsel**: Event app — QR attendance, real-time sync, offline mode.
-- **Kawan Sedarah**: Blood stock — real-time alerts, hospital finder, emergency mode.
 
 ## Awards
 - **Top 10** – Samsung Next Apps 4.0 Gear VR (2017) ⭐

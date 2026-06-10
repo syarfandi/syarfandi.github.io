@@ -15,6 +15,15 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **Pelaporan**: Pelacakan KPI, Ringkasan Eksekutif, Laporan Mingguan/Bulanan, Monitoring SLA, Data Storytelling.
 - **Kualitas Data**: Pipeline ETL, Validasi Data, Deteksi Duplikat, Pemeriksaan Integritas, Tata Kelola Data.
 
+## Proyek
+- **Data Sulsel Dashboard**: Analitik interaktif 9jt+ data — grafik, filter, scorecard KPI, laporan otomatis.
+- **GetKasir Merchant BI**: Analitik POS — ringkasan penjualan, breakdown revenue, ranking produk, perbandingan cabang.
+- **Helpdesk Analytics**: Analisis keluhan — kategorisasi, skor prioritas, pelacakan resolusi, laporan tren.
+- **Kawan Sedarah Monitor**: Dashboard stok darah — level real-time, alert kekurangan, perbandingan RS.
+- **Kegiatan Sulsel**: Pelaporan kehadiran — data QR, tingkat partisipasi, ringkasan kegiatan.
+- **Malmora Market Intel**: Pelaporan e-commerce — performa penjualan, tren produk, metrik logistik.
+- **Email SLA Reports**: Monitoring performa — uptime, tingkat pengiriman, kepatuhan SLA 200+ domain.
+
 ---
 
 ## Pengalaman
@@ -43,15 +52,6 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **Membuat** dashboard efisiensi logistik — waktu pengiriman, tingkat pemenuhan, analisis biaya regional.
 
 ---
-
-## Proyek
-- **Data Sulsel Dashboard**: Analitik interaktif 9jt+ data — grafik, filter, scorecard KPI, laporan otomatis.
-- **GetKasir Merchant BI**: Analitik POS — ringkasan penjualan, breakdown revenue, ranking produk, perbandingan cabang.
-- **Helpdesk Analytics**: Analisis keluhan — kategorisasi, skor prioritas, pelacakan resolusi, laporan tren.
-- **Kawan Sedarah Monitor**: Dashboard stok darah — level real-time, alert kekurangan, perbandingan RS.
-- **Kegiatan Sulsel**: Pelaporan kehadiran — data QR, tingkat partisipasi, ringkasan kegiatan.
-- **Malmora Market Intel**: Pelaporan e-commerce — performa penjualan, tren produk, metrik logistik.
-- **Email SLA Reports**: Monitoring performa — uptime, tingkat pengiriman, kepatuhan SLA 200+ domain.
 
 ## Penghargaan
 - **National Cyber Exercise #10** – BSSN (2024)

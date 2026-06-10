@@ -15,6 +15,14 @@ Reliable System Administrator with 4+ years of experience in managing high-avail
 - **Monitoring & Automation:** Zabbix, Prometheus, Grafana, Bash Scripting, Python
 - **Storage & Backup:** RAID Configuration, rsync, Proxmox Backup Server, Cloud Backup
 
+## FEATURED PROJECTS
+- **Mailcow Cluster:** Hardened mail server cluster supporting 200+ government domains.
+- **Proxmox Virtualization:** High-density server consolidation for regional data centers.
+- **Server Hardening Lab:** Implementation of CIS security benchmarks across production environments.
+- **Automated Backup System:** Multi-layered disaster recovery solution using rsync and cloud storage.
+- **Zabbix Monitoring:** Real-time infrastructure health monitoring with custom alerting.
+- **VPN Gateway:** Secure remote access infrastructure for government employees.
+
 ## PROFESSIONAL EXPERIENCE
 
 **Regional Office of Ministry of Religious Affairs (South Sulawesi)** | Makassar, Indonesia
@@ -52,14 +60,6 @@ GPA: 3.22 / 4.00
 - **National Cyber Exercise #10** - BSSN (2024)
 - **Samsung Next Apps Winner** - Samsung Indonesia (2017)
 - **Microsoft CityApp Participant** - Microsoft
-
-## FEATURED PROJECTS
-- **Mailcow Cluster:** Hardened mail server cluster supporting 200+ government domains.
-- **Proxmox Virtualization:** High-density server consolidation for regional data centers.
-- **Server Hardening Lab:** Implementation of CIS security benchmarks across production environments.
-- **Automated Backup System:** Multi-layered disaster recovery solution using rsync and cloud storage.
-- **Zabbix Monitoring:** Real-time infrastructure health monitoring with custom alerting.
-- **VPN Gateway:** Secure remote access infrastructure for government employees.
 
 ## Education
 - **Bachelor of Computer Science (S.Kom)** | UIN Alauddin Makassar

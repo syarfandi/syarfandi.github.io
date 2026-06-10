@@ -15,6 +15,16 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **Cloud & Serverless**: Vercel Serverless Functions, Supabase Edge Functions, Arsitektur Cloud-native, Background Job Queues.
 - **Soft Skills**: Kolaborasi Asinkron, Dokumentasi Teknis, Kepemimpinan Tim Remote, Desain Sistem.
 
+## Proyek Teknis
+- **GetKasir Enterprise POS**: Backend full-stack untuk ekosistem retail 100+ modul — inventori, penjualan, pelaporan, sinkronisasi multi-cabang (Node.js, PostgreSQL, Supabase).
+- **Lipsync Realtime Avatar AI**: Orkestrasi API backend untuk Conversational AI — routing LLM, pemrosesan Voice AI, streaming WebSocket (TypeScript, Supabase).
+- **Portal Data Sulsel**: Backend data warehouse dengan stored procedure PostgreSQL, view agregasi, dan RESTful analytics API (PLpgSQL, Node.js).
+- **PPID Parepare**: Backend portal transparansi pemerintah dengan integrasi Google Gemini AI dan manajemen konten otomatis (TypeScript, Supabase).
+- **Kegiatan Sulsel**: Backend manajemen kegiatan — API pendaftaran, pelacakan kehadiran berbasis QR, sinkronisasi peserta real-time (Next.js, Supabase).
+- **Kawan Sedarah**: Monitoring stok darah darurat — ingesti data real-time, API alerting, backend dashboard (TypeScript, Supabase Realtime).
+- **Gov Email Cluster**: Administrasi backend Mailcow — provisioning domain otomatis, integrasi DNS, skrip monitoring (Docker, Bash).
+- **Malmora**: Backend e-commerce — pemrosesan pesanan, sinkronisasi inventori, API katalog multi-vendor, integrasi kurir (Node.js, PostgreSQL).
+
 ---
 
 ## Pengalaman Profesional
@@ -52,16 +62,6 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **Mendigitalisasi** manajemen aset komunitas melalui solusi database kustom dan alat pelaporan otomatis.
 
 ---
-
-## Proyek Teknis
-- **GetKasir Enterprise POS**: Backend full-stack untuk ekosistem retail 100+ modul — inventori, penjualan, pelaporan, sinkronisasi multi-cabang (Node.js, PostgreSQL, Supabase).
-- **Lipsync Realtime Avatar AI**: Orkestrasi API backend untuk Conversational AI — routing LLM, pemrosesan Voice AI, streaming WebSocket (TypeScript, Supabase).
-- **Portal Data Sulsel**: Backend data warehouse dengan stored procedure PostgreSQL, view agregasi, dan RESTful analytics API (PLpgSQL, Node.js).
-- **PPID Parepare**: Backend portal transparansi pemerintah dengan integrasi Google Gemini AI dan manajemen konten otomatis (TypeScript, Supabase).
-- **Kegiatan Sulsel**: Backend manajemen kegiatan — API pendaftaran, pelacakan kehadiran berbasis QR, sinkronisasi peserta real-time (Next.js, Supabase).
-- **Kawan Sedarah**: Monitoring stok darah darurat — ingesti data real-time, API alerting, backend dashboard (TypeScript, Supabase Realtime).
-- **Gov Email Cluster**: Administrasi backend Mailcow — provisioning domain otomatis, integrasi DNS, skrip monitoring (Docker, Bash).
-- **Malmora**: Backend e-commerce — pemrosesan pesanan, sinkronisasi inventori, API katalog multi-vendor, integrasi kurir (Node.js, PostgreSQL).
 
 ## Sertifikasi & Penghargaan
 - **National Cyber Exercise #10** – BSSN (2024)

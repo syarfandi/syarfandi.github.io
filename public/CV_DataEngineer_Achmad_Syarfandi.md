@@ -14,6 +14,13 @@ Strategic Data Engineer with 4+ years of experience in architecting scalable dat
 - **Infrastructure & Cloud:** GCP, AWS, Terraform, Docker, Kubernetes, Proxmox VE
 - **Monitoring & BI:** Zabbix, Prometheus, Grafana, Tableau, Google Looker Studio
 
+## FEATURED PROJECTS
+- **Data Sulsel Warehouse:** Regional-scale data consolidation platform for 9M+ public records.
+- **Enterprise POS Data Layer:** High-concurrency transactional database for thousands of retail merchants.
+- **Automated ETL Hub:** Centralized pipeline hub for government data migration and cleaning.
+- **Retail Analytics Engine:** Business intelligence layer for POS data using BigQuery and Grafana.
+- **Helpdesk Data Platform:** Public complaint data management system with real-time tracking.
+
 ## PROFESSIONAL EXPERIENCE
 
 **Regional Office of Ministry of Religious Affairs (South Sulawesi)** | Makassar, Indonesia
@@ -44,13 +51,6 @@ GPA: 3.22 / 4.00
 - **National Cyber Exercise #10** - BSSN (2024)
 - **Samsung Next Apps Winner** - Samsung Indonesia (2017)
 - **Microsoft CityApp Participant** - Microsoft
-
-## FEATURED PROJECTS
-- **Data Sulsel Warehouse:** Regional-scale data consolidation platform for 9M+ public records.
-- **Enterprise POS Data Layer:** High-concurrency transactional database for thousands of retail merchants.
-- **Automated ETL Hub:** Centralized pipeline hub for government data migration and cleaning.
-- **Retail Analytics Engine:** Business intelligence layer for POS data using BigQuery and Grafana.
-- **Helpdesk Data Platform:** Public complaint data management system with real-time tracking.
 
 ## Education
 - **Bachelor of Computer Science (S.Kom)** | UIN Alauddin Makassar

@@ -15,6 +15,15 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **Statistik**: Uji Hipotesis, Regresi, Klasifikasi, A/B Testing, Analisis Time-Series, Metode Bayesian.
 - **Tools**: Git, Docker, GitHub Actions, Jupyter, Google Colab, Linux.
 
+## Proyek
+- **Data Sulsel Analytics**: Mesin statistik 9jt+ data — agregasi PostgreSQL, analisis tren, dashboard.
+- **GetKasir Forecasting**: Prediksi penjualan — ARIMA/Prophet, clustering merchant, peramalan permintaan.
+- **Lipsync Avatar AI**: Integrasi NLP/LLM — routing Gemini, voice-to-text, analisis percakapan.
+- **Helpdesk Sentimen**: Klasifikasi keluhan NLP — analisis sentimen, auto-prioritisasi, tren.
+- **Kawan Sedarah**: Prediksi stok darah — monitoring real-time, peramalan kekurangan, alert.
+- **Malmora Market**: Analitik e-commerce — peringkat produk, pola pembelian, A/B testing.
+- **PPID AI Search**: Pencarian dokumen NLP — Gemini AI, respons otomatis, analisis query.
+
 ---
 
 ## Pengalaman
@@ -43,15 +52,6 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **Mengembangkan** dashboard analisis pasar regional melacak performa penjual, tren permintaan, dan metrik logistik.
 
 ---
-
-## Proyek
-- **Data Sulsel Analytics**: Mesin statistik 9jt+ data — agregasi PostgreSQL, analisis tren, dashboard.
-- **GetKasir Forecasting**: Prediksi penjualan — ARIMA/Prophet, clustering merchant, peramalan permintaan.
-- **Lipsync Avatar AI**: Integrasi NLP/LLM — routing Gemini, voice-to-text, analisis percakapan.
-- **Helpdesk Sentimen**: Klasifikasi keluhan NLP — analisis sentimen, auto-prioritisasi, tren.
-- **Kawan Sedarah**: Prediksi stok darah — monitoring real-time, peramalan kekurangan, alert.
-- **Malmora Market**: Analitik e-commerce — peringkat produk, pola pembelian, A/B testing.
-- **PPID AI Search**: Pencarian dokumen NLP — Gemini AI, respons otomatis, analisis query.
 
 ## Penghargaan
 - **National Cyber Exercise #10** – BSSN (2024)

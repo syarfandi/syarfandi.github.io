@@ -14,6 +14,16 @@ Dynamic **Cloud Engineer** with 4+ years of experience in architecting high-perf
 - **Data & Middleware**: Supabase, PostgreSQL (Optimization & Scaling), RESTful API Architecture, Redis.
 - **Soft Skills**: Asynchronous Collaboration, Technical Writing, Remote Team Leadership, Strategic Planning.
 
+## Technical Projects
+- **Lipsync Realtime Avatar AI**: Developed a conversational AI application integrating LLMs, Voice AI, and Simli for immersive user interactions.
+- **Government Email Cluster**: Built and secured a Mailcow-based email infrastructure supporting over 200 government domains.
+- **PPID Parepare Transparency Portal**: Engineered an official transparency portal with Google Gemini AI integration for public information.
+- **Kegiatan Sulsel (Activity Management)**: Built a regional activity tracking and attendance system using Next.js, Supabase, and QR Codes.
+- **Cyber Incident Response SOP**: Formulated automated incident response protocols and security standards for municipal IT systems.
+- **Data Sulsel**: Managed a regional data monitoring platform for public religious services, serving 9 million residents.
+- **Helpdesk Makassar**: Developed a scalable citizen service portal for urban complaint management and public service tracking.
+- **Kawan Sedarah**: Built a real-time blood stock monitoring command center for emergency response using Supabase and React.
+
 ---
 
 ## Professional Experience
@@ -50,16 +60,6 @@ Dynamic **Cloud Engineer** with 4+ years of experience in architecting high-perf
 - **Optimized** community asset management and digital documentation for the mosque's operations.
 
 ---
-
-## Technical Projects
-- **Lipsync Realtime Avatar AI**: Developed a conversational AI application integrating LLMs, Voice AI, and Simli for immersive user interactions.
-- **Government Email Cluster**: Built and secured a Mailcow-based email infrastructure supporting over 200 government domains.
-- **PPID Parepare Transparency Portal**: Engineered an official transparency portal with Google Gemini AI integration for public information.
-- **Kegiatan Sulsel (Activity Management)**: Built a regional activity tracking and attendance system using Next.js, Supabase, and QR Codes.
-- **Cyber Incident Response SOP**: Formulated automated incident response protocols and security standards for municipal IT systems.
-- **Data Sulsel**: Managed a regional data monitoring platform for public religious services, serving 9 million residents.
-- **Helpdesk Makassar**: Developed a scalable citizen service portal for urban complaint management and public service tracking.
-- **Kawan Sedarah**: Built a real-time blood stock monitoring command center for emergency response using Supabase and React.
 
 ## Certifications & Awards
 - **National Cyber Exercise #10** – BSSN (2024)

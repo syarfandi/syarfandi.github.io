@@ -15,6 +15,17 @@ Versatile **Fullstack Developer** with 4+ years of experience engineering end-to
 - **DevOps & Deployment**: Docker, GitHub Actions, Vercel, Nginx, Linux Server Administration, CI/CD Pipelines.
 - **Soft Skills**: End-to-End Ownership, Technical Documentation, Asynchronous Collaboration, Remote Team Leadership.
 
+## Technical Projects (Full-Stack)
+- **GetKasir Enterprise POS**: 100+ module retail ecosystem — React merchant dashboard + Node.js/PostgreSQL backend + Supabase Realtime sync.
+- **Lipsync Realtime Avatar AI**: Conversational AI — React UI + WebSocket streaming + LLM API orchestration + Supabase backend (TypeScript).
+- **Portal Data Sulsel**: Government data portal — React analytics dashboard + PLpgSQL data warehouse + real-time aggregation API (Node.js).
+- **PPID Kemenag Parepare**: Gov transparency portal — Next.js SSR frontend + Google Gemini AI backend integration + Supabase CMS.
+- **Kegiatan Sulsel**: Event management — Next.js frontend + Supabase backend + QR-based attendance tracking + real-time participant sync.
+- **Kawan Sedarah (Blood Stock)**: Emergency monitoring — React dashboard + Supabase Realtime data ingestion + alerting API backend.
+- **Helpdesk Makassar**: Citizen service portal — responsive React UI + Node.js ticket management API + cross-department routing.
+- **Malmora**: E-commerce platform — React storefront + Node.js order processing backend + courier API integration + multi-vendor catalog.
+- **Virtual Museum Makassar**: Cultural heritage — 360° panoramic React viewer + 3D asset loader + backend content management API.
+
 ---
 
 ## Professional Experience
@@ -52,17 +63,6 @@ Versatile **Fullstack Developer** with 4+ years of experience engineering end-to
 - **Digitized** community asset management through custom full-stack solutions and automated reporting dashboards.
 
 ---
-
-## Technical Projects (Full-Stack)
-- **GetKasir Enterprise POS**: 100+ module retail ecosystem — React merchant dashboard + Node.js/PostgreSQL backend + Supabase Realtime sync.
-- **Lipsync Realtime Avatar AI**: Conversational AI — React UI + WebSocket streaming + LLM API orchestration + Supabase backend (TypeScript).
-- **Portal Data Sulsel**: Government data portal — React analytics dashboard + PLpgSQL data warehouse + real-time aggregation API (Node.js).
-- **PPID Kemenag Parepare**: Gov transparency portal — Next.js SSR frontend + Google Gemini AI backend integration + Supabase CMS.
-- **Kegiatan Sulsel**: Event management — Next.js frontend + Supabase backend + QR-based attendance tracking + real-time participant sync.
-- **Kawan Sedarah (Blood Stock)**: Emergency monitoring — React dashboard + Supabase Realtime data ingestion + alerting API backend.
-- **Helpdesk Makassar**: Citizen service portal — responsive React UI + Node.js ticket management API + cross-department routing.
-- **Malmora**: E-commerce platform — React storefront + Node.js order processing backend + courier API integration + multi-vendor catalog.
-- **Virtual Museum Makassar**: Cultural heritage — 360° panoramic React viewer + 3D asset loader + backend content management API.
 
 ## Certifications & Awards
 - **National Cyber Exercise #10** – BSSN (2024)

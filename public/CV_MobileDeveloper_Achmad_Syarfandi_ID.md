@@ -15,6 +15,15 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **Performa**: Rendering 60fps, Optimasi Gambar, Reduksi Bundle, Manajemen Memori.
 - **Publikasi**: App Store, Google Play, CodePush OTA, Fastlane, GitHub Actions, TestFlight.
 
+## Proyek
+- **GetKasir Mobile POS**: React Native — barcode, cetak Bluetooth, transaksi offline, sync multi-perangkat.
+- **Al-Haram VR**: Unity VR — Samsung Gear VR, Top 10 Samsung Next Apps 4.0.
+- **Malmora Mobile**: E-commerce — katalog, keranjang, push notification, auth biometrik.
+- **Data Sulsel Mobile**: PWA — dashboard offline, analitik sentuh untuk petugas lapangan.
+- **Helpdesk Mobile**: Aplikasi warga — pengaduan kamera, drafting offline, push notification.
+- **Kegiatan Sulsel**: Aplikasi kegiatan — scan QR kehadiran, sync real-time, mode offline.
+- **Kawan Sedarah**: Stok darah — alert real-time, pencari RS, mode darurat.
+
 ---
 
 ## Pengalaman
@@ -45,15 +54,6 @@ Makassar, Indonesia | [+62 852-5652-2335](https://wa.me/6285256522335) | syarfan
 - **Mengoptimalkan** gambar dengan JPEG progresif, lazy loading, CDN — 50% lebih cepat.
 
 ---
-
-## Proyek
-- **GetKasir Mobile POS**: React Native — barcode, cetak Bluetooth, transaksi offline, sync multi-perangkat.
-- **Al-Haram VR**: Unity VR — Samsung Gear VR, Top 10 Samsung Next Apps 4.0.
-- **Malmora Mobile**: E-commerce — katalog, keranjang, push notification, auth biometrik.
-- **Data Sulsel Mobile**: PWA — dashboard offline, analitik sentuh untuk petugas lapangan.
-- **Helpdesk Mobile**: Aplikasi warga — pengaduan kamera, drafting offline, push notification.
-- **Kegiatan Sulsel**: Aplikasi kegiatan — scan QR kehadiran, sync real-time, mode offline.
-- **Kawan Sedarah**: Stok darah — alert real-time, pencari RS, mode darurat.
 
 ## Penghargaan
 - **Top 10** – Samsung Next Apps 4.0 Gear VR (2017) ⭐
