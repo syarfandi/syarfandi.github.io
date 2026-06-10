@@ -381,20 +381,20 @@ const HeroSection = () => {
             exit={{ opacity: 0, scale: 0.95, y: 10 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
             onClick={e => e.stopPropagation()}
-            className="resume-modal-card glass"
+            className="resume-modal-card"
           >
             <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
               <h3 className="heading-tertiary" style={{ margin: 0, fontSize: '1.8rem', color: 'var(--text-primary)' }}>{t('selectResume')}</h3>
             </div>
             <div className="resume-options-grid">
               {resumeOptions.map((opt, i) => (
-                <a key={i} href={opt.path} target="_blank" rel="noreferrer" className="glass resume-opt-btn" onClick={() => setShowResumeModal(false)}>
+                <a key={i} href={opt.path} target="_blank" rel="noreferrer" className="resume-opt-btn" onClick={() => setShowResumeModal(false)}>
                   <span>{opt.title}</span>
                 </a>
               ))}
             </div>
             <div style={{ marginTop: '2.5rem', textAlign: 'center' }}>
-              <button onClick={() => setShowResumeModal(false)} className="btn btn-outline glass" style={{ padding: '0.8rem 2.5rem', color: 'var(--text-primary)', borderRadius: '9999px', fontWeight: 'bold' }}>
+              <button onClick={() => setShowResumeModal(false)} className="btn btn-outline" style={{ padding: '0.8rem 2.5rem', color: 'var(--text-primary)', borderRadius: '9999px', fontWeight: 'bold' }}>
                 {t('close')}
               </button>
             </div>
