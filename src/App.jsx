@@ -355,13 +355,13 @@ const HeroSection = () => {
           >
             <h2 className="hero-subheading">{t('heroRole')}</h2>
             <h1 className="hero-title">
-              {t('heroGreeting')} <br />
-              <span className="text-gradient">Syarfandi "Andi" Achmad</span>
+              <span className="hero-greeting">{t('heroGreeting')}</span> <br />
+              <span className="hero-name-blue">Syarfandi "Andi" <br /> Achmad</span>
             </h1>
             <p className="hero-description" dangerouslySetInnerHTML={{ __html: t('heroDesc') }} />
             <div className="hero-buttons">
-              <a href="#portfolio" className="btn btn-primary glass">{t('viewProjects')}</a>
-              <a href="#contact" className="btn btn-outline glass" style={{ color: 'var(--text-primary)' }}>{t('hireMe')}</a>
+              <a href="#portfolio" className="hero-btn-primary">{t('viewProjects')}</a>
+              <a href="#contact" className="hero-btn-secondary">{t('hireMe')}</a>
               <button onClick={() => {
                 if (pinUnlocked) {
                   setShowResumeModal(true);
@@ -372,8 +372,8 @@ const HeroSection = () => {
                   setPinSuccess(false);
                   setTimeout(() => pinInputRef.current?.focus(), 100);
                 }
-              }} className="btn btn-outline glass">
-                <span style={{ color: 'var(--text-primary)' }}>{t('resume')}</span>
+              }} className="hero-btn-secondary">
+                <span>{t('resume')}</span>
               </button>
             </div>
           </motion.div>
@@ -502,10 +502,17 @@ const HeroSection = () => {
         .orb-1 { background: var(--primary-color); width: 600px; height: 600px; top: -200px; left: -200px; }
         .orb-2 { background: var(--secondary-color); width: 700px; height: 700px; bottom: -300px; right: -200px; }
         .hero-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 4rem; align-items: center; }
-        .hero-title { font-size: clamp(2.5rem, 8vw, 5rem); line-height: 1.2; margin-bottom: 2.5rem; font-weight: 800; }
-        .hero-subheading { font-size: 1.25rem; color: var(--primary-color); margin-bottom: 2rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; }
-        .hero-description { font-size: 1.15rem; color: var(--text-secondary); max-width: 750px; margin-bottom: 4rem; line-height: 1.8; }
-        .hero-buttons { display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 2rem; }
+        .hero-title { font-size: clamp(3rem, 6vw, 5.5rem); line-height: 1.1; margin-bottom: 2rem; font-weight: 900; letter-spacing: -0.02em; }
+        .hero-greeting { color: var(--text-primary); }
+        .hero-name-blue { color: var(--primary-color); }
+        .hero-subheading { font-size: 1.1rem; color: var(--primary-color); margin-bottom: 1.5rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 800; }
+        .hero-description { font-size: 1.25rem; color: var(--text-secondary); max-width: 750px; margin-bottom: 3.5rem; line-height: 1.7; }
+        .hero-description strong { color: var(--text-primary); font-weight: 700; }
+        .hero-buttons { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+        .hero-btn-primary { background: var(--primary-color); color: white; border-radius: 9999px; padding: 1.2rem 2.5rem; font-weight: 700; font-size: 1.1rem; text-decoration: none; border: none; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(37, 99, 235, 0.25); display: inline-flex; align-items: center; justify-content: center; }
+        .hero-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35); }
+        .hero-btn-secondary { background: var(--bg-primary); color: var(--text-primary); border-radius: 9999px; padding: 1.2rem 2.5rem; font-weight: 700; font-size: 1.1rem; text-decoration: none; border: 1px solid var(--glass-border); cursor: pointer; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05); display: inline-flex; align-items: center; justify-content: center; }
+        .hero-btn-secondary:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); }
         .resume-modal-inline { overflow: hidden; margin-top: 2rem; }
         .resume-options-grid { padding: 1.5rem; border-radius: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.75rem; }
         .resume-opt-btn { text-decoration: none; padding: 0.85rem; border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; text-align: center; }
