@@ -423,7 +423,7 @@ const HeroSection = () => {
         .hero-btn-secondary:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); }
         .resume-modal-inline { overflow: hidden; margin-top: 2rem; }
         
-        .resume-modal-card { padding: 3rem 2rem; border-radius: 24px; text-align: center; width: 92%; max-width: 900px; box-shadow: 0 40px 100px rgba(0,0,0,0.15); border: 1px solid var(--glass-border); position: relative; max-height: 90vh; overflow-y: auto; background: var(--bg-primary); margin: auto; }
+        .resume-modal-card { padding: 3rem 2rem; border-radius: 24px; text-align: center; width: 92%; max-width: 900px; box-shadow: 0 40px 100px rgba(0,0,0,0.15); border: 1px solid var(--glass-border); position: relative; max-height: 90vh; overflow-y: auto; background: var(--surface-color); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); margin: auto; }
         .resume-options-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
         .resume-opt-btn { text-decoration: none; padding: 1.2rem; border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; text-align: center; background: var(--bg-primary); border: 1px solid var(--glass-border); box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
         .resume-opt-btn span { color: var(--text-primary); font-size: 1rem; font-weight: 700; }
