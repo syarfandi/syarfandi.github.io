@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState, createContext, useContext } from 'react';
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import { motion, useScroll, useTransform, useSpring, useInView } from 'framer-motion';
 import { Mail, Phone, MapPin, ExternalLink, Download, ChevronDown, Award, Briefcase, GraduationCap, Code, Github, Star, GitFork, Moon, Sun, Languages, Shield, Layout, Monitor, Cpu, FileText, Lock, ShieldAlert, CheckCircle2, Linkedin, Server, Globe } from 'lucide-react';
 
 const translations = {
@@ -621,6 +621,8 @@ const PortfolioSection = () => {
   const { t, lang } = useTheme();
   const [publicRepos, setPublicRepos] = useState([]);
   const [loading, setLoading] = useState(true);
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, margin: "200px" });
 
   // All projects unified — sorted by priority
   const allProjects = [
@@ -647,30 +649,28 @@ const PortfolioSection = () => {
   const knownRepoNames = allProjects.map(p => p.id);
 
   useEffect(() => {
+    if (!isInView) return;
     const excludedRepos = ['syarfandi.github.io', 'MagiskOnWSA', 'ECC'];
-    const timer = setTimeout(() => {
-      fetch('https://api.github.com/users/syarfandi/repos?sort=updated&per_page=15')
-        .then(res => res.json())
-        .then(data => {
-          const filtered = data
-            .filter(repo => !knownRepoNames.includes(repo.name) && !excludedRepos.includes(repo.name))
-            .slice(0, 6)
-            .map(repo => ({ id: repo.name, title: formatName(repo.name), desc: repo.description || 'No description available.', url: repo.html_url, isPublicRepo: true }));
-          setPublicRepos(filtered);
-          setLoading(false);
-        })
-        .catch(err => {
-          console.error(err);
-          setLoading(false);
-        });
-    }, 1500); // Defer fetch by 1.5 seconds to prioritize LCP rendering
-    return () => clearTimeout(timer);
-  }, []);
+    fetch('https://api.github.com/users/syarfandi/repos?sort=updated&per_page=15')
+      .then(res => res.json())
+      .then(data => {
+        const filtered = data
+          .filter(repo => !knownRepoNames.includes(repo.name) && !excludedRepos.includes(repo.name))
+          .slice(0, 6)
+          .map(repo => ({ id: repo.name, title: formatName(repo.name), desc: repo.description || 'No description available.', url: repo.html_url, isPublicRepo: true }));
+        setPublicRepos(filtered);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error(err);
+        setLoading(false);
+      });
+  }, [isInView]);
 
   const combined = [...allProjects, ...publicRepos];
 
   return (
-    <section id="portfolio" className="container">
+    <section id="portfolio" ref={sectionRef} className="container">
       <h2 style={{ textAlign: 'center', fontSize: 'clamp(3rem, 5vw, 4rem)', fontWeight: 900, marginBottom: '3rem', color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
         {lang === 'id' ? (
           <>Pro<span style={{ color: 'var(--primary-color)' }}>yek</span></>
