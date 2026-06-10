@@ -340,7 +340,7 @@ const HeroSection = () => {
           >
             <div className="image-stack">
               <div className="image-bg-blob"></div>
-              <img src="/Andi.webp" alt='Syarfandi "Andi" Achmad' className="hero-img-main" fetchpriority="high" style={{ width: '100%', height: 'auto', objectFit: 'contain' }} />
+              <img src="/Andi.webp" alt='Syarfandi "Andi" Achmad' className="hero-img-main" width="280" height="500" fetchpriority="high" style={{ width: '100%', height: 'auto', objectFit: 'contain' }} />
             </div>
           </motion.div>
 
@@ -648,18 +648,24 @@ const PortfolioSection = () => {
 
   useEffect(() => {
     const excludedRepos = ['syarfandi.github.io', 'MagiskOnWSA', 'ECC'];
-    fetch('https://api.github.com/users/syarfandi/repos?sort=updated&per_page=15')
-      .then(res => res.json())
-      .then(data => {
-        const filtered = data
-          .filter(repo => !knownRepoNames.includes(repo.name) && !excludedRepos.includes(repo.name))
-          .slice(0, 6)
-          .map(repo => ({ id: repo.name, title: formatName(repo.name), desc: repo.description || 'No description available.', url: repo.html_url, isPublicRepo: true }));
-        setPublicRepos(filtered);
-        setLoading(false);
-      })
-      .catch(() => { setPublicRepos([]); setLoading(false); });
-  }, [lang]);
+    const timer = setTimeout(() => {
+      fetch('https://api.github.com/users/syarfandi/repos?sort=updated&per_page=15')
+        .then(res => res.json())
+        .then(data => {
+          const filtered = data
+            .filter(repo => !knownRepoNames.includes(repo.name) && !excludedRepos.includes(repo.name))
+            .slice(0, 6)
+            .map(repo => ({ id: repo.name, title: formatName(repo.name), desc: repo.description || 'No description available.', url: repo.html_url, isPublicRepo: true }));
+          setPublicRepos(filtered);
+          setLoading(false);
+        })
+        .catch(err => {
+          console.error(err);
+          setLoading(false);
+        });
+    }, 1500); // Defer fetch by 1.5 seconds to prioritize LCP rendering
+    return () => clearTimeout(timer);
+  }, []);
 
   const combined = [...allProjects, ...publicRepos];
 
@@ -890,7 +896,7 @@ const ContactSection = () => {
                 {c.icon}
               </div>
               <div className="contact-row-text">
-                <h4>{c.label}</h4>
+                <h3>{c.label}</h3>
                 <p>{c.value}</p>
               </div>
               <ExternalLink size={18} className="contact-row-arrow" />
@@ -975,7 +981,7 @@ const ContactSection = () => {
         .contact-row-text {
           flex-grow: 1;
         }
-        .contact-row-text h4 {
+        .contact-row-text h3 {
           font-size: 1.15rem;
           font-weight: 900;
           color: var(--text-primary);
