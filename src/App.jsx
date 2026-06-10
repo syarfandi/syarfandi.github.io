@@ -241,7 +241,7 @@ const App = () => {
 
   return (
     <ThemeContext.Provider value={{ lang, theme, t, toggleTheme, toggleLang }}>
-      <div className="app-container">
+      <main className="app-container">
         <motion.div className="progress-bar" style={{ scaleX, position: 'fixed', top: 0, left: 0, right: 0, height: '4px', background: 'var(--primary-color)', transformOrigin: '0%', zIndex: 100 }} />
         <Navbar />
         <HeroSection />
@@ -253,7 +253,7 @@ const App = () => {
         <CertificatesSection />
         <ContactSection />
         <Footer />
-      </div>
+      </main>
     </ThemeContext.Provider>
   );
 };
@@ -340,7 +340,7 @@ const HeroSection = () => {
           >
             <div className="image-stack">
               <div className="image-bg-blob"></div>
-              <img src="/Andi.webp" alt='Syarfandi "Andi" Achmad' className="hero-img-main" width="450" height="450" fetchpriority="high" />
+              <img src="/Andi.webp" alt='Syarfandi "Andi" Achmad' className="hero-img-main" fetchpriority="high" style={{ width: '100%', height: 'auto', objectFit: 'contain' }} />
             </div>
           </motion.div>
 
@@ -492,19 +492,19 @@ const AboutSection = () => {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', marginTop: '2rem' }}>
               <div className="info-item">
                 <MapPin color="var(--primary-color)" size={24} />
-                <div><h4 style={{ color: 'var(--text-primary)' }}>{t('location')}</h4><p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Makassar, Indonesia</p></div>
+                <div><h3 style={{ color: 'var(--text-primary)', fontSize: '1.2rem', margin: '0 0 0.5rem 0' }}>{t('location')}</h3><p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Makassar, Indonesia</p></div>
               </div>
               <div className="info-item">
                 <GraduationCap color="var(--primary-color)" size={24} />
-                <div><h4 style={{ color: 'var(--text-primary)' }}>{t('education')}</h4><p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>{lang === 'en' ? 'Bachelor of Computer Science' : 'S1 Teknik Informatika (Computer Science)'}</p></div>
+                <div><h3 style={{ color: 'var(--text-primary)', fontSize: '1.2rem', margin: '0 0 0.5rem 0' }}>{t('education')}</h3><p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>{lang === 'en' ? 'Bachelor of Computer Science' : 'S1 Teknik Informatika (Computer Science)'}</p></div>
               </div>
               <div className="info-item">
                 <Globe color="var(--primary-color)" size={24} />
-                <div><h4 style={{ color: 'var(--text-primary)' }}>{t('availability')}</h4><p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Remote & Full-Time</p></div>
+                <div><h3 style={{ color: 'var(--text-primary)', fontSize: '1.2rem', margin: '0 0 0.5rem 0' }}>{t('availability')}</h3><p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Remote & Full-Time</p></div>
               </div>
               <div className="info-item">
                 <Languages color="var(--primary-color)" size={24} />
-                <div><h4 style={{ color: 'var(--text-primary)' }}>{t('languages')}</h4><p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Indonesian (Native), English</p></div>
+                <div><h3 style={{ color: 'var(--text-primary)', fontSize: '1.2rem', margin: '0 0 0.5rem 0' }}>{t('languages')}</h3><p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Indonesian (Native), English</p></div>
               </div>
             </div>
           </div>
@@ -519,19 +519,19 @@ const AboutSection = () => {
         <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid var(--glass-border)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
             <Code color="var(--primary-color)" size={32} />
-            <div><h4 style={{ color: 'var(--text-primary)', fontSize: '1rem' }}>Full Stack Excellence</h4><p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>React, Node.js, PostgreSQL</p></div>
+            <div><h3 style={{ color: 'var(--text-primary)', fontSize: '1rem', margin: '0 0 0.2rem 0' }}>Full Stack Excellence</h3><p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>React, Node.js, PostgreSQL</p></div>
           </div>
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
             <Server color="var(--primary-color)" size={32} />
-            <div><h4 style={{ color: 'var(--text-primary)', fontSize: '1rem' }}>Cloud-Native Infra</h4><p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>Docker, K8s, AWS, GCP</p></div>
+            <div><h3 style={{ color: 'var(--text-primary)', fontSize: '1rem', margin: '0 0 0.2rem 0' }}>Cloud-Native Infra</h3><p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>Docker, K8s, AWS, GCP</p></div>
           </div>
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
             <Shield color="var(--primary-color)" size={32} />
-            <div><h4 style={{ color: 'var(--text-primary)', fontSize: '1rem' }}>Secure & Automated</h4><p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>CI/CD Pipelines & BSSN Standard</p></div>
+            <div><h3 style={{ color: 'var(--text-primary)', fontSize: '1rem', margin: '0 0 0.2rem 0' }}>Secure & Automated</h3><p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>CI/CD Pipelines & BSSN Standard</p></div>
           </div>
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
             <Monitor color="var(--primary-color)" size={32} />
-            <div><h4 style={{ color: 'var(--text-primary)', fontSize: '1rem' }}>Site Reliability</h4><p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>Monitoring & High Availability</p></div>
+            <div><h3 style={{ color: 'var(--text-primary)', fontSize: '1rem', margin: '0 0 0.2rem 0' }}>Site Reliability</h3><p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>Monitoring & High Availability</p></div>
           </div>
         </div>
       </motion.div>
