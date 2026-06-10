@@ -214,7 +214,7 @@ const translations = {
 };
 
 const ThemeContext = createContext();
-export const useTheme = () => useContext(ThemeContext);
+const useTheme = () => useContext(ThemeContext);
 
 const App = () => {
   const { scrollYProgress } = useScroll();
@@ -569,7 +569,9 @@ const AboutSection = () => {
       <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4 }} className="glass about-card">
         <div className="about-grid">
           <div className="about-info">
-            <h2 className="heading-secondary" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>{t('aboutMe')} <span className="text-gradient">{t('me')}</span></h2>
+            <h2 style={{ textAlign: 'center', fontSize: 'clamp(3rem, 5vw, 4rem)', fontWeight: 900, marginBottom: '2.5rem', color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
+              {t('aboutMe')} <span style={{ color: 'var(--primary-color)' }}>{t('me')}</span>
+            </h2>
             {Array.isArray(t('aboutDesc')) ? t('aboutDesc').map((desc, idx) => (
               <p key={idx} style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '1.2rem', lineHeight: 1.8 }} dangerouslySetInnerHTML={{ __html: desc }} />
             )) : (
@@ -595,11 +597,11 @@ const AboutSection = () => {
             </div>
           </div>
           <div className="stats-grid">
-            <div className="stat-card glass"><h3 className="text-gradient">8+</h3><p>{t('yearsExp')}</p></div>
-            <div className="stat-card glass"><h3 className="text-gradient">20+</h3><p>{t('projectsDelivered')}</p></div>
-            <div className="stat-card glass"><h3 className="text-gradient">100%</h3><p>{t('commitment')}</p></div>
-            <div className="stat-card glass"><h3 className="text-gradient">Gov</h3><p>{t('publicSector')}</p></div>
-            <div className="stat-card glass"><h3 className="text-gradient">{t('bizSector')}</h3><p>{t('retailIndustry')}</p></div>
+            <div className="stat-card"><h3>8+</h3><p>{t('yearsExp')}</p></div>
+            <div className="stat-card"><h3>20+</h3><p>{t('projectsDelivered')}</p></div>
+            <div className="stat-card"><h3>100%</h3><p>{t('commitment')}</p></div>
+            <div className="stat-card"><h3>Gov</h3><p>{t('publicSector')}</p></div>
+            <div className="stat-card"><h3>{t('bizSector')}</h3><p>{t('retailIndustry')}</p></div>
           </div>
         </div>
         <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid var(--glass-border)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
@@ -627,9 +629,9 @@ const AboutSection = () => {
         .about-info { max-width: 100%; text-align: justify; }
         .info-item { display: flex; align-items: flex-start; gap: 1rem; text-align: left; }
         .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; justify-content: center; }
-        .stat-card { padding: 2rem 1rem; text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-        .stat-card:hover { transform: translateY(-5px); }
-        .stat-card h3 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .stat-card { background: var(--bg-primary); border: 1px solid var(--glass-border); border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); padding: 2.5rem 1rem; text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .stat-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
+        .stat-card h3 { font-size: 3rem; margin-bottom: 0.5rem; font-weight: 900; color: var(--primary-color); letter-spacing: -0.02em; }
         .stat-card p { color: var(--text-secondary); font-size: 0.9rem; font-weight: 500; }
         
         @media (max-width: 1024px) { 
@@ -666,10 +668,12 @@ const ExperienceSection = () => {
   ];
   return (
     <section id="experience" className="container">
-      <h2 className="heading-secondary">{t('professional')} <span className="text-gradient">{t('journey')}</span></h2>
+      <h2 style={{ textAlign: 'center', fontSize: 'clamp(3rem, 5vw, 4rem)', fontWeight: 900, marginBottom: '3rem', color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
+        {t('professional')} <span style={{ color: 'var(--primary-color)' }}>{t('journey')}</span>
+      </h2>
       <div className="experience-grid">
         {experiences.map((exp, index) => (
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: index * 0.05 }} key={index} className="experience-card glass">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: index * 0.05 }} key={index} className="experience-card">
             <div className="experience-header">
               <div className="experience-icon"><Briefcase size={20} /></div>
               <span className="period">{exp.period}</span>
@@ -682,14 +686,15 @@ const ExperienceSection = () => {
       </div>
       <style>{`
         .experience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-        .experience-card { padding: 2rem; display: flex; flex-direction: column; transition: all 0.3s ease; }
-        .experience-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); border-color: var(--primary-color); }
+        @media (min-width: 1280px) { .experience-grid { grid-template-columns: repeat(4, 1fr); } }
+        .experience-card { background: var(--bg-primary); border-radius: 16px; padding: 2rem; display: flex; flex-direction: column; transition: all 0.3s ease; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); }
+        .experience-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); border-color: var(--primary-color); }
         .experience-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
-        .experience-icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(30, 58, 138, 0.1); color: var(--primary-color); display: flex; align-items: center; justify-content: center; }
-        .period { color: var(--accent-color); font-size: 0.85rem; font-weight: 700; background: var(--surface-color); padding: 0.4rem 1rem; border-radius: 50px; }
-        .experience-card h3 { font-size: 1.25rem; margin-bottom: 0.25rem; font-weight: 700; line-height: 1.4; }
-        .company { color: var(--text-secondary); font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem; }
-        .experience-card p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; flex-grow: 1; }
+        .experience-icon { width: 48px; height: 48px; border-radius: 14px; background: rgba(37, 99, 235, 0.08); color: var(--primary-color); display: flex; align-items: center; justify-content: center; }
+        .period { color: var(--primary-color); font-size: 0.85rem; font-weight: 800; }
+        .experience-card h3 { font-size: 1.3rem; margin-bottom: 0.5rem; font-weight: 900; line-height: 1.3; letter-spacing: -0.01em; color: var(--text-primary); }
+        .company { color: var(--text-secondary); font-weight: 800; margin-bottom: 1.5rem; font-size: 0.9rem; }
+        .experience-card p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1; }
         
         @media (max-width: 768px) {
           .experience-grid { grid-template-columns: 1fr; }
@@ -707,19 +712,19 @@ const PortfolioSection = () => {
 
   // All projects unified — sorted by complexity, mixed between featured & repo
   const allProjects = [
-    { id: 'getkasir', title: 'GetKasir Enterprise POS', desc: lang === 'id' ? 'Ekosistem retail raksasa kelas Enterprise yang menggabungkan kecanggihan AI, keamanan biometrik, dan skalabilitas cloud (100+ Modul).' : 'Enterprise-class giant retail ecosystem combining AI sophistication, biometric security, and cloud scalability (100+ Modules).', badge: 'JavaScript', url: 'https://getkasir.com' },
-    { id: 'asistenvirtual', title: 'Lipsync Realtime Avatar AI', desc: lang === 'id' ? 'Aplikasi Conversational AI canggih berbasis web yang menggabungkan kecerdasan buatan mutakhir (Lipsync Realtime, Voice AI, LLM) dengan antarmuka visual yang memukau.' : 'Advanced web-based Conversational AI app combining cutting-edge AI (Lipsync Realtime, Voice AI, LLM) with stunning visual interfaces.', badge: 'TypeScript', url: 'https://asistenvirtual.ai' },
-    { id: 'malmora', title: 'Malmora (Reseller & Dropship)', desc: lang === 'id' ? 'Platform aplikasi reseller & dropship yang berfokus pada produk kebutuhan muslim-muslimah, memudahkan pengguna berjualan online tanpa memikirkan pengemasan dan pengiriman di wilayah Sulawesi & Indonesia Timur.' : 'Reseller & dropship app platform focused on Muslim lifestyle products, enabling users to sell online without handling packaging or shipping across Sulawesi and Eastern Indonesia.', badge: t('typeWeb'), url: 'https://malmora.com' },
-    { id: 'datasulsel', title: 'Portal Data Sulsel', desc: lang === 'id' ? 'Portal data terpadu untuk pengelolaan, monitoring, dan analisis statistik data keagamaan di seluruh wilayah Sulawesi Selatan secara real-time.' : 'Integrated data portal for real-time management, monitoring, and analysis of religious statistical data across South Sulawesi.', badge: 'PLpgSQL', url: 'https://datasulsel.com' },
-    { id: 'emailserver', title: 'Email Server Makassar Gov', desc: lang === 'id' ? 'Infrastruktur email cluster berbasis Mailcow yang mendukung lebih dari 200 domain pemerintah Kota Makassar dengan keamanan SPF/DKIM/DMARC dan high-availability setup.' : 'Mailcow-based email cluster infrastructure supporting 200+ Makassar government domains with SPF/DKIM/DMARC security hardening and high-availability configuration.', badge: t('typeInfra'), url: 'https://surat.makassarkota.go.id' },
-    { id: 'ppidparepare', title: 'PPID Kemenag Kota Parepare', desc: lang === 'id' ? 'Portal Resmi PPID Kemenag Kota Parepare untuk transparansi informasi publik, laporan kinerja, dan integrasi Google Gemini AI.' : 'Official PPID Kemenag Kota Parepare Portal for public information transparency, performance reports, and Google Gemini AI integration.', badge: 'TypeScript', url: 'https://ppid.kemenag.go.id/parepare' },
-    { id: 'helpdesk', title: 'Helpdesk Kota Makassar', desc: lang === 'id' ? 'Portal layanan warga Kota Makassar berbasis web untuk manajemen pengaduan publik, tracking tiket real-time, dan integrasi dengan unit kerja Pemkot Makassar.' : 'Citizen service portal for Makassar City enabling public complaint management, real-time ticket tracking, and integration across municipal work units.', badge: t('typeWeb'), url: 'https://helpdesk.makassarkota.go.id' },
-    { id: 'kegiatansulsel', title: 'Manajemen Kegiatan Sulsel', desc: lang === 'id' ? 'Sistem Manajemen Kehadiran dan Pendaftaran Peserta Kegiatan Sulawesi Selatan berbasis Next.js, Supabase, dan QR Code.' : 'South Sulawesi Activity Participant Registration and Attendance Management System based on Next.js, Supabase, and QR Code.', badge: 'TypeScript', url: 'https://kegiatansulsel.com' },
-    { id: 'virtualmuseum', title: 'Virtual Museum Makassar', desc: lang === 'id' ? 'Museum digital interaktif Kota Makassar dengan navigasi panorama 360°, galeri artefak 3D, dan tur audio-visual untuk pelestarian warisan budaya Sulawesi Selatan.' : 'Interactive digital museum of Makassar City featuring 360° panoramic navigation, 3D artifact galleries, and audio-visual tours for South Sulawesi cultural heritage preservation.', badge: t('typeVR'), url: 'https://dikemas.makassarkota.go.id/virtualtour' },
-    { id: 'kawansedarah', title: 'Kawan Sedarah (Blood Stock)', desc: lang === 'id' ? 'Command center platform monitoring stok darah real-time yang terintegrasi dengan Supabase.' : 'Command center platform for real-time blood stock monitoring integrated with Supabase.', badge: 'TypeScript', url: 'https://kawansedarah.com' },
-    { id: 'alharamvr', title: 'Al-Haram VR', desc: lang === 'id' ? 'Rekonstruksi virtual reality presisi tinggi dari Masjidil Haram dan Masjid Nabawi menggunakan Unity, dioptimalkan untuk headset VR dan mobile sebagai alat edukasi ibadah haji & umrah.' : 'High-fidelity virtual reality reconstruction of Al-Masjid Al-Haram and Al-Masjid An-Nabawi in Unity, optimized for VR headsets and mobile as a Hajj & Umrah educational tool.', badge: t('typeVR'), url: null },
-    { id: 'paralluta', title: 'Paralluta (Lalu Lintas)', desc: lang === 'id' ? 'Sistem informasi manajemen lalu lintas berbasis web untuk monitoring kondisi jalan, pencatatan pelanggaran, dan koordinasi petugas lapangan Kota Makassar.' : 'Web-based traffic management information system for road condition monitoring, violation recording, and field officer coordination across Makassar City.', badge: t('typeWeb'), url: null },
-    { id: 'sopsiber', title: 'SOP Pelaporan Insiden Siber', desc: lang === 'id' ? 'Dokumen SOP komprehensif dan protokol respons insiden siber yang diformulasikan untuk jaringan IT Pemerintah Kota Makassar, sesuai standar BSSN dan NIST Cybersecurity Framework.' : 'Comprehensive SOP documentation and cyber incident response protocols formulated for Makassar City Government IT networks, aligned with BSSN and NIST Cybersecurity Framework standards.', badge: t('typeSecurity'), url: null },
+    { id: 'getkasir', title: 'GetKasir Enterprise POS', desc: lang === 'id' ? 'Ekosistem retail raksasa kelas <strong>Enterprise</strong> yang menggabungkan kecanggihan <strong>AI</strong>, keamanan <strong>biometrik</strong>, dan <strong>skalabilitas cloud</strong> (100+ Modul).' : 'Enterprise-class giant retail ecosystem combining <strong>AI</strong> sophistication, <strong>biometric security</strong>, and <strong>cloud scalability</strong> (100+ Modules).', url: 'https://getkasir.com' },
+    { id: 'asistenvirtual', title: 'Lipsync Realtime Avatar AI', desc: lang === 'id' ? 'Aplikasi <strong>Conversational AI</strong> canggih berbasis web yang menggabungkan <strong>Lipsync Realtime</strong>, <strong>Voice AI</strong>, <strong>LLM</strong> dengan antarmuka visual yang memukau.' : 'Advanced web-based <strong>Conversational AI</strong> app combining cutting-edge <strong>Lipsync Realtime</strong>, <strong>Voice AI</strong>, <strong>LLM</strong> with stunning visual interfaces.', url: 'https://asistenvirtual.ai' },
+    { id: 'malmora', title: 'Malmora (Reseller & Dropship)', desc: lang === 'id' ? 'Platform aplikasi <strong>reseller & dropship</strong> yang berfokus pada produk kebutuhan muslim-muslimah, memudahkan pengguna berjualan online tanpa memikirkan pengemasan dan pengiriman di wilayah <strong>Sulawesi & Indonesia Timur</strong>.' : '<strong>Reseller & dropship</strong> app platform focused on Muslim lifestyle products, enabling users to sell online without handling packaging or shipping across <strong>Sulawesi and Eastern Indonesia</strong>.', url: 'https://malmora.com' },
+    { id: 'datasulsel', title: 'Portal Data Sulsel', desc: lang === 'id' ? 'Portal data terpadu untuk <strong>pengelolaan</strong>, <strong>monitoring</strong>, dan <strong>analisis statistik</strong> data keagamaan di seluruh wilayah Sulawesi Selatan secara <strong>real-time</strong>.' : 'Integrated data portal for <strong>real-time</strong> management, <strong>monitoring</strong>, and <strong>statistical analysis</strong> of religious data across South Sulawesi.', url: 'https://datasulsel.com' },
+    { id: 'emailserver', title: 'Email Server Makassar Gov', desc: lang === 'id' ? 'Infrastruktur <strong>email cluster</strong> berbasis <strong>Mailcow</strong> yang mendukung lebih dari <strong>200 domain</strong> pemerintah Kota Makassar dengan keamanan <strong>SPF/DKIM/DMARC</strong> dan <strong>high-availability</strong> setup.' : '<strong>Mailcow</strong>-based <strong>email cluster</strong> infrastructure supporting <strong>200+ government domains</strong> with <strong>SPF/DKIM/DMARC</strong> security hardening and <strong>high-availability</strong> configuration.', url: 'https://surat.makassarkota.go.id' },
+    { id: 'ppidparepare', title: 'PPID Kemenag Kota Parepare', desc: lang === 'id' ? 'Portal Resmi <strong>PPID Kemenag</strong> Kota Parepare untuk <strong>transparansi informasi publik</strong>, laporan kinerja, dan integrasi <strong>Google Gemini AI</strong>.' : 'Official <strong>PPID Kemenag</strong> Kota Parepare Portal for <strong>public information transparency</strong>, performance reports, and <strong>Google Gemini AI</strong> integration.', url: 'https://ppid.kemenag.go.id/parepare' },
+    { id: 'helpdesk', title: 'Helpdesk Kota Makassar', desc: lang === 'id' ? 'Portal layanan warga Kota Makassar berbasis web untuk <strong>manajemen pengaduan publik</strong>, <strong>tracking tiket real-time</strong>, dan integrasi dengan unit kerja <strong>Pemkot Makassar</strong>.' : 'Citizen service portal for Makassar City enabling <strong>public complaint management</strong>, <strong>real-time ticket tracking</strong>, and integration across <strong>municipal work units</strong>.', url: 'https://helpdesk.makassarkota.go.id' },
+    { id: 'kegiatansulsel', title: 'Manajemen Kegiatan Sulsel', desc: lang === 'id' ? 'Sistem <strong>Manajemen Kehadiran</strong> dan <strong>Pendaftaran Peserta</strong> Kegiatan Sulawesi Selatan berbasis <strong>Next.js</strong>, <strong>Supabase</strong>, dan <strong>QR Code</strong>.' : 'South Sulawesi Activity <strong>Participant Registration</strong> and <strong>Attendance Management</strong> System based on <strong>Next.js</strong>, <strong>Supabase</strong>, and <strong>QR Code</strong>.', url: 'https://kegiatansulsel.com' },
+    { id: 'virtualmuseum', title: 'Virtual Museum Makassar', desc: lang === 'id' ? 'Museum digital interaktif Kota Makassar dengan navigasi <strong>panorama 360°</strong>, galeri <strong>artefak 3D</strong>, dan <strong>tur audio-visual</strong> untuk pelestarian warisan budaya Sulawesi Selatan.' : 'Interactive digital museum of Makassar City featuring <strong>360° panoramic</strong> navigation, <strong>3D artifact</strong> galleries, and <strong>audio-visual tours</strong> for South Sulawesi cultural heritage preservation.', url: 'https://dikemas.makassarkota.go.id/virtualtour' },
+    { id: 'kawansedarah', title: 'Kawan Sedarah (Blood Stock)', desc: lang === 'id' ? '<strong>Command center</strong> platform <strong>monitoring stok darah</strong> real-time yang terintegrasi dengan <strong>Supabase</strong>.' : '<strong>Command center</strong> platform for <strong>real-time blood stock monitoring</strong> integrated with <strong>Supabase</strong>.', url: 'https://kawansedarah.com' },
+    { id: 'alharamvr', title: 'Al-Haram VR', desc: lang === 'id' ? 'Rekonstruksi <strong>virtual reality</strong> presisi tinggi dari <strong>Masjidil Haram</strong> dan <strong>Masjid Nabawi</strong> menggunakan <strong>Unity</strong>, dioptimalkan untuk <strong>headset VR</strong> dan mobile sebagai alat edukasi ibadah haji & umrah.' : 'High-fidelity <strong>virtual reality</strong> reconstruction of <strong>Al-Masjid Al-Haram</strong> and <strong>Al-Masjid An-Nabawi</strong> in <strong>Unity</strong>, optimized for <strong>VR headsets</strong> and mobile as a Hajj & Umrah educational tool.', url: null },
+    { id: 'paralluta', title: 'Paralluta (Lalu Lintas)', desc: lang === 'id' ? 'Sistem informasi <strong>manajemen lalu lintas</strong> berbasis web untuk <strong>monitoring kondisi jalan</strong>, pencatatan pelanggaran, dan <strong>koordinasi petugas lapangan</strong> Kota Makassar.' : 'Web-based <strong>traffic management</strong> information system for <strong>road condition monitoring</strong>, violation recording, and <strong>field officer coordination</strong> across Makassar City.', url: null },
+    { id: 'sopsiber', title: 'SOP Pelaporan Insiden Siber', desc: lang === 'id' ? 'Dokumen <strong>SOP</strong> komprehensif dan <strong>protokol respons insiden siber</strong> yang diformulasikan untuk jaringan IT <strong>Pemerintah Kota Makassar</strong>, sesuai standar <strong>BSSN</strong> dan <strong>NIST Cybersecurity Framework</strong>.' : 'Comprehensive <strong>SOP</strong> documentation and <strong>cyber incident response protocols</strong> formulated for <strong>Makassar City Government</strong> IT networks, aligned with <strong>BSSN</strong> and <strong>NIST Cybersecurity Framework</strong> standards.', url: null },
   ];
 
   const formatName = (name) => {
@@ -736,7 +741,7 @@ const PortfolioSection = () => {
         const filtered = data
           .filter(repo => !knownRepoNames.includes(repo.name) && !excludedRepos.includes(repo.name))
           .slice(0, 6)
-          .map(repo => ({ id: repo.name, title: formatName(repo.name), desc: repo.description || 'No description available.', badge: repo.language || 'Mixed', url: repo.html_url, isPublicRepo: true }));
+          .map(repo => ({ id: repo.name, title: formatName(repo.name), desc: repo.description || 'No description available.', url: repo.html_url, isPublicRepo: true }));
         setPublicRepos(filtered);
         setLoading(false);
       })
@@ -747,28 +752,32 @@ const PortfolioSection = () => {
 
   return (
     <section id="portfolio" className="container">
-      <h2 className="heading-secondary">{t('featured')} <span className="text-gradient">{t('projects')}</span></h2>
+      <h2 style={{ textAlign: 'center', fontSize: 'clamp(3rem, 5vw, 4rem)', fontWeight: 900, marginBottom: '3rem', color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
+        {lang === 'id' ? (
+          <>Pro<span style={{ color: 'var(--primary-color)' }}>yek</span></>
+        ) : (
+          <>Pro<span style={{ color: 'var(--primary-color)' }}>jects</span></>
+        )}
+      </h2>
 
       <div className="portfolio-grid">
-        {combined.map((item, idx) => (
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: idx * 0.03 }} key={item.id} className="portfolio-card glass">
-            <div className="card-image-container">
-              <img src={`https://picsum.photos/seed/${item.id}/600/400`} alt={item.title} className="card-image" loading="lazy" />
-            </div>
-            <div className="card-content">
-              <div className="card-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span className="badge">{item.badge}</span>
-              </div>
-              <h3 style={{ color: 'var(--text-primary)' }}>{item.title}</h3>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '1.5rem', flexGrow: 1, lineHeight: 1.7 }}>{item.desc}</p>
-              {item.url && (
-                <a href={item.url} target="_blank" rel="noreferrer" className="project-link">
-                  {item.isPublicRepo ? t('viewRepo') : (lang === 'id' ? 'Lihat Aplikasi' : 'View App')} <ExternalLink size={16} />
-                </a>
-              )}
-            </div>
-          </motion.div>
-        ))}
+        {combined.map((item, idx) => {
+          const CardWrapper = item.url ? 'a' : 'div';
+          const linkProps = item.url ? { href: item.url, target: '_blank', rel: 'noreferrer' } : {};
+          return (
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: idx * 0.03 }} key={item.id}>
+              <CardWrapper {...linkProps} className="portfolio-card">
+                <div className="card-image-container">
+                  <img src={`https://picsum.photos/seed/${item.id}/600/400`} alt={item.title} className="card-image" loading="lazy" />
+                </div>
+                <div className="card-content">
+                  <h3>{item.title}</h3>
+                  <p dangerouslySetInnerHTML={{ __html: item.desc }} />
+                </div>
+              </CardWrapper>
+            </motion.div>
+          );
+        })}
       </div>
 
       {loading && <div style={{ textAlign: 'center', color: 'var(--text-secondary)', padding: '2rem' }}>{t('loadingRepos')}</div>}
@@ -781,19 +790,16 @@ const PortfolioSection = () => {
         @media (max-width: 768px) {
           .portfolio-grid { grid-template-columns: 1fr; }
           .portfolio-card { text-align: center; align-items: center; }
-          .card-header { flex-direction: column; gap: 1rem; align-items: center; }
         }
-        .portfolio-card { padding: 0; display: flex; flex-direction: column; transition: all 0.3s ease; overflow: hidden; }
-        .portfolio-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); border-color: var(--primary-color); }
-        .card-image-container { width: 100%; height: 170px; overflow: hidden; border-bottom: 1px solid var(--glass-border); }
+        .portfolio-card { background: var(--bg-primary); border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); padding: 0; display: flex; flex-direction: column; transition: all 0.3s ease; overflow: hidden; border: 1px solid var(--glass-border); text-decoration: none; cursor: pointer; height: 100%; }
+        .portfolio-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); border-color: var(--primary-color); }
+        .card-image-container { width: 100%; height: 200px; overflow: hidden; border-bottom: 1px solid var(--glass-border); }
         .card-image { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
         .portfolio-card:hover .card-image { transform: scale(1.05); }
-        .card-content { padding: 1.5rem 1.75rem; display: flex; flex-direction: column; flex-grow: 1; }
-        .card-header { margin-bottom: 1.25rem; }
-        .badge { background: rgba(30, 58, 138, 0.1); color: var(--primary-color); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
-        .portfolio-card h3 { font-size: 1.3rem; margin-bottom: 1.5rem; font-weight: 700; }
-        .project-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color); font-size: 0.95rem; font-weight: 700; transition: all 0.3s ease; }
-        .project-link:hover { color: var(--accent-color); transform: translateX(5px); }
+        .card-content { padding: 2rem; display: flex; flex-direction: column; flex-grow: 1; }
+        .portfolio-card h3 { font-size: 1.4rem; margin-bottom: 1rem; font-weight: 900; color: var(--text-primary); letter-spacing: -0.01em; line-height: 1.3; }
+        .portfolio-card .card-content p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; flex-grow: 1; }
+        .portfolio-card .card-content p strong { color: var(--text-primary); font-weight: 800; }
       `}</style>
     </section>
   );
@@ -817,30 +823,39 @@ const SkillsSection = () => {
   return (
     <section id="skills" className="container">
       <div className="skills-layout">
-        <div><h2 className="heading-secondary" style={{ textAlign: 'left' }}>{t('core')} <span className="text-gradient">{t('competencies')}</span></h2><p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>{t('coreDesc')}</p></div>
+        <div>
+          <h2 style={{ textAlign: 'left', fontSize: 'clamp(3rem, 5vw, 4rem)', fontWeight: 900, marginBottom: '2rem', color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
+            {t('core')} <span style={{ color: 'var(--primary-color)' }}>{t('competencies')}</span>
+          </h2>
+          <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '1.1rem', lineHeight: 1.7 }}>{t('coreDesc')}</p>
+        </div>
         <div className="skills-list">
           {skills.map((skill, idx) => (
             <div key={idx} className="skill-item">
-              <div className="skill-info"><span style={{ fontWeight: 600, color: 'var(--text-primary)' }}>{skill.name}</span><span className="text-gradient">{skill.level}%</span></div>
-              <div className="skill-bar-bg"><motion.div className="skill-bar-fill" initial={{ width: 0 }} whileInView={{ width: `${skill.level}%` }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }} /></div>
+              <div className="skill-info">
+                <span style={{ fontWeight: 800, color: 'var(--text-primary)' }}>{skill.name}</span>
+                <span style={{ fontWeight: 700, color: 'var(--primary-color)' }}>{skill.level}%</span>
+              </div>
+              <div className="skill-bar-bg">
+                <motion.div className="skill-bar-fill" initial={{ width: 0 }} whileInView={{ width: `${skill.level}%` }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }} />
+              </div>
             </div>
           ))}
         </div>
       </div>
       <style>{`
         .skills-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: flex-start; }
-        .skill-item { margin-bottom: 1.5rem; }
-        .skill-info { display: flex; justify-content: space-between; margin-bottom: 0.5rem; }
-        .skill-bar-bg { height: 8px; background: var(--surface-color); border-radius: 4px; overflow: hidden; }
-        .skill-bar-fill { height: 100%; background: linear-gradient(90deg, var(--primary-color), var(--accent-color)); border-radius: 4px; }
+        .skill-item { margin-bottom: 2rem; }
+        .skill-info { display: flex; justify-content: space-between; margin-bottom: 0.8rem; }
+        .skill-bar-bg { height: 6px; background: rgba(37, 99, 235, 0.1); border-radius: 999px; overflow: hidden; }
+        .skill-bar-fill { height: 100%; background: linear-gradient(90deg, var(--primary-color), var(--accent-color)); border-radius: 999px; }
         @media (max-width: 992px) { 
           .skills-layout { grid-template-columns: 1fr; gap: 3rem; text-align: center; } 
-          .heading-secondary { text-align: center !important; }
+          .skills-layout h2 { text-align: center !important; }
         }
         @media (max-width: 600px) {
           .skill-info { font-size: 0.9rem; }
           .skill-item { text-align: left; }
-          .skill-bar-bg { height: 10px; }
         }
       `}</style>
     </section>
@@ -858,59 +873,213 @@ const CertificatesSection = () => {
   ];
   return (
     <section id="certificates" className="container">
-      <h2 className="heading-secondary">{t('certifications')} <span className="text-gradient">{t('awards')}</span></h2>
-      <div className="portfolio-grid">
+      <h2 style={{ textAlign: 'center', fontSize: 'clamp(3rem, 5vw, 4rem)', fontWeight: 900, marginBottom: '3rem', color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
+        {t('certifications')} <span style={{ color: 'var(--primary-color)' }}>{t('awards')}</span>
+      </h2>
+      <div className="cert-grid">
         {certs.map((cert, idx) => (
-          <div key={idx} className="cert-card glass" style={{ padding: '2rem', textAlign: 'center' }}>
-            <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'center', color: 'var(--primary-color)' }}>{cert.icon}</div>
-            <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', color: 'var(--text-primary)' }}>{cert.title}</h3>
-            <p style={{ color: 'var(--accent-color)', fontWeight: 600, fontSize: '0.9rem' }}>{cert.issuer}</p>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>{cert.date}</p>
+          <div key={idx} className="cert-card">
+            <div className="cert-icon">{cert.icon}</div>
+            <h3 className="cert-title">{cert.title}</h3>
+            <p className="cert-issuer">{cert.issuer}</p>
+            <p className="cert-date">{cert.date}</p>
           </div>
         ))}
       </div>
+      <style>{`
+        .cert-grid { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
+        .cert-card { background: var(--bg-primary); border-radius: 16px; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); padding: 2.5rem 2rem; text-align: center; transition: all 0.3s ease; flex: 0 1 calc(33.333% - 1rem); min-width: 280px; max-width: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .cert-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); border-color: var(--primary-color); }
+        .cert-icon { margin-bottom: 1.5rem; color: var(--primary-color); }
+        .cert-title { font-size: 1.15rem; margin-bottom: 0.75rem; color: var(--text-primary); font-weight: 900; line-height: 1.4; }
+        .cert-issuer { color: var(--primary-color); font-weight: 700; font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .cert-date { color: var(--text-secondary); font-size: 0.8rem; font-weight: 600; }
+      `}</style>
     </section>
   );
 };
 
 const ContactSection = () => {
   const { t } = useTheme();
+  const contacts = [
+    {
+      href: "https://linkedin.com/in/syarfandi",
+      icon: <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>,
+      color: '#0077b5',
+      bg: 'rgba(0, 119, 181, 0.08)',
+      label: 'LinkedIn',
+      value: 'linkedin.com/in/syarfandi',
+      external: true,
+    },
+    {
+      href: "https://wa.me/6285256522335",
+      icon: <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>,
+      color: '#25D366',
+      bg: 'rgba(37, 211, 102, 0.08)',
+      label: 'WhatsApp',
+      value: '+62 852-5652-2335',
+      external: true,
+    },
+    {
+      href: "mailto:syarfandi.achmad@gmail.com",
+      icon: <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.39l-9 6.58-9-6.58V21H1.5c-.85 0-1.5-.65-1.5-1.5v-15c0-1.15.95-1.75 1.85-1.15L12 9.81l10.15-7.31c.9-.6 1.85 0 1.85 1.15z" /></svg>,
+      color: '#EA4335',
+      bg: 'rgba(234, 67, 53, 0.08)',
+      label: t('email'),
+      value: 'syarfandi.achmad@gmail.com',
+      external: false,
+    },
+  ];
   return (
     <section id="contact" className="container">
-      <div className="glass contact-card">
-        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          <h2 className="heading-secondary" style={{ marginBottom: '1rem' }}>{t('readyCollab')} <span className="text-gradient">{t('collaborate')}</span></h2>
-          <p style={{ color: 'var(--text-secondary)' }}>{t('discussValue')}</p>
+      <div className="contact-split">
+        <div className="contact-left">
+          <h2 className="contact-heading">
+            {t('readyCollab')}<br />
+            <span style={{ color: 'var(--primary-color)' }}>{t('collaborate')}</span>
+          </h2>
+          <p className="contact-subtitle">{t('discussValue')}</p>
+          <div className="contact-decoration">
+            <div className="deco-line" />
+            <div className="deco-dot" />
+          </div>
         </div>
-        <div className="contact-grid">
-          <a href="https://linkedin.com/in/syarfandi" target="_blank" rel="noreferrer" className="contact-item glass">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32" style={{ color: '#0077b5' }}><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
-            <h4 style={{ color: 'var(--text-primary)' }}>LinkedIn</h4>
-            <p>linkedin.com/in/syarfandi</p>
-          </a>
-          <a href="mailto:syarfandi.achmad@gmail.com" className="contact-item glass">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32" style={{ color: '#EA4335' }}><path d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.39l-9 6.58-9-6.58V21H1.5c-.85 0-1.5-.65-1.5-1.5v-15c0-1.15.95-1.75 1.85-1.15L12 9.81l10.15-7.31c.9-.6 1.85 0 1.85 1.15z" /></svg>
-            <h4 style={{ color: 'var(--text-primary)' }}>{t('email')}</h4>
-            <p>syarfandi.achmad@gmail.com</p>
-          </a>
-          <a href="https://wa.me/6285256522335" target="_blank" rel="noreferrer" className="contact-item glass">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32" style={{ color: '#25D366' }}><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
-            <h4 style={{ color: 'var(--text-primary)' }}>WhatsApp</h4>
-            <p>+62 852-5652-2335</p>
-          </a>
+        <div className="contact-right">
+          {contacts.map((c, i) => (
+            <motion.a
+              key={i}
+              href={c.href}
+              target={c.external ? "_blank" : undefined}
+              rel={c.external ? "noreferrer" : undefined}
+              className="contact-row"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
+            >
+              <div className="contact-row-icon" style={{ background: c.bg, color: c.color }}>
+                {c.icon}
+              </div>
+              <div className="contact-row-text">
+                <h4>{c.label}</h4>
+                <p>{c.value}</p>
+              </div>
+              <ExternalLink size={18} className="contact-row-arrow" />
+            </motion.a>
+          ))}
         </div>
       </div>
       <style>{`
-        .contact-card { padding: 5rem; border-radius: 32px; }
-        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-        .contact-item { padding: 3rem 2rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; transition: all 0.3s ease; border-radius: 24px; }
-        .contact-item:hover { transform: translateY(-10px); border-color: var(--primary-color); background: rgba(255,255,255,0.05); }
-        .contact-item h4 { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); }
-        .contact-item p, .contact-item h3 { color: var(--text-secondary); font-size: 1rem; font-weight: 500; }
-        @media (max-width: 768px) { 
-          .contact-card { padding: 3rem 1.5rem; }
-          .contact-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-          .contact-item { padding: 2rem; }
+        .contact-split {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 5rem;
+          align-items: center;
+        }
+        .contact-heading {
+          font-size: clamp(3rem, 5vw, 4.5rem);
+          font-weight: 900;
+          color: var(--text-primary);
+          letter-spacing: -0.03em;
+          line-height: 1.1;
+          margin-bottom: 1.5rem;
+        }
+        .contact-subtitle {
+          color: var(--text-secondary);
+          font-size: 1.15rem;
+          line-height: 1.8;
+          max-width: 420px;
+        }
+        .contact-decoration {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          margin-top: 2.5rem;
+        }
+        .deco-line {
+          width: 60px;
+          height: 4px;
+          background: var(--primary-color);
+          border-radius: 999px;
+        }
+        .deco-dot {
+          width: 10px;
+          height: 10px;
+          background: var(--accent-color);
+          border-radius: 50%;
+        }
+        .contact-right {
+          display: flex;
+          flex-direction: column;
+          gap: 1.25rem;
+        }
+        .contact-row {
+          display: flex;
+          align-items: center;
+          gap: 1.5rem;
+          padding: 1.75rem 2rem;
+          background: var(--bg-primary);
+          border: 1px solid var(--glass-border);
+          border-radius: 20px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+          text-decoration: none;
+          transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .contact-row:hover {
+          transform: translateX(8px);
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+          border-color: var(--primary-color);
+        }
+        .contact-row-icon {
+          width: 56px;
+          height: 56px;
+          border-radius: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          transition: transform 0.3s ease;
+        }
+        .contact-row:hover .contact-row-icon {
+          transform: scale(1.1);
+        }
+        .contact-row-text {
+          flex-grow: 1;
+        }
+        .contact-row-text h4 {
+          font-size: 1.15rem;
+          font-weight: 900;
+          color: var(--text-primary);
+          margin: 0 0 0.25rem;
+          letter-spacing: -0.01em;
+        }
+        .contact-row-text p {
+          color: var(--text-secondary);
+          font-size: 0.95rem;
+          font-weight: 600;
+          margin: 0;
+        }
+        .contact-row-arrow {
+          color: var(--text-secondary);
+          opacity: 0;
+          transform: translateX(-8px);
+          transition: all 0.3s ease;
+          flex-shrink: 0;
+        }
+        .contact-row:hover .contact-row-arrow {
+          opacity: 1;
+          transform: translateX(0);
+          color: var(--primary-color);
+        }
+        @media (max-width: 992px) {
+          .contact-split { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
+          .contact-heading { text-align: center; }
+          .contact-subtitle { max-width: none; }
+          .contact-decoration { justify-content: center; }
+        }
+        @media (max-width: 600px) {
+          .contact-row { padding: 1.25rem 1.5rem; gap: 1rem; }
+          .contact-row-icon { width: 48px; height: 48px; border-radius: 14px; }
         }
       `}</style>
     </section>
