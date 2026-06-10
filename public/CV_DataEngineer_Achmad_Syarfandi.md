@@ -15,11 +15,21 @@ Strategic Data Engineer with 4+ years of experience in architecting scalable dat
 - **Monitoring & BI:** Zabbix, Prometheus, Grafana, Tableau, Google Looker Studio
 
 ## FEATURED PROJECTS
-- **Data Sulsel Warehouse:** Regional-scale data consolidation platform for 9M+ public records.
-- **Enterprise POS Data Layer:** High-concurrency transactional database for thousands of retail merchants.
-- **Automated ETL Hub:** Centralized pipeline hub for government data migration and cleaning.
-- **Retail Analytics Engine:** Business intelligence layer for POS data using BigQuery and Grafana.
-- **Helpdesk Data Platform:** Public complaint data management system with real-time tracking.
+
+- **[Kawan Sedarah (Blood Stock)](https://kawansedarah.org)**: A **command center** dashboard that tracks **blood stock** availability across donor units in **real-time**, powered by **Supabase** as its core backend.
+- **[Portal Data Sulsel](https://datasulsel.kemenag.go.id)**: A unified information system delivering **data visualization**, **monitoring**, and religious **statistical analysis** across all districts in South Sulawesi in **real-time**.
+- **[AI Virtual Assistant](https://asistenvirtual.vercel.app)**: A **Conversational AI**-powered virtual assistant featuring **Realtime Lipsync** on 3D avatars, backed by **Voice AI** and **LLM** for immersive conversational interactions.
+- **[GetKasir Enterprise POS](https://getkasir.xyz)**: A large-scale **Enterprise** POS ecosystem with **100+ modules**, integrating **AI**-driven sales prediction, **biometric** authentication, and a scalable **cloud-native** architecture.
+- **[PPID Kemenag Kota Parepare](https://ppidparepare.vercel.app)**: A public information disclosure portal for **PPID Kemenag** providing access to **official documents**, **performance reports**, and an intelligent chatbot powered by **Google Gemini AI**.
+- **[OP Tracker](https://optracks.vercel.app)**: A premium logbook for tracking **One Piece** watch progress without login — equipped with automatic **filler filter**, **saga & arc** navigation map, and a gamified **pirate rank** system.
+- **[QR Scanner Presence App](https://creativebooster.vercel.app)**: A modern **attendance solution** leveraging **QR Code** scanning for instant participant check-in, built on a **Next.js** + **Supabase** stack with **real-time** sync.
+- **[Malmora (Reseller & Dropship)](https://malmora.com)**: A **reseller & dropship** marketplace tailored for Muslim lifestyle products, enabling anyone to sell without physical stock across **Sulawesi and Eastern Indonesia**.
+- **[Email Server Makassar Gov](https://mail.makassarkota.go.id)**: A city-scale **Mailcow**-based email cluster serving **200+ official domains** for Makassar City Government, hardened with **SPF/DKIM/DMARC** security protocols and **high-availability** setup.
+- **Helpdesk Kota Makassar**: An **e-government** system for handling **citizen complaints** digitally — featuring **real-time ticket tracking**, automated escalation, and cross-department integration across **Makassar City agencies**.
+- **Virtual Museum Makassar**: An immersive digital museum experience with **360° panoramic** tours, interactive **3D artifact** collections, and **audio-visual** narratives preserving South Sulawesi cultural heritage.
+- **Al-Haram VR**: A high-precision **virtual reality** simulation of **Al-Masjid Al-Haram** and **Al-Masjid An-Nabawi**, developed in **Unity** and optimized for both **VR headsets** and mobile devices as a Hajj & Umrah educational tool.
+- **Paralluta (Lalu Lintas)**: A smart platform for **traffic management** in Makassar City — covering **road condition monitoring**, violation logging, and centralized **field officer coordination**.
+- **SOP Pelaporan Insiden Siber**: A **SOP** framework and **cyber incident response protocols** designed for **Makassar City Government** IT infrastructure, aligned with **BSSN** and **NIST Cybersecurity Framework** standards.
 
 ## PROFESSIONAL EXPERIENCE
 
