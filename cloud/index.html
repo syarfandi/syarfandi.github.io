@@ -774,15 +774,15 @@
             printStyle.innerHTML = `
                 @media print {
                     @page { 
-                        size: 210mm ${heightMm}mm; 
-                        margin: 0 !important; 
+                        size: ${isPremium ? `210mm ${heightMm}mm` : 'a4'}; 
+                        margin: ${isPremium ? '0 !important;' : '15mm !important;'} 
                     }
                     html, body { 
                         margin: 0 !important; 
                         padding: 0 !important; 
-                        width: 210mm !important;
-                        height: ${heightMm}mm !important;
-                        overflow: hidden !important;
+                        width: 100% !important;
+                        height: ${isPremium ? heightMm + 'mm' : 'auto'} !important;
+                        overflow: ${isPremium ? 'hidden' : 'visible'} !important;
                         background: white !important;
                     }
                     .nav-container, .theme-switch, #downloadBtn { display: none !important; }
