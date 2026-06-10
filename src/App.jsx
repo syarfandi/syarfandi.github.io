@@ -340,7 +340,7 @@ const HeroSection = () => {
           >
             <div className="image-stack">
               <div className="image-bg-blob"></div>
-              <img src="/Andi.png" alt='Syarfandi "Andi" Achmad' className="hero-img-main" width="450" height="450" fetchpriority="high" />
+              <img src="/Andi.webp" alt='Syarfandi "Andi" Achmad' className="hero-img-main" width="450" height="450" fetchpriority="high" />
             </div>
           </motion.div>
 
@@ -686,7 +686,7 @@ const PortfolioSection = () => {
                       src={
                         item.isPublicRepo
                           ? `https://opengraph.githubassets.com/1/${item.url.replace('https://github.com/', '')}`
-                          : `/projects/${item.id}.jpg`
+                          : `/projects/${item.id}.webp`
                       }
                       onError={(e) => {
                         e.target.onerror = null;
