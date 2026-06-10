@@ -76,7 +76,7 @@ Reliable **Backend Developer** with 4+ years of experience in building scalable,
 
 ---
 
-## Backend Expertise Keywords (ATS Optimized)
+## Backend Expertise Keywords
 Node.js, Express.js, Next.js API Routes, PostgreSQL, Supabase, REST API, GraphQL, WebSocket, JWT Authentication, OAuth, Redis, Docker, GitHub Actions, CI/CD, Database Optimization, SQL Query Tuning, Indexing, Database Migration, Row-Level Security (RLS), Serverless Functions, Edge Functions, Background Jobs, Bull Queue, PM2, Nginx, Linux, Microservices, API Gateway, Webhook Integration, Real-time Data Streaming, Multi-tenant Architecture, Database Partitioning, Connection Pooling.
 
 ## Future-Ready Technical Roadmap
