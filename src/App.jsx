@@ -1,13 +1,14 @@
 import React, { useEffect, useRef, useState, createContext, useContext } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
-import { Mail, Phone, MapPin, ExternalLink, Download, ChevronDown, Award, Briefcase, GraduationCap, Code, Github, Star, GitFork, Moon, Sun, Languages, Shield, Layout, Monitor, Cpu, FileText, Lock, ShieldAlert, CheckCircle2, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, ExternalLink, Download, ChevronDown, Award, Briefcase, GraduationCap, Code, Github, Star, GitFork, Moon, Sun, Languages, Shield, Layout, Monitor, Cpu, FileText, Lock, ShieldAlert, CheckCircle2, Linkedin, Server, Globe } from 'lucide-react';
 
 const translations = {
   id: {
-    heroRole: "Full Stack Developer & DevOps",
+    heroRole: "Full Stack Developer, DevOps & SRE",
     heroGreeting: "Hai, Saya",
-    heroDesc: "Bersemangat dalam membangun solusi digital yang berdampak, membina kerja sama tim yang solid, dan menghadirkan inovasi layanan publik yang prima.",
-    hireMe: "Rekrut Saya",
+    heroDesc: "Bersemangat membangun <strong>solusi web full stack</strong> yang tangguh, merancang <strong>arsitektur cloud (SRE/DevOps)</strong> yang scalable, dan mengotomatisasi <strong>CI/CD pipelines</strong> untuk inovasi enterprise maupun layanan publik.",
+    hireMe: "Chat Me",
+    viewProjects: "Lihat Proyek",
     resume: "Resume",
     selectResume: "Pilih Versi Resume",
     close: "Tutup",
@@ -17,9 +18,15 @@ const translations = {
     pinUnlock: "Buka Kunci",
     aboutMe: "Tentang",
     me: "Saya",
-    aboutDesc: "Saya memiliki semangat alami untuk bekerja dalam tim untuk mencapai tim yang solid dan berkarakter. Memiliki kemampuan komunikasi yang baik, dapat bekerja dengan cepat dan efisien, serta selalu berkomitmen untuk memberikan pelayanan terbaik.",
+    aboutDesc: [
+      "Saya adalah seorang <strong>Full Stack Developer</strong> dengan <strong>lebih dari 8 tahun pengalaman</strong> merancang dan membangun ekosistem aplikasi web dari ujung ke ujung (end-to-end). Fokus utama saya adalah menciptakan <strong>antarmuka pengguna (UI/UX) yang intuitif</strong> serta mengembangkan <strong>arsitektur backend yang tangguh</strong> (React, Node.js, PostgreSQL) untuk menghasilkan <strong>solusi web enterprise</strong> berkinerja tinggi.",
+      "Sebagai nilai tambah, saya memiliki fondasi kuat di bidang <strong>DevOps & Site Reliability Engineering (SRE)</strong>. Hal ini memungkinkan saya untuk tidak hanya menulis kode, tetapi juga memastikan keandalan sistem, mendeploy, menskalakan, dan mengelola infrastruktur secara mandiri menggunakan arsitektur <strong>cloud-native (AWS/GCP)</strong> dan otomatisasi <strong>CI/CD</strong> yang andal.",
+      "Selama karir saya, saya sukses memimpin digitalisasi di sektor publik—melalui portal data terintegrasi—serta merintis sistem <i>agile</i> untuk startup retail dengan penerapan <strong>clean code</strong> dan <strong>best practices</strong>. Saat ini saya terbuka untuk peluang baru dan sepenuhnya <strong>Remote-Ready</strong> untuk berkolaborasi dengan tim global."
+    ],
     location: "Lokasi",
     education: "Pendidikan",
+    availability: "Ketersediaan",
+    languages: "Bahasa",
     yearsExp: "Tahun Pengalaman",
     projectsDelivered: "Proyek Selesai",
     commitment: "Komitmen",
@@ -35,7 +42,7 @@ const translations = {
     privateRepo: "Repositori Privat",
     core: "Kompetensi",
     competencies: "Inti",
-    coreDesc: "Keahlian teknis dan manajerial yang dibangun selama bertahun-tahun dalam mengelola infrastruktur IT, keamanan siber, dan pengembangan aplikasi interaktif.",
+    coreDesc: "Keahlian teknis dan manajerial yang dibangun selama bertahun-tahun dalam mengelola infrastruktur cloud, keamanan siber, dan rekayasa perangkat lunak full stack.",
     certifications: "Sertifikasi",
     awards: "& Penghargaan",
     readyCollab: "Siap",
@@ -101,10 +108,11 @@ const translations = {
     certCityApp: "Microsoft CityApp Appathon Participant"
   },
   en: {
-    heroRole: "Full Stack Developer & DevOps",
+    heroRole: "Full Stack Developer, DevOps & SRE",
     heroGreeting: "Hi, I'm",
-    heroDesc: "Passionate about building impactful digital solutions, fostering solid teamwork, and delivering excellent public service innovations.",
-    hireMe: "Hire Me",
+    heroDesc: "Passionate about building robust <strong>full stack web solutions</strong>, alongside designing scalable <strong>cloud architectures (SRE/DevOps)</strong> and automating <strong>CI/CD pipelines</strong> for enterprise and public service innovations.",
+    hireMe: "Chat Me",
+    viewProjects: "View Projects",
     resume: "Resume",
     selectResume: "Select Resume Version",
     close: "Close",
@@ -114,9 +122,15 @@ const translations = {
     pinUnlock: "Unlock",
     aboutMe: "About",
     me: "Me",
-    aboutDesc: "I have a natural passion for working in a team to achieve a solid and character-driven dynamic. I possess good communication skills, can work quickly and efficiently, and am always committed to providing the best service.",
+    aboutDesc: [
+      "I am a passionate <strong>Full Stack Developer</strong> with <strong>over 8 years of experience</strong> architecting and building end-to-end web application ecosystems. My primary focus lies in crafting <strong>intuitive user interfaces (UI/UX)</strong> and developing <strong>robust backend architectures</strong> (React, Node.js, PostgreSQL) to deliver high-performance <strong>enterprise web solutions</strong>.",
+      "Additionally, my strong foundation in <strong>DevOps & Site Reliability Engineering (SRE)</strong> empowers me to go beyond writing code. I am able to ensure system reliability, independently deploy, scale, and manage digital infrastructures using <strong>cloud-native architectures (AWS/GCP)</strong> and reliable <strong>CI/CD automation</strong>.",
+      "Throughout my career, I have successfully spearheaded digital transformation in the public sector—delivering integrated data portals—and pioneered agile systems for retail startups using <strong>clean code</strong> and <strong>best practices</strong>. I am fully <strong>Remote-Ready</strong> and currently open to new opportunities to collaborate with global teams."
+    ],
     location: "Location",
     education: "Education",
+    availability: "Availability",
+    languages: "Languages",
     yearsExp: "Years Experience",
     projectsDelivered: "Projects Delivered",
     commitment: "Commitment",
@@ -132,7 +146,7 @@ const translations = {
     privateRepo: "Private Repository",
     core: "Core",
     competencies: "Competencies",
-    coreDesc: "Technical and managerial expertise built over years of managing IT infrastructure, cyber security, and interactive application development.",
+    coreDesc: "Technical and managerial expertise built over years of managing cloud infrastructure, cyber security, and full stack software engineering.",
     certifications: "Certifications",
     awards: "& Awards",
     readyCollab: "Ready to",
@@ -302,11 +316,11 @@ const HeroSection = () => {
   };
 
   const resumeOptions = [
+    { title: "Fullstack Developer", path: "/fullstack/" },
     { title: "DevOps / SRE Engineer", path: "/devops/" },
     { title: "Cloud Engineer", path: "/cloud/" },
     { title: "Frontend Developer", path: "/frontend/" },
     { title: "Backend Developer", path: "/backend/" },
-    { title: "Fullstack Developer", path: "/fullstack/" },
     { title: "Mobile Developer", path: "/mobile/" },
     { title: "Data Scientist", path: "/data-scientist/" },
     { title: "Data Analyst", path: "/data-analyst/" },
@@ -330,14 +344,6 @@ const HeroSection = () => {
             <div className="image-stack">
               <div className="image-bg-blob"></div>
               <img src="/Andi.png" alt='Syarfandi "Andi" Achmad' className="hero-img-main" />
-              <motion.div
-                animate={{ y: [0, -15, 0] }}
-                transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-                className="floating-card glass"
-              >
-                <Shield size={20} color="var(--primary-color)" />
-                <span>Expert Infrastructure</span>
-              </motion.div>
             </div>
           </motion.div>
 
@@ -346,19 +352,19 @@ const HeroSection = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="hero-text-container"
-            style={{ marginTop: '-13rem' }}
           >
             <h2 className="hero-subheading">{t('heroRole')}</h2>
             <h1 className="hero-title">
               {t('heroGreeting')} <br />
               <span className="text-gradient">Syarfandi "Andi" Achmad</span>
             </h1>
-            <p className="hero-description">{t('heroDesc')}</p>
+            <p className="hero-description" dangerouslySetInnerHTML={{ __html: t('heroDesc') }} />
             <div className="hero-buttons">
-              <a href="#contact" className="btn btn-primary glass">{t('hireMe')}</a>
+              <a href="#portfolio" className="btn btn-primary glass">{t('viewProjects')}</a>
+              <a href="#contact" className="btn btn-outline glass" style={{ color: 'var(--text-primary)' }}>{t('hireMe')}</a>
               <button onClick={() => {
                 if (pinUnlocked) {
-                  setShowResumeModal(!showResumeModal);
+                  setShowResumeModal(true);
                 } else {
                   setShowPinModal(true);
                   setPinValue('');
@@ -370,27 +376,43 @@ const HeroSection = () => {
                 <span style={{ color: 'var(--text-primary)' }}>{t('resume')}</span>
               </button>
             </div>
-
-            <motion.div
-              initial={false}
-              animate={{ height: showResumeModal ? 'auto' : 0, opacity: showResumeModal ? 1 : 0 }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="resume-modal-inline"
-            >
-              <div className="glass resume-options-grid">
-                {resumeOptions.map((opt, i) => (
-                  <a key={i} href={opt.path} target="_blank" rel="noreferrer" className="glass resume-opt-btn">
-                    <span>{opt.title}</span>
-                  </a>
-                ))}
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </motion.div>
       <motion.div animate={{ y: [0, 10, 0] }} transition={{ repeat: Infinity, duration: 2 }} style={{ position: 'absolute', bottom: '2rem', left: '50%', transform: 'translateX(-50%)', opacity: 0.5, color: 'var(--text-primary)' }}>
         <ChevronDown size={32} />
       </motion.div>
+
+      {/* Resume Selection Modal */}
+      {showResumeModal && (
+        <div className="adaptive-pin-overlay" onClick={() => setShowResumeModal(false)}>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 10 }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
+            onClick={e => e.stopPropagation()}
+            className="adaptive-pin-card glass"
+            style={{ maxWidth: '800px', width: '90%' }}
+          >
+            <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
+              <h3 className="heading-tertiary" style={{ margin: 0 }}>{t('selectResume')}</h3>
+            </div>
+            <div className="resume-options-grid">
+              {resumeOptions.map((opt, i) => (
+                <a key={i} href={opt.path} target="_blank" rel="noreferrer" className="glass resume-opt-btn" onClick={() => setShowResumeModal(false)}>
+                  <span>{opt.title}</span>
+                </a>
+              ))}
+            </div>
+            <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+              <button onClick={() => setShowResumeModal(false)} className="btn btn-outline glass" style={{ padding: '0.5rem 1.5rem', color: 'var(--text-primary)' }}>
+                {t('close')}
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      )}
 
       {/* Adaptive Glass PIN Modal */}
       {showPinModal && (
@@ -492,7 +514,7 @@ const HeroSection = () => {
         .hero-image-container { position: relative; }
         .image-stack { position: relative; width: 100%; max-width: 450px; margin: 0 auto; }
         .image-bg-blob { position: absolute; top: 10%; left: 10%; width: 80%; height: 80%; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; filter: blur(40px); opacity: 0.4; animation: morph 6s ease-in-out infinite; z-index: 0; }
-        .hero-img-main { position: relative; width: 100%; height: auto; border-radius: 30px; z-index: 1; filter: drop-shadow(0 20px 50px rgba(0,0,0,0.1)); }
+        .hero-img-main { position: relative; width: 100%; height: auto; border-radius: 30px; z-index: 1; filter: drop-shadow(0 20px 50px rgba(0,0,0,0.1)); -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%), linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%); -webkit-mask-composite: source-in; mask-image: linear-gradient(to bottom, black 50%, transparent 100%), linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%); mask-composite: intersect; }
         .floating-card { position: absolute; bottom: 20px; left: -30px; padding: 1rem 1.5rem; border-radius: 20px; display: flex; align-items: center; gap: 0.75rem; z-index: 2; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         .floating-card span { font-weight: 700; font-size: 0.9rem; color: var(--text-primary); }
 
@@ -541,7 +563,11 @@ const AboutSection = () => {
         <div className="about-grid">
           <div className="about-info">
             <h2 className="heading-secondary" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>{t('aboutMe')} <span className="text-gradient">{t('me')}</span></h2>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '1rem' }}>{t('aboutDesc')}</p>
+            {Array.isArray(t('aboutDesc')) ? t('aboutDesc').map((desc, idx) => (
+              <p key={idx} style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '1.2rem', lineHeight: 1.8 }} dangerouslySetInnerHTML={{ __html: desc }} />
+            )) : (
+              <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '1.2rem', lineHeight: 1.8 }} dangerouslySetInnerHTML={{ __html: t('aboutDesc') }} />
+            )}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', marginTop: '2rem' }}>
               <div className="info-item">
                 <MapPin color="var(--primary-color)" size={24} />
@@ -549,7 +575,15 @@ const AboutSection = () => {
               </div>
               <div className="info-item">
                 <GraduationCap color="var(--primary-color)" size={24} />
-                <div><h4 style={{ color: 'var(--text-primary)' }}>{t('education')}</h4><p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>S1 Teknik Informatika (GPA: 3.22)</p></div>
+                <div><h4 style={{ color: 'var(--text-primary)' }}>{t('education')}</h4><p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>S1 Teknik Informatika (Computer Science)</p></div>
+              </div>
+              <div className="info-item">
+                <Globe color="var(--primary-color)" size={24} />
+                <div><h4 style={{ color: 'var(--text-primary)' }}>{t('availability')}</h4><p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Remote & Full-Time</p></div>
+              </div>
+              <div className="info-item">
+                <Languages color="var(--primary-color)" size={24} />
+                <div><h4 style={{ color: 'var(--text-primary)' }}>{t('languages')}</h4><p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Indonesian (Native), English</p></div>
               </div>
             </div>
           </div>
@@ -563,23 +597,27 @@ const AboutSection = () => {
         </div>
         <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid var(--glass-border)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-            <Cpu color="var(--primary-color)" size={32} />
-            <div><h4 style={{ color: 'var(--text-primary)', fontSize: '1rem' }}>Modern Architecture</h4><p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>Vite + React 18 for high speed</p></div>
+            <Code color="var(--primary-color)" size={32} />
+            <div><h4 style={{ color: 'var(--text-primary)', fontSize: '1rem' }}>Full Stack Excellence</h4><p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>React, Node.js, PostgreSQL</p></div>
           </div>
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-            <Monitor color="var(--primary-color)" size={32} />
-            <div><h4 style={{ color: 'var(--text-primary)', fontSize: '1rem' }}>Premium UX</h4><p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>Framer Motion for fluid interactions</p></div>
+            <Server color="var(--primary-color)" size={32} />
+            <div><h4 style={{ color: 'var(--text-primary)', fontSize: '1rem' }}>Cloud-Native Infra</h4><p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>Docker, K8s, AWS, GCP</p></div>
           </div>
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
             <Shield color="var(--primary-color)" size={32} />
-            <div><h4 style={{ color: 'var(--text-primary)', fontSize: '1rem' }}>Enterprise Ready</h4><p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>Supabase + PM2 for reliability</p></div>
+            <div><h4 style={{ color: 'var(--text-primary)', fontSize: '1rem' }}>Secure & Automated</h4><p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>CI/CD Pipelines & BSSN Standard</p></div>
+          </div>
+          <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+            <Monitor color="var(--primary-color)" size={32} />
+            <div><h4 style={{ color: 'var(--text-primary)', fontSize: '1rem' }}>Site Reliability</h4><p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>Monitoring & High Availability</p></div>
           </div>
         </div>
       </motion.div>
       <style>{`
         .about-card { padding: 4rem; }
         .about-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; }
-        .about-info { max-width: 800px; margin: 0 auto; text-align: center; }
+        .about-info { max-width: 100%; text-align: justify; }
         .info-item { display: flex; align-items: flex-start; gap: 1rem; text-align: left; }
         .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; justify-content: center; }
         .stat-card { padding: 2rem 1rem; text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: center; }
@@ -761,13 +799,13 @@ const GithubSection = () => null;
 const SkillsSection = () => {
   const { t } = useTheme();
   const skills = [
-    { name: "AR/VR Development (Unity)", level: 95 },
-    { name: "3D Modeling (SketchUp)", level: 90 },
-    { name: "Sys Admin & Infrastructure", level: 90 },
-    { name: "Web Development (React/Next.js)", level: 85 },
-    { name: "CMS Specialist (Wordpress)", level: 90 },
-    { name: "AutoCAD (Network Design)", level: 85 },
-    { name: "Information Security", level: 80 },
+    { name: "DevOps & Cloud Infra (AWS/GCP)", level: 95 },
+    { name: "Full Stack Web (React/Node.js)", level: 95 },
+    { name: "Containerization (Docker/K8s)", level: 90 },
+    { name: "CI/CD & Automation", level: 90 },
+    { name: "Backend Architecture (SQL/Redis)", level: 85 },
+    { name: "Frontend Engineering (Next.js/Vite)", level: 85 },
+    { name: "Cybersecurity & InfoSec", level: 85 },
   ];
   return (
     <section id="skills" className="container">
