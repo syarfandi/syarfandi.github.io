@@ -21,6 +21,7 @@ export default defineConfig({
         sysadmin: resolve(__dirname, 'sysadmin/index.html'),
         "data-engineer": resolve(__dirname, 'data-engineer/index.html'),
         "product-manager": resolve(__dirname, 'product-manager/index.html'),
+        resume: resolve(__dirname, 'resume/index.html'),
       },
     },
   },

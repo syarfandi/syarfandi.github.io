@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syarfandi "Andi" Achmad | Software Engineer & IT Expert</title>
+    <meta name="description"
+        content="Professional CV of Syarfandi 'Andi' Achmad, a Software Engineer & IT Expert specializing in Fullstack Web Development, Cloud Infrastructure, and SRE. View Visual or ATS-friendly versions.">
+    <meta name="keywords"
+        content="Software Engineer, IT Expert, Syarfandi Andi Achmad, React, Node.js, PostgreSQL, AWS, GCP, DevOps, Makassar IT Professional">
+    <meta name="author" content="Syarfandi 'Andi' Achmad">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://syarfandi.github.io/resume/">
+    <meta property="og:title" content="Syarfandi 'Andi' Achmad | Software Engineer & IT Expert CV">
+    <meta property="og:description"
+        content="Expert in Fullstack Web Development, Cloud Infrastructure, and DevOps. View my professional portfolio and resume.">
+    <meta property="og:image" content="https://syarfandi.github.io/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://syarfandi.github.io/resume/">
+    <meta property="twitter:title" content="Syarfandi 'Andi' Achmad | Software Engineer & IT Expert CV">
+    <meta property="twitter:description"
+        content="Expert in Fullstack Web Development, Cloud Infrastructure, and DevOps. View my professional portfolio and resume.">
+    <meta property="twitter:image" content="https://syarfandi.github.io/og-image.png">
+
+    <link rel="canonical" href="https://syarfandi.github.io" />
+    <link rel="icon" type="image/png" href="/profile.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+                :root {
+            --primary: #1e3a8a; /* Navy */
+            --secondary: #0f172a; /* Dark Navy */
+            --accent: #3b82f6; /* Modern Blue */
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --bg: #ffffff;
+            --border: rgba(30, 58, 138, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f6f8fa;
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Fixed Navigation & Controls */
+        .nav-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .nav-group {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        /* Segmented Control / Switch */
+        .segmented-control {
+            display: flex;
+            background: #e2e8f0;
+            padding: 2px;
+            border-radius: 20px;
+            gap: 2px;
+        }
+
+        .segment-btn {
+            padding: 6px 16px;
+            border: none;
+            background: none;
+            border-radius: 18px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--text-muted);
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .segment-btn.active {
+            background: #fff;
+            color: var(--secondary);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-compact {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: #fff;
+            color: var(--secondary);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .btn-compact:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-compact.primary {
+            background: var(--secondary);
+            color: white;
+        }
+
+        /* Premium CV Styles (Scoped) */
+        .resume-container {
+            background: var(--bg);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            width: 100%;
+            max-width: 900px;
+            margin-top: 60px;
+            display: none;
+        }
+
+        .resume-container.active {
+            display: grid;
+        }
+
+                .sidebar {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 40px;
+        }
+
+        .profile-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid var(--accent);
+            margin-bottom: 20px;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile-section h1 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .profile-section .role {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+        }
+
+        .contact-info {
+            margin-bottom: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 13px;
+        }
+
+        .contact-item i {
+            color: var(--accent);
+        }
+
+        .contact-item a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+
+        .sidebar-section {
+            margin-bottom: 35px;
+        }
+
+        .sidebar-section h2 {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            color: #f1f5f9;
+            padding-bottom: 8px;
+        }
+
+        .skill-item {
+            margin-bottom: 12px;
+        }
+
+        .skill-name {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .skill-bar {
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: var(--accent);
+        }
+
+        .main-content {
+            padding: 40px 50px;
+            background: white;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .section-title i {
+            color: var(--primary);
+        }
+
+        .experience-item {
+            margin-bottom: 25px;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+
+        .experience-title {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .experience-company {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .experience-date {
+            font-size: 12px;
+            background: #f1f5f9;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .experience-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            padding-left: 18px;
+        }
+
+        /* ATS View Styles (GitHub Markdown) */
+        .markdown-body {
+            padding: 60px;
+            background-color: #fff;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(149, 157, 165, 0.1);
+            width: 100%;
+            max-width: 900px;
+            margin-top: 60px;
+            display: none;
+        }
+
+        #ats-view.active .markdown-body {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .resume-container.active {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-container {
+                position: static;
+                flex-direction: column;
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+
+            .markdown-body {
+                padding: 30px;
+            }
+        }
+
+        @media print {
+            @page {
+                margin: 0;
+                size: auto;
+            }
+
+            .nav-container {
+                display: none !important;
+            }
+
+            body {
+                padding: 0;
+                margin: 0;
+                background: white;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .resume-container {
+                display: grid !important;
+                grid-template-columns: 280px 1fr !important;
+                margin-top: 0 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                box-shadow: none !important;
+                border: none !important;
+                border-radius: 0 !important;
+                min-height: 100vh;
+            }
+
+            .sidebar {
+                background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+                color: white !important;
+                padding: 30px !important;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .main-content {
+                padding: 30px !important;
+            }
+
+            .markdown-body {
+                margin-top: 0 !important;
+                padding: 40px !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                box-shadow: none !important;
+                border: none !important;
+            }
+        }</style>
+    
+</head>
+
+<body>
+    <div class="nav-container">
+        <div class="nav-group">
+            <a href="/" class="btn-compact primary"><i data-lucide="arrow-left" style="width:16px"></i> <span
+                    id="backLabel">Back</span></a>
+            <button id="shareBtn" class="btn-compact"><i data-lucide="share-2" style="width:16px"></i> <span
+                    id="shareLabel">Share</span></button>
+            <button id="downloadBtn" class="btn-compact active"><i data-lucide="download" style="width:16px"></i> <span
+                    id="downloadLabel">PDF</span></button>
+        </div>
+        <div class="nav-group">
+            <div class="segmented-control">
+                <button id="toggleATS" class="segment-btn active">
+                    <i data-lucide="file-text" style="width:14px"></i> <span id="labelATS">ATS</span>
+                </button>
+                <button id="togglePremium" class="segment-btn">
+                    <i data-lucide="layout" style="width:14px"></i> <span id="labelPremium">Premium</span>
+                </button>
+            </div>
+            <div class="segmented-control">
+                <button id="toggleEN" class="segment-btn active"><i data-lucide="globe" style="width:14px"></i> EN</button>
+                <button id="toggleID" class="segment-btn"><i data-lucide="globe" style="width:14px"></i> ID</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PREMIUM VIEW -->
+    <div id="premium-view" class="resume-container">
+        <aside class="sidebar">
+            <div class="profile-section">
+                <img src="/profile.png" alt="Syarfandi 'Andi' Achmad" class="profile-img">
+                <h1>SYARFANDI "ANDI" ACHMAD</h1>
+                <p class="role" id="p-role">Software Engineer & IT Expert</p>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item"><i data-lucide="mail" size="14"></i><a
+                        href="mailto:syarfandi.achmad@gmail.com">syarfandi.achmad@gmail.com</a></div>
+                <div class="contact-item"><i data-lucide="phone" size="14"></i><span>+62 852-5652-2335</span></div>
+                <div class="contact-item"><i data-lucide="map-pin" size="14"></i><span id="p-locText">Makassar,
+                        Indonesia</span></div>
+                <div class="contact-item"><i data-lucide="globe" size="14"></i><a href="https://syarfandi.github.io"
+                        target="_blank">syarfandi.github.io</a></div>
+            </div>
+            <div class="sidebar-section">
+                <h2 id="p-skillsTitle">Core Skills</h2>
+                <div class="skill-list" id="p-skillList"></div>
+            </div>
+            <div class="sidebar-section">
+                <h2 id="p-certsTitle">Certifications</h2>
+                <div id="p-certList" style="font-size: 13px; color: #cbd5e1;"></div>
+            </div>
+        </aside>
+        <main class="main-content">
+            <section class="section">
+                <h2 class="section-title"><i data-lucide="user"></i> <span id="p-summaryTitle">Professional
+                        Summary</span></h2>
+                <p class="summary-text" id="p-summaryText"></p>
+            </section>
+            <section class="section">
+                <h2 class="section-title"><i data-lucide="briefcase"></i> <span id="p-expTitle">Experience</span></h2>
+                <div id="p-experienceList"></div>
+            </section>
+            <section class="section">
+                <h2 class="section-title"><i data-lucide="graduation-cap"></i> <span id="p-eduTitle">Education</span>
+                </h2>
+                <div class="education-item">
+                    <div class="education-degree">Bachelor of Computer Science (S.Kom)</div>
+                    <div class="education-school">UIN Alauddin Makassar</div>
+                    <div class="education-school" style="color: var(--primary-color); font-weight: 600;">GPA: 3.22 / 4.00</div>
+                </div>
+            </section>
+            <section class="section">
+                <h2 class="section-title"><i data-lucide="star"></i> <span id="p-projectsTitle">Featured Projects</span>
+                </h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;" id="p-projectsGrid"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- ATS VIEW -->
+    <div id="ats-view">
+        <article class="markdown-body" id="ats-content"></article>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                role: "Software Engineer & IT Expert",
+                locText: "Makassar, Indonesia",
+                skillsTitle: "Core Skills",
+                certsTitle: "Certifications",
+                summaryTitle: "Professional Summary",
+                expTitle: "Experience",
+                eduTitle: "Education",
+                projectsTitle: "Featured Projects",
+                present: "Present",
+                summary: "Versatile <strong>Software Engineer and IT Infrastructure Expert</strong> with over 4 years of experience architecting end-to-end digital solutions. Expertise spans across the full stack ecosystem (<strong>React, Node.js, PostgreSQL</strong>) and robust cloud infrastructure management (<strong>AWS, GCP, Docker, K8s</strong>). Proven track record delivering production-grade applications for government agencies and enterprise startups, handling millions of records with 99.9% uptime.",
+                skills: [
+                    { name: "React / Next.js / Frontend Eng.", level: 95 },
+                    { name: "Node.js / PostgreSQL / Backend API", level: 93 },
+                    { name: "Docker / K8s / Cloud (AWS, GCP)", level: 90 },
+                    { name: "CI/CD & DevOps Automation", level: 88 },
+                    { name: "Cybersecurity & Email Clusters", level: 85 }
+                ],
+                certs: [
+                    { title: "National Cyber Exercise #10", issuer: "BSSN", date: "2024" },
+                    { title: "Samsung Next Apps Winner", issuer: "Samsung Indonesia", date: "2017" },
+                    { title: "Microsoft CityApp Participant", issuer: "Microsoft", date: "" }
+                ],
+                experiences: [
+                    {
+                        title: "Computer Specialist (Civil Servant)",
+                        company: "Regional Office of Ministry of Religious Affairs (South Sulawesi)",
+                        date: "2025 - Present",
+                        desc: [
+                            "<strong>Spearheaded</strong> the end-to-end development of <strong>Data Sulsel</strong> — React dashboard + Node.js/Supabase backend serving 9M+ records.",
+                            "<strong>Automated</strong> CI/CD deployment pipelines via GitHub Actions, significantly reducing deployment times."
+                        ]
+                    },
+                    {
+                        title: "DevOps & Infrastructure Expert",
+                        company: "Dinas Kominfo & Disbud Makassar",
+                        date: "2023 - 2025",
+                        desc: [
+                            "<strong>Developed</strong> the <strong>Helpdesk Makassar</strong> citizen portal end-to-end (responsive UI & cross-department routing API).",
+                            "<strong>Engineered</strong> a city-wide <strong>Mailcow</strong> email cluster serving 200+ domains, hardened with SPF/DKIM/DMARC protocols."
+                        ]
+                    },
+                    {
+                        title: "Co-Founder & Lead Engineer",
+                        company: "GetKasir (Enterprise POS Startup)",
+                        date: "2019 - Present",
+                        desc: [
+                            "<strong>Designed and built</strong> a 100+ module enterprise POS ecosystem (React merchant dashboard & Node.js/PostgreSQL backend).",
+                            "<strong>Optimized</strong> system-wide performance by implementing React code-splitting and Redis caching — 40% faster response times."
+                        ]
+                    },
+                    {
+                        title: "SQA & DevOps Engineer",
+                        company: "Malmora (Startup)",
+                        date: "2020 - 2023",
+                        desc: [
+                            "<strong>Built</strong> a full-stack e-commerce platform tailored for resellers and dropshippers with automated order processing.",
+                            "<strong>Engineered</strong> seamless API integrations with logistics couriers and payment gateways."
+                        ]
+                    }
+                ],
+                projects: [
+                    { title: "GetKasir POS", desc: "100+ module enterprise retail ecosystem (React + Node.js/PostgreSQL)." },
+                    { title: "Data Sulsel", desc: "Full-stack regional data portal (React analytics + PLpgSQL)." },
+                    { title: "Helpdesk Makassar", desc: "Unified citizen portal (responsive UI + ticket management API)." },
+                    { title: "Kawan Sedarah", desc: "Real-time blood stock monitoring platform (React + Supabase)." },
+                    { title: "Lipsync Avatar AI", desc: "Conversational AI application (React UI + WebSocket + LLM API)." },
+                    { title: "Mailcow Cluster", desc: "City-wide secure email cluster for 200+ official domains." }
+                ],
+                atsFile: "/CV_General_Achmad_Syarfandi.md",
+                viewLabels: { premium: "Visual", ats: "ATS" },
+                btnLabels: { share: "Share", pdf: "PDF", back: "Back" }
+            },
+            id: {
+                role: "Software Engineer & IT Expert",
+                locText: "Makassar, Indonesia",
+                skillsTitle: "Keahlian Inti",
+                certsTitle: "Sertifikasi",
+                summaryTitle: "Ringkasan Profesional",
+                expTitle: "Pengalaman Kerja",
+                eduTitle: "Pendidikan",
+                projectsTitle: "Proyek Pilihan",
+                present: "Sekarang",
+                summary: "<strong>Software Engineer dan Pakar Infrastruktur IT</strong> serbabisa dengan pengalaman lebih dari 4 tahun membangun solusi digital end-to-end. Keahlian meliputi ekosistem full stack (<strong>React, Node.js, PostgreSQL</strong>) serta manajemen infrastruktur cloud yang tangguh (<strong>AWS, GCP, Docker, K8s</strong>). Memiliki rekam jejak terbukti menghadirkan aplikasi tingkat produksi untuk instansi pemerintah dan startup enterprise, menangani jutaan data dengan uptime 99,9%.",
+                skills: [
+                    { name: "React / Next.js / Frontend Eng.", level: 95 },
+                    { name: "Node.js / PostgreSQL / Backend API", level: 93 },
+                    { name: "Docker / K8s / Cloud (AWS, GCP)", level: 90 },
+                    { name: "CI/CD & DevOps Automation", level: 88 },
+                    { name: "Cybersecurity & Email Clusters", level: 85 }
+                ],
+                certs: [
+                    { title: "National Cyber Exercise #10", issuer: "BSSN", date: "2024" },
+                    { title: "Pemenang Samsung Next Apps", issuer: "Samsung Indonesia", date: "2017" },
+                    { title: "Peserta Microsoft CityApp", issuer: "Microsoft", date: "" }
+                ],
+                experiences: [
+                    {
+                        title: "Pranata Komputer (ASN)",
+                        company: "Kanwil Kementerian Agama Prov. Sulawesi Selatan",
+                        date: "2025 - Sekarang",
+                        desc: [
+                            "<strong>Memimpin</strong> pengembangan end-to-end <strong>Data Sulsel</strong> — dashboard React + backend Node.js/Supabase melayani 9jt+ data.",
+                            "<strong>Mengotomatisasi</strong> alur deployment CI/CD melalui GitHub Actions, mengurangi waktu deployment secara signifikan."
+                        ]
+                    },
+                    {
+                        title: "Pakar DevOps & Infrastruktur",
+                        company: "Dinas Kominfo & Disbud Makassar",
+                        date: "2023 - 2025",
+                        desc: [
+                            "<strong>Mengembangkan</strong> portal masyarakat <strong>Helpdesk Makassar</strong> secara end-to-end (UI responsif & API routing antar-departemen).",
+                            "<strong>Merekayasa</strong> cluster email <strong>Mailcow</strong> untuk 200+ domain pemerintah, diperkuat dengan protokol keamanan SPF/DKIM/DMARC."
+                        ]
+                    },
+                    {
+                        title: "Co-Founder & Lead Engineer",
+                        company: "GetKasir (Startup POS Enterprise)",
+                        date: "2019 - Sekarang",
+                        desc: [
+                            "<strong>Merancang dan membangun</strong> ekosistem POS enterprise dengan 100+ modul (Dashboard React & backend Node.js/PostgreSQL).",
+                            "<strong>Mengoptimalkan</strong> performa sistem dengan React code-splitting dan caching Redis — waktu respons API 40% lebih cepat."
+                        ]
+                    },
+                    {
+                        title: "SQA & DevOps Engineer",
+                        company: "Malmora (Startup)",
+                        date: "2020 - 2023",
+                        desc: [
+                            "<strong>Membangun</strong> platform e-commerce full-stack untuk reseller dan dropshipper dengan otomatisasi pemrosesan pesanan.",
+                            "<strong>Merekayasa</strong> integrasi API kurir logistik dan payment gateway secara mulus."
+                        ]
+                    }
+                ],
+                projects: [
+                    { title: "GetKasir POS", desc: "Ekosistem ritel enterprise 100+ modul (React + Node.js/PostgreSQL)." },
+                    { title: "Data Sulsel", desc: "Portal data regional full-stack (Dashboard analitik React + PLpgSQL)." },
+                    { title: "Helpdesk Makassar", desc: "Portal terpadu masyarakat (UI responsif + API manajemen tiket)." },
+                    { title: "Kawan Sedarah", desc: "Platform monitoring stok darah real-time (React + Supabase)." },
+                    { title: "Lipsync Avatar AI", desc: "Aplikasi Conversational AI (UI React + WebSocket + API LLM)." },
+                    { title: "Mailcow Cluster", desc: "Cluster email aman berskala kota untuk 200+ domain pemerintah." }
+                ],
+                atsFile: "/CV_General_Achmad_Syarfandi_ID.md",
+                viewLabels: { premium: "Visual", ats: "ATS" },
+                btnLabels: { share: "Bagikan", pdf: "PDF", back: "Kembali" }
+            }
+        };
+
+        let lang = 'en';
+        let view = 'ats'; // Default to ATS
+
+        const premiumView = document.getElementById('premium-view');
+        const atsView = document.getElementById('ats-view');
+        const atsContent = document.getElementById('ats-content');
+        const toggleEN = document.getElementById('toggleEN');
+        const toggleID = document.getElementById('toggleID');
+        const togglePremium = document.getElementById('togglePremium');
+        const toggleATS = document.getElementById('toggleATS');
+        const shareLabel = document.getElementById('shareLabel');
+        const downloadLabel = document.getElementById('downloadLabel');
+        const backLabel = document.getElementById('backLabel');
+
+        function updateContent() {
+            const t = translations[lang];
+
+            // Labels
+            shareLabel.innerText = t.btnLabels.share;
+            downloadLabel.innerText = t.btnLabels.pdf;
+            backLabel.innerText = t.btnLabels.back;
+            document.getElementById('labelPremium').innerText = t.viewLabels.premium;
+            document.getElementById('labelATS').innerText = t.viewLabels.ats;
+
+            // Premium Elements
+            document.getElementById('p-role').innerText = t.role;
+            document.getElementById('p-locText').innerText = t.locText;
+            document.getElementById('p-skillsTitle').innerText = t.skillsTitle;
+            document.getElementById('p-certsTitle').innerText = t.certsTitle;
+            document.getElementById('p-summaryTitle').innerText = t.summaryTitle;
+            document.getElementById('p-expTitle').innerText = t.expTitle;
+            document.getElementById('p-eduTitle').innerText = t.eduTitle;
+            document.getElementById('p-projectsTitle').innerText = t.projectsTitle;
+            document.getElementById('p-summaryText').innerHTML = t.summary;
+
+            document.getElementById('p-skillList').innerHTML = t.skills.map(s => `
+                <div class="skill-item">
+                    <span class="skill-name">${s.name}</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: ${s.level}%;"></div></div>
+                </div>
+            `).join('');
+
+            document.getElementById('p-certList').innerHTML = t.certs.map(c => `
+                <p style="margin-bottom: 10px;"><strong style="color: white; display: block;">${c.title}</strong> ${c.issuer} ${c.date ? '(' + c.date + ')' : ''}</p>
+            `).join('');
+
+            document.getElementById('p-experienceList').innerHTML = t.experiences.map(e => `
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <span class="experience-title">${e.title}</span>
+                        <span class="experience-date">${e.date}</span>
+                    </div>
+                    <div class="experience-company">${e.company}</div>
+                    <ul class="experience-desc">${e.desc.map(d => `<li>${d}</li>`).join('')}</ul>
+                </div>
+            `).join('');
+
+            document.getElementById('p-projectsGrid').innerHTML = t.projects.map(p => `
+                <div style="background: #f8fafc; padding: 12px; border-radius: 8px; border-left: 4px solid var(--primary);">
+                    <h4 style="font-size: 14px; margin-bottom: 4px;">${p.title}</h4>
+                    <p style="font-size: 12px; color: var(--text-muted);">${p.desc}</p>
+                </div>
+            `).join('');
+
+            // ATS Content
+            fetch(t.atsFile)
+                .then(r => {
+                    if (!r.ok) throw new Error('File not found: ' + t.atsFile);
+                    return r.text();
+                })
+                .then(md => { atsContent.innerHTML = marked.parse(md); })
+                .catch(err => {
+                    console.error(err);
+                    atsContent.innerHTML = `<p style="color:red; padding: 20px;">Error loading CV: ${err.message}</p>`;
+                });
+
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+        }
+
+        function setView(v) {
+            view = v;
+            if (view === 'premium') {
+                premiumView.classList.add('active');
+                atsView.classList.remove('active');
+                togglePremium.classList.add('active');
+                toggleATS.classList.remove('active');
+            } else {
+                premiumView.classList.remove('active');
+                atsView.classList.add('active');
+                togglePremium.classList.remove('active');
+                toggleATS.classList.add('active');
+            }
+        }
+
+        togglePremium.onclick = () => setView('premium');
+                toggleATS.onclick = () => setView('ats');
+
+        function setLang(l) {
+            lang = l;
+            if (lang === 'en') {
+                toggleEN.classList.add('active');
+                toggleID.classList.remove('active');
+            } else {
+                toggleEN.classList.remove('active');
+                toggleID.classList.add('active');
+            }
+            updateContent();
+        }
+
+        toggleEN.onclick = () => setLang('en');
+        toggleID.onclick = () => setLang('id');
+
+        document.getElementById('downloadBtn').addEventListener('click', () => {
+            const isPremium = view === 'premium';
+            const element = isPremium ? premiumView : atsContent;
+            
+            // Simulasikan lebar kertas cetak untuk mendapatkan tinggi yang akurat setelah text-wrap
+            const originalWidth = element.style.width;
+            const originalMaxWidth = element.style.maxWidth;
+            element.style.width = isPremium ? '210mm' : '180mm';
+            element.style.maxWidth = 'none';
+            
+            // 1. Hitung tinggi (Tetap gunakan logika ATS yang sudah bagus, tapi perbaiki akurasi Visual)
+            const heightMm = Math.ceil(element.scrollHeight * 0.264583) + (isPremium ? 20 : 40);
+            
+            // Kembalikan lebar seperti semula
+            element.style.width = originalWidth;
+            element.style.maxWidth = originalMaxWidth;
+            
+            const printStyle = document.createElement('style');
+            printStyle.id = 'dynamic-print-style';
+            printStyle.innerHTML = `
+                @media print {
+                    @page { 
+                        size: 210mm ${heightMm}mm; 
+                        margin: ${isPremium ? '0 !important;' : '15mm !important;'} 
+                    }
+                    html, body { 
+                        margin: 0 !important; 
+                        padding: 0 !important; 
+                        width: 100% !important;
+                        height: ${isPremium ? heightMm + 'mm' : 'auto'} !important;
+                        overflow: ${isPremium ? 'hidden' : 'visible'} !important;
+                        background: white !important;
+                    }
+                    .nav-container, .theme-switch, #downloadBtn { display: none !important; }
+                    
+                    /* CSS Khusus Visual (Premium) */
+                    /* Compaction for 1-page visual guarantee */
+                    #premium-view .sidebar { padding: 30px 25px !important; }
+                    #premium-view .main-content { padding: 30px 40px !important; }
+                    #premium-view .section { margin-bottom: 20px !important; }
+                    #premium-view .experience-item { margin-bottom: 15px !important; }
+                    #premium-view .sidebar-section { margin-bottom: 25px !important; }
+                    #premium-view .profile-section { margin-bottom: 25px !important; }
+                    #premium-view .profile-img { width: 110px !important; height: 110px !important; }
+                    #premium-view h1 { font-size: 20px !important; }
+                    #premium-view .summary-text { font-size: 12px !important; line-height: 1.4 !important; }
+                    #premium-view .experience-desc { font-size: 12px !important; }
+                    #premium-view .education-item { margin-bottom: 10px !important; }
+                    #premium-view #p-projectsGrid { gap: 10px !important; }
+
+                    #premium-view {
+                        display: ${isPremium ? 'grid' : 'none'} !important;
+                        position: absolute !important;
+                        top: 0 !important;
+                        left: 0 !important;
+                        width: 210mm !important;
+                        height: auto !important;
+                        margin: 0 !important;
+                        padding: 0 !important;
+                        box-shadow: none !important;
+                        border: none !important;
+                    }
+                    
+                    #premium-view * {
+                        break-inside: avoid !important; /* Cegah elemen di dalam visual terpotong */
+                    }
+
+                    /* CSS Khusus ATS */
+                    #ats-view { 
+                        display: ${!isPremium ? 'block' : 'none'} !important; 
+                        position: absolute !important;
+                        top: 0 !important;
+                        left: 0 !important;
+                        width: 210mm !important;
+                        height: auto !important;
+                        margin: 0 !important;
+                        padding: 0 !important;
+                        overflow: ${isPremium ? 'hidden' : 'visible'} !important;
+                    }
+                    .markdown-body { 
+                        display: ${!isPremium ? 'block' : 'none'} !important;
+                        padding: 30px !important;
+                        margin: 0 !important;
+                        background: white !important;
+                        height: auto !important;
+                    } !important;
+                        padding: 40px !important;
+                    }
+
+                    * { 
+                        -webkit-print-color-adjust: exact !important; 
+                        print-color-adjust: exact !important;
+                        break-inside: avoid !important;
+                    }
+                }
+            `;
+            document.head.appendChild(printStyle);
+
+            
+            // 2. Set judul halaman sementara sebagai nama file PDF
+            const originalTitle = document.title;
+            const suffix = isPremium ? "" : "_ATS";
+            document.title = `CV_Syarfandi_SoftwareEngineer${suffix}_${lang.toUpperCase()}`;
+
+            window.print();
+
+            // 3. Kembalikan judul asli
+            setTimeout(() => {
+                document.title = originalTitle;
+                const s = document.getElementById('dynamic-print-style');
+                if (s) s.remove();
+            }, 1000);
+        });
+
+        document.getElementById('shareBtn').addEventListener('click', async () => {
+            const url = window.location.href;
+            if (navigator.share) {
+                try { await navigator.share({ title: 'Achmad Syarfandi CV', url }); } catch (e) { }
+            } else {
+                navigator.clipboard.writeText(url);
+                alert('Link copied!');
+            }
+        });
+
+        updateContent();
+        setView('ats'); // Initialize with ATS view
+    </script>
+</body>
+
+</html>
