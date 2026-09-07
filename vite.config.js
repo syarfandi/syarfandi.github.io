@@ -23,6 +23,7 @@ export default defineConfig({
         "product-manager": resolve(__dirname, 'product-manager/index.html'),
         resume: resolve(__dirname, 'resume/index.html'),
         cv: resolve(__dirname, 'cv/index.html'),
+        materi: resolve(__dirname, 'materi/index.html'),
       },
     },
   },

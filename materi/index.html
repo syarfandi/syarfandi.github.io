@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Materi Presentasi | Syarfandi Achmad</title>
+    <meta name="description" content="Materi presentasi Syarfandi Achmad">
+    <link rel="icon" type="image/png" href="/profile.png">
+    
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/dracula.min.css" id="theme">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        .back-btn-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        .btn-back {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.2s;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        .btn-back:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        
+        .download-btn-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .btn-download {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            background: #3b82f6;
+            transition: all 0.2s;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        
+        .btn-download:hover {
+            background: #2563eb;
+        }
+
+        /* Adjusting reveal text to left-align slightly for markdown since it's a document */
+        .reveal section {
+            text-align: left;
+        }
+        .reveal section h1, .reveal section h2, .reveal section h3 {
+            text-align: center;
+        }
+
+        /* Mobile responsiveness for overlay buttons */
+        @media (max-width: 768px) {
+            .back-btn-container, .download-btn-container {
+                top: 10px;
+            }
+            .back-btn-container {
+                left: 10px;
+            }
+            .download-btn-container {
+                right: 10px;
+            }
+            .btn-back, .btn-download {
+                padding: 6px 10px;
+                font-size: 12px;
+            }
+            /* Reveal.js handles its own scaling for content */
+        }
+    </style>
+</head>
+<body>
+    <div class="back-btn-container">
+        <a href="/" class="btn-back">
+            <i data-lucide="arrow-left" style="width: 16px; height: 16px;"></i>
+            Kembali
+        </a>
+    </div>
+    
+    <div class="download-btn-container">
+        <a href="/materi/Draft_Materi_Seminar_AI_UINAM.pdf" download class="btn-download">
+            <i data-lucide="download" style="width: 16px; height: 16px;"></i>
+            Unduh PDF
+        </a>
+    </div>
+
+    <div class="reveal">
+        <div class="slides">
+            <!-- Using external markdown plugin to load the draft -->
+            <section data-markdown="/materi/Draft_Materi_Seminar_AI_UINAM.md"
+                     data-separator="^---$"
+                     data-separator-vertical="^--$"
+                     data-separator-notes="^Note:">
+            </section>
+        </div>
+    </div>
+
+    <!-- Reveal.js Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/markdown/markdown.js"></script>
+    
+    <script>
+        // Inisialisasi ikon Lucide
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
+        // Setup Reveal.js for 16:9 aspect ratio
+        Reveal.initialize({
+            width: 1920,
+            height: 1080,
+            margin: 0.1,
+            minScale: 0.2,
+            maxScale: 2.0,
+            hash: true,
+            slideNumber: true,
+            plugins: [ RevealMarkdown ]
+        });
+    </script>
+</body>
+</html>

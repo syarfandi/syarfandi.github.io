@@ -152,6 +152,33 @@
             margin-bottom: 60px;
         }
 
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .nav-container {
+                position: static;
+                margin-bottom: 20px;
+                justify-content: center;
+            }
+            .cv-container {
+                margin-top: 0;
+                padding: 20px;
+            }
+            .bio-data tr td:nth-child(1) {
+                width: 110px;
+            }
+            table.cv-table {
+                font-size: 12px;
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            table.cv-table th, table.cv-table td {
+                padding: 6px;
+            }
+        }
+
         @media print {
             @page {
                 size: A4 portrait;
