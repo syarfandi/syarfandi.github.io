@@ -22,6 +22,7 @@ export default defineConfig({
         "data-engineer": resolve(__dirname, 'data-engineer/index.html'),
         "product-manager": resolve(__dirname, 'product-manager/index.html'),
         resume: resolve(__dirname, 'resume/index.html'),
+        cv: resolve(__dirname, 'cv/index.html'),
       },
     },
   },
