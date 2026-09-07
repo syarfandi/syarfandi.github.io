@@ -155,27 +155,58 @@
         @media screen and (max-width: 768px) {
             body {
                 padding: 10px;
+                overflow-x: hidden;
             }
             .nav-container {
                 position: static;
                 margin-bottom: 20px;
                 justify-content: center;
+                flex-wrap: wrap;
             }
             .cv-container {
                 margin-top: 0;
-                padding: 20px;
+                padding: 15px;
+                width: 100%;
+                overflow-x: hidden;
+            }
+            
+            /* Stack bio data vertically on mobile */
+            .bio-data {
+                display: block;
+            }
+            .bio-data tbody {
+                display: block;
+            }
+            .bio-data tr {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 12px;
+            }
+            .bio-data tr td {
+                padding: 2px 0;
+                width: 100% !important;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
             }
             .bio-data tr td:nth-child(1) {
-                width: 110px;
+                font-weight: bold;
+                color: #555;
             }
+            .bio-data tr td:nth-child(2) {
+                display: none; /* Hide colons */
+            }
+            
+            /* Make tables scrollable horizontally */
             table.cv-table {
                 font-size: 12px;
                 display: block;
                 overflow-x: auto;
                 white-space: nowrap;
+                width: 100%;
+                -webkit-overflow-scrolling: touch;
             }
             table.cv-table th, table.cv-table td {
-                padding: 6px;
+                padding: 8px;
             }
         }
 
