@@ -226,6 +226,21 @@
                 display: none !important; /* Hide arrows on mobile, rely on swipe */
             }
         }
+
+        /* Fullscreen Mode */
+        :fullscreen .navbar, :-webkit-full-screen .navbar {
+            display: none !important;
+        }
+        :fullscreen .viewer-area, :-webkit-full-screen .viewer-area {
+            padding: 0;
+        }
+        :fullscreen .swiper, :-webkit-full-screen .swiper {
+            padding-bottom: 0;
+            max-width: 100%;
+        }
+        :fullscreen .slide-content, :-webkit-full-screen .slide-content {
+            border-radius: 0;
+        }
     </style>
 </head>
 <body>
@@ -238,7 +253,11 @@
             <div class="presentation-title">Materi Seminar AI & Vibe Coding</div>
         </div>
         <div class="nav-right">
-            <a href="/materi/Draft_Materi_Seminar_AI_UINAM.pdf" download class="btn-ui btn-download">
+            <button onclick="toggleFullscreen()" class="btn-ui btn-back" style="cursor: pointer;">
+                <i data-lucide="maximize" style="width: 16px; height: 16px;"></i>
+                Layar Penuh
+            </button>
+            <a href="/materi/Materi_Seminar_AI_Slide.pdf" download class="btn-ui btn-download">
                 <i data-lucide="download" style="width: 16px; height: 16px;"></i>
                 Unduh PDF
             </a>
@@ -271,10 +290,35 @@
             lucide.createIcons();
         }
 
-        const url = '/materi/Draft_Materi_Seminar_AI_UINAM.pdf';
+        const url = '/materi/Materi_Seminar_AI_Slide.pdf';
         const container = document.getElementById('pdf-slides-container');
         const loader = document.getElementById('loader');
         const loaderText = document.getElementById('loader-text');
+
+        // Fullscreen Toggle
+        function toggleFullscreen() {
+            if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+                const elem = document.documentElement;
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.webkitRequestFullscreen) { /* Safari */
+                    elem.webkitRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) { /* Safari */
+                    document.webkitExitFullscreen();
+                }
+            }
+        }
+        
+        // Double click to exit fullscreen gracefully when navbar is hidden
+        document.addEventListener('dblclick', () => {
+            if (document.fullscreenElement || document.webkitFullscreenElement) {
+                toggleFullscreen();
+            }
+        });
 
         // Render PDF pages into Swiper slides
         async function renderPDF() {
@@ -283,7 +327,7 @@
                 const totalPages = pdf.numPages;
 
                 for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
-                    loaderText.innerText = \`Memuat slide \${pageNum} dari \${totalPages}...\`;
+                    loaderText.innerText = `Memuat slide ${pageNum} dari ${totalPages}...`;
                     
                     const page = await pdf.getPage(pageNum);
                     
