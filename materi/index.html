@@ -125,19 +125,17 @@
             transition: all 0.3s ease;
         }
 
-        /* 16:9 Aspect Ratio Canvas Wrapper */
+        /* Slide Canvas Wrapper */
         .slide-content {
             position: relative;
             width: 100%;
-            max-height: 100%;
-            aspect-ratio: 16 / 9;
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
+            border-radius: 12px;
+            overflow: hidden;
+            background: transparent;
         }
 
         canvas.pdf-canvas {
@@ -228,18 +226,42 @@
         }
 
         /* Fullscreen Mode */
-        :fullscreen .navbar, :-webkit-full-screen .navbar {
-            display: none !important;
+        :fullscreen, :-webkit-full-screen {
+            background-color: black !important;
         }
         :fullscreen .viewer-area, :-webkit-full-screen .viewer-area {
-            padding: 0;
+            padding: 0 !important;
+            margin: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
         }
         :fullscreen .swiper, :-webkit-full-screen .swiper {
-            padding-bottom: 0;
-            max-width: 100%;
+            padding: 0 !important;
+            margin: 0 !important;
+            max-width: 100% !important;
+            width: 100vw !important;
+            height: 100vh !important;
+        }
+        :fullscreen .swiper-slide, :-webkit-full-screen .swiper-slide {
+            width: 100vw !important;
+            height: 100vh !important;
         }
         :fullscreen .slide-content, :-webkit-full-screen .slide-content {
-            border-radius: 0;
+            border-radius: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+        }
+        :fullscreen canvas.pdf-canvas, :-webkit-full-screen canvas.pdf-canvas {
+            object-fit: contain !important;
+            width: 100vw !important;
+            height: 100vh !important;
+        }
+        :fullscreen .swiper-pagination, :-webkit-full-screen .swiper-pagination {
+            display: none !important;
+        }
+        :fullscreen .swiper-button-next, :-webkit-full-screen .swiper-button-next,
+        :fullscreen .swiper-button-prev, :-webkit-full-screen .swiper-button-prev {
+            display: none !important;
         }
     </style>
 </head>
@@ -297,8 +319,8 @@
 
         // Fullscreen Toggle
         function toggleFullscreen() {
+            const elem = document.querySelector('.viewer-area');
             if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-                const elem = document.documentElement;
                 if (elem.requestFullscreen) {
                     elem.requestFullscreen();
                 } else if (elem.webkitRequestFullscreen) { /* Safari */
@@ -313,10 +335,14 @@
             }
         }
         
-        // Double click to exit fullscreen gracefully when navbar is hidden
-        document.addEventListener('dblclick', () => {
+        // Double click to exit fullscreen gracefully
+        document.querySelector('.viewer-area').addEventListener('dblclick', () => {
             if (document.fullscreenElement || document.webkitFullscreenElement) {
-                toggleFullscreen();
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) { /* Safari */
+                    document.webkitExitFullscreen();
+                }
             }
         });
 
