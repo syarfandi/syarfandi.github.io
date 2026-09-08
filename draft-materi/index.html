@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Draft Materi Seminar | Syarfandi Achmad</title>
+    <meta name="description" content="Materi presentasi Syarfandi Achmad">
+    <link rel="icon" type="image/png" href="/profile.png">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    </script>
+
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --accent-color: #3b82f6;
+            --text-color: #f8fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background-image: radial-gradient(circle at 50% -20%, #1e293b, #0f172a);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            z-index: 100;
+        }
+
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-ui {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-back {
+            color: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-back:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        .btn-download {
+            background: var(--accent-color);
+            color: white;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-download:hover {
+            background: #2563eb;
+            box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+            transform: translateY(-1px);
+        }
+
+        .presentation-title {
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Swiper Viewer Area */
+        .viewer-area {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .swiper {
+            width: 100%;
+            max-width: 1600px; /* Max width for ultra-wide screens */
+            height: 100%;
+            padding-bottom: 50px;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        /* Slide Canvas Wrapper */
+        .slide-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            overflow: hidden;
+            background: transparent;
+        }
+
+        canvas.pdf-canvas {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: contain;
+        }
+
+        /* Swiper Navigation Styling */
+        .swiper-button-next, .swiper-button-prev {
+            color: white !important;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            width: 50px !important;
+            height: 50px !important;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .swiper-button-next:hover, .swiper-button-prev:hover {
+            background: var(--accent-color);
+            transform: scale(1.1);
+        }
+
+        .swiper-button-next::after, .swiper-button-prev::after {
+            font-size: 20px !important;
+            font-weight: bold;
+        }
+
+        .swiper-pagination-bullet {
+            background: rgba(255, 255, 255, 0.4) !important;
+            width: 10px !important;
+            height: 10px !important;
+            transition: all 0.3s !important;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: var(--accent-color) !important;
+            width: 24px !important;
+            border-radius: 5px !important;
+        }
+
+        /* Loader */
+        #loader {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: var(--bg-color);
+            z-index: 50;
+            gap: 16px;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-left-color: var(--accent-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 12px;
+                gap: 12px;
+            }
+            .presentation-title {
+                display: none; /* Hide on mobile to save space */
+            }
+            .viewer-area {
+                padding: 10px 0;
+            }
+            .slide-content {
+                border-radius: 0;
+            }
+            .swiper-button-next, .swiper-button-prev {
+                display: none !important; /* Hide arrows on mobile, rely on swipe */
+            }
+        }
+
+        /* Fullscreen Mode */
+        :fullscreen, :-webkit-full-screen {
+            background-color: black !important;
+        }
+        :fullscreen .viewer-area, :-webkit-full-screen .viewer-area {
+            padding: 0 !important;
+            margin: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+        }
+        :fullscreen .swiper, :-webkit-full-screen .swiper {
+            padding: 0 !important;
+            margin: 0 !important;
+            max-width: 100% !important;
+            width: 100vw !important;
+            height: 100vh !important;
+        }
+        :fullscreen .swiper-slide, :-webkit-full-screen .swiper-slide {
+            width: 100vw !important;
+            height: 100vh !important;
+        }
+        :fullscreen .slide-content, :-webkit-full-screen .slide-content {
+            border-radius: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+        }
+        :fullscreen canvas.pdf-canvas, :-webkit-full-screen canvas.pdf-canvas {
+            object-fit: contain !important;
+            width: 100vw !important;
+            height: 100vh !important;
+        }
+        :fullscreen .swiper-pagination, :-webkit-full-screen .swiper-pagination {
+            display: none !important;
+        }
+        :fullscreen .swiper-button-next, :-webkit-full-screen .swiper-button-next,
+        :fullscreen .swiper-button-prev, :-webkit-full-screen .swiper-button-prev {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="/" class="btn-ui btn-back">
+                <i data-lucide="arrow-left" style="width: 16px; height: 16px;"></i>
+                Kembali
+            </a>
+            <div class="presentation-title">Draft Materi Seminar AI</div>
+        </div>
+        <div class="nav-right">
+            <button onclick="toggleFullscreen()" class="btn-ui btn-back" style="cursor: pointer;">
+                <i data-lucide="maximize" style="width: 16px; height: 16px;"></i>
+                Layar Penuh
+            </button>
+            <a href="/draft-materi/Draft_Materi_Seminar_AI_UINAM.pdf" download class="btn-ui btn-download">
+                <i data-lucide="download" style="width: 16px; height: 16px;"></i>
+                Unduh PDF
+            </a>
+        </div>
+    </nav>
+
+    <div id="loader">
+        <div class="spinner"></div>
+        <div style="font-size: 14px; color: #94a3b8;" id="loader-text">Memproses presentasi...</div>
+    </div>
+
+    <main class="viewer-area">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper" id="pdf-slides-container">
+                <!-- Slides will be injected here by PDF.js -->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </main>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script>
+        // Init icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
+        const url = '/draft-materi/Draft_Materi_Seminar_AI_UINAM.pdf';
+        const container = document.getElementById('pdf-slides-container');
+        const loader = document.getElementById('loader');
+        const loaderText = document.getElementById('loader-text');
+
+        // Fullscreen Toggle
+        function toggleFullscreen() {
+            const elem = document.querySelector('.viewer-area');
+            if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.webkitRequestFullscreen) { /* Safari */
+                    elem.webkitRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) { /* Safari */
+                    document.webkitExitFullscreen();
+                }
+            }
+        }
+        
+        // Double click to toggle fullscreen
+        document.querySelector('.viewer-area').addEventListener('dblclick', () => {
+            toggleFullscreen();
+        });
+
+        // Render PDF pages into Swiper slides
+        async function renderPDF() {
+            try {
+                const pdf = await pdfjsLib.getDocument(url).promise;
+                const totalPages = pdf.numPages;
+
+                for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
+                    loaderText.innerText = `Memuat slide ${pageNum} dari ${totalPages}...`;
+                    
+                    const page = await pdf.getPage(pageNum);
+                    
+                    // Higher scale for better resolution on large screens
+                    const scale = 2.0; 
+                    const viewport = page.getViewport({ scale: scale });
+
+                    // Create canvas
+                    const canvas = document.createElement('canvas');
+                    canvas.className = 'pdf-canvas';
+                    const context = canvas.getContext('2d');
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+
+                    // Render task
+                    const renderContext = {
+                        canvasContext: context,
+                        viewport: viewport
+                    };
+                    
+                    await page.render(renderContext).promise;
+
+                    // Create slide wrapper
+                    const slideDiv = document.createElement('div');
+                    slideDiv.className = 'swiper-slide';
+                    
+                    const contentDiv = document.createElement('div');
+                    contentDiv.className = 'slide-content';
+                    contentDiv.appendChild(canvas);
+                    
+                    slideDiv.appendChild(contentDiv);
+                    container.appendChild(slideDiv);
+                }
+
+                // Hide loader
+                loader.style.opacity = '0';
+                setTimeout(() => loader.style.display = 'none', 300);
+
+                // Initialize Swiper after all slides are injected
+                initSwiper();
+                
+            } catch (error) {
+                console.error('Error loading PDF:', error);
+                loaderText.innerText = 'Gagal memuat materi presentasi.';
+            }
+        }
+
+        let swiperInstance;
+
+        function initSwiper() {
+            swiperInstance = new Swiper(".mySwiper", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                spaceBetween: 30,
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 2,
+                    slideShadows: true,
+                },
+                keyboard: {
+                    enabled: true,
+                    pageUpDown: true,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    dynamicBullets: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                        effect: "slide" // Disable coverflow on small screens
+                    },
+                    768: {
+                        slidesPerView: "auto",
+                        spaceBetween: 30,
+                        effect: "coverflow"
+                    }
+                }
+            });
+
+            // Dukungan maksimal untuk Presentation Pointer / Clicker & Shortcut
+            document.addEventListener('keydown', (e) => {
+                // Shortcut Fullscreen (Tombol F atau f)
+                if (e.key === 'f' || e.key === 'F') {
+                    toggleFullscreen();
+                    return;
+                }
+
+                // Shortcut Escape ditekankan (biasanya browser sudah bawaan, ini untuk jaga-jaga)
+                if (e.key === 'Escape') {
+                    if (document.fullscreenElement || document.webkitFullscreenElement) {
+                        if (document.exitFullscreen) document.exitFullscreen();
+                        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+                    }
+                    return;
+                }
+
+                if (!swiperInstance) return;
+                
+                const nextKeys = ['PageDown', 'ArrowRight', 'ArrowDown', ' ', 'Enter', 'n', 'N'];
+                const prevKeys = ['PageUp', 'ArrowLeft', 'ArrowUp', 'Backspace', 'p', 'P'];
+
+                if (nextKeys.includes(e.key)) {
+                    // Hindari scroll bawah jika tekan Spasi
+                    if (e.key === ' ') e.preventDefault();
+                    swiperInstance.slideNext();
+                } else if (prevKeys.includes(e.key)) {
+                    swiperInstance.slidePrev();
+                }
+            });
+        }
+
+        // Start execution
+        renderPDF();
+    </script>
+</body>
+</html>
