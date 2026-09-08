@@ -24,6 +24,7 @@ export default defineConfig({
         resume: resolve(__dirname, 'resume/index.html'),
         cv: resolve(__dirname, 'cv/index.html'),
         materi: resolve(__dirname, 'materi/index.html'),
+        "draft-materi": resolve(__dirname, 'draft-materi/index.html'),
       },
     },
   },

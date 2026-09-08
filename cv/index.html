@@ -367,7 +367,7 @@
                     { title: "National Cyber Exercise #8 dan #10", issuer: "BSSN", date: "2024" },
                     { title: "Samsung Next Apps Winner", issuer: "Samsung Indonesia", date: "2017" },
                     { title: "Microsoft CityApp Participant", issuer: "Microsoft", date: "" },
-                    { title: "IELTS of Academic Program 5.5", issuer: "ACCESS ES", date: "" }
+                    { title: "IELTS of Academic Program 5.5", issuer: "ACCESS ES", date: "2018" }
                 ],
                 experiences: [
                     {
@@ -426,7 +426,11 @@
                     { title: "Data Sulsel", desc: "Full-stack regional data portal.", date: "2026" },
                     { title: "Kawan Sedarah", desc: "Real-time blood stock monitoring platform.", date: "2026" },
                     { title: "Helpdesk Makassar", desc: "Unified citizen portal.", date: "2025" },
-                    { title: "Mailcow Cluster", desc: "City-wide secure email cluster for 200+ official domains.", date: "2025" }
+                    { title: "Mailcow Cluster", desc: "City-wide secure email cluster for 200+ official domains.", date: "2025" },
+                    { title: "PPID Kemenag Sulsel", desc: "", date: "2026" },
+                    { title: "Malmora", desc: "", date: "2025" },
+                    { title: "Makaverse", desc: "Diskominfo Makassar.", date: "2025" },
+                    { title: "Virtual Tour Museum Kota Makassar", desc: "Disbud Makassar.", date: "2025" }
                 ],
                 
                 btnLabels: { share: "Share", pdf: "PDF", back: "Back" }
@@ -453,7 +457,7 @@
                     { title: "National Cyber Exercise #8 dan #10", issuer: "BSSN", date: "2024" },
                     { title: "Top 10 Winner Samsung Next Apps", issuer: "Samsung Indonesia", date: "2017" },
                     { title: "Participant Microsoft CityApp", issuer: "Microsoft", date: "2014" },
-                    { title: "IELTS of Academic Program 5.5", issuer: "ACCESS ES", date: "" }
+                    { title: "IELTS of Academic Program 5.5", issuer: "ACCESS ES", date: "2018" }
                 ],
                 experiences: [
                     {
@@ -512,7 +516,11 @@
                     { title: "Data Sulsel", desc: "Portal data regional full-stack.", date: "2026" },
                     { title: "Kawan Sedarah", desc: "Platform monitoring stok darah real-time.", date: "2026" },
                     { title: "Helpdesk Makassar", desc: "Portal terpadu masyarakat.", date: "2025" },
-                    { title: "Mailcow Cluster", desc: "Cluster email aman berskala kota untuk 200+ domain pemerintah.", date: "2025" }
+                    { title: "Mailcow Cluster", desc: "Cluster email aman berskala kota untuk 200+ domain pemerintah.", date: "2025" },
+                    { title: "PPID Kemenag Sulsel", desc: "", date: "2026" },
+                    { title: "Malmora", desc: "", date: "2025" },
+                    { title: "Makaverse", desc: "Diskominfo Makassar.", date: "2025" },
+                    { title: "Virtual Tour Museum Kota Makassar", desc: "Disbud Makassar.", date: "2025" }
                 ],
                 
                 btnLabels: { share: "Bagikan", pdf: "PDF", back: "Kembali" }
@@ -550,7 +558,7 @@
                 htmlProyek += `
                     <tr>
                         <td class="col-no">${idx + 1}</td>
-                        <td><strong>${proj.title}</strong> - ${proj.desc}</td>
+                        <td><strong>${proj.title}</strong>${proj.desc ? ' - ' + proj.desc : ''}</td>
                         <td class="col-year">${proj.date || '-'}</td>
                     </tr>
                 `;
