@@ -335,15 +335,9 @@
             }
         }
         
-        // Double click to exit fullscreen gracefully
+        // Double click to toggle fullscreen
         document.querySelector('.viewer-area').addEventListener('dblclick', () => {
-            if (document.fullscreenElement || document.webkitFullscreenElement) {
-                if (document.exitFullscreen) {
-                    document.exitFullscreen();
-                } else if (document.webkitExitFullscreen) { /* Safari */
-                    document.webkitExitFullscreen();
-                }
-            }
+            toggleFullscreen();
         });
 
         // Render PDF pages into Swiper slides
@@ -444,8 +438,23 @@
                 }
             });
 
-            // Dukungan maksimal untuk Presentation Pointer / Clicker
+            // Dukungan maksimal untuk Presentation Pointer / Clicker & Shortcut
             document.addEventListener('keydown', (e) => {
+                // Shortcut Fullscreen (Tombol F atau f)
+                if (e.key === 'f' || e.key === 'F') {
+                    toggleFullscreen();
+                    return;
+                }
+
+                // Shortcut Escape ditekankan (biasanya browser sudah bawaan, ini untuk jaga-jaga)
+                if (e.key === 'Escape') {
+                    if (document.fullscreenElement || document.webkitFullscreenElement) {
+                        if (document.exitFullscreen) document.exitFullscreen();
+                        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+                    }
+                    return;
+                }
+
                 if (!swiperInstance) return;
                 
                 const nextKeys = ['PageDown', 'ArrowRight', 'ArrowDown', ' ', 'Enter', 'n', 'N'];
