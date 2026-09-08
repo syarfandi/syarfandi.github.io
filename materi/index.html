@@ -401,8 +401,10 @@
             }
         }
 
+        let swiperInstance;
+
         function initSwiper() {
-            new Swiper(".mySwiper", {
+            swiperInstance = new Swiper(".mySwiper", {
                 effect: "coverflow",
                 grabCursor: true,
                 centeredSlides: true,
@@ -417,6 +419,7 @@
                 },
                 keyboard: {
                     enabled: true,
+                    pageUpDown: true,
                 },
                 pagination: {
                     el: ".swiper-pagination",
@@ -438,6 +441,22 @@
                         spaceBetween: 30,
                         effect: "coverflow"
                     }
+                }
+            });
+
+            // Dukungan maksimal untuk Presentation Pointer / Clicker
+            document.addEventListener('keydown', (e) => {
+                if (!swiperInstance) return;
+                
+                const nextKeys = ['PageDown', 'ArrowRight', 'ArrowDown', ' ', 'Enter', 'n', 'N'];
+                const prevKeys = ['PageUp', 'ArrowLeft', 'ArrowUp', 'Backspace', 'p', 'P'];
+
+                if (nextKeys.includes(e.key)) {
+                    // Hindari scroll bawah jika tekan Spasi
+                    if (e.key === ' ') e.preventDefault();
+                    swiperInstance.slideNext();
+                } else if (prevKeys.includes(e.key)) {
+                    swiperInstance.slidePrev();
                 }
             });
         }
