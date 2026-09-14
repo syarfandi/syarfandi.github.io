@@ -52,7 +52,11 @@ GEMINI.md
 .clinerules*
 .cursorrules*
 .agent*
+.agents*
 AGENTS.md
+ECC/
+
+scratch/
 
 /.DS_Store
 
