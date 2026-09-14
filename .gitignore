@@ -55,3 +55,12 @@ GEMINI.md
 AGENTS.md
 
 /.DS_Store
+
+# Agent rules and configuration files
+GEMINI.md
+.clinerules*
+.cursorrules*
+.agent*
+.agents*
+AGENTS.md
+ECC/
